@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		1B95DDCBFA3C0E32FBAA006C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 91578B2819DE2AD8A3EE13F1 /* libPods.a */; };
+		2940BB031AB87F3C00D1069A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2940BAF51AB87F3C00D1069A /* AppDelegate.m */; };
+		2940BB041AB87F3C00D1069A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2940BAF81AB87F3C00D1069A /* ViewController.m */; };
+		2940BB051AB87F3C00D1069A /* DoubanMedia.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2940BAFB1AB87F3C00D1069A /* DoubanMedia.xcdatamodeld */; };
+		2940BB061AB87F3C00D1069A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2940BB001AB87F3C00D1069A /* Main.storyboard */; };
+		2940BB071AB87F3C00D1069A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2940BB021AB87F3C00D1069A /* LaunchScreen.xib */; };
 		2976254A1AB675DE00008804 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 297625491AB675DE00008804 /* main.m */; };
-		2976254D1AB675DE00008804 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2976254C1AB675DE00008804 /* AppDelegate.m */; };
-		297625501AB675DE00008804 /* DoubanMedia.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2976254E1AB675DE00008804 /* DoubanMedia.xcdatamodeld */; };
-		297625531AB675DE00008804 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 297625521AB675DE00008804 /* ViewController.m */; };
-		297625561AB675DE00008804 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 297625541AB675DE00008804 /* Main.storyboard */; };
 		297625581AB675DE00008804 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 297625571AB675DE00008804 /* Images.xcassets */; };
-		2976255B1AB675DE00008804 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 297625591AB675DE00008804 /* LaunchScreen.xib */; };
 		297625671AB675DE00008804 /* DoubanMediaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 297625661AB675DE00008804 /* DoubanMediaTests.m */; };
 		8A544CE265375C9223304D52 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 8A544F34E9223A3F392A68E8 /* Podfile */; };
 /* End PBXBuildFile section */
@@ -30,17 +30,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2940BAF41AB87F3C00D1069A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2940BAF51AB87F3C00D1069A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2940BAF71AB87F3C00D1069A /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2940BAF81AB87F3C00D1069A /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2940BAFC1AB87F3C00D1069A /* DoubanMedia.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DoubanMedia.xcdatamodel; sourceTree = "<group>"; };
+		2940BB001AB87F3C00D1069A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		2940BB021AB87F3C00D1069A /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		297625441AB675DE00008804 /* DoubanMedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoubanMedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		297625481AB675DE00008804 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		297625491AB675DE00008804 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2976254B1AB675DE00008804 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		2976254C1AB675DE00008804 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2976254F1AB675DE00008804 /* DoubanMedia.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DoubanMedia.xcdatamodel; sourceTree = "<group>"; };
-		297625511AB675DE00008804 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		297625521AB675DE00008804 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		297625551AB675DE00008804 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		297625571AB675DE00008804 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		2976255A1AB675DE00008804 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		297625601AB675DE00008804 /* DoubanMediaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoubanMediaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		297625651AB675DE00008804 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		297625661AB675DE00008804 /* DoubanMediaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoubanMediaTests.m; sourceTree = "<group>"; };
@@ -69,6 +69,100 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2940BAF01AB87F3C00D1069A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				2940BAF11AB87F3C00D1069A /* Assets */,
+				2940BAF21AB87F3C00D1069A /* Common */,
+				2940BAF61AB87F3C00D1069A /* Controllers */,
+				2940BAF91AB87F3C00D1069A /* Models */,
+				2940BAFD1AB87F3C00D1069A /* Tools */,
+				2940BAFE1AB87F3C00D1069A /* Views */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		2940BAF11AB87F3C00D1069A /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		2940BAF21AB87F3C00D1069A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				2940BAF31AB87F3C00D1069A /* AppDelegate */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		2940BAF31AB87F3C00D1069A /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				2940BAF41AB87F3C00D1069A /* AppDelegate.h */,
+				2940BAF51AB87F3C00D1069A /* AppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		2940BAF61AB87F3C00D1069A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2940BAF71AB87F3C00D1069A /* ViewController.h */,
+				2940BAF81AB87F3C00D1069A /* ViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2940BAF91AB87F3C00D1069A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2940BAFA1AB87F3C00D1069A /* DataBaseLayers */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2940BAFA1AB87F3C00D1069A /* DataBaseLayers */ = {
+			isa = PBXGroup;
+			children = (
+				2940BAFB1AB87F3C00D1069A /* DoubanMedia.xcdatamodeld */,
+			);
+			path = DataBaseLayers;
+			sourceTree = "<group>";
+		};
+		2940BAFD1AB87F3C00D1069A /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		2940BAFE1AB87F3C00D1069A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2940BAFF1AB87F3C00D1069A /* Sbs */,
+				2940BB011AB87F3C00D1069A /* Xibs */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2940BAFF1AB87F3C00D1069A /* Sbs */ = {
+			isa = PBXGroup;
+			children = (
+				2940BB001AB87F3C00D1069A /* Main.storyboard */,
+			);
+			path = Sbs;
+			sourceTree = "<group>";
+		};
+		2940BB011AB87F3C00D1069A /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				2940BB021AB87F3C00D1069A /* LaunchScreen.xib */,
+			);
+			path = Xibs;
+			sourceTree = "<group>";
+		};
 		2976253B1AB675DE00008804 = {
 			isa = PBXGroup;
 			children = (
@@ -93,14 +187,8 @@
 		297625461AB675DE00008804 /* DoubanMedia */ = {
 			isa = PBXGroup;
 			children = (
-				2976254B1AB675DE00008804 /* AppDelegate.h */,
-				2976254C1AB675DE00008804 /* AppDelegate.m */,
-				297625511AB675DE00008804 /* ViewController.h */,
-				297625521AB675DE00008804 /* ViewController.m */,
-				297625541AB675DE00008804 /* Main.storyboard */,
+				2940BAF01AB87F3C00D1069A /* Classes */,
 				297625571AB675DE00008804 /* Images.xcassets */,
-				297625591AB675DE00008804 /* LaunchScreen.xib */,
-				2976254E1AB675DE00008804 /* DoubanMedia.xcdatamodeld */,
 				297625471AB675DE00008804 /* Supporting Files */,
 			);
 			path = DoubanMedia;
@@ -231,8 +319,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				297625561AB675DE00008804 /* Main.storyboard in Resources */,
-				2976255B1AB675DE00008804 /* LaunchScreen.xib in Resources */,
+				2940BB071AB87F3C00D1069A /* LaunchScreen.xib in Resources */,
+				2940BB061AB87F3C00D1069A /* Main.storyboard in Resources */,
 				297625581AB675DE00008804 /* Images.xcassets in Resources */,
 				8A544CE265375C9223304D52 /* Podfile in Resources */,
 			);
@@ -285,9 +373,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2976254D1AB675DE00008804 /* AppDelegate.m in Sources */,
-				297625501AB675DE00008804 /* DoubanMedia.xcdatamodeld in Sources */,
-				297625531AB675DE00008804 /* ViewController.m in Sources */,
+				2940BB041AB87F3C00D1069A /* ViewController.m in Sources */,
+				2940BB051AB87F3C00D1069A /* DoubanMedia.xcdatamodeld in Sources */,
+				2940BB031AB87F3C00D1069A /* AppDelegate.m in Sources */,
 				2976254A1AB675DE00008804 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,25 +397,6 @@
 			targetProxy = 297625611AB675DE00008804 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		297625541AB675DE00008804 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				297625551AB675DE00008804 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		297625591AB675DE00008804 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2976255A1AB675DE00008804 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		297625681AB675DE00008804 /* Debug */ = {
@@ -497,12 +566,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		2976254E1AB675DE00008804 /* DoubanMedia.xcdatamodeld */ = {
+		2940BAFB1AB87F3C00D1069A /* DoubanMedia.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				2976254F1AB675DE00008804 /* DoubanMedia.xcdatamodel */,
+				2940BAFC1AB87F3C00D1069A /* DoubanMedia.xcdatamodel */,
 			);
-			currentVersion = 2976254F1AB675DE00008804 /* DoubanMedia.xcdatamodel */;
+			currentVersion = 2940BAFC1AB87F3C00D1069A /* DoubanMedia.xcdatamodel */;
 			path = DoubanMedia.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
