@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B95DDCBFA3C0E32FBAA006C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 91578B2819DE2AD8A3EE13F1 /* libPods.a */; };
 		2976254A1AB675DE00008804 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 297625491AB675DE00008804 /* main.m */; };
 		2976254D1AB675DE00008804 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2976254C1AB675DE00008804 /* AppDelegate.m */; };
 		297625501AB675DE00008804 /* DoubanMedia.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2976254E1AB675DE00008804 /* DoubanMedia.xcdatamodeld */; };
@@ -15,6 +16,7 @@
 		297625581AB675DE00008804 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 297625571AB675DE00008804 /* Images.xcassets */; };
 		2976255B1AB675DE00008804 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 297625591AB675DE00008804 /* LaunchScreen.xib */; };
 		297625671AB675DE00008804 /* DoubanMediaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 297625661AB675DE00008804 /* DoubanMediaTests.m */; };
+		8A544CE265375C9223304D52 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 8A544F34E9223A3F392A68E8 /* Podfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,10 @@
 		297625601AB675DE00008804 /* DoubanMediaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoubanMediaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		297625651AB675DE00008804 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		297625661AB675DE00008804 /* DoubanMediaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoubanMediaTests.m; sourceTree = "<group>"; };
+		62EFE6757B0D7C97578719DC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		8A544F34E9223A3F392A68E8 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		91578B2819DE2AD8A3EE13F1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECDD4AB39CBD51B04F934DA5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B95DDCBFA3C0E32FBAA006C /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +75,9 @@
 				297625461AB675DE00008804 /* DoubanMedia */,
 				297625631AB675DE00008804 /* DoubanMediaTests */,
 				297625451AB675DE00008804 /* Products */,
+				8A544F34E9223A3F392A68E8 /* Podfile */,
+				D2C7A77FA4C43394E0F13D80 /* Pods */,
+				67B9E8C8F08C500E4C0D83A0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,6 +132,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		67B9E8C8F08C500E4C0D83A0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				91578B2819DE2AD8A3EE13F1 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D2C7A77FA4C43394E0F13D80 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				62EFE6757B0D7C97578719DC /* Pods.debug.xcconfig */,
+				ECDD4AB39CBD51B04F934DA5 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -129,9 +156,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2976256A1AB675DE00008804 /* Build configuration list for PBXNativeTarget "DoubanMedia" */;
 			buildPhases = (
+				CC324818A2346791ABB5CD83 /* Check Pods Manifest.lock */,
 				297625401AB675DE00008804 /* Sources */,
 				297625411AB675DE00008804 /* Frameworks */,
 				297625421AB675DE00008804 /* Resources */,
+				51B2225D0BF5F3088E53D501 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -205,6 +234,7 @@
 				297625561AB675DE00008804 /* Main.storyboard in Resources */,
 				2976255B1AB675DE00008804 /* LaunchScreen.xib in Resources */,
 				297625581AB675DE00008804 /* Images.xcassets in Resources */,
+				8A544CE265375C9223304D52 /* Podfile in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +246,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		51B2225D0BF5F3088E53D501 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC324818A2346791ABB5CD83 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		297625401AB675DE00008804 /* Sources */ = {
@@ -347,6 +410,7 @@
 		};
 		2976256B1AB675DE00008804 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62EFE6757B0D7C97578719DC /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DoubanMedia/Info.plist;
@@ -357,6 +421,7 @@
 		};
 		2976256C1AB675DE00008804 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECDD4AB39CBD51B04F934DA5 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DoubanMedia/Info.plist;
@@ -418,6 +483,7 @@
 				2976256C1AB675DE00008804 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2976256D1AB675DE00008804 /* Build configuration list for PBXNativeTarget "DoubanMediaTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +492,7 @@
 				2976256F1AB675DE00008804 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
