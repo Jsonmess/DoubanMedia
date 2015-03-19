@@ -8,6 +8,6 @@
 
 #ifndef DoubanMedia_DMGlobal_h
 #define DoubanMedia_DMGlobal_h
-
+#define ScreenBounds  [UIScreen mainScreen].bounds
 
 #endif
