@@ -1,0 +1,15 @@
+<body bgcolor="white">
+ <br/>
+<font color=4f4f4f size = 2px >版本号：Mini豆瓣（iPhone) v1.0<br/>
+作者QQ：646147651&nbsp;&nbsp;&nbsp;&nbsp;<b>欢迎妹纸前来"骚扰"！</b><br/>
+作者豆瓣：<a href="http://www.douban.com/people/102325861/">http://www.douban.com/people/102325861</a><br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mini豆瓣 适用于iOS 5.0 及以上固件的设备,由于时间问题，只对5S以下设备进行了适配，iPhone6以及iPhone6 Plus还未进行适配，请见谅。本软件是由作者个人爱好之作，所以难免会出现一些作者没有发现的bug，由于是第一个版本，许多功能作者没有实现，有些功能也并未想到，所以作者设置意见反馈模块，欢迎大家吐槽！后期有时间我会更新版本，敬请大家期待，作者在此聊表谢意！<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;作者一贯高度重视知识产权保护并遵守中国各项知识产权法律、法规和具有约束力的规范性文件。重视正版，打击盗版。音乐电影资源信息来自于互联网，都与作者无关。<br/>
+<br/>
+<br/>
+Jsonmess版权所有<br/>
+Copyright 2014 Jsonmess-Inc.<br/>
+All Right Reserved</font>
+</body>

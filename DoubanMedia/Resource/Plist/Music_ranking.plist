@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>id</key>
+		<string>3779629</string>
+		<key>info</key>
+		<string>newtop</string>
+		<key>name</key>
+		<string>新歌榜</string>
+		<key>picture</key>
+		<string>new_top.png</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>3778678</string>
+		<key>info</key>
+		<string>redtop</string>
+		<key>name</key>
+		<string>热歌榜</string>
+		<key>picture</key>
+		<string>red_top.png</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>2884035</string>
+		<key>info</key>
+		<string>originaltop</string>
+		<key>name</key>
+		<string>原创榜</string>
+		<key>picture</key>
+		<string>original_top.png</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>19723756</string>
+		<key>info</key>
+		<string>surgetop</string>
+		<key>name</key>
+		<string>飙升榜</string>
+		<key>picture</key>
+		<string>surge_top.png</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>10520166</string>
+		<key>info</key>
+		<string>radiotop</string>
+		<key>name</key>
+		<string>电音榜</string>
+		<key>picture</key>
+		<string>radio_top.png</string>
+	</dict>
+</array>
+</plist>
