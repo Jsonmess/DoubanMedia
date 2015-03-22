@@ -21,7 +21,7 @@
 
     [super viewDidLoad];
     subViewControllers = [NSMutableArray array];
-
+    [self initSubViewControllers];
     RootTabView *tab =[[RootTabView alloc]initWithFrame:CGRectMake(0, 100, self.view.bounds.size.width, 44)];
     [tab setTabDataSource:self];
     [tab setTabDelegate:self];
@@ -30,23 +30,36 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
--(void)initSubViewController
+-(void)initSubViewControllers
 {
+    [subViewControllers removeAllObjects];
     //豆瓣FM
     UIViewController *doubanFmController = [[UIViewController alloc]init];
+    [subViewControllers addObject:doubanFmController];
     //豆瓣音乐
      UIViewController *doubanMusicController = [[UIViewController alloc]init];
+    [subViewControllers addObject:doubanMusicController];
     //豆瓣电影
      UIViewController *doubanFilmController = [[UIViewController alloc]init];
+    [subViewControllers addObject:doubanFilmController];
 	//应用设置
      UIViewController *doubanSettingController = [[UIViewController alloc]init];
+    [subViewControllers addObject:doubanSettingController];
+
+    //默认是豆瓣FM
+    self.view = doubanFmController.view;
+}
+//添加视图和Tabbar
+-(void)setUpView
+{
+
 }
 -(void)RunButionAction:(NSInteger)oldtag To:(NSInteger)newtag
 {
     if (newtag < 0|| newtag > KitemCount)return;
 
     //1.取出将要添加到主视图控制器子视图
-    UIViewController *current_c=self.childViewControllers[newtag];
+    UIViewController *current_c=subViewControllers[newtag];
     //1.2设置该子控制器的frame
 //    CGFloat weidth=self.view.frame.size.width;
 //
@@ -54,14 +67,14 @@
 //    [current_c.view setFrame:CGRectMake(0, 0, weidth, height)];
 
     //2.取出已经存在的子视图
-    UIViewController *old_c=self.childViewControllers[oldtag];
+    UIViewController *old_c=subViewControllers[oldtag];
 
     //3.将主视图控制器中子控制器移除
     [old_c.view removeFromSuperview];
 
 
     //4.添加新的子控制器主视图控制器
-    [self.view addSubview:current_c.view];
+    self.view =current_c.view;
     
 }
 
