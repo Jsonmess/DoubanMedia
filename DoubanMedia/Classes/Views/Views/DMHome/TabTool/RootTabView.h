@@ -10,7 +10,7 @@
 @class RootTabView;
 @protocol TabbarDelegate <NSObject>
 @required
--(void)rootTabView:(RootTabView*)tabbarView didSelectedItem:(NSInteger)index;
+-(void)rootTabView:(RootTabView*)tabbarView lastSelectedItem:(NSInteger)lindex didSelectedItem:(NSInteger)nindex;
 @optional
 //item的高度
 -(CGFloat)widthOfEachItem;

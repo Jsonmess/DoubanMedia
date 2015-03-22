@@ -168,7 +168,7 @@
                                           alpha:0.8f]
                  forState:UIControlStateSelected];
 
-    [self.TabDelegate rootTabView:self didSelectedItem:sender.tag];
+    [self.TabDelegate rootTabView:self lastSelectedItem:selectedItem.tag didSelectedItem:sender.tag];
 
     //3.记录当前按钮
     selectedItem=sender;
