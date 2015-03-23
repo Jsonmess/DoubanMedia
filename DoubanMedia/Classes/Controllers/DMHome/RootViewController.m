@@ -10,6 +10,7 @@
 #import "RootTabView.h"
 #import "PureLayout.h"
 #import "Com_navigationController.h"
+#import "DMFMChannelController.h"
 #define KitemCount 4  //Tabbar 选项卡数目
 #define kTabbarHeight 44.0f //Tabbar 高度
 @interface RootViewController  ()<TabbarDataSource,TabbarDelegate>
@@ -33,10 +34,9 @@
 {
     [subViewControllers removeAllObjects];
     //豆瓣FM
-    UIViewController *doubanFmController = [[UIViewController alloc]init];
+    DMFMChannelController *doubanFmController = [[DMFMChannelController alloc]init];
     Com_navigationController *navFMController = [[Com_navigationController alloc]
                                                initWithRootViewController:doubanFmController];
-    [doubanFmController.view setBackgroundColor:[UIColor redColor]];
     [subViewControllers addObject:navFMController];
     //豆瓣音乐
      UIViewController *doubanMusicController = [[UIViewController alloc]init];
