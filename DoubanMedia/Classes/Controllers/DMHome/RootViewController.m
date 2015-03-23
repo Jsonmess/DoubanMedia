@@ -74,7 +74,7 @@
     [self.view addSubview:fm.view];
     [self setContainsWith:fm];
 }
-
+//切换模块
 -(void)RunButionAction:(NSInteger)oldtag To:(NSInteger)newtag
 {
     if (newtag < 0|| newtag > KitemCount)return;
@@ -95,6 +95,7 @@
 
     
 }
+//设置约束
 -(void)setContainsWith:(UIViewController *)controller
 {
       [controller.view autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(0, 0, 0, 0)
@@ -107,7 +108,6 @@
 {
     return KitemCount;
 }
-
 -(NSArray *)theSourceOfItemNormalIcons
 {
     return @[@"home_my.png",@"morePage_musicRecognizer.png",
