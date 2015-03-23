@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3F30CF2605973D823938AF62"
+               BlueprintIdentifier = "19F6A80DBCA847925D826F61"
                BuildableName = "libPods-AFSoundManager.a"
                BlueprintName = "Pods-AFSoundManager"
                ReferencedContainer = "container:Pods.xcodeproj">

@@ -8,10 +8,13 @@
 #import "RootViewController.h"
 #import "DMGlobal.h"
 #import "RootTabView.h"
+#import "PureLayout.h"
 #define KitemCount 4  //Tabbar 选项卡数目
+#define kTabbarHeight 44.0f //Tabbar 高度
 @interface RootViewController  ()<TabbarDataSource,TabbarDelegate>
 {
     NSMutableArray *subViewControllers;//子控制器组
+    RootTabView *tabView;
 }
 @end
 
@@ -21,12 +24,7 @@
 
     [super viewDidLoad];
     subViewControllers = [NSMutableArray array];
-    [self initSubViewControllers];
-    RootTabView *tab =[[RootTabView alloc]initWithFrame:CGRectMake(0, 100, self.view.bounds.size.width, 44)];
-    [tab setTabDataSource:self];
-    [tab setTabDelegate:self];
-    [self.view addSubview:tab];
-    [self.view setBackgroundColor:[UIColor redColor]];
+    [self setUpView];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -35,36 +33,45 @@
     [subViewControllers removeAllObjects];
     //豆瓣FM
     UIViewController *doubanFmController = [[UIViewController alloc]init];
+    [doubanFmController.view setBackgroundColor:[UIColor redColor]];
     [subViewControllers addObject:doubanFmController];
     //豆瓣音乐
      UIViewController *doubanMusicController = [[UIViewController alloc]init];
+    [doubanMusicController.view setBackgroundColor:[UIColor greenColor]];
     [subViewControllers addObject:doubanMusicController];
     //豆瓣电影
      UIViewController *doubanFilmController = [[UIViewController alloc]init];
+    [doubanFilmController.view setBackgroundColor:[UIColor blueColor]];
     [subViewControllers addObject:doubanFilmController];
 	//应用设置
      UIViewController *doubanSettingController = [[UIViewController alloc]init];
+    [doubanSettingController.view setBackgroundColor:[UIColor yellowColor]];
     [subViewControllers addObject:doubanSettingController];
-
-    //默认是豆瓣FM
-    self.view = doubanFmController.view;
 }
 //添加视图和Tabbar
 -(void)setUpView
 {
-
+	//tabbar
+    tabView = [[RootTabView alloc]initWithFrame:CGRectZero];
+    [tabView setTabDataSource:self];
+    [tabView setTabDelegate:self];
+    [self initSubViewControllers];
+    [self.view addSubview:tabView];
+    [tabView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(0, 0, 0, 0)
+                                      excludingEdge:ALEdgeTop];
+    [tabView autoSetDimension:ALDimensionHeight toSize:kTabbarHeight];
+    //默认添加豆瓣fm
+    UIViewController *fm = [subViewControllers firstObject];
+    [self.view addSubview:fm.view];
+    [self setContainsWith:fm];
 }
+
 -(void)RunButionAction:(NSInteger)oldtag To:(NSInteger)newtag
 {
     if (newtag < 0|| newtag > KitemCount)return;
 
     //1.取出将要添加到主视图控制器子视图
     UIViewController *current_c=subViewControllers[newtag];
-    //1.2设置该子控制器的frame
-//    CGFloat weidth=self.view.frame.size.width;
-//
-//    CGFloat height=self.view.frame.size.height-Ktabbar_height;
-//    [current_c.view setFrame:CGRectMake(0, 0, weidth, height)];
 
     //2.取出已经存在的子视图
     UIViewController *old_c=subViewControllers[oldtag];
@@ -74,12 +81,18 @@
 
 
     //4.添加新的子控制器主视图控制器
-    self.view =current_c.view;
+    [self.view addSubview:current_c.view];
+    [self setContainsWith:current_c];
+
     
 }
-
-
-
+-(void)setContainsWith:(UIViewController *)controller
+{
+      [controller.view autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(0, 0, 0, 0)
+                                                excludingEdge:ALEdgeBottom];
+        [controller.view autoPinEdge:ALEdgeBottom toEdge:ALEdgeTop ofView:tabView];
+    [self.view setNeedsLayout];
+}
 #pragma mark -----Tabbar代理
 -(NSInteger)numberOfTabItemsInTabbarView
 {
@@ -107,7 +120,8 @@
 
 -(void)rootTabView:(RootTabView *)tabbarView lastSelectedItem:(NSInteger)lindex didSelectedItem:(NSInteger)nindex
 {
-    NSLog(@"之前选中了---%d  选中了index ----%d",lindex,nindex);
+    NSLog(@"之前选中了---%ld  选中了index ----%ld",lindex,nindex);
+    [self RunButionAction:lindex To:nindex];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
