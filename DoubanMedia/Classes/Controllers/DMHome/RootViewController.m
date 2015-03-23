@@ -9,6 +9,7 @@
 #import "DMGlobal.h"
 #import "RootTabView.h"
 #import "PureLayout.h"
+#import "Com_navigationController.h"
 #define KitemCount 4  //Tabbar 选项卡数目
 #define kTabbarHeight 44.0f //Tabbar 高度
 @interface RootViewController  ()<TabbarDataSource,TabbarDelegate>
@@ -33,20 +34,28 @@
     [subViewControllers removeAllObjects];
     //豆瓣FM
     UIViewController *doubanFmController = [[UIViewController alloc]init];
+    Com_navigationController *navFMController = [[Com_navigationController alloc]
+                                               initWithRootViewController:doubanFmController];
     [doubanFmController.view setBackgroundColor:[UIColor redColor]];
-    [subViewControllers addObject:doubanFmController];
+    [subViewControllers addObject:navFMController];
     //豆瓣音乐
      UIViewController *doubanMusicController = [[UIViewController alloc]init];
+    Com_navigationController *navMusicController = [[Com_navigationController alloc]
+                                               initWithRootViewController:doubanMusicController];
     [doubanMusicController.view setBackgroundColor:[UIColor greenColor]];
-    [subViewControllers addObject:doubanMusicController];
+    [subViewControllers addObject:navMusicController];
     //豆瓣电影
      UIViewController *doubanFilmController = [[UIViewController alloc]init];
+    Com_navigationController *navFilmController = [[Com_navigationController alloc]
+                                                    initWithRootViewController:doubanFilmController];
     [doubanFilmController.view setBackgroundColor:[UIColor blueColor]];
-    [subViewControllers addObject:doubanFilmController];
+    [subViewControllers addObject:navFilmController];
 	//应用设置
      UIViewController *doubanSettingController = [[UIViewController alloc]init];
+    Com_navigationController *navSettingController = [[Com_navigationController alloc]
+                                                   initWithRootViewController:doubanSettingController];
     [doubanSettingController.view setBackgroundColor:[UIColor yellowColor]];
-    [subViewControllers addObject:doubanSettingController];
+    [subViewControllers addObject:navSettingController];
 }
 //添加视图和Tabbar
 -(void)setUpView
@@ -120,7 +129,6 @@
 
 -(void)rootTabView:(RootTabView *)tabbarView lastSelectedItem:(NSInteger)lindex didSelectedItem:(NSInteger)nindex
 {
-    NSLog(@"之前选中了---%ld  选中了index ----%ld",lindex,nindex);
     [self RunButionAction:lindex To:nindex];
 }
 - (void)didReceiveMemoryWarning {
