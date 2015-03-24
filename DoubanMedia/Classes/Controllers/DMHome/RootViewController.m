@@ -11,6 +11,8 @@
 #import "PureLayout.h"
 #import "Com_navigationController.h"
 #import "DMFMChannelController.h"
+//debug
+#import "DBLoginViewController.h"
 #define KitemCount 4  //Tabbar 选项卡数目
 #define kTabbarHeight 44.0f //Tabbar 高度
 @interface RootViewController  ()<TabbarDataSource,TabbarDelegate>
@@ -26,7 +28,9 @@
 
     [super viewDidLoad];
     subViewControllers = [NSMutableArray array];
-    [self setUpView];
+    DBLoginViewController *test = [[DBLoginViewController alloc]initWithNibName:@"DBLoginViewController" bundle:nil];
+    [self.view addSubview: test.view];
+    //[self setUpView];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
