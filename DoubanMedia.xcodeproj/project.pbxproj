@@ -14,7 +14,6 @@
 		296F47121AC187B500231873 /* push_close_normal_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 296F470F1AC187B500231873 /* push_close_normal_btn@2x.png */; };
 		296F47131AC187B500231873 /* splash_screen_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 296F47101AC187B500231873 /* splash_screen_logo.png */; };
 		296F47141AC187B500231873 /* splash_screen_wave.png in Resources */ = {isa = PBXBuildFile; fileRef = 296F47111AC187B500231873 /* splash_screen_wave.png */; };
-		296F47191AC18E6200231873 /* DBLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 296F47181AC18E6200231873 /* DBLoginViewController.xib */; };
 		2976254A1AB675DE00008804 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 297625491AB675DE00008804 /* main.m */; };
 		297625581AB675DE00008804 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 297625571AB675DE00008804 /* Images.xcassets */; };
 		297625671AB675DE00008804 /* DoubanMediaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 297625661AB675DE00008804 /* DoubanMediaTests.m */; };
@@ -108,7 +107,6 @@
 		296F470F1AC187B500231873 /* push_close_normal_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "push_close_normal_btn@2x.png"; sourceTree = "<group>"; };
 		296F47101AC187B500231873 /* splash_screen_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash_screen_logo.png; sourceTree = "<group>"; };
 		296F47111AC187B500231873 /* splash_screen_wave.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash_screen_wave.png; sourceTree = "<group>"; };
-		296F47181AC18E6200231873 /* DBLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DBLoginViewController.xib; sourceTree = "<group>"; };
 		297625441AB675DE00008804 /* DoubanMedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoubanMedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		297625481AB675DE00008804 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		297625491AB675DE00008804 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -314,7 +312,6 @@
 			isa = PBXGroup;
 			children = (
 				2940BB021AB87F3C00D1069A /* LaunchScreen.xib */,
-				296F47181AC18E6200231873 /* DBLoginViewController.xib */,
 			);
 			path = Xibs;
 			sourceTree = "<group>";
@@ -738,7 +735,6 @@
 				29B4D1561ABEBE7200899F29 /* Icon@2x.png in Resources */,
 				29B4D1781ABEBE7200899F29 /* loading@2x.png in Resources */,
 				29B4D1641ABEBE7200899F29 /* BackToList.png in Resources */,
-				296F47191AC18E6200231873 /* DBLoginViewController.xib in Resources */,
 				29B4D1531ABEBE7200899F29 /* Default.png in Resources */,
 				29B4D1831ABEBE7200899F29 /* Back_Setting.png in Resources */,
 				29B4D1741ABEBE7200899F29 /* play_sound@2x.png in Resources */,

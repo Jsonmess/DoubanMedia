@@ -28,7 +28,8 @@
 
     [super viewDidLoad];
     subViewControllers = [NSMutableArray array];
-    DBLoginViewController *test = [[DBLoginViewController alloc]initWithNibName:@"DBLoginViewController" bundle:nil];
+    DBLoginViewController *test = [[DBLoginViewController alloc]init];
+    [test.view setFrame:self.view.frame];
     [self.view addSubview: test.view];
     //[self setUpView];
     // Do any additional setup after loading the view, typically from a nib.
