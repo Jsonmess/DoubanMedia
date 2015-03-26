@@ -9,8 +9,13 @@
 #import "DBLoginViewController.h"
 #import "PureLayout.h"
 #import "DMGlobal.h"
-@interface DBLoginViewController ()
-
+#import "DMLoginManager.h"
+#import <UIKit+AFNetworking.h>
+#import <ReactiveCocoa.h>
+@interface DBLoginViewController ()<DMLoginManagerDelegate,UITextFieldDelegate>
+{
+    DMLoginManager *loginManager;
+}
 @property(nonatomic)    UIImageView *cancelImageView;//返回
 @property(nonatomic)    UIImageView *logo1ImageView;//logo1
 @property(nonatomic)    UILabel *loginLabel;//登录提示框
@@ -31,8 +36,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self commonInit];
     [self setUpView];
     // Do any additional setup after loading the view.
+}
+-(void)commonInit
+{
+    loginManager = [[DMLoginManager alloc]init];
+    [loginManager setLoginDelegate:self];
+    //预加载验证码
+    [loginManager getCaptchaImageFromDM];
+
 }
 //设置视图
 -(void)setUpView
@@ -45,10 +59,20 @@
     [_logo1ImageView setImage:[UIImage imageNamed:@"splash_screen_logo.png"]];
     _loginLabel = [[UILabel alloc] initWithFrame:CGRectZero];
     _userName = [[UITextField alloc] initWithFrame:CGRectZero];
+    [_userName setDelegate:self];
     _password = [[UITextField alloc] initWithFrame:CGRectZero];
+    [_password setSecureTextEntry:YES];
+    [_password setDelegate:self];
     _registerBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [_registerBtn addTarget:self action:@selector(gotoRegisterAccount) forControlEvents:UIControlEventTouchUpInside];
     _authCode = [[UITextField alloc] initWithFrame:CGRectZero];
+    [_authCode setDelegate:self];
    	_authImageView = [[UIImageView alloc] initWithFrame:CGRectZero];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(reloadAuthImage)];
+    [_authImageView setUserInteractionEnabled:YES];
+    [_authImageView setBackgroundColor:DMColor(195, 218, 105, 0.3f)];
+    [_authImageView.layer setCornerRadius:3.0f];
+    [_authImageView addGestureRecognizer:tap];
 	_commmitLogin = [UIButton buttonWithType:UIButtonTypeCustom];
     _loginPrompt = [[UILabel alloc] initWithFrame:CGRectZero];
     _logo2ImageView = [[UIImageView alloc] initWithFrame:CGRectZero];
@@ -126,10 +150,8 @@
     [self.authCode autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.password withOffset:20.0f];
     //验证码图片
     [self.authImageView autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self.authCode];
-    [self.authImageView setBackgroundColor:[UIColor redColor]];
     [self.authImageView autoPinEdge:ALEdgeLeading toEdge:ALEdgeRight ofView:self.authCode withOffset:15.0f];
-    CGSize authSize = self.authImageView.image.size;
-    [self.authImageView autoSetDimension:ALDimensionWidth toSize:80.0f];
+    [self.authImageView autoSetDimension:ALDimensionWidth toSize:90.0f];
     [self.authImageView autoSetDimension:ALDimensionHeight toSize:30.0f];
     //登录按钮
     [self.commmitLogin autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.authCode withOffset:23.0f];
@@ -171,11 +193,52 @@
     
 }
 
+#pragma mark -- action
+-(void)reloadAuthImage
+{
+    [loginManager getCaptchaImageFromDM];
+}
+//前往注册新账户
+-(void)gotoRegisterAccount
+{
+
+}
+#pragma mark ---DMLoginManagerDelegate
+-(void)setCaptchaImageUrl:(NSString *)url
+{
+    [self.authImageView setImageWithURL:[NSURL URLWithString:url]];
+}
+-(void)loginState:(BOOL)state
+{
+
+}
+#pragma mark ---TextFiledDelegate
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    return YES;
+}
+-(BOOL)textFieldShouldClear:(UITextField *)textField
+{
+    return YES;
+}
+-(void)textFieldDidEndEditing:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+}
+#pragma mark--Other
+
+-(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [_userName resignFirstResponder];
+    [_password resignFirstResponder];
+    [_authCode resignFirstResponder];
+}
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 /*
 #pragma mark - Navigation
 
