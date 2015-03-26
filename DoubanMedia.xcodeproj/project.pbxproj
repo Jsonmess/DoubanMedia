@@ -18,6 +18,7 @@
 		2976254A1AB675DE00008804 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 297625491AB675DE00008804 /* main.m */; };
 		297625581AB675DE00008804 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 297625571AB675DE00008804 /* Images.xcassets */; };
 		297625671AB675DE00008804 /* DoubanMediaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 297625661AB675DE00008804 /* DoubanMediaTests.m */; };
+		2976E8421AC41E180016DD88 /* AccountInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2976E8411AC41E180016DD88 /* AccountInfo.m */; };
 		2978D1971AC035D4005CB2F3 /* Com_navigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2978D1961AC035D4005CB2F3 /* Com_navigationController.m */; };
 		2978D19C1AC064BC005CB2F3 /* DMFMChannelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2978D19B1AC064BC005CB2F3 /* DMFMChannelController.m */; };
 		2999D9791ABB134400F43C54 /* RootTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2999D9781ABB134400F43C54 /* RootTabView.m */; };
@@ -117,6 +118,9 @@
 		297625601AB675DE00008804 /* DoubanMediaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoubanMediaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		297625651AB675DE00008804 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		297625661AB675DE00008804 /* DoubanMediaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoubanMediaTests.m; sourceTree = "<group>"; };
+		2976E8401AC41E180016DD88 /* AccountInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountInfo.h; sourceTree = "<group>"; };
+		2976E8411AC41E180016DD88 /* AccountInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountInfo.m; sourceTree = "<group>"; };
+		2976E8431AC4254C0016DD88 /* DoubanMedia.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoubanMedia.pch; sourceTree = "<group>"; };
 		2978D1951AC035D4005CB2F3 /* Com_navigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Com_navigationController.h; sourceTree = "<group>"; };
 		2978D1961AC035D4005CB2F3 /* Com_navigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Com_navigationController.m; sourceTree = "<group>"; };
 		2978D19A1AC064BC005CB2F3 /* DMFMChannelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMFMChannelController.h; sourceTree = "<group>"; };
@@ -349,6 +353,8 @@
 		296F47171AC188E800231873 /* ObjectModels */ = {
 			isa = PBXGroup;
 			children = (
+				2976E8401AC41E180016DD88 /* AccountInfo.h */,
+				2976E8411AC41E180016DD88 /* AccountInfo.m */,
 			);
 			path = ObjectModels;
 			sourceTree = "<group>";
@@ -389,6 +395,7 @@
 				29B4D1091ABEBE7200899F29 /* Resource */,
 				297625481AB675DE00008804 /* Info.plist */,
 				297625491AB675DE00008804 /* main.m */,
+				2976E8431AC4254C0016DD88 /* DoubanMedia.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -842,6 +849,7 @@
 				2953C8B11AC2E02B00F62F07 /* DMLoginManager.m in Sources */,
 				2940BB031AB87F3C00D1069A /* AppDelegate.m in Sources */,
 				2976254A1AB675DE00008804 /* main.m in Sources */,
+				2976E8421AC41E180016DD88 /* AccountInfo.m in Sources */,
 				2999D9791ABB134400F43C54 /* RootTabView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -955,8 +963,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Qiang Zhu (N3YQQZE5KP)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Qiang Zhu (N3YQQZE5KP)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/DoubanMedia/DoubanMedia.pch";
 				INFOPLIST_FILE = DoubanMedia/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -970,8 +980,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Qiang Zhu (N3YQQZE5KP)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/DoubanMedia/DoubanMedia.pch";
 				INFOPLIST_FILE = DoubanMedia/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

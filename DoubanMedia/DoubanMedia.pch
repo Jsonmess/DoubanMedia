@@ -1,0 +1,20 @@
+//
+//  DoubanMedia.pch
+//  DoubanMedia
+//
+//  Created by jsonmess on 15/3/26.
+//  Copyright (c) 2015年 jsonmess. All rights reserved.
+//
+
+#ifndef DoubanMedia_DoubanMedia_pch
+#define DoubanMedia_DoubanMedia_pch
+#endif
+#define MR_SHORTHAND
+#import "CoreData+MagicalRecord.h"
+
+#ifdef __OBJC__
+	#import <UIKit/UIKit.h>
+	#import <Foundation/Foundation.h>
+	#define MR_SHORTHAND
+	#import "CoreData+MagicalRecord.h"
+#endif

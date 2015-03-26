@@ -16,7 +16,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+	//初始化数据库
+    [MagicalRecord setupCoreDataStackWithStoreNamed:@"DoubanMedia"];
+    
     return YES;
 }
 

@@ -20,12 +20,13 @@
 @property(nonatomic)    UIImageView *logo1ImageView;//logo1
 @property(nonatomic)    UILabel *loginLabel;//登录提示框
 @property(nonatomic)    UITextField *userName;//用户名
+@property(nonatomic)    UILabel *nameError;//不合法提示
 @property(nonatomic)    UITextField *password;//密码
 @property(nonatomic)    UIButton *registerBtn;//跳转注册
 @property(nonatomic)    UITextField *authCode;//验证码
 @property(nonatomic)    UIImageView *authImageView;//验证码图片
 
-@property(nonatomic)    UIButton *commmitLogin;//提交登录
+@property(nonatomic)    UIButton *commitLogin;//提交登录
 @property(nonatomic)    UILabel *loginPrompt;//提示登录
 @property(nonatomic)    UIImageView *logo2ImageView;//logo2
 
@@ -59,21 +60,27 @@
     [_logo1ImageView setImage:[UIImage imageNamed:@"splash_screen_logo.png"]];
     _loginLabel = [[UILabel alloc] initWithFrame:CGRectZero];
     _userName = [[UITextField alloc] initWithFrame:CGRectZero];
+    [_userName setTag:1];
     [_userName setDelegate:self];
+    _nameError = [[UILabel alloc] initWithFrame:CGRectZero];
     _password = [[UITextField alloc] initWithFrame:CGRectZero];
     [_password setSecureTextEntry:YES];
     [_password setDelegate:self];
     _registerBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [_registerBtn addTarget:self action:@selector(gotoRegisterAccount) forControlEvents:UIControlEventTouchUpInside];
+    [_registerBtn addTarget:self action:@selector(gotoRegisterAccount)
+           forControlEvents:UIControlEventTouchUpInside];
     _authCode = [[UITextField alloc] initWithFrame:CGRectZero];
     [_authCode setDelegate:self];
    	_authImageView = [[UIImageView alloc] initWithFrame:CGRectZero];
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(reloadAuthImage)];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self action:@selector(reloadAuthImage)];
     [_authImageView setUserInteractionEnabled:YES];
     [_authImageView setBackgroundColor:DMColor(195, 218, 105, 0.3f)];
     [_authImageView.layer setCornerRadius:3.0f];
     [_authImageView addGestureRecognizer:tap];
-	_commmitLogin = [UIButton buttonWithType:UIButtonTypeCustom];
+	_commitLogin = [UIButton buttonWithType:UIButtonTypeCustom];
+    [_commitLogin addTarget:self action:@selector(beginToLogin)
+           forControlEvents:UIControlEventTouchUpInside];
     _loginPrompt = [[UILabel alloc] initWithFrame:CGRectZero];
     _logo2ImageView = [[UIImageView alloc] initWithFrame:CGRectZero];
     [_logo2ImageView setImage:[UIImage imageNamed:@"splash_screen_wave.png"]];
@@ -82,11 +89,12 @@
     [self.view addSubview:_cancelImageView];
 	[self.view addSubview:_logo1ImageView];
     [self.view addSubview:_userName];
+    [self.view addSubview:_nameError];
     [self.view addSubview:_password];
     [self.view addSubview:_registerBtn];
     [self.view addSubview:_authCode];
     [self.view addSubview:_authImageView];
-    [self.view addSubview:_commmitLogin];
+    [self.view addSubview:_commitLogin];
 	[self.view addSubview:_loginLabel];
     [self.view addSubview:_loginPrompt];
     [self.view addSubview:_logo2ImageView];
@@ -123,13 +131,20 @@
     [self.userName autoPinEdge:ALEdgeRight toEdge:ALEdgeRight ofView:self.view withOffset:-40.0f];
     [self.userName autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.loginLabel withOffset:5.0f];
     [self.userName autoSetDimension:ALDimensionHeight toSize:30.0f];
+	//错误提示框
+    [self.nameError setFont:DMFont(12.0f)];
+    [self.nameError setText:@"    "];
+    [self.nameError setTextColor:[UIColor redColor]];
+    [self.nameError autoPinEdge:ALEdgeRight toEdge:ALEdgeRight ofView:self.view withOffset:-50.0f];
+    [self.nameError setTextAlignment:NSTextAlignmentLeft];
+    [self.nameError autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.userName withOffset:3.0f];
     //密码
     [self.password setPlaceholder:@"密码"];
     [self.password setFont:DMFont(14.0f)];
     [self.password setBorderStyle:UITextBorderStyleRoundedRect];
     [self.password autoPinEdge:ALEdgeLeft toEdge:ALEdgeLeft ofView:self.view withOffset:40.0f];
     [self.password autoPinEdge:ALEdgeRight toEdge:ALEdgeRight ofView:self.view withOffset:-40.0f];
-    [self.password autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.userName withOffset:15.0f];
+    [self.password autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.nameError withOffset:10.0f];
     [self.password autoSetDimension:ALDimensionHeight toSize:30.0f];
     //没有账号
     [self.registerBtn setTitle:@"没有账户？" forState:UIControlStateNormal];
@@ -154,24 +169,24 @@
     [self.authImageView autoSetDimension:ALDimensionWidth toSize:90.0f];
     [self.authImageView autoSetDimension:ALDimensionHeight toSize:30.0f];
     //登录按钮
-    [self.commmitLogin autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.authCode withOffset:23.0f];
-    [self.commmitLogin setTintColor:[UIColor whiteColor]];
-    [self.commmitLogin setTitle:@"登录" forState:UIControlStateNormal];
-    [self.commmitLogin setTitle:@"登录" forState:UIControlStateHighlighted];
-    [self.commmitLogin autoSetDimension:ALDimensionHeight toSize:35.0f];
-    [self.commmitLogin setBackgroundColor:DMColor(35, 131, 50, 0.8f)];
-    [self.commmitLogin autoPinEdge:ALEdgeLeading toEdge:ALEdgeLeading ofView:self.password];
-    [self.commmitLogin autoPinEdge:ALEdgeTrailing toEdge:ALEdgeTrailing ofView:self.password];
+    [self.commitLogin autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.authCode withOffset:23.0f];
+    [self.commitLogin setTintColor:[UIColor whiteColor]];
+    [self.commitLogin setTitle:@"登录" forState:UIControlStateNormal];
+    [self.commitLogin setTitle:@"登录" forState:UIControlStateHighlighted];
+    [self.commitLogin autoSetDimension:ALDimensionHeight toSize:35.0f];
+    [self.commitLogin setBackgroundColor:DMColor(35, 131, 50, 0.8f)];
+    [self.commitLogin autoPinEdge:ALEdgeLeading toEdge:ALEdgeLeading ofView:self.password];
+    [self.commitLogin autoPinEdge:ALEdgeTrailing toEdge:ALEdgeTrailing ofView:self.password];
 
     //提示登录
     [self.loginPrompt autoSetDimension:ALDimensionHeight toSize:20.0f];
     [self.loginPrompt setFont:DMFont(11.0f)];
     [self.loginPrompt setText:@"登录后可以将喜欢的歌曲同步到豆瓣"];
     [self.loginPrompt setTextColor:DMColor(173, 175, 176, 1.0f)];
-    [self.loginPrompt autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.commmitLogin withOffset:5.0f];
-    [self.loginPrompt autoAlignAxis:ALAxisVertical toSameAxisOfView:self.commmitLogin];
-    [self.loginPrompt autoPinEdge:ALEdgeLeading toEdge:ALEdgeLeading ofView:self.commmitLogin];
-    [self.loginPrompt autoPinEdge:ALEdgeTrailing toEdge:ALEdgeTrailing ofView:self.commmitLogin];
+    [self.loginPrompt autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.commitLogin withOffset:5.0f];
+    [self.loginPrompt autoAlignAxis:ALAxisVertical toSameAxisOfView:self.commitLogin];
+    [self.loginPrompt autoPinEdge:ALEdgeLeading toEdge:ALEdgeLeading ofView:self.commitLogin];
+    [self.loginPrompt autoPinEdge:ALEdgeTrailing toEdge:ALEdgeTrailing ofView:self.commitLogin];
     [self.loginPrompt setTextAlignment:NSTextAlignmentCenter];
     //logo2
     [self.logo2ImageView autoAlignAxis:ALAxisVertical toSameAxisOfView:self.logo1ImageView];
@@ -190,7 +205,7 @@
     [self.logo2ImageView autoSetDimension:ALDimensionWidth toSize:logo2Size.width ];
     [self.logo2ImageView autoSetDimension:ALDimensionHeight toSize:logo2Size.height];
     [self.view setNeedsLayout];
-    
+
 }
 
 #pragma mark -- action
@@ -203,27 +218,51 @@
 {
 
 }
+//开始登录
+-(void)beginToLogin
+{
+    NSString *userName = _userName.text;
+    NSString *passWord = _password.text;
+    NSString *authCode = _authCode.text;
+    [loginManager LoginwithUsername:userName Password:passWord Captcha:authCode RememberOnorOff:@"On"];
+    [_commitLogin setEnabled:NO];
+}
+
 #pragma mark ---DMLoginManagerDelegate
 -(void)setCaptchaImageUrl:(NSString *)url
 {
     [self.authImageView setImageWithURL:[NSURL URLWithString:url]];
 }
--(void)loginState:(BOOL)state
+-(void)loginState:(kLoginState)state
 {
-
+    [_commitLogin setEnabled:YES];
 }
 #pragma mark ---TextFiledDelegate
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
 {
+    if (textField.tag == 1)
+    {
+        [self checkMobileNumberOrEmail:textField.text];
+    }
     return YES;
 }
--(BOOL)textFieldShouldClear:(UITextField *)textField
+-(BOOL)textFieldShouldEndEditing:(UITextField *)textField
 {
+    if (textField.tag == 1)
+    {
+         [self checkMobileNumberOrEmail:textField.text];
+    }
     return YES;
 }
 -(void)textFieldDidEndEditing:(UITextField *)textField
 {
     [textField resignFirstResponder];
+
+    if (textField.tag == 1)
+    {
+        [self checkMobileNumberOrEmail:textField.text];
+    }
+
 }
 #pragma mark--Other
 
@@ -232,8 +271,43 @@
     [_userName resignFirstResponder];
     [_password resignFirstResponder];
     [_authCode resignFirstResponder];
+
+    [self checkMobileNumberOrEmail:_userName.text];
+
 }
 
+//检查手机号码和邮箱是否合法
+-(void)checkMobileNumberOrEmail:(NSString *)userName
+{
+    BOOL isRightNumber = [self isValidateMobile:userName];
+    BOOL isRightEmail = [self isValidateEmail:userName];
+    BOOL isValiable =   (isRightEmail || isRightNumber);
+    if (!isValiable)
+    {
+        [self.nameError setText:@"输入邮箱或者手机号码错误"];
+    }
+    else
+    {
+        [self.nameError setText:@"       "];
+    }
+
+}
+/*手机号码验证*/
+-(BOOL) isValidateMobile:(NSString *)mobile
+{
+    //手机号以13， 15，18开头，八个 \d 数字字符
+    NSString *phoneRegex = @"^((13[0-9])|(15[^4,\\D])|(18[0,0-9]))\\d{8}$";
+    NSPredicate *phoneTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",phoneRegex];
+    //    NSLog(@"phoneTest is %@",phoneTest);
+    return [phoneTest evaluateWithObject:mobile];
+}
+/*邮箱验证 */
+-(BOOL)isValidateEmail:(NSString *)email
+{
+    NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
+    return [emailTest evaluateWithObject:email];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
