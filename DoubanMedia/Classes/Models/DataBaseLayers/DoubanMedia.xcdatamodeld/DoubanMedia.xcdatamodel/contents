@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7517.1" systemVersion="14C1510" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="AccountInfo" representedClassName="AccountInfo" syncable="YES">
-        <attribute name="banned" optional="YES" attributeType="Integer 32" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <attribute name="banned" optional="YES" attributeType="String" minValueString="0" syncable="YES"/>
         <attribute name="cookies" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="isNotLogin" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
-        <attribute name="liked" optional="YES" attributeType="Integer 32" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <attribute name="isNotLogin" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="liked" optional="YES" attributeType="String" minValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="played" optional="YES" attributeType="Integer 32" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <attribute name="played" optional="YES" attributeType="String" minValueString="0" syncable="YES"/>
         <attribute name="userId" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="AccountInfo" positionX="-63" positionY="-18" width="128" height="148"/>
+        <element name="AccountInfo" positionX="-63" positionY="-18" width="128" height="150"/>
     </elements>
 </model>

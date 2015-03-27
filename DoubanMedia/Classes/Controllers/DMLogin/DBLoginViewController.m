@@ -12,6 +12,7 @@
 #import "DMLoginManager.h"
 #import <UIKit+AFNetworking.h>
 #import <ReactiveCocoa.h>
+#import "AccountInfo.h"
 @interface DBLoginViewController ()<DMLoginManagerDelegate,UITextFieldDelegate>
 {
     DMLoginManager *loginManager;
@@ -125,7 +126,7 @@
     [self.loginLabel autoSetDimension:ALDimensionHeight toSize:20.0f];
     //用户名
     [self.userName setPlaceholder:@"手机号码/邮箱"];
-    [self.userName setFont:DMFont(14.0f)];
+    [self.userName setFont:DMFont(12.0f)];
     [self.userName setBorderStyle:UITextBorderStyleRoundedRect];
     [self.userName autoPinEdge:ALEdgeLeft toEdge:ALEdgeLeft ofView:self.view withOffset:40.0f];
     [self.userName autoPinEdge:ALEdgeRight toEdge:ALEdgeRight ofView:self.view withOffset:-40.0f];
@@ -140,7 +141,7 @@
     [self.nameError autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.userName withOffset:3.0f];
     //密码
     [self.password setPlaceholder:@"密码"];
-    [self.password setFont:DMFont(14.0f)];
+    [self.password setFont:DMFont(12.0f)];
     [self.password setBorderStyle:UITextBorderStyleRoundedRect];
     [self.password autoPinEdge:ALEdgeLeft toEdge:ALEdgeLeft ofView:self.view withOffset:40.0f];
     [self.password autoPinEdge:ALEdgeRight toEdge:ALEdgeRight ofView:self.view withOffset:-40.0f];
@@ -216,16 +217,39 @@
 //前往注册新账户
 -(void)gotoRegisterAccount
 {
-
+    [loginManager logout];
 }
 //开始登录
 -(void)beginToLogin
 {
+    [_nameError setText:@"     "];
     NSString *userName = _userName.text;
     NSString *passWord = _password.text;
     NSString *authCode = _authCode.text;
+    //除去空字符
+
+    userName = [userName stringByReplacingOccurrencesOfString:@" " withString:@""];
+    passWord = [passWord stringByReplacingOccurrencesOfString:@" " withString:@""];
+    authCode = [authCode stringByReplacingOccurrencesOfString:@" " withString:@""];
+    if (![self checkMobileNumberOrEmail:_userName.text])
+    {  //提示
+        return;
+    }
+    if ([_password.text isEqualToString:@""]||_password.text == nil)
+    {
+        [_password setPlaceholder:@"密码不可为空"];
+        [_password setValue:[UIColor redColor] forKeyPath:@"_placeholderLabel.textColor"];
+        return;
+    }
+    if ([_authCode.text isEqualToString:@""]||_authCode.text == nil)
+    {
+        [_authCode setPlaceholder:@"输入验证码"];
+        [_authCode setValue:[UIColor redColor] forKeyPath:@"_placeholderLabel.textColor"];
+        return;
+    }
     [loginManager LoginwithUsername:userName Password:passWord Captcha:authCode RememberOnorOff:@"On"];
     [_commitLogin setEnabled:NO];
+
 }
 
 #pragma mark ---DMLoginManagerDelegate
@@ -236,6 +260,10 @@
 -(void)loginState:(kLoginState)state
 {
     [_commitLogin setEnabled:YES];
+}
+-(void)logoutState:(kLogoutState)state
+{
+
 }
 #pragma mark ---TextFiledDelegate
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -277,7 +305,7 @@
 }
 
 //检查手机号码和邮箱是否合法
--(void)checkMobileNumberOrEmail:(NSString *)userName
+-(BOOL)checkMobileNumberOrEmail:(NSString *)userName
 {
     BOOL isRightNumber = [self isValidateMobile:userName];
     BOOL isRightEmail = [self isValidateEmail:userName];
@@ -290,7 +318,7 @@
     {
         [self.nameError setText:@"       "];
     }
-
+    return isValiable;
 }
 /*手机号码验证*/
 -(BOOL) isValidateMobile:(NSString *)mobile

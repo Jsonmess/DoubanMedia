@@ -9,6 +9,7 @@
 #ifndef DoubanMedia_DoubanMedia_pch
 #define DoubanMedia_DoubanMedia_pch
 #endif
+
 #define MR_SHORTHAND
 #import "CoreData+MagicalRecord.h"
 

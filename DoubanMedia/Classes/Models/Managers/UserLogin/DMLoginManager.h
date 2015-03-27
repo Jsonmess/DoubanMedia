@@ -14,12 +14,18 @@ typedef NS_ENUM(NSInteger, kLoginState)
     eLoginFaild,
     eLoginError
 };
-
+typedef NS_ENUM(NSInteger, kLogoutState)
+{
+     eLogoutSuccess = 0,
+     eLogoutFaild,
+};
 @protocol DMLoginManagerDelegate<NSObject>
 //传出验证码图片地址
 -(void)setCaptchaImageUrl:(NSString *)url;
 //登录状态
 -(void)loginState:(kLoginState)state;
+//注销状态
+-(void)logoutState:(kLogoutState)state;
 @end
 
 @interface DMLoginManager : NSObject

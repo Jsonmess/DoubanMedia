@@ -18,7 +18,6 @@
 		2976254A1AB675DE00008804 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 297625491AB675DE00008804 /* main.m */; };
 		297625581AB675DE00008804 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 297625571AB675DE00008804 /* Images.xcassets */; };
 		297625671AB675DE00008804 /* DoubanMediaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 297625661AB675DE00008804 /* DoubanMediaTests.m */; };
-		2976E8421AC41E180016DD88 /* AccountInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2976E8411AC41E180016DD88 /* AccountInfo.m */; };
 		2978D1971AC035D4005CB2F3 /* Com_navigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2978D1961AC035D4005CB2F3 /* Com_navigationController.m */; };
 		2978D19C1AC064BC005CB2F3 /* DMFMChannelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2978D19B1AC064BC005CB2F3 /* DMFMChannelController.m */; };
 		2999D9791ABB134400F43C54 /* RootTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2999D9781ABB134400F43C54 /* RootTabView.m */; };
@@ -87,6 +86,7 @@
 		29B4D18F1ABEBE7200899F29 /* setlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 29B4D1511ABEBE7200899F29 /* setlist.plist */; };
 		29B4D1921ABF0D6C00899F29 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B4D1911ABF0D6C00899F29 /* RootViewController.m */; };
 		29BE7A4B1AC1668700963F97 /* DBLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29BE7A4A1AC1668700963F97 /* DBLoginViewController.m */; };
+		29FC25E51AC452870055A770 /* AccountInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 29FC25E41AC452870055A770 /* AccountInfo.m */; };
 		29FC40371ABB0BAA005D97DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29FC40361ABB0BAA005D97DC /* Main.storyboard */; };
 		8A544CE265375C9223304D52 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 8A544F34E9223A3F392A68E8 /* Podfile */; };
 /* End PBXBuildFile section */
@@ -118,8 +118,6 @@
 		297625601AB675DE00008804 /* DoubanMediaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoubanMediaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		297625651AB675DE00008804 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		297625661AB675DE00008804 /* DoubanMediaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoubanMediaTests.m; sourceTree = "<group>"; };
-		2976E8401AC41E180016DD88 /* AccountInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountInfo.h; sourceTree = "<group>"; };
-		2976E8411AC41E180016DD88 /* AccountInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountInfo.m; sourceTree = "<group>"; };
 		2976E8431AC4254C0016DD88 /* DoubanMedia.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoubanMedia.pch; sourceTree = "<group>"; };
 		2978D1951AC035D4005CB2F3 /* Com_navigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Com_navigationController.h; sourceTree = "<group>"; };
 		2978D1961AC035D4005CB2F3 /* Com_navigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Com_navigationController.m; sourceTree = "<group>"; };
@@ -196,6 +194,8 @@
 		29B4D1911ABF0D6C00899F29 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		29BE7A491AC1668700963F97 /* DBLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBLoginViewController.h; sourceTree = "<group>"; };
 		29BE7A4A1AC1668700963F97 /* DBLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBLoginViewController.m; sourceTree = "<group>"; };
+		29FC25E31AC452870055A770 /* AccountInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountInfo.h; sourceTree = "<group>"; };
+		29FC25E41AC452870055A770 /* AccountInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountInfo.m; sourceTree = "<group>"; };
 		29FC40361ABB0BAA005D97DC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		62EFE6757B0D7C97578719DC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		8A544F34E9223A3F392A68E8 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -353,8 +353,8 @@
 		296F47171AC188E800231873 /* ObjectModels */ = {
 			isa = PBXGroup;
 			children = (
-				2976E8401AC41E180016DD88 /* AccountInfo.h */,
-				2976E8411AC41E180016DD88 /* AccountInfo.m */,
+				29FC25E31AC452870055A770 /* AccountInfo.h */,
+				29FC25E41AC452870055A770 /* AccountInfo.m */,
 			);
 			path = ObjectModels;
 			sourceTree = "<group>";
@@ -849,7 +849,7 @@
 				2953C8B11AC2E02B00F62F07 /* DMLoginManager.m in Sources */,
 				2940BB031AB87F3C00D1069A /* AppDelegate.m in Sources */,
 				2976254A1AB675DE00008804 /* main.m in Sources */,
-				2976E8421AC41E180016DD88 /* AccountInfo.m in Sources */,
+				29FC25E51AC452870055A770 /* AccountInfo.m in Sources */,
 				2999D9791ABB134400F43C54 /* RootTabView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

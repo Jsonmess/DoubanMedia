@@ -18,7 +18,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
 	//初始化数据库
-    [MagicalRecord setupCoreDataStackWithStoreNamed:@"DoubanMedia"];
+    [MagicalRecord setupCoreDataStackWithStoreNamed:@"DoubanMedia.sqlite"];
     
     return YES;
 }

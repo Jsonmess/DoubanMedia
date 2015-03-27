@@ -8,11 +8,12 @@
 
 #import "DMLoginManager.h"
 #import <AFNetworking.h>
-
+#import "AccountInfo.h"
 @interface DMLoginManager()
 {
     AFHTTPRequestOperationManager *OperationManager;
     NSString *captchaID ;//验证码序列
+    AccountInfo *userInfo;//用户信息
 
 }
 @end
@@ -72,6 +73,7 @@
         {
             [self.loginDelegate loginState:eLoginSuccess];
             //保存用户数据到数据库
+            [self saveUserInfoToDataBase:tempLoginInfoDictionary];
         }
         else{
 			//登录失败
@@ -81,26 +83,62 @@
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         //网络故障或者未知错误
         [self.loginDelegate loginState:eLoginError];
+        [self getCaptchaImageFromDM];
     }];
 }
 //注销操作
 -(void)logout
 {
-//    NSDictionary *logoutParameters = @{@"source": @"radio",
-//                                       @"ck": appDelegate.userInfo.cookies,
-//                                       @"no_login": @"y"};
-//    NSString *logoutURL = @"http://douban.fm/partner/logout";
-//    manager.requestSerializer = [AFJSONRequestSerializer serializer];
-//    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-//    [manager GET:logoutURL parameters:logoutParameters success:^(AFHTTPRequestOperation *operation,
-//   id responseObject) {
-//        NSLog(@"LOGOUT_SUCCESSFUL");
-//        appDelegate.userInfo = [[UserInfo alloc]init];
-//        [appDelegate.userInfo archiverUserInfo];
-//        [self.delegate logoutSuccess];
-//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-//        NSLog(@"LOGOUT_ERROR:%@",error);
-//    }];
+    //查询数据库
+ NSArray *users = [AccountInfo MR_findAll];
+    if (users.count <= 0 )
+    {
+        NSLog(@"您还未登陆");
+        //跳转到登陆界面
+    }
+    else
+    {
+        //执行注销并删除数据
+        userInfo = [users firstObject];
+
+    NSDictionary *logoutParameters = @{@"source": @"radio",
+                                       @"ck": userInfo.cookies,
+                                       @"no_login": @"y"};
+    NSString *logoutURL = @"http://douban.fm/partner/logout";
+ OperationManager.requestSerializer = [AFJSONRequestSerializer serializer];
+    OperationManager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    [OperationManager GET:logoutURL parameters:logoutParameters
+                  success:^(AFHTTPRequestOperation *operation,id responseObject)
+        {
+       			 NSLog(@"成功注销 ");
+            [self.loginDelegate logoutState:eLogoutSuccess];
+            [userInfo MR_deleteEntity];
+            [userInfo.managedObjectContext MR_saveToPersistentStoreAndWait];
+
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error)
+     {
+         [self.loginDelegate logoutState:eLogoutFaild];
+        NSLog(@"LOGOUT_ERROR:%@",error);
+    }];
+
+    }
 }
 
+//保存信息到数据库
+-(void)saveUserInfoToDataBase:(NSDictionary *)dictionary
+{
+    userInfo = [AccountInfo MR_createEntity];
+    NSString *loginStateCode = [[dictionary valueForKey:@"r"] stringValue];
+    userInfo.isNotLogin =loginStateCode;
+    NSDictionary *temp =[dictionary valueForKey:@"user_info"];
+    userInfo.cookies =[temp valueForKey:@"ck"];
+    userInfo.userId =[temp valueForKey:@"id"];
+    userInfo.name = [temp valueForKey:@"name"];
+    NSDictionary *playRecordDic = [temp valueForKey:@"play_record"];
+    userInfo.banned =[NSString stringWithFormat:@"%@",[playRecordDic valueForKey:@"banned"]];
+    userInfo.liked = [NSString stringWithFormat:@"%@",[playRecordDic valueForKey:@"liked"]];
+    userInfo.played = [NSString stringWithFormat:@"%@",[playRecordDic valueForKey:@"played"]];
+    [userInfo.managedObjectContext MR_saveToPersistentStoreWithCompletion:nil];
+
+}
 @end
