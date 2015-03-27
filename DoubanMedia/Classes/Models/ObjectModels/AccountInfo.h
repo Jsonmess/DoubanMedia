@@ -12,12 +12,12 @@
 
 @interface AccountInfo : NSManagedObject
 
-@property (nonatomic, retain) NSString * userId;
-@property (nonatomic, retain) NSString * name;
+@property (nonatomic, retain) NSString * banned;
 @property (nonatomic, retain) NSString * cookies;
-@property (nonatomic, retain) NSNumber * banned;
-@property (nonatomic, retain) NSNumber * liked;
-@property (nonatomic, retain) NSNumber * played;
-@property (nonatomic, retain) NSNumber * isNotLogin;
+@property (nonatomic, retain) NSString * isNotLogin;
+@property (nonatomic, retain) NSString * liked;
+@property (nonatomic, retain) NSString * name;
+@property (nonatomic, retain) NSString * played;
+@property (nonatomic, retain) NSString * userId;
 
 @end

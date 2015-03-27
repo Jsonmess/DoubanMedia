@@ -11,12 +11,12 @@
 
 @implementation AccountInfo
 
-@dynamic userId;
-@dynamic name;
-@dynamic cookies;
 @dynamic banned;
-@dynamic liked;
-@dynamic played;
+@dynamic cookies;
 @dynamic isNotLogin;
+@dynamic liked;
+@dynamic name;
+@dynamic played;
+@dynamic userId;
 
 @end
