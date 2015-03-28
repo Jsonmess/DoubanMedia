@@ -7,10 +7,12 @@
 //
 
 #import "DMFMChannelController.h"
-
-@interface DMFMChannelController ()
+#import "BaseTableView.h"
+#import "DMFMTableViewCell.h"
+@interface DMFMChannelController ()<UITableViewDataSource,UITableViewDelegate>
 
 @end
+static NSString *reuseCell = @"FMChannelCell";
 
 @implementation DMFMChannelController
 
@@ -27,6 +29,13 @@
 -(void)setUpView
 {
     [self setTitle:@"豆瓣FM"];
+    CGRect frame = (CGRect){{0,0},{self.view.bounds.size.width,self.view.bounds.size.height -kTabbarHeight}};
+    BaseTableView *fmTableView = [[BaseTableView alloc] initWithFrame:frame
+                                                    style:UITableViewStylePlain ];
+
+    [fmTableView setDataSource:self];
+    [fmTableView setDelegate:self];
+	[self.view addSubview: fmTableView];
 
 }
 #pragma mark - Table view data source
@@ -43,21 +52,29 @@
 }
 
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-	static NSString *reuseStr = @"fmCell";
+- (DMFMTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
 
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseStr];
+    DMFMTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseCell];
     if (cell == nil)
     {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseStr];
+        cell = [[DMFMTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+                                        reuseIdentifier:reuseCell];
     }
-    
-    // Configure the cell...
-    
+
+    [cell setCellContent:@"频道兆赫" isCurrentPlay:YES isDouBanRed:YES];
     return cell;
 }
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 54.0f;
+}
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
 
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

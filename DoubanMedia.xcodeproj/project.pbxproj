@@ -21,6 +21,11 @@
 		2978D1971AC035D4005CB2F3 /* Com_navigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2978D1961AC035D4005CB2F3 /* Com_navigationController.m */; };
 		2978D19C1AC064BC005CB2F3 /* DMFMChannelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2978D19B1AC064BC005CB2F3 /* DMFMChannelController.m */; };
 		2999D9791ABB134400F43C54 /* RootTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2999D9781ABB134400F43C54 /* RootTabView.m */; };
+		29A35B081AC6624900C2C2ED /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A35B071AC6624900C2C2ED /* BaseTableViewCell.m */; };
+		29A35B0B1AC6879200C2C2ED /* UIImage+DMResizeImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A35B0A1AC6879200C2C2ED /* UIImage+DMResizeImage.m */; };
+		29A35B0E1AC68DEF00C2C2ED /* BaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A35B0D1AC68DEF00C2C2ED /* BaseTableView.m */; };
+		29A35B121AC698F200C2C2ED /* DMFMTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A35B111AC698F200C2C2ED /* DMFMTableViewCell.m */; };
+		29A35B141AC6A3A100C2C2ED /* redMusicIncon.png in Resources */ = {isa = PBXBuildFile; fileRef = 29A35B131AC6A3A100C2C2ED /* redMusicIncon.png */; };
 		29B4D1081ABEBCA300899F29 /* TabItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B4D1071ABEBCA300899F29 /* TabItem.m */; };
 		29B4D1521ABEBE7200899F29 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 29B4D10C1ABEBE7200899F29 /* Default-568h@2x.png */; };
 		29B4D1531ABEBE7200899F29 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 29B4D10D1ABEBE7200899F29 /* Default.png */; };
@@ -126,6 +131,15 @@
 		2999D9761ABB12BA00F43C54 /* DMGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMGlobal.h; sourceTree = "<group>"; };
 		2999D9771ABB134400F43C54 /* RootTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTabView.h; sourceTree = "<group>"; };
 		2999D9781ABB134400F43C54 /* RootTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTabView.m; sourceTree = "<group>"; };
+		29A35B061AC6624900C2C2ED /* BaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
+		29A35B071AC6624900C2C2ED /* BaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCell.m; sourceTree = "<group>"; };
+		29A35B091AC6879200C2C2ED /* UIImage+DMResizeImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+DMResizeImage.h"; sourceTree = "<group>"; };
+		29A35B0A1AC6879200C2C2ED /* UIImage+DMResizeImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+DMResizeImage.m"; sourceTree = "<group>"; };
+		29A35B0C1AC68DEF00C2C2ED /* BaseTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableView.h; sourceTree = "<group>"; };
+		29A35B0D1AC68DEF00C2C2ED /* BaseTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableView.m; sourceTree = "<group>"; };
+		29A35B101AC698F200C2C2ED /* DMFMTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMFMTableViewCell.h; sourceTree = "<group>"; };
+		29A35B111AC698F200C2C2ED /* DMFMTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMFMTableViewCell.m; sourceTree = "<group>"; };
+		29A35B131AC6A3A100C2C2ED /* redMusicIncon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redMusicIncon.png; sourceTree = "<group>"; };
 		29B4D1061ABEBCA300899F29 /* TabItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabItem.h; sourceTree = "<group>"; };
 		29B4D1071ABEBCA300899F29 /* TabItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabItem.m; sourceTree = "<group>"; };
 		29B4D10C1ABEBE7200899F29 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -249,6 +263,8 @@
 				2978D1961AC035D4005CB2F3 /* Com_navigationController.m */,
 				2940BAF31AB87F3C00D1069A /* AppDelegate */,
 				2999D9761ABB12BA00F43C54 /* DMGlobal.h */,
+				29A35B091AC6879200C2C2ED /* UIImage+DMResizeImage.h */,
+				29A35B0A1AC6879200C2C2ED /* UIImage+DMResizeImage.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -426,6 +442,15 @@
 			path = DMFM;
 			sourceTree = "<group>";
 		};
+		29A35B0F1AC698BC00C2C2ED /* DMFM */ = {
+			isa = PBXGroup;
+			children = (
+				29A35B101AC698F200C2C2ED /* DMFMTableViewCell.h */,
+				29A35B111AC698F200C2C2ED /* DMFMTableViewCell.m */,
+			);
+			path = DMFM;
+			sourceTree = "<group>";
+		};
 		29B4D1091ABEBE7200899F29 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -529,6 +554,7 @@
 		29B4D1371ABEBE7200899F29 /* MusicInfo */ = {
 			isa = PBXGroup;
 			children = (
+				29A35B131AC6A3A100C2C2ED /* redMusicIncon.png */,
 				29B4D1381ABEBE7200899F29 /* CoverIcon.jpg */,
 				29B4D1391ABEBE7200899F29 /* Dock_play.png */,
 				29B4D13A1ABEBE7200899F29 /* musicincon.png */,
@@ -589,7 +615,12 @@
 		29FC40381ABB0C0D005D97DC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				29A35B0F1AC698BC00C2C2ED /* DMFM */,
 				29FC40391ABB0C0D005D97DC /* DMHome */,
+				29A35B061AC6624900C2C2ED /* BaseTableViewCell.h */,
+				29A35B071AC6624900C2C2ED /* BaseTableViewCell.m */,
+				29A35B0C1AC68DEF00C2C2ED /* BaseTableView.h */,
+				29A35B0D1AC68DEF00C2C2ED /* BaseTableView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -770,6 +801,7 @@
 				29B4D16F1ABEBE7200899F29 /* Nav_play.png in Resources */,
 				29B4D1541ABEBE7200899F29 /* Default@2x.png in Resources */,
 				29B4D1871ABEBE7200899F29 /* home_my@2x.png in Resources */,
+				29A35B141AC6A3A100C2C2ED /* redMusicIncon.png in Resources */,
 				29B4D1651ABEBE7200899F29 /* BtnDel@2x.png in Resources */,
 				29B4D1811ABEBE7200899F29 /* surge_top.png in Resources */,
 				29B4D17C1ABEBE7200899F29 /* new_top.png in Resources */,
@@ -846,11 +878,15 @@
 				29BE7A4B1AC1668700963F97 /* DBLoginViewController.m in Sources */,
 				2978D19C1AC064BC005CB2F3 /* DMFMChannelController.m in Sources */,
 				2940BB051AB87F3C00D1069A /* DoubanMedia.xcdatamodeld in Sources */,
+				29A35B0E1AC68DEF00C2C2ED /* BaseTableView.m in Sources */,
 				2953C8B11AC2E02B00F62F07 /* DMLoginManager.m in Sources */,
 				2940BB031AB87F3C00D1069A /* AppDelegate.m in Sources */,
+				29A35B081AC6624900C2C2ED /* BaseTableViewCell.m in Sources */,
 				2976254A1AB675DE00008804 /* main.m in Sources */,
+				29A35B0B1AC6879200C2C2ED /* UIImage+DMResizeImage.m in Sources */,
 				29FC25E51AC452870055A770 /* AccountInfo.m in Sources */,
 				2999D9791ABB134400F43C54 /* RootTabView.m in Sources */,
+				29A35B121AC698F200C2C2ED /* DMFMTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
