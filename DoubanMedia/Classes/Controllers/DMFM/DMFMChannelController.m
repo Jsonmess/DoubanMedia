@@ -9,32 +9,73 @@
 #import "DMFMChannelController.h"
 #import "BaseTableView.h"
 #import "DMFMTableViewCell.h"
+#import "DMFMUserHeaderView.h"
+#import "DMChannelManager.h"
+#import "AccountInfo.h"
 @interface DMFMChannelController ()<UITableViewDataSource,UITableViewDelegate>
+{
+    DMChannelManager *networkManager;
 
+}
 @end
 static NSString *reuseCell = @"FMChannelCell";
 
 @implementation DMFMChannelController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
+    [self commonInit];
     [super viewDidLoad];
     [self setUpView];
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    //在此处获取频道列表，为加载数据做准备
+    [self getChannelInfo];
 
+}
+-(void)commonInit
+{
+    networkManager = [[ DMChannelManager alloc] init];
+}
+-(void)getChannelInfo
+{
+    //推荐兆赫
+    //查询数据，用户是否登录
+    NSArray *users = [AccountInfo MR_findAll];
+    if (users.count <= 0)
+    {
+        [networkManager getChannel:1 withURLWithString:@"http://douban.fm/j/explore/get_recommend_chl"];
+    }
+    else
+    {
+        AccountInfo *user = [users firstObject];
+
+        if (user.cookies == nil)
+        {
+            [networkManager getChannel:1 withURLWithString:@"http://douban.fm/j/explore/get_recommend_chl"];
+        }
+        else{
+            [networkManager getChannel:1 withURLWithString:
+            [NSString stringWithFormat:@"http://douban.fm/j/explore/get_login_chls?uk=%@",user.userId]];
+        }
+    }
+    //上升最快的兆赫
+    [networkManager getChannel:2 withURLWithString:@"http://douban.fm/j/explore/up_trending_channels"];
+    //热门兆赫
+    [networkManager getChannel:3 withURLWithString:@"http://douban.fm/j/explore/hot_channels"];
+}
 -(void)setUpView
 {
     [self setTitle:@"豆瓣FM"];
     CGRect frame = (CGRect){{0,0},{self.view.bounds.size.width,self.view.bounds.size.height -kTabbarHeight}};
     BaseTableView *fmTableView = [[BaseTableView alloc] initWithFrame:frame
-                                                    style:UITableViewStylePlain ];
+                                                    style:UITableViewStylePlain];
 
     [fmTableView setDataSource:self];
     [fmTableView setDelegate:self];
+    [fmTableView setSeparatorInset:UIEdgeInsetsMake(0, 0, 5.0f, 0)];
 	[self.view addSubview: fmTableView];
 
 }
@@ -75,48 +116,21 @@ static NSString *reuseCell = @"FMChannelCell";
 
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+-(DMFMUserHeaderView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    DMFMUserHeaderView *view = [[DMFMUserHeaderView alloc]
+                                initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 30)];
+    [view setBackgroundColor:DMColor(230, 230, 230, 0.8f)];
+    [view setHeadViewContent:@"测试" Image:[UIImage imageNamed:@"user_normal.jpg"]];
+
+    return view;
 }
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 30.0f;
 }
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return 1.0f;
 }
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end

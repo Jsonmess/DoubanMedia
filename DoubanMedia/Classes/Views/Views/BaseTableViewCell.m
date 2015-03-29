@@ -26,6 +26,7 @@
                                       [UIImage ResizeThePicture:@"cell_bg@2x.png"
                                               WithUIEdgeInserts: UIEdgeInsetsMake(10, 10, 10, 10)
                                                    resizingMode:UIImageResizingModeStretch]];
+
     }
     return self;
 }

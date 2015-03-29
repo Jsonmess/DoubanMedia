@@ -7,20 +7,65 @@
 //
 
 #import "AppDelegate.h"
-
+#import "FMChannel.h"
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
 	//初始化数据库
     [MagicalRecord setupCoreDataStackWithStoreNamed:@"DoubanMedia.sqlite"];
+    //频道分类
+    [self initTheChannels];
     
     return YES;
+}
+//初始化频道分类
+-(void)initTheChannels
+{
+     _channels = [NSMutableArray array];
+    //初始化数据源Array----0
+    NSArray *fmarray = @[@"我的兆赫",@"推荐频道",@"上升最快兆赫",@"热门兆赫"];
+    //我的兆赫
+    NSMutableDictionary *myPrivate = [NSMutableDictionary dictionary];
+    NSMutableArray *subChannels = [NSMutableArray array];
+    FMChannel *myPrivateChannel = [FMChannel MR_createEntity];
+    myPrivateChannel.channelName = @"我的私人";
+    myPrivateChannel.channelID = @"0";
+    myPrivateChannel.section = 0;//查询标记
+    FMChannel *myRedheartChannel = [FMChannel MR_createEntity];
+    myRedheartChannel.channelName = @"我的红心";
+    myRedheartChannel.channelID = @"-3";
+    myRedheartChannel.section = 0;//查询标记
+    [myPrivate setValue:fmarray[0] forKey:@"section"];
+    [subChannels addObject:myPrivateChannel];
+    [subChannels addObject:myRedheartChannel];
+    [myPrivate setObject:subChannels forKey:@"subChannels"];
+    [_channels addObject:myPrivate];
+
+
+    //推荐兆赫------1
+    NSMutableArray *recommendChannels = [NSMutableArray array];
+    NSMutableDictionary *recommend = [NSMutableDictionary dictionary];
+    [recommend setValue:fmarray[1] forKey:@"section"];
+    [recommend setObject:recommendChannels forKey:@"subChannels"];
+    [_channels addObject:recommend];
+    //上升最快兆赫-----2
+    NSMutableArray *upTrendingChannels = [NSMutableArray array];
+    NSMutableDictionary *upTrending = [NSMutableDictionary dictionary];
+    [upTrending setValue:fmarray[2] forKey:@"section"];
+    [upTrending setObject:upTrendingChannels forKey:@"subChannels"];
+    [_channels addObject:upTrending];
+    //热门兆赫------3
+    NSMutableArray *hotChannels = [NSMutableArray array];
+    NSMutableDictionary *hot = [NSMutableDictionary dictionary];
+    [hot setValue:fmarray[3] forKey:@"section"];
+    [hot setObject:hotChannels forKey:@"subChannels"];
+    [_channels addObject:hot];
+
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

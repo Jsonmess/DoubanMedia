@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface DMFMUserHeaderView : UIView
-
+-(void)setHeadViewContent:(NSString *)title Image:(UIImage *)image;
 @end

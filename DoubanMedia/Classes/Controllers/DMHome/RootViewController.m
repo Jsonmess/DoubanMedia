@@ -109,17 +109,16 @@
 }
 -(NSArray *)theSourceOfItemNormalIcons
 {
-    return @[@"home_my.png",@"morePage_musicRecognizer.png",
-             @"home_film.png",@"morePage_setting.png"];
+    return @[@"home_fm.png",@"home_film.png",
+             @"home_mm.png",@"morePage_setting.png"];
 }
 -(NSArray *)theSourceOfItemTitles
 {
-    return @[@"豆瓣FM",@"豆瓣音乐",@"豆瓣电影",@"应用设置"];
+    return @[@"豆瓣FM",@"豆瓣电影",@"豆瓣妹纸",@"应用设置"];
 }
 -(NSArray*)theSourceOfItemSelectedIcons
 {
-    return @[@"home_my.png",@"morePage_musicRecognizer.png",
-             @"home_film.png",@"morePage_setting.png"];
+    return @[@"home_fm.png",@"home_film.png",@"home_mm.png",@"morePage_setting.png"];
 }
 -(UIImage *)theSourceOfTabbarBackGroundImage
 {

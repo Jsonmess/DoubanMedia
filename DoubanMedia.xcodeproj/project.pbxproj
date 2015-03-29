@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		1B95DDCBFA3C0E32FBAA006C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 91578B2819DE2AD8A3EE13F1 /* libPods.a */; };
+		29141D6C1AC703E100FDDC85 /* home_mm@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 29141D6B1AC703E100FDDC85 /* home_mm@2x.png */; };
+		29141D6E1AC7070200FDDC85 /* home_fm@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 29141D6D1AC7070200FDDC85 /* home_fm@2x.png */; };
+		29141D771AC7A8E400FDDC85 /* FMChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 29141D761AC7A8E400FDDC85 /* FMChannel.m */; };
+		29141D7B1AC7ABB100FDDC85 /* DMChannelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 29141D7A1AC7ABB100FDDC85 /* DMChannelManager.m */; };
 		2940BB031AB87F3C00D1069A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2940BAF51AB87F3C00D1069A /* AppDelegate.m */; };
 		2940BB051AB87F3C00D1069A /* DoubanMedia.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2940BAFB1AB87F3C00D1069A /* DoubanMedia.xcdatamodeld */; };
 		2940BB071AB87F3C00D1069A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2940BB021AB87F3C00D1069A /* LaunchScreen.xib */; };
@@ -26,6 +30,7 @@
 		29A35B0E1AC68DEF00C2C2ED /* BaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A35B0D1AC68DEF00C2C2ED /* BaseTableView.m */; };
 		29A35B121AC698F200C2C2ED /* DMFMTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A35B111AC698F200C2C2ED /* DMFMTableViewCell.m */; };
 		29A35B141AC6A3A100C2C2ED /* redMusicIncon.png in Resources */ = {isa = PBXBuildFile; fileRef = 29A35B131AC6A3A100C2C2ED /* redMusicIncon.png */; };
+		29A35B171AC6D5D700C2C2ED /* DMFMUserHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A35B161AC6D5D700C2C2ED /* DMFMUserHeaderView.m */; };
 		29B4D1081ABEBCA300899F29 /* TabItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B4D1071ABEBCA300899F29 /* TabItem.m */; };
 		29B4D1521ABEBE7200899F29 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 29B4D10C1ABEBE7200899F29 /* Default-568h@2x.png */; };
 		29B4D1531ABEBE7200899F29 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 29B4D10D1ABEBE7200899F29 /* Default.png */; };
@@ -80,8 +85,6 @@
 		29B4D1841ABEBE7200899F29 /* Settingforward_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 29B4D1441ABEBE7200899F29 /* Settingforward_pressed@2x.png */; };
 		29B4D1851ABEBE7200899F29 /* user_normal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 29B4D1451ABEBE7200899F29 /* user_normal.jpg */; };
 		29B4D1861ABEBE7200899F29 /* home_film@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 29B4D1471ABEBE7200899F29 /* home_film@2x.png */; };
-		29B4D1871ABEBE7200899F29 /* home_my@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 29B4D1481ABEBE7200899F29 /* home_my@2x.png */; };
-		29B4D1881ABEBE7200899F29 /* morePage_musicRecognizer@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 29B4D1491ABEBE7200899F29 /* morePage_musicRecognizer@2x.png */; };
 		29B4D1891ABEBE7200899F29 /* morePage_setting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 29B4D14A1ABEBE7200899F29 /* morePage_setting@2x.png */; };
 		29B4D18A1ABEBE7200899F29 /* TabBar_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 29B4D14B1ABEBE7200899F29 /* TabBar_bg@2x.png */; };
 		29B4D18B1ABEBE7200899F29 /* TabBarItem_Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 29B4D14C1ABEBE7200899F29 /* TabBarItem_Selected@2x.png */; };
@@ -107,6 +110,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		29141D6B1AC703E100FDDC85 /* home_mm@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_mm@2x.png"; sourceTree = "<group>"; };
+		29141D6D1AC7070200FDDC85 /* home_fm@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_fm@2x.png"; sourceTree = "<group>"; };
+		29141D751AC7A8E400FDDC85 /* FMChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMChannel.h; sourceTree = "<group>"; };
+		29141D761AC7A8E400FDDC85 /* FMChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMChannel.m; sourceTree = "<group>"; };
+		29141D791AC7ABB100FDDC85 /* DMChannelManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMChannelManager.h; sourceTree = "<group>"; };
+		29141D7A1AC7ABB100FDDC85 /* DMChannelManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMChannelManager.m; sourceTree = "<group>"; };
 		2940BAF41AB87F3C00D1069A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2940BAF51AB87F3C00D1069A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		2940BAFC1AB87F3C00D1069A /* DoubanMedia.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DoubanMedia.xcdatamodel; sourceTree = "<group>"; };
@@ -140,6 +149,8 @@
 		29A35B101AC698F200C2C2ED /* DMFMTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMFMTableViewCell.h; sourceTree = "<group>"; };
 		29A35B111AC698F200C2C2ED /* DMFMTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMFMTableViewCell.m; sourceTree = "<group>"; };
 		29A35B131AC6A3A100C2C2ED /* redMusicIncon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redMusicIncon.png; sourceTree = "<group>"; };
+		29A35B151AC6D5D700C2C2ED /* DMFMUserHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMFMUserHeaderView.h; sourceTree = "<group>"; };
+		29A35B161AC6D5D700C2C2ED /* DMFMUserHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMFMUserHeaderView.m; sourceTree = "<group>"; };
 		29B4D1061ABEBCA300899F29 /* TabItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabItem.h; sourceTree = "<group>"; };
 		29B4D1071ABEBCA300899F29 /* TabItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabItem.m; sourceTree = "<group>"; };
 		29B4D10C1ABEBE7200899F29 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -195,8 +206,6 @@
 		29B4D1441ABEBE7200899F29 /* Settingforward_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Settingforward_pressed@2x.png"; sourceTree = "<group>"; };
 		29B4D1451ABEBE7200899F29 /* user_normal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = user_normal.jpg; sourceTree = "<group>"; };
 		29B4D1471ABEBE7200899F29 /* home_film@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_film@2x.png"; sourceTree = "<group>"; };
-		29B4D1481ABEBE7200899F29 /* home_my@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_my@2x.png"; sourceTree = "<group>"; };
-		29B4D1491ABEBE7200899F29 /* morePage_musicRecognizer@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "morePage_musicRecognizer@2x.png"; sourceTree = "<group>"; };
 		29B4D14A1ABEBE7200899F29 /* morePage_setting@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "morePage_setting@2x.png"; sourceTree = "<group>"; };
 		29B4D14B1ABEBE7200899F29 /* TabBar_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TabBar_bg@2x.png"; sourceTree = "<group>"; };
 		29B4D14C1ABEBE7200899F29 /* TabBarItem_Selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TabBarItem_Selected@2x.png"; sourceTree = "<group>"; };
@@ -236,6 +245,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		29141D781AC7AB9300FDDC85 /* ChannelList */ = {
+			isa = PBXGroup;
+			children = (
+				29141D791AC7ABB100FDDC85 /* DMChannelManager.h */,
+				29141D7A1AC7ABB100FDDC85 /* DMChannelManager.m */,
+			);
+			path = ChannelList;
+			sourceTree = "<group>";
+		};
 		2940BAF01AB87F3C00D1069A /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -352,6 +370,7 @@
 		296F47151AC188E800231873 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				29141D781AC7AB9300FDDC85 /* ChannelList */,
 				296F47161AC188E800231873 /* UserLogin */,
 			);
 			path = Managers;
@@ -371,6 +390,8 @@
 			children = (
 				29FC25E31AC452870055A770 /* AccountInfo.h */,
 				29FC25E41AC452870055A770 /* AccountInfo.m */,
+				29141D751AC7A8E400FDDC85 /* FMChannel.h */,
+				29141D761AC7A8E400FDDC85 /* FMChannel.m */,
 			);
 			path = ObjectModels;
 			sourceTree = "<group>";
@@ -447,6 +468,8 @@
 			children = (
 				29A35B101AC698F200C2C2ED /* DMFMTableViewCell.h */,
 				29A35B111AC698F200C2C2ED /* DMFMTableViewCell.m */,
+				29A35B151AC6D5D700C2C2ED /* DMFMUserHeaderView.h */,
+				29A35B161AC6D5D700C2C2ED /* DMFMUserHeaderView.m */,
 			);
 			path = DMFM;
 			sourceTree = "<group>";
@@ -582,9 +605,9 @@
 		29B4D1461ABEBE7200899F29 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				29141D6D1AC7070200FDDC85 /* home_fm@2x.png */,
 				29B4D1471ABEBE7200899F29 /* home_film@2x.png */,
-				29B4D1481ABEBE7200899F29 /* home_my@2x.png */,
-				29B4D1491ABEBE7200899F29 /* morePage_musicRecognizer@2x.png */,
+				29141D6B1AC703E100FDDC85 /* home_mm@2x.png */,
 				29B4D14A1ABEBE7200899F29 /* morePage_setting@2x.png */,
 				29B4D14B1ABEBE7200899F29 /* TabBar_bg@2x.png */,
 				29B4D14C1ABEBE7200899F29 /* TabBarItem_Selected@2x.png */,
@@ -768,6 +791,7 @@
 				29B4D1671ABEBE7200899F29 /* BtnLike@2x.png in Resources */,
 				29B4D1801ABEBE7200899F29 /* red_top.png in Resources */,
 				296F47131AC187B500231873 /* splash_screen_logo.png in Resources */,
+				29141D6E1AC7070200FDDC85 /* home_fm@2x.png in Resources */,
 				29B4D16E1ABEBE7200899F29 /* FMPlayBg@2x.png in Resources */,
 				29B4D15D1ABEBE7200899F29 /* l_star_white@2x.png in Resources */,
 				29B4D17B1ABEBE7200899F29 /* musicincon.png in Resources */,
@@ -781,7 +805,6 @@
 				29B4D1531ABEBE7200899F29 /* Default.png in Resources */,
 				29B4D1831ABEBE7200899F29 /* Back_Setting.png in Resources */,
 				29B4D1741ABEBE7200899F29 /* play_sound@2x.png in Resources */,
-				29B4D1881ABEBE7200899F29 /* morePage_musicRecognizer@2x.png in Resources */,
 				297625581AB675DE00008804 /* Images.xcassets in Resources */,
 				29B4D1721ABEBE7200899F29 /* play_CoverMaskRing@2x.png in Resources */,
 				29B4D1821ABEBE7200899F29 /* Author.jpg in Resources */,
@@ -800,7 +823,6 @@
 				29B4D17F1ABEBE7200899F29 /* radio_top.png in Resources */,
 				29B4D16F1ABEBE7200899F29 /* Nav_play.png in Resources */,
 				29B4D1541ABEBE7200899F29 /* Default@2x.png in Resources */,
-				29B4D1871ABEBE7200899F29 /* home_my@2x.png in Resources */,
 				29A35B141AC6A3A100C2C2ED /* redMusicIncon.png in Resources */,
 				29B4D1651ABEBE7200899F29 /* BtnDel@2x.png in Resources */,
 				29B4D1811ABEBE7200899F29 /* surge_top.png in Resources */,
@@ -812,6 +834,7 @@
 				29B4D18D1ABEBE7200899F29 /* channels.plist in Resources */,
 				29B4D1691ABEBE7200899F29 /* BtnNext@2x.png in Resources */,
 				29B4D18E1ABEBE7200899F29 /* Music_ranking.plist in Resources */,
+				29141D6C1AC703E100FDDC85 /* home_mm@2x.png in Resources */,
 				29B4D1631ABEBE7200899F29 /* starIcon.png in Resources */,
 				29B4D1771ABEBE7200899F29 /* start.png in Resources */,
 				29B4D15B1ABEBE7200899F29 /* l_star_half@2x.png in Resources */,
@@ -876,8 +899,11 @@
 				29B4D1081ABEBCA300899F29 /* TabItem.m in Sources */,
 				29B4D1921ABF0D6C00899F29 /* RootViewController.m in Sources */,
 				29BE7A4B1AC1668700963F97 /* DBLoginViewController.m in Sources */,
+				29141D7B1AC7ABB100FDDC85 /* DMChannelManager.m in Sources */,
 				2978D19C1AC064BC005CB2F3 /* DMFMChannelController.m in Sources */,
 				2940BB051AB87F3C00D1069A /* DoubanMedia.xcdatamodeld in Sources */,
+				29141D771AC7A8E400FDDC85 /* FMChannel.m in Sources */,
+				29A35B171AC6D5D700C2C2ED /* DMFMUserHeaderView.m in Sources */,
 				29A35B0E1AC68DEF00C2C2ED /* BaseTableView.m in Sources */,
 				2953C8B11AC2E02B00F62F07 /* DMLoginManager.m in Sources */,
 				2940BB031AB87F3C00D1069A /* AppDelegate.m in Sources */,
