@@ -25,6 +25,7 @@
 		2978D19C1AC064BC005CB2F3 /* DMFMChannelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2978D19B1AC064BC005CB2F3 /* DMFMChannelController.m */; };
 		297AE74D1ACA4FA90037448C /* FMChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 297AE74C1ACA4FA90037448C /* FMChannel.m */; };
 		297AE7521ACAC14F0037448C /* DBMusicPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 297AE7511ACAC14F0037448C /* DBMusicPlayerController.m */; };
+		297AE7941ACADE080037448C /* AlbumRoundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 297AE7931ACADE080037448C /* AlbumRoundView.m */; };
 		2999D9791ABB134400F43C54 /* RootTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2999D9781ABB134400F43C54 /* RootTabView.m */; };
 		29A35B081AC6624900C2C2ED /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A35B071AC6624900C2C2ED /* BaseTableViewCell.m */; };
 		29A35B0B1AC6879200C2C2ED /* UIImage+DMResizeImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A35B0A1AC6879200C2C2ED /* UIImage+DMResizeImage.m */; };
@@ -140,6 +141,8 @@
 		297AE74C1ACA4FA90037448C /* FMChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMChannel.m; sourceTree = "<group>"; };
 		297AE7501ACAC14F0037448C /* DBMusicPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBMusicPlayerController.h; sourceTree = "<group>"; };
 		297AE7511ACAC14F0037448C /* DBMusicPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBMusicPlayerController.m; sourceTree = "<group>"; };
+		297AE7921ACADE080037448C /* AlbumRoundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumRoundView.h; sourceTree = "<group>"; };
+		297AE7931ACADE080037448C /* AlbumRoundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumRoundView.m; sourceTree = "<group>"; };
 		2999D9761ABB12BA00F43C54 /* DMGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMGlobal.h; sourceTree = "<group>"; };
 		2999D9771ABB134400F43C54 /* RootTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTabView.h; sourceTree = "<group>"; };
 		2999D9781ABB134400F43C54 /* RootTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTabView.m; sourceTree = "<group>"; };
@@ -460,6 +463,8 @@
 		2978D1991AC059AC005CB2F3 /* DMFM */ = {
 			isa = PBXGroup;
 			children = (
+				297AE7921ACADE080037448C /* AlbumRoundView.h */,
+				297AE7931ACADE080037448C /* AlbumRoundView.m */,
 				2978D19A1AC064BC005CB2F3 /* DMFMChannelController.h */,
 				2978D19B1AC064BC005CB2F3 /* DMFMChannelController.m */,
 				297AE7501ACAC14F0037448C /* DBMusicPlayerController.h */,
@@ -919,6 +924,7 @@
 				29FC25E51AC452870055A770 /* AccountInfo.m in Sources */,
 				2999D9791ABB134400F43C54 /* RootTabView.m in Sources */,
 				29A35B121AC698F200C2C2ED /* DMFMTableViewCell.m in Sources */,
+				297AE7941ACADE080037448C /* AlbumRoundView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
