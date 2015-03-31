@@ -6,14 +6,14 @@
 //  Copyright (c) 2015年 jsonmess. All rights reserved.
 //
 
-#import "DBLoginViewController.h"
+#import "DMLoginViewController.h"
 #import "PureLayout.h"
 #import "DMGlobal.h"
 #import "DMLoginManager.h"
 #import <UIKit+AFNetworking.h>
 #import <ReactiveCocoa.h>
 #import "AccountInfo.h"
-@interface DBLoginViewController ()<DMLoginManagerDelegate,UITextFieldDelegate>
+@interface DMLoginViewController ()<DMLoginManagerDelegate,UITextFieldDelegate>
 {
     DMLoginManager *loginManager;
 }
@@ -34,7 +34,7 @@
 
 @end
 
-@implementation DBLoginViewController
+@implementation DMLoginViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

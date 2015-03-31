@@ -6,15 +6,16 @@
 //  Copyright (c) 2015年 jsonmess. All rights reserved.
 //
 
-#import "DBMusicPlayerController.h"
+#import "DMMusicPlayerController.h"
 
-@interface DBMusicPlayerController ()
+@interface DMMusicPlayerController ()
 
 @end
 
-@implementation DBMusicPlayerController
+@implementation DMMusicPlayerController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }

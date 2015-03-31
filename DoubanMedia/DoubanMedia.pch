@@ -20,4 +20,5 @@
 #import "DMGlobal.h"
 #define MR_SHORTHAND
 #import <CoreData+MagicalRecord.h>
+#import <ReactiveCocoa.h>
 #endif

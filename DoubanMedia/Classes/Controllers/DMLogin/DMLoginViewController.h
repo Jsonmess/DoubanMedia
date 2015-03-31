@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DBLoginViewController : UIViewController
+@interface DMLoginViewController : UIViewController
 
 @end

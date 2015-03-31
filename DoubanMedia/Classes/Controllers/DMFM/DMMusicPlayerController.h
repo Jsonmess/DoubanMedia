@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DBMusicPlayerController : UIViewController
+@interface DMMusicPlayerController : UIViewController
 
 @end
