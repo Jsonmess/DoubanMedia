@@ -24,6 +24,8 @@
 		2978D1971AC035D4005CB2F3 /* Com_navigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2978D1961AC035D4005CB2F3 /* Com_navigationController.m */; };
 		2978D19C1AC064BC005CB2F3 /* DMFMChannelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2978D19B1AC064BC005CB2F3 /* DMFMChannelController.m */; };
 		297AE74D1ACA4FA90037448C /* FMChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 297AE74C1ACA4FA90037448C /* FMChannel.m */; };
+		297AE7521ACAC14F0037448C /* DMMusicPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 297AE7511ACAC14F0037448C /* DMMusicPlayerController.m */; };
+		297AE7941ACADE080037448C /* AlbumRoundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 297AE7931ACADE080037448C /* AlbumRoundView.m */; };
 		2999D9791ABB134400F43C54 /* RootTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2999D9781ABB134400F43C54 /* RootTabView.m */; };
 		29A35B081AC6624900C2C2ED /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A35B071AC6624900C2C2ED /* BaseTableViewCell.m */; };
 		29A35B0B1AC6879200C2C2ED /* UIImage+DMResizeImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A35B0A1AC6879200C2C2ED /* UIImage+DMResizeImage.m */; };
@@ -93,7 +95,8 @@
 		29B4D18E1ABEBE7200899F29 /* Music_ranking.plist in Resources */ = {isa = PBXBuildFile; fileRef = 29B4D1501ABEBE7200899F29 /* Music_ranking.plist */; };
 		29B4D18F1ABEBE7200899F29 /* setlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 29B4D1511ABEBE7200899F29 /* setlist.plist */; };
 		29B4D1921ABF0D6C00899F29 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B4D1911ABF0D6C00899F29 /* RootViewController.m */; };
-		29BE7A4B1AC1668700963F97 /* DBLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29BE7A4A1AC1668700963F97 /* DBLoginViewController.m */; };
+		29BE7A4B1AC1668700963F97 /* DMLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29BE7A4A1AC1668700963F97 /* DMLoginViewController.m */; };
+		29D07B891ACAF33F00B3D69E /* DMPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D07B881ACAF33F00B3D69E /* DMPlayerView.m */; };
 		29FC25E51AC452870055A770 /* AccountInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 29FC25E41AC452870055A770 /* AccountInfo.m */; };
 		29FC40371ABB0BAA005D97DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29FC40361ABB0BAA005D97DC /* Main.storyboard */; };
 		8A544CE265375C9223304D52 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 8A544F34E9223A3F392A68E8 /* Podfile */; };
@@ -137,6 +140,10 @@
 		2978D19B1AC064BC005CB2F3 /* DMFMChannelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMFMChannelController.m; sourceTree = "<group>"; };
 		297AE74B1ACA4FA90037448C /* FMChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMChannel.h; sourceTree = "<group>"; };
 		297AE74C1ACA4FA90037448C /* FMChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMChannel.m; sourceTree = "<group>"; };
+		297AE7501ACAC14F0037448C /* DMMusicPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMMusicPlayerController.h; sourceTree = "<group>"; };
+		297AE7511ACAC14F0037448C /* DMMusicPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMMusicPlayerController.m; sourceTree = "<group>"; };
+		297AE7921ACADE080037448C /* AlbumRoundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumRoundView.h; sourceTree = "<group>"; };
+		297AE7931ACADE080037448C /* AlbumRoundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumRoundView.m; sourceTree = "<group>"; };
 		2999D9761ABB12BA00F43C54 /* DMGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMGlobal.h; sourceTree = "<group>"; };
 		2999D9771ABB134400F43C54 /* RootTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTabView.h; sourceTree = "<group>"; };
 		2999D9781ABB134400F43C54 /* RootTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTabView.m; sourceTree = "<group>"; };
@@ -215,8 +222,10 @@
 		29B4D1511ABEBE7200899F29 /* setlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = setlist.plist; sourceTree = "<group>"; };
 		29B4D1901ABF0D6C00899F29 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		29B4D1911ABF0D6C00899F29 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		29BE7A491AC1668700963F97 /* DBLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBLoginViewController.h; sourceTree = "<group>"; };
-		29BE7A4A1AC1668700963F97 /* DBLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBLoginViewController.m; sourceTree = "<group>"; };
+		29BE7A491AC1668700963F97 /* DMLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMLoginViewController.h; sourceTree = "<group>"; };
+		29BE7A4A1AC1668700963F97 /* DMLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMLoginViewController.m; sourceTree = "<group>"; };
+		29D07B871ACAF33F00B3D69E /* DMPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMPlayerView.h; sourceTree = "<group>"; };
+		29D07B881ACAF33F00B3D69E /* DMPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMPlayerView.m; sourceTree = "<group>"; };
 		29FC25E31AC452870055A770 /* AccountInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountInfo.h; sourceTree = "<group>"; };
 		29FC25E41AC452870055A770 /* AccountInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountInfo.m; sourceTree = "<group>"; };
 		29FC40361ABB0BAA005D97DC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -457,8 +466,12 @@
 		2978D1991AC059AC005CB2F3 /* DMFM */ = {
 			isa = PBXGroup;
 			children = (
+				297AE7921ACADE080037448C /* AlbumRoundView.h */,
+				297AE7931ACADE080037448C /* AlbumRoundView.m */,
 				2978D19A1AC064BC005CB2F3 /* DMFMChannelController.h */,
 				2978D19B1AC064BC005CB2F3 /* DMFMChannelController.m */,
+				297AE7501ACAC14F0037448C /* DMMusicPlayerController.h */,
+				297AE7511ACAC14F0037448C /* DMMusicPlayerController.m */,
 			);
 			path = DMFM;
 			sourceTree = "<group>";
@@ -470,6 +483,8 @@
 				29A35B111AC698F200C2C2ED /* DMFMTableViewCell.m */,
 				29A35B151AC6D5D700C2C2ED /* DMFMUserHeaderView.h */,
 				29A35B161AC6D5D700C2C2ED /* DMFMUserHeaderView.m */,
+				29D07B871ACAF33F00B3D69E /* DMPlayerView.h */,
+				29D07B881ACAF33F00B3D69E /* DMPlayerView.m */,
 			);
 			path = DMFM;
 			sourceTree = "<group>";
@@ -629,8 +644,8 @@
 		29BE7A481AC1663000963F97 /* DMLogin */ = {
 			isa = PBXGroup;
 			children = (
-				29BE7A491AC1668700963F97 /* DBLoginViewController.h */,
-				29BE7A4A1AC1668700963F97 /* DBLoginViewController.m */,
+				29BE7A491AC1668700963F97 /* DMLoginViewController.h */,
+				29BE7A4A1AC1668700963F97 /* DMLoginViewController.m */,
 			);
 			path = DMLogin;
 			sourceTree = "<group>";
@@ -899,13 +914,15 @@
 				29B4D1081ABEBCA300899F29 /* TabItem.m in Sources */,
 				297AE74D1ACA4FA90037448C /* FMChannel.m in Sources */,
 				29B4D1921ABF0D6C00899F29 /* RootViewController.m in Sources */,
-				29BE7A4B1AC1668700963F97 /* DBLoginViewController.m in Sources */,
+				29BE7A4B1AC1668700963F97 /* DMLoginViewController.m in Sources */,
 				29141D7B1AC7ABB100FDDC85 /* DMChannelManager.m in Sources */,
 				2978D19C1AC064BC005CB2F3 /* DMFMChannelController.m in Sources */,
 				2940BB051AB87F3C00D1069A /* DoubanMedia.xcdatamodeld in Sources */,
 				29A35B171AC6D5D700C2C2ED /* DMFMUserHeaderView.m in Sources */,
 				29A35B0E1AC68DEF00C2C2ED /* BaseTableView.m in Sources */,
+				29D07B891ACAF33F00B3D69E /* DMPlayerView.m in Sources */,
 				2953C8B11AC2E02B00F62F07 /* DMLoginManager.m in Sources */,
+				297AE7521ACAC14F0037448C /* DMMusicPlayerController.m in Sources */,
 				2940BB031AB87F3C00D1069A /* AppDelegate.m in Sources */,
 				29A35B081AC6624900C2C2ED /* BaseTableViewCell.m in Sources */,
 				2976254A1AB675DE00008804 /* main.m in Sources */,
@@ -913,6 +930,7 @@
 				29FC25E51AC452870055A770 /* AccountInfo.m in Sources */,
 				2999D9791ABB134400F43C54 /* RootTabView.m in Sources */,
 				29A35B121AC698F200C2C2ED /* DMFMTableViewCell.m in Sources */,
+				297AE7941ACADE080037448C /* AlbumRoundView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -952,8 +970,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Qiang Zhu (N3YQQZE5KP)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Qiang Zhu (N3YQQZE5KP)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -974,7 +992,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "0b8d70c3-de2f-4482-84f0-ef9f97a71e49";
+				PROVISIONING_PROFILE = "00cad6bc-43b7-465d-9776-059ec5ad3c3f";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -996,8 +1014,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Qiang Zhu (N3YQQZE5KP)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Qiang Zhu (N3YQQZE5KP)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -1011,7 +1029,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "0b8d70c3-de2f-4482-84f0-ef9f97a71e49";
+				PROVISIONING_PROFILE = "00cad6bc-43b7-465d-9776-059ec5ad3c3f";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1023,14 +1041,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Qiang Zhu (N3YQQZE5KP)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Qiang Zhu (N3YQQZE5KP)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/DoubanMedia/DoubanMedia.pch";
 				INFOPLIST_FILE = DoubanMedia/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "00cad6bc-43b7-465d-9776-059ec5ad3c3f";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1041,13 +1060,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Qiang Zhu (N3YQQZE5KP)";
+				CODE_SIGN_IDENTITY = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/DoubanMedia/DoubanMedia.pch";
 				INFOPLIST_FILE = DoubanMedia/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "00cad6bc-43b7-465d-9776-059ec5ad3c3f";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
