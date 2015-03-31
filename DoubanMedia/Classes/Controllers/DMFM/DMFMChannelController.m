@@ -12,10 +12,15 @@
 #import "DMFMUserHeaderView.h"
 #import "DMChannelManager.h"
 #import "AccountInfo.h"
-@interface DMFMChannelController ()<UITableViewDataSource,UITableViewDelegate>
+#import "AppDelegate.h"
+#import "FMChannel.h"
+@interface DMFMChannelController ()<UITableViewDataSource,UITableViewDelegate,DMChannelDelegate,NSFetchedResultsControllerDelegate>
 {
     DMChannelManager *networkManager;
-
+        AppDelegate *appDelegate;
+    BaseTableView *fmTableView;
+    NSArray *dataSource;
+    NSFetchedResultsController *fectchedController;
 }
 @end
 static NSString *reuseCell = @"FMChannelCell";
@@ -24,20 +29,25 @@ static NSString *reuseCell = @"FMChannelCell";
 
 - (void)viewDidLoad
 {
-    [self commonInit];
     [super viewDidLoad];
+	[self commonInit];
     [self setUpView];
+    //在此处获取频道列表，为加载数据做准备
+    [self getChannelInfo];
 }
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    //在此处获取频道列表，为加载数据做准备
-    [self getChannelInfo];
-
 }
 -(void)commonInit
 {
+    //在此处获取频道列表，为加载数据做准备
+    [self getChannelInfo];
     networkManager = [[ DMChannelManager alloc] init];
+    [networkManager setDelegate:self];
+    appDelegate = [UIApplication sharedApplication].delegate;
+
+
 }
 -(void)getChannelInfo
 {
@@ -65,12 +75,13 @@ static NSString *reuseCell = @"FMChannelCell";
     [networkManager getChannel:2 withURLWithString:@"http://douban.fm/j/explore/up_trending_channels"];
     //热门兆赫
     [networkManager getChannel:3 withURLWithString:@"http://douban.fm/j/explore/hot_channels"];
+    [fmTableView reloadData];
 }
 -(void)setUpView
 {
     [self setTitle:@"豆瓣FM"];
     CGRect frame = (CGRect){{0,0},{self.view.bounds.size.width,self.view.bounds.size.height -kTabbarHeight}};
-    BaseTableView *fmTableView = [[BaseTableView alloc] initWithFrame:frame
+   fmTableView = [[BaseTableView alloc] initWithFrame:frame
                                                     style:UITableViewStylePlain];
 
     [fmTableView setDataSource:self];
@@ -83,13 +94,13 @@ static NSString *reuseCell = @"FMChannelCell";
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return 5;
+    return [fectchedController sections].count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
     // Return the number of rows in the section.
-    return 5;
+    return [[[fectchedController sections] objectAtIndex:section] numberOfObjects];
 }
 
 
@@ -102,10 +113,21 @@ static NSString *reuseCell = @"FMChannelCell";
         cell = [[DMFMTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
                                         reuseIdentifier:reuseCell];
     }
+    FMChannel *channel = [fectchedController objectAtIndexPath:indexPath];
+    if (indexPath.section == 0 && indexPath.row == 1)
+    {
+        [cell setCellContent: channel.channelName isDouBanRed:YES];
+    }
+    else
+    {
+        [cell setCellContent:channel.channelName isDouBanRed:NO];
+    }
 
-    [cell setCellContent:@"频道兆赫" isCurrentPlay:YES isDouBanRed:YES];
+
+
     return cell;
 }
+
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 54.0f;
@@ -121,7 +143,14 @@ static NSString *reuseCell = @"FMChannelCell";
     DMFMUserHeaderView *view = [[DMFMUserHeaderView alloc]
                                 initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 30)];
     [view setBackgroundColor:DMColor(230, 230, 230, 0.8f)];
-    [view setHeadViewContent:@"测试" Image:[UIImage imageNamed:@"user_normal.jpg"]];
+    //设置head 数据
+    NSString *title = appDelegate.channels[section][@"section"];
+    NSString *imagefile;
+    if (section == 0)
+    {
+		imagefile = @"user_normal.jpg";
+    }
+    [view setHeadViewContent:title Image:[UIImage imageNamed:imagefile]];
 
     return view;
 }
@@ -132,5 +161,20 @@ static NSString *reuseCell = @"FMChannelCell";
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
     return 1.0f;
+}
+#pragma mark --delegate
+-(void)shouldReloadData:(BOOL)isReadFromLocal
+{
+	//重新查询数据库
+    fectchedController = [FMChannel MR_fetchAllGroupedBy:@"section" withPredicate:nil sortedBy:@"section" ascending:YES];
+    [fectchedController setDelegate:self];
+    if (isReadFromLocal)
+    {
+        [fmTableView reloadData];
+    }
+}
+-(void)controllerDidChangeContent:(NSFetchedResultsController *)controller
+{
+    [fmTableView reloadData];
 }
 @end

@@ -10,7 +10,6 @@
 		1B95DDCBFA3C0E32FBAA006C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 91578B2819DE2AD8A3EE13F1 /* libPods.a */; };
 		29141D6C1AC703E100FDDC85 /* home_mm@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 29141D6B1AC703E100FDDC85 /* home_mm@2x.png */; };
 		29141D6E1AC7070200FDDC85 /* home_fm@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 29141D6D1AC7070200FDDC85 /* home_fm@2x.png */; };
-		29141D771AC7A8E400FDDC85 /* FMChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 29141D761AC7A8E400FDDC85 /* FMChannel.m */; };
 		29141D7B1AC7ABB100FDDC85 /* DMChannelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 29141D7A1AC7ABB100FDDC85 /* DMChannelManager.m */; };
 		2940BB031AB87F3C00D1069A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2940BAF51AB87F3C00D1069A /* AppDelegate.m */; };
 		2940BB051AB87F3C00D1069A /* DoubanMedia.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2940BAFB1AB87F3C00D1069A /* DoubanMedia.xcdatamodeld */; };
@@ -24,6 +23,7 @@
 		297625671AB675DE00008804 /* DoubanMediaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 297625661AB675DE00008804 /* DoubanMediaTests.m */; };
 		2978D1971AC035D4005CB2F3 /* Com_navigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2978D1961AC035D4005CB2F3 /* Com_navigationController.m */; };
 		2978D19C1AC064BC005CB2F3 /* DMFMChannelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2978D19B1AC064BC005CB2F3 /* DMFMChannelController.m */; };
+		297AE74D1ACA4FA90037448C /* FMChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 297AE74C1ACA4FA90037448C /* FMChannel.m */; };
 		2999D9791ABB134400F43C54 /* RootTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2999D9781ABB134400F43C54 /* RootTabView.m */; };
 		29A35B081AC6624900C2C2ED /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A35B071AC6624900C2C2ED /* BaseTableViewCell.m */; };
 		29A35B0B1AC6879200C2C2ED /* UIImage+DMResizeImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A35B0A1AC6879200C2C2ED /* UIImage+DMResizeImage.m */; };
@@ -112,8 +112,6 @@
 /* Begin PBXFileReference section */
 		29141D6B1AC703E100FDDC85 /* home_mm@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_mm@2x.png"; sourceTree = "<group>"; };
 		29141D6D1AC7070200FDDC85 /* home_fm@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_fm@2x.png"; sourceTree = "<group>"; };
-		29141D751AC7A8E400FDDC85 /* FMChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMChannel.h; sourceTree = "<group>"; };
-		29141D761AC7A8E400FDDC85 /* FMChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMChannel.m; sourceTree = "<group>"; };
 		29141D791AC7ABB100FDDC85 /* DMChannelManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMChannelManager.h; sourceTree = "<group>"; };
 		29141D7A1AC7ABB100FDDC85 /* DMChannelManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMChannelManager.m; sourceTree = "<group>"; };
 		2940BAF41AB87F3C00D1069A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -137,6 +135,8 @@
 		2978D1961AC035D4005CB2F3 /* Com_navigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Com_navigationController.m; sourceTree = "<group>"; };
 		2978D19A1AC064BC005CB2F3 /* DMFMChannelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMFMChannelController.h; sourceTree = "<group>"; };
 		2978D19B1AC064BC005CB2F3 /* DMFMChannelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMFMChannelController.m; sourceTree = "<group>"; };
+		297AE74B1ACA4FA90037448C /* FMChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMChannel.h; sourceTree = "<group>"; };
+		297AE74C1ACA4FA90037448C /* FMChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMChannel.m; sourceTree = "<group>"; };
 		2999D9761ABB12BA00F43C54 /* DMGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMGlobal.h; sourceTree = "<group>"; };
 		2999D9771ABB134400F43C54 /* RootTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTabView.h; sourceTree = "<group>"; };
 		2999D9781ABB134400F43C54 /* RootTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTabView.m; sourceTree = "<group>"; };
@@ -390,8 +390,8 @@
 			children = (
 				29FC25E31AC452870055A770 /* AccountInfo.h */,
 				29FC25E41AC452870055A770 /* AccountInfo.m */,
-				29141D751AC7A8E400FDDC85 /* FMChannel.h */,
-				29141D761AC7A8E400FDDC85 /* FMChannel.m */,
+				297AE74B1ACA4FA90037448C /* FMChannel.h */,
+				297AE74C1ACA4FA90037448C /* FMChannel.m */,
 			);
 			path = ObjectModels;
 			sourceTree = "<group>";
@@ -897,12 +897,12 @@
 			files = (
 				2978D1971AC035D4005CB2F3 /* Com_navigationController.m in Sources */,
 				29B4D1081ABEBCA300899F29 /* TabItem.m in Sources */,
+				297AE74D1ACA4FA90037448C /* FMChannel.m in Sources */,
 				29B4D1921ABF0D6C00899F29 /* RootViewController.m in Sources */,
 				29BE7A4B1AC1668700963F97 /* DBLoginViewController.m in Sources */,
 				29141D7B1AC7ABB100FDDC85 /* DMChannelManager.m in Sources */,
 				2978D19C1AC064BC005CB2F3 /* DMFMChannelController.m in Sources */,
 				2940BB051AB87F3C00D1069A /* DoubanMedia.xcdatamodeld in Sources */,
-				29141D771AC7A8E400FDDC85 /* FMChannel.m in Sources */,
 				29A35B171AC6D5D700C2C2ED /* DMFMUserHeaderView.m in Sources */,
 				29A35B0E1AC68DEF00C2C2ED /* BaseTableView.m in Sources */,
 				2953C8B11AC2E02B00F62F07 /* DMLoginManager.m in Sources */,

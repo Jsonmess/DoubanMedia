@@ -10,5 +10,6 @@
 
 @interface DMFMTableViewCell : BaseTableViewCell
 //设置cell内容
--(void)setCellContent:(NSString *)title isCurrentPlay:(BOOL)isPlay isDouBanRed:(BOOL)isRed;
+-(void)setCellContent:(NSString *)title isDouBanRed:(BOOL)isRed;
+-(void)isNowPlayChannel:(BOOL)isPlay;
 @end

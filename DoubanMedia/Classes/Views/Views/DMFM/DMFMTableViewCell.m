@@ -24,6 +24,7 @@
     if (self)
     {
         [self setUpView];
+
     }
     return self;
 }
@@ -60,21 +61,30 @@
     [self setNeedsLayout];
 }
 //设置cell内容
--(void)setCellContent:(NSString *)title isCurrentPlay:(BOOL)isPlay isDouBanRed:(BOOL)isRed
+-(void)setCellContent:(NSString *)title isDouBanRed:(BOOL)isRed
 {
     [channelTitle setText:title];
     //是否是豆瓣红心
     if (isRed)
     {
 		[channelTitle setTextColor:DMColor(251, 22, 55, 1.0f)];
-		[mhz setTextColor:DMColor(251, 22, 55, 1.0f)];
+        mhz.textColor = channelTitle.textColor;
         [currentPlay setImage:[UIImage imageNamed:@"redMusicIncon.png"]];
     }
+    else
+    {
+        [channelTitle setTextColor:DMColor(180, 182, 182, 1.0f)];
+        [mhz setTextColor:channelTitle.textColor];
+        [currentPlay setImage:[UIImage imageNamed:@"musicincon.png"]];
+    }
+    
+    [self setNeedsLayout];
+}
+-(void)isNowPlayChannel:(BOOL)isPlay
+{
     if (isPlay)
     {
         [currentPlay setHidden:NO];
     }
-    [self setNeedsLayout];
 }
-
 @end

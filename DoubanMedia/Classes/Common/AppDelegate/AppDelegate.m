@@ -9,7 +9,10 @@
 #import "AppDelegate.h"
 #import "FMChannel.h"
 @interface AppDelegate ()
+{
 
+    NSManagedObjectContext *firstContext;
+}
 @end
 
 @implementation AppDelegate
@@ -29,24 +32,13 @@
      _channels = [NSMutableArray array];
     //初始化数据源Array----0
     NSArray *fmarray = @[@"我的兆赫",@"推荐频道",@"上升最快兆赫",@"热门兆赫"];
-    //我的兆赫
-    NSMutableDictionary *myPrivate = [NSMutableDictionary dictionary];
-    NSMutableArray *subChannels = [NSMutableArray array];
-    FMChannel *myPrivateChannel = [FMChannel MR_createEntity];
-    myPrivateChannel.channelName = @"我的私人";
-    myPrivateChannel.channelID = @"0";
-    myPrivateChannel.section = 0;//查询标记
-    FMChannel *myRedheartChannel = [FMChannel MR_createEntity];
-    myRedheartChannel.channelName = @"我的红心";
-    myRedheartChannel.channelID = @"-3";
-    myRedheartChannel.section = 0;//查询标记
-    [myPrivate setValue:fmarray[0] forKey:@"section"];
-    [subChannels addObject:myPrivateChannel];
-    [subChannels addObject:myRedheartChannel];
-    [myPrivate setObject:subChannels forKey:@"subChannels"];
-    [_channels addObject:myPrivate];
 
-
+	//我的兆赫
+    NSMutableArray *privateChannels = [NSMutableArray array];
+    NSMutableDictionary *private = [NSMutableDictionary dictionary];
+    [private setValue:fmarray[0] forKey:@"section"];
+    [private setObject:privateChannels forKey:@"subChannels"];
+    [_channels addObject:private];
     //推荐兆赫------1
     NSMutableArray *recommendChannels = [NSMutableArray array];
     NSMutableDictionary *recommend = [NSMutableDictionary dictionary];

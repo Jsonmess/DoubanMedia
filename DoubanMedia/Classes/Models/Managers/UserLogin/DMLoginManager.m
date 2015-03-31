@@ -15,6 +15,7 @@
     NSString *captchaID ;//验证码序列
     AccountInfo *userInfo;//用户信息
 
+
 }
 @end
 @implementation DMLoginManager

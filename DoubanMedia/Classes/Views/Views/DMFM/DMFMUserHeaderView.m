@@ -33,8 +33,7 @@
     [userIcon setContentMode:UIViewContentModeScaleAspectFit];
     [self addSubview:userName];
     [self addSubview:userIcon];
-    [userName setFont:DMFont(16.0f)];
-    [userName setTextColor:DMColor(74, 217, 57, 0.8f)];
+    [userName setTextColor:DMColor(120, 122, 122, 1.0f)];
     [userIcon autoSetDimension:ALDimensionHeight toSize:20.0f];
     [userIcon autoSetDimension:ALDimensionWidth toSize:20.0f];
     [userIcon.layer setCornerRadius:10.0f];
@@ -42,7 +41,7 @@
     [userIcon autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
     [userIcon autoPinEdge:ALEdgeLeading toEdge:ALEdgeLeading ofView:self withOffset:20.0f];
 
-    [userName autoPinEdge:ALEdgeLeading toEdge:ALEdgeTrailing ofView:userIcon withOffset:10.0f];
+    [userName autoPinEdge:ALEdgeLeading toEdge:ALEdgeTrailing ofView:userIcon withOffset:8.0f];
     [userName autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
 
     [self setNeedsLayout];
@@ -61,8 +60,10 @@
     }
     else
     {
-		[userName setFont:DMFont(16.0f)];
+		[userName setFont:DMFont(12.0f)];
         [userIcon setHidden:YES];
+        [userIcon autoSetDimension:ALDimensionHeight toSize:2.0f];
+        [userIcon autoSetDimension:ALDimensionWidth toSize:2.0f];
     }
     [self setNeedsLayout];
 }

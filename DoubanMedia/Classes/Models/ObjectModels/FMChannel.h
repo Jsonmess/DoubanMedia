@@ -2,7 +2,7 @@
 //  FMChannel.h
 //  DoubanMedia
 //
-//  Created by jsonmess on 15/3/29.
+//  Created by jsonmess on 15/3/31.
 //  Copyright (c) 2015年 jsonmess. All rights reserved.
 //
 
@@ -14,7 +14,6 @@
 
 @property (nonatomic, retain) NSString * channelID;
 @property (nonatomic, retain) NSString * channelName;
-@property (nonatomic, retain) NSNumber * isSelected;
 @property (nonatomic, retain) NSNumber * section;
 -(void)setChannelDictionary:(NSDictionary *)dic ChannelSection:(NSInteger)section;
 @end

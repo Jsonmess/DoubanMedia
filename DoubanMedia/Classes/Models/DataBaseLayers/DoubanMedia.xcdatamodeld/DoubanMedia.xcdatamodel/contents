@@ -12,11 +12,10 @@
     <entity name="FMChannel" representedClassName="FMChannel" syncable="YES">
         <attribute name="channelID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="channelName" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="isSelected" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="section" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
     </entity>
     <elements>
         <element name="AccountInfo" positionX="-63" positionY="-18" width="128" height="150"/>
-        <element name="FMChannel" positionX="-63" positionY="36" width="128" height="105"/>
+        <element name="FMChannel" positionX="-63" positionY="36" width="128" height="90"/>
     </elements>
 </model>
