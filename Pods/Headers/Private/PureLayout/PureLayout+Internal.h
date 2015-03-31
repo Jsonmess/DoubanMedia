@@ -1,1 +1,1 @@
-../../../PureLayout/PureLayout/PureLayout/PureLayout+Internal.h
+../../../PureLayout/Source/PureLayout+Internal.h

@@ -62,8 +62,6 @@
     {
 		[userName setFont:DMFont(12.0f)];
         [userIcon setHidden:YES];
-        [userIcon autoSetDimension:ALDimensionHeight toSize:2.0f];
-        [userIcon autoSetDimension:ALDimensionWidth toSize:2.0f];
     }
     [self setNeedsLayout];
 }

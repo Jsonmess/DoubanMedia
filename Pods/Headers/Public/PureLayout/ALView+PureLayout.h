@@ -1,1 +1,1 @@
-../../../PureLayout/PureLayout/PureLayout/ALView+PureLayout.h
+../../../PureLayout/Source/ALView+PureLayout.h

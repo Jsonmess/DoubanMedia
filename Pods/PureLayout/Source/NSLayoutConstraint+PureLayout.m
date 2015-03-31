@@ -1,9 +1,9 @@
 //
 //  NSLayoutConstraint+PureLayout.m
-//  v2.0.5
+//  v2.0.4
 //  https://github.com/smileyborg/PureLayout
 //
-//  Copyright (c) 2013-2015 Tyler Fox
+//  Copyright (c) 2013-2014 Tyler Fox
 //
 //  This code is distributed under the terms and conditions of the MIT license.
 //
@@ -107,16 +107,16 @@
 
 /**
  Sets the string as the identifier for this constraint. Available in iOS 7.0 and OS X 10.9 and later.
- The identifier will be printed along with the constraint's description.
+ The identifer will be printed along with the constraint's description.
  This is helpful to document a constraint's purpose and aid in debugging.
  
  @param identifier A string used to identify this constraint.
  @return This constraint.
  */
-- (instancetype)autoIdentify:(NSString *)identifier
+- (instancetype)autoIdentify:(NSString *)identifer
 {
     if ([self respondsToSelector:@selector(setIdentifier:)]) {
-        self.identifier = identifier;
+        self.identifier = identifer;
     }
     return self;
 }

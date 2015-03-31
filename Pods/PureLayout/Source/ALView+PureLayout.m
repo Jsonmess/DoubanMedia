@@ -1,10 +1,10 @@
 //
 //  ALView+PureLayout.m
-//  v2.0.5
+//  v2.0.4
 //  https://github.com/smileyborg/PureLayout
 //
 //  Copyright (c) 2012 Richard Turton
-//  Copyright (c) 2013-2015 Tyler Fox
+//  Copyright (c) 2013-2014 Tyler Fox
 //
 //  This code is distributed under the terms and conditions of the MIT license.
 //
@@ -235,19 +235,19 @@ static NSMutableArray *_al_globalConstraintIdentifiers = nil;
  NOTE: This method will have no effect (and will NOT set the identifier) on constraints created or added
  without using the PureLayout API!
  
- @param identifier A string used to identify all constraints created in the constraints block.
+ @param identifer A string used to identify all constraints created in the constraints block.
  @param block A block of method calls to the PureLayout API that create and install constraints.
  */
-+ (void)autoSetIdentifier:(NSString *)identifier forConstraints:(ALConstraintsBlock)block
++ (void)autoSetIdentifier:(NSString *)identifer forConstraints:(ALConstraintsBlock)block
 {
     NSAssert(block, @"The constraints block cannot be nil.");
-    NSAssert(identifier, @"The identifier string cannot be nil.");
+    NSAssert(identifer, @"The identifier string cannot be nil.");
     if (block) {
-        if (identifier) {
-            [[self al_globalConstraintIdentifiers] addObject:identifier];
+        if (identifer) {
+            [[self al_globalConstraintIdentifiers] addObject:identifer];
         }
         block();
-        if (identifier) {
+        if (identifer) {
             [[self al_globalConstraintIdentifiers] removeLastObject];
         }
     }

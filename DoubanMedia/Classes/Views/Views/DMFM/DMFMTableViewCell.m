@@ -34,7 +34,7 @@
 
     channelTitle = [[UILabel alloc] initWithFrame:CGRectZero];
     [channelTitle setFont:DMFont(16.0f)];
-    [channelTitle setText:@" "];
+    [channelTitle setText:@"  "];
     [channelTitle setTextColor:DMColor(180, 182, 182, 1.0f)];
     mhz = [[UILabel alloc] initWithFrame:CGRectZero];
     [mhz setFont:DMFont(12.0f)];
@@ -51,7 +51,7 @@
     [mhz autoPinEdge:ALEdgeLeading toEdge:ALEdgeTrailing ofView:channelTitle withOffset:12.0f];
     [mhz autoAlignAxis:ALAxisHorizontal toSameAxisOfView:channelTitle withOffset:7.0f];
 
-    [currentPlay autoPinEdge:ALEdgeRight toEdge:ALEdgeRight ofView:self.contentView withOffset:-20.0f];
+    [currentPlay autoPinEdge:ALEdgeTrailing toEdge:ALEdgeTrailing ofView:self.contentView withOffset:-20.0f];
     [currentPlay autoSetDimension:ALDimensionHeight toSize:22.0f];
     [currentPlay autoSetDimension:ALDimensionWidth toSize:22.0f];
     [currentPlay setContentMode:UIViewContentModeScaleAspectFit];
