@@ -54,15 +54,19 @@
          if (channelsArray.count > 0)
          {
              [subChannels removeAllObjects];
-             [FMChannel MR_deleteAllMatchingPredicate:predicate inContext:[NSManagedObjectContext MR_defaultContext]];
-             [context MR_saveToPersistentStoreWithCompletion:^(BOOL success, NSError *error)
-              {
-
-                  if (success)
-                  {
-                      NSLog(@"清理频道数据成功");
-                  }
-              }];
+             [FMChannel MR_deleteAllMatchingPredicate:predicate inContext:context];
+             [context MR_saveToPersistentStoreAndWait];
+//             [context MR_saveToPersistentStoreWithCompletion:^(BOOL success, NSError *error)
+//              {
+//
+//                  if (success)
+//                  {
+//                      NSLog(@"清理频道数据成功");
+//                  }else
+//                  {
+//                      NSLog(@"qinglishibai");
+//                  }
+//              }];
          }
 
          //获取的频道字典
