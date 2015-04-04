@@ -34,6 +34,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-Reachability.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-ReactiveCocoa.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -67,62 +72,67 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>04D01047AD925A09DE89D3BD</key>
+		<key>28A084FA42AFDD0D12717728</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3552068CFCCC2274EFF3F03E</key>
+		<key>2BC880FFFC336D8B131D7163</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>59ACC5B065021F20E27D8669</key>
+		<key>3507E05C4515962C5A239841</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5B8B2746A7EA57FBF072FE76</key>
+		<key>356E55D6506EAE876796B59F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8A5394106C2D06273BF3713E</key>
+		<key>4D0EAD0817FCC4410ECF0EB9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8E76E9B180E71AE176BD11D4</key>
+		<key>587F8EEEF4860CC0C200413F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9EC43610A28B47BBD75DC484</key>
+		<key>5B59281904BD0A4F28D2FBE6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>ADCEB00B3DC1A57F579FE65A</key>
+		<key>7A48A244207252D0CCE0EF80</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B75714371120712B09E88671</key>
+		<key>80F4A37E3C36C0CA094E2983</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B98A512B2D8A261C1BF3CB63</key>
+		<key>A51096F0180397049D5D6F73</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DE03DB8492C2E8CB89E32E02</key>
+		<key>BB07842C5D5F254FA0E52D82</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F51DBF5B12F8FAA38D59D195</key>
+		<key>D89420B2D551D252D7002A4C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F1C98B99F6AED0816659426F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

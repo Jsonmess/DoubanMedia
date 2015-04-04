@@ -26,6 +26,7 @@
 		2978D19C1AC064BC005CB2F3 /* DMFMChannelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2978D19B1AC064BC005CB2F3 /* DMFMChannelController.m */; };
 		297AE74D1ACA4FA90037448C /* FMChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 297AE74C1ACA4FA90037448C /* FMChannel.m */; };
 		297AE7521ACAC14F0037448C /* DMMusicPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 297AE7511ACAC14F0037448C /* DMMusicPlayerController.m */; };
+		297FFCD61AD01C3D00A6D3EE /* DMDeviceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 297FFCD51AD01C3D00A6D3EE /* DMDeviceManager.m */; };
 		2999D9791ABB134400F43C54 /* RootTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2999D9781ABB134400F43C54 /* RootTabView.m */; };
 		29A35B081AC6624900C2C2ED /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A35B071AC6624900C2C2ED /* BaseTableViewCell.m */; };
 		29A35B0B1AC6879200C2C2ED /* UIImage+DMResizeImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A35B0A1AC6879200C2C2ED /* UIImage+DMResizeImage.m */; };
@@ -144,6 +145,8 @@
 		297AE74C1ACA4FA90037448C /* FMChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMChannel.m; sourceTree = "<group>"; };
 		297AE7501ACAC14F0037448C /* DMMusicPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMMusicPlayerController.h; sourceTree = "<group>"; };
 		297AE7511ACAC14F0037448C /* DMMusicPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMMusicPlayerController.m; sourceTree = "<group>"; };
+		297FFCD41AD01C3D00A6D3EE /* DMDeviceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMDeviceManager.h; sourceTree = "<group>"; };
+		297FFCD51AD01C3D00A6D3EE /* DMDeviceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMDeviceManager.m; sourceTree = "<group>"; };
 		2999D9761ABB12BA00F43C54 /* DMGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMGlobal.h; sourceTree = "<group>"; };
 		2999D9771ABB134400F43C54 /* RootTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTabView.h; sourceTree = "<group>"; };
 		2999D9781ABB134400F43C54 /* RootTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTabView.m; sourceTree = "<group>"; };
@@ -336,6 +339,8 @@
 		2940BAFD1AB87F3C00D1069A /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				297FFCD41AD01C3D00A6D3EE /* DMDeviceManager.h */,
+				297FFCD51AD01C3D00A6D3EE /* DMDeviceManager.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -926,6 +931,7 @@
 				2940BB031AB87F3C00D1069A /* AppDelegate.m in Sources */,
 				29A35B081AC6624900C2C2ED /* BaseTableViewCell.m in Sources */,
 				2976254A1AB675DE00008804 /* main.m in Sources */,
+				297FFCD61AD01C3D00A6D3EE /* DMDeviceManager.m in Sources */,
 				29A35B0B1AC6879200C2C2ED /* UIImage+DMResizeImage.m in Sources */,
 				29FC25E51AC452870055A770 /* AccountInfo.m in Sources */,
 				2999D9791ABB134400F43C54 /* RootTabView.m in Sources */,
