@@ -21,16 +21,6 @@
 
 @implementation AlbumRoundView
 
-
--(id)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        [self initJingRound];
-    }
-    return self;
-}
-
 -(id)initWithCoder:(NSCoder *)aDecoder
 {
     self = [super initWithCoder:aDecoder];
@@ -39,7 +29,11 @@
     }
     return self;
 }
-
+-(void)layoutSubviews
+{
+    [super layoutSubviews];
+    [self initJingRound];
+}
 -(void) initJingRound
 {
     CGPoint center = CGPointMake(self.frame.size.width / 2.0, self.frame.size.height / 2.0);

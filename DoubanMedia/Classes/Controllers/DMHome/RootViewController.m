@@ -11,6 +11,7 @@
 #import "PureLayout.h"
 #import "Com_navigationController.h"
 #import "DMFMChannelController.h"
+#import "DMMusicPlayerController.h"
 #define KitemCount 4  //Tabbar 选项卡数目
 @interface RootViewController  ()<TabbarDataSource,TabbarDelegate>
 {
@@ -25,7 +26,9 @@
 
     [super viewDidLoad];
     subViewControllers = [NSMutableArray array];
-    [self setUpView];
+    DMMusicPlayerController *controller = [[DMMusicPlayerController alloc] init];
+    [self.view addSubview: controller.view];
+   // [self setUpView];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
