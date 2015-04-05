@@ -68,7 +68,7 @@
                         forState:UIControlStateDisabled];
     [_dislikeBtn setBackgroundImage:[UIImage imageNamed:@"ic_player_ban_highlight.png"]
                         forState:UIControlStateNormal];
-    [_dislikeBtn setBackgroundImage:[UIImage imageNamed:@"ic_player_ban_selected_highlight.png"]
+    [_dislikeBtn setBackgroundImage:[UIImage imageNamed:@"ic_player_ban_disable.png"]
                         forState:UIControlStateHighlighted];
     [[_dislikeBtn rac_signalForControlEvents:UIControlEventTouchUpInside]
     	subscribeNext:^(id x)
@@ -82,20 +82,11 @@
                            forState:UIControlStateDisabled];
     [_nextSongBtn setBackgroundImage:[UIImage imageNamed:@"ic_player_next_highlight.png"]
                            forState:UIControlStateNormal];
-    [_nextSongBtn setBackgroundImage:[UIImage imageNamed:@"ic_player_next_selected_highlight.png"]
+    [_nextSongBtn setBackgroundImage:[UIImage imageNamed:@"ic_player_next_disable.png"]
                            forState:UIControlStateHighlighted];
     [[_nextSongBtn rac_signalForControlEvents:UIControlEventTouchUpInside]
      subscribeNext:^(id x) {
          [self playNextSong:_nextSongBtn];
-     }];
-    _moreBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [_moreBtn setFrame:CGRectZero];
-    [_moreBtn.titleLabel setText:@"更多"];
-    [_moreBtn.titleLabel setFont:DMFont(13.0f)];
-    [_moreBtn.titleLabel setTextColor:[UIColor greenColor]];
-    [[_moreBtn rac_signalForControlEvents:UIControlEventTouchUpInside]
-     subscribeNext:^(id x) {
-         [self showMore:_moreBtn];
      }];
     [self addSubview:backgroundImage];
     [self addSubview:_playChannel];
@@ -107,7 +98,7 @@
     [BtnParentView addSubview:_likeBtn];
     [BtnParentView addSubview:_dislikeBtn];
     [BtnParentView addSubview:_nextSongBtn];
-    //[BtnParentView addSubview:_moreBtn];
+
 
     [self setcontains];
 }
@@ -126,11 +117,11 @@
             width = 200.0f;
             break;
         case kiPhone6:
-            width = 230.0f;
+            width = 250.0f;
             break;
             //屏幕大于6plus以上
         case kIphone6Plus:
-            width  = 300.0f;
+            width  = 350.0f;
             break;
 
         default:
@@ -169,29 +160,25 @@
     [_nextSongBtn autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:BtnParentView];
     [_nextSongBtn autoSetDimension:ALDimensionWidth toSize:nextSize.width*0.5f];
     [_nextSongBtn autoPinEdge:ALEdgeBottom toEdge:ALEdgeBottom ofView:BtnParentView];
-    //更多
-//    CGSize moreSize = _moreBtn.currentBackgroundImage.size;
-//    [_moreBtn autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:BtnParentView];
-//    [_moreBtn autoSetDimension:ALDimensionWidth toSize:moreSize.width*0.5f];
-//    [_moreBtn autoPinEdge:ALEdgeBottom toEdge:ALEdgeBottom ofView:BtnParentView];
+
     NSArray *buttons = @[_likeBtn,_dislikeBtn,_nextSongBtn];
     CGFloat indexWidth = (ScreenBounds.size.width *0.8f -40.0f*buttons.count)/(buttons.count -1);
     [buttons autoDistributeViewsAlongAxis:ALAxisHorizontal
                                       alignedTo:ALAttributeHorizontal
                                   withFixedSize:indexWidth insetSpacing:NO];
+    //音量滑块
+    [volumeSlider autoPinEdge:ALEdgeBottom toEdge:ALEdgeTop ofView:BtnParentView
+                   withOffset:-ScreenBounds.size.height *0.03f];
+    [volumeSlider autoSetDimension:ALDimensionHeight toSize:10.0f];
+    [volumeSlider autoPinEdge:ALEdgeLeading toEdge:ALEdgeLeading ofView:_likeBtn withOffset:10.0f];
+    [volumeSlider autoPinEdge:ALEdgeTrailing toEdge:ALEdgeTrailing ofView:_nextSongBtn withOffset:-10.0f];
     //音量icon
     CGSize size = volumeIcon.image.size;
-    [volumeIcon autoPinEdge:ALEdgeBottom toEdge:ALEdgeTop ofView:BtnParentView
-                 withOffset:-ScreenBounds.size.height *0.03f];
+    [volumeIcon autoAlignAxis:ALAxisHorizontal toSameAxisOfView:volumeSlider];
     [volumeIcon setContentMode:UIViewContentModeScaleAspectFit];
     [volumeIcon autoSetDimension:ALDimensionHeight toSize:size.height];
     [volumeIcon autoSetDimension:ALDimensionWidth toSize:size.width];
-    [volumeIcon autoPinEdge:ALEdgeLeading toEdge:ALEdgeLeading ofView:BtnParentView];
-    //音量滑块
-    [volumeSlider autoAlignAxis:ALAxisHorizontal toSameAxisOfView:volumeIcon];
-    [volumeSlider autoSetDimension:ALDimensionHeight toSize:10.0f];
-    [volumeSlider autoPinEdge:ALEdgeLeading toEdge:ALEdgeTrailing ofView:volumeIcon withOffset:15.0f];
-    [volumeSlider autoPinEdge:ALEdgeTrailing toEdge:ALEdgeTrailing ofView:BtnParentView ];
+    [volumeIcon autoPinEdge:ALEdgeTrailing toEdge:ALEdgeLeading ofView:volumeSlider withOffset:-5.0f];
     [self setNeedsLayout];
 }
 

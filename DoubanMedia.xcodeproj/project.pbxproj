@@ -1010,7 +1010,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "0b8d70c3-de2f-4482-84f0-ef9f97a71e49";
+				PROVISIONING_PROFILE = "00cad6bc-43b7-465d-9776-059ec5ad3c3f";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1047,7 +1047,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "0b8d70c3-de2f-4482-84f0-ef9f97a71e49";
+				PROVISIONING_PROFILE = "00cad6bc-43b7-465d-9776-059ec5ad3c3f";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1067,7 +1067,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0b8d70c3-de2f-4482-84f0-ef9f97a71e49";
+				PROVISIONING_PROFILE = "00cad6bc-43b7-465d-9776-059ec5ad3c3f";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1085,7 +1085,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0b8d70c3-de2f-4482-84f0-ef9f97a71e49";
+				PROVISIONING_PROFILE = "00cad6bc-43b7-465d-9776-059ec5ad3c3f";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1106,6 +1106,7 @@
 				INFOPLIST_FILE = DoubanMediaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "00cad6bc-43b7-465d-9776-059ec5ad3c3f";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DoubanMedia.app/DoubanMedia";
 			};
 			name = Debug;
@@ -1122,6 +1123,7 @@
 				INFOPLIST_FILE = DoubanMediaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "00cad6bc-43b7-465d-9776-059ec5ad3c3f";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DoubanMedia.app/DoubanMedia";
 			};
 			name = Release;
