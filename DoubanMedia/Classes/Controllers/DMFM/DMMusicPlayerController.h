@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "DMPlayerView.h"
 @interface DMMusicPlayerController : UIViewController
-
+@property (nonatomic) DMPlayerView *playView ;
 @end

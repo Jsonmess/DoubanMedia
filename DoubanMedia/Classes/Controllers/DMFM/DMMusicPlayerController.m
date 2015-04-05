@@ -7,11 +7,7 @@
 //
 
 #import "DMMusicPlayerController.h"
-#import "DMPlayerView.h"
-@interface DMMusicPlayerController ()
-{
-    DMPlayerView *playView ;
-}
+@interface DMMusicPlayerController ()<DMPlayerViewDelegate>
 @end
 
 @implementation DMMusicPlayerController
@@ -25,12 +21,12 @@
 //设置目录----
 -(void)setUpView
 {
-    if (playView == nil)
+    if (_playView == nil)
     {
-        playView = [[DMPlayerView alloc] initWithFrame:self.view.bounds];
-        [self.view addSubview:playView];
-        [playView.albumView setRoundImage:[UIImage imageNamed:@"Default.png"]];
-        [playView.albumView  play];
+        _playView = [[DMPlayerView alloc] initWithFrame:self.view.bounds];
+        [self.view addSubview:_playView];
+        [_playView.albumView setRoundImage:[UIImage imageNamed:@"Default.png"]];
+        [_playView.albumView  play];
     }
 }
 - (void)didReceiveMemoryWarning {
@@ -38,14 +34,20 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark ---DMPlayDelegate
+//标记红心
+-(void)likeCurrentSong
+{
+	
 }
-*/
+//标记删除
+-(void)dislikeCurrentSong
+{
 
+}
+//下一曲
+-(void)playNextSong
+{
+
+}
 @end

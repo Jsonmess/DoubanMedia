@@ -12,4 +12,6 @@
 //设置cell内容
 -(void)setCellContent:(NSString *)title isDouBanRed:(BOOL)isRed;
 -(void)isNowPlayChannel:(BOOL)isPlay;
+//获取标题
+-(NSString *)getTitle;
 @end

@@ -50,6 +50,7 @@
 		297FFD031AD03CF700A6D3EE /* playAnimation_play.png in Resources */ = {isa = PBXBuildFile; fileRef = 297FFCEC1AD03CF700A6D3EE /* playAnimation_play.png */; };
 		297FFD041AD03CF700A6D3EE /* refresh_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 297FFCED1AD03CF700A6D3EE /* refresh_pressed.png */; };
 		297FFD051AD03CF700A6D3EE /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = 297FFCEE1AD03CF700A6D3EE /* start.png */; };
+		297FFD111AD1780A00A6D3EE /* DMPlayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 297FFD101AD1780A00A6D3EE /* DMPlayManager.m */; };
 		2999D9791ABB134400F43C54 /* RootTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2999D9781ABB134400F43C54 /* RootTabView.m */; };
 		29A35B081AC6624900C2C2ED /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A35B071AC6624900C2C2ED /* BaseTableViewCell.m */; };
 		29A35B0B1AC6879200C2C2ED /* UIImage+DMResizeImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A35B0A1AC6879200C2C2ED /* UIImage+DMResizeImage.m */; };
@@ -173,6 +174,8 @@
 		297FFCEC1AD03CF700A6D3EE /* playAnimation_play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playAnimation_play.png; sourceTree = "<group>"; };
 		297FFCED1AD03CF700A6D3EE /* refresh_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh_pressed.png; sourceTree = "<group>"; };
 		297FFCEE1AD03CF700A6D3EE /* start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start.png; sourceTree = "<group>"; };
+		297FFD0F1AD1780A00A6D3EE /* DMPlayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMPlayManager.h; sourceTree = "<group>"; };
+		297FFD101AD1780A00A6D3EE /* DMPlayManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMPlayManager.m; sourceTree = "<group>"; };
 		2999D9761ABB12BA00F43C54 /* DMGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMGlobal.h; sourceTree = "<group>"; };
 		2999D9771ABB134400F43C54 /* RootTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTabView.h; sourceTree = "<group>"; };
 		2999D9781ABB134400F43C54 /* RootTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTabView.m; sourceTree = "<group>"; };
@@ -390,6 +393,7 @@
 		296F47151AC188E800231873 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				297FFD0E1AD177F000A6D3EE /* SongPlay */,
 				29141D781AC7AB9300FDDC85 /* ChannelList */,
 				296F47161AC188E800231873 /* UserLogin */,
 			);
@@ -513,6 +517,15 @@
 				297FFCEE1AD03CF700A6D3EE /* start.png */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		297FFD0E1AD177F000A6D3EE /* SongPlay */ = {
+			isa = PBXGroup;
+			children = (
+				297FFD0F1AD1780A00A6D3EE /* DMPlayManager.h */,
+				297FFD101AD1780A00A6D3EE /* DMPlayManager.m */,
+			);
+			path = SongPlay;
 			sourceTree = "<group>";
 		};
 		29A35B0F1AC698BC00C2C2ED /* DMFM */ = {
@@ -928,6 +941,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2978D1971AC035D4005CB2F3 /* Com_navigationController.m in Sources */,
+				297FFD111AD1780A00A6D3EE /* DMPlayManager.m in Sources */,
 				29B4D1081ABEBCA300899F29 /* TabItem.m in Sources */,
 				297AE74D1ACA4FA90037448C /* FMChannel.m in Sources */,
 				29B4D1921ABF0D6C00899F29 /* RootViewController.m in Sources */,

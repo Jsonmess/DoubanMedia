@@ -36,7 +36,7 @@
     BtnParentView = [[UIView alloc] initWithFrame:CGRectZero];
     _playChannel = [[UILabel alloc] initWithFrame:CGRectZero];
     [_playChannel setFont:DMBoldFont(18.0f)];
-    [_playChannel setText:@"。。。当前频道。。。"];
+   // [_playChannel setText:@"。。。当前频道。。。"];
     [_playChannel setTextColor:DMColor(210, 242, 158, 1.0f)];
     _albumView = [[AlbumRoundView alloc] initWithFrame:CGRectZero];
 
@@ -162,7 +162,7 @@
     [_nextSongBtn autoPinEdge:ALEdgeBottom toEdge:ALEdgeBottom ofView:BtnParentView];
 
     NSArray *buttons = @[_likeBtn,_dislikeBtn,_nextSongBtn];
-    CGFloat indexWidth = (ScreenBounds.size.width *0.8f -40.0f*buttons.count)/(buttons.count -1);
+    CGFloat indexWidth = (ScreenBounds.size.width *0.8f -40.0f*buttons.count)/(buttons.count-1);
     [buttons autoDistributeViewsAlongAxis:ALAxisHorizontal
                                       alignedTo:ALAttributeHorizontal
                                   withFixedSize:indexWidth insetSpacing:NO];
@@ -186,22 +186,27 @@
 //红心
 -(void)likeTheSong:(id)sender
 {
-    [_likeBtn setBackgroundImage:[UIImage imageNamed:@"ic_player_fav_selected.png"]
-                        forState:UIControlStateNormal];
+    [self.playDelegate likeCurrentSong];
 }
 //标记删除
 -(void)disLikeTheSong:(id)sender
 {
-
+    [self.playDelegate dislikeCurrentSong];
 }
 //下一首
 -(void)playNextSong:(id)sender
 {
-    
+    [self.playDelegate playNextSong];
 }
-//更多
--(void)showMore:(id)sender
+//设置为红心
+-(void)setlikeCurrentSongState
 {
-    
+    [_likeBtn setBackgroundImage:[UIImage imageNamed:@"ic_player_fav_selected.png"]
+                        forState:UIControlStateNormal];
+}
+-(void)setDislikeSong
+{
+    [_likeBtn setBackgroundImage:[UIImage imageNamed:@"ic_player_fav_disable.png"]
+                        forState:UIControlStateNormal];
 }
 @end

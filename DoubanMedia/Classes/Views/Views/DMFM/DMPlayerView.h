@@ -8,6 +8,17 @@
 
 #import <UIKit/UIKit.h>
 #import "AlbumRoundView.h"
+
+@protocol DMPlayerViewDelegate <NSObject>
+
+//标记红心
+-(void)likeCurrentSong;
+//标记不再播放
+-(void)dislikeCurrentSong;
+//切换下一曲
+-(void)playNextSong;
+@end
+
 @interface DMPlayerView : UIView
 @property (nonatomic) UILabel *playChannel;//播放频道
 @property (nonatomic) AlbumRoundView *albumView;
@@ -15,5 +26,8 @@
 @property (nonatomic) UIButton *likeBtn; //标记喜欢
 @property (nonatomic) UIButton *dislikeBtn;//标记不再收听
 @property (nonatomic) UIButton *nextSongBtn;//下一首
-@property (nonatomic) UIButton *moreBtn;//更多
+@property (nonatomic) id<DMPlayerViewDelegate> playDelegate;
+//标记红心操作
+-(void)setlikeCurrentSongState;
+-(void)setDislikeSong;
 @end

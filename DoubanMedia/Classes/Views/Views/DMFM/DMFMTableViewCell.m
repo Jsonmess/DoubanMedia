@@ -85,6 +85,14 @@
     if (isPlay)
     {
         [currentPlay setHidden:NO];
+    }else
+    {
+        [currentPlay setHidden:YES];
     }
+}
+#pragma mark -- get source
+-(NSString *)getTitle
+{
+    return channelTitle.text;
 }
 @end
