@@ -48,6 +48,10 @@
     volumeIcon  = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"play_sound@2x.png"]];
     //音量滑块
     volumeSlider = [[UISlider alloc] init];
+    //DMPlayerManager 中获取系统音量大小
+#warning 这里获取音量
+    [volumeSlider addTarget:self action:@selector(setPlayMediaVolume:)
+           forControlEvents:UIControlEventValueChanged];
     _likeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [_likeBtn setFrame:CGRectZero];
     [_likeBtn setBackgroundImage:[UIImage imageNamed:@"ic_player_fav_disable.png"]
@@ -183,6 +187,26 @@
 }
 
 #pragma mark ---- actions
+//设置频道text
+-(void)setChannelName:(NSString *)channelName
+{
+    [self.playChannel setText:channelName];
+}
+//设置歌曲名称
+-(void)setSongTitle:(NSString *)title
+{
+    [self.songName setText:title];
+}
+//设置专辑图片
+-(void)setAlbumImage:(UIImage *)image
+{
+    [self.albumView setRoundImage:image];
+}
+//设置音量
+-(void)setPlayMediaVolume:(UISlider*)sender
+{
+	//PlayManager 进行操作
+}
 //红心
 -(void)likeTheSong:(id)sender
 {

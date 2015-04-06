@@ -51,6 +51,7 @@
 		297FFD041AD03CF700A6D3EE /* refresh_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 297FFCED1AD03CF700A6D3EE /* refresh_pressed.png */; };
 		297FFD051AD03CF700A6D3EE /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = 297FFCEE1AD03CF700A6D3EE /* start.png */; };
 		297FFD111AD1780A00A6D3EE /* DMPlayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 297FFD101AD1780A00A6D3EE /* DMPlayManager.m */; };
+		297FFD181AD2173700A6D3EE /* TabViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 297FFD171AD2173700A6D3EE /* TabViewManager.m */; };
 		2999D9791ABB134400F43C54 /* RootTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2999D9781ABB134400F43C54 /* RootTabView.m */; };
 		29A35B081AC6624900C2C2ED /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A35B071AC6624900C2C2ED /* BaseTableViewCell.m */; };
 		29A35B0B1AC6879200C2C2ED /* UIImage+DMResizeImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A35B0A1AC6879200C2C2ED /* UIImage+DMResizeImage.m */; };
@@ -176,6 +177,8 @@
 		297FFCEE1AD03CF700A6D3EE /* start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start.png; sourceTree = "<group>"; };
 		297FFD0F1AD1780A00A6D3EE /* DMPlayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMPlayManager.h; sourceTree = "<group>"; };
 		297FFD101AD1780A00A6D3EE /* DMPlayManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMPlayManager.m; sourceTree = "<group>"; };
+		297FFD161AD2173700A6D3EE /* TabViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabViewManager.h; sourceTree = "<group>"; };
+		297FFD171AD2173700A6D3EE /* TabViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabViewManager.m; sourceTree = "<group>"; };
 		2999D9761ABB12BA00F43C54 /* DMGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMGlobal.h; sourceTree = "<group>"; };
 		2999D9771ABB134400F43C54 /* RootTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTabView.h; sourceTree = "<group>"; };
 		2999D9781ABB134400F43C54 /* RootTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTabView.m; sourceTree = "<group>"; };
@@ -714,6 +717,8 @@
 				2999D9781ABB134400F43C54 /* RootTabView.m */,
 				29B4D1061ABEBCA300899F29 /* TabItem.h */,
 				29B4D1071ABEBCA300899F29 /* TabItem.m */,
+				297FFD161AD2173700A6D3EE /* TabViewManager.h */,
+				297FFD171AD2173700A6D3EE /* TabViewManager.m */,
 			);
 			path = TabTool;
 			sourceTree = "<group>";
@@ -940,6 +945,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				297FFD181AD2173700A6D3EE /* TabViewManager.m in Sources */,
 				2978D1971AC035D4005CB2F3 /* Com_navigationController.m in Sources */,
 				297FFD111AD1780A00A6D3EE /* DMPlayManager.m in Sources */,
 				29B4D1081ABEBCA300899F29 /* TabItem.m in Sources */,
@@ -1024,7 +1030,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "00cad6bc-43b7-465d-9776-059ec5ad3c3f";
+				PROVISIONING_PROFILE = "0b8d70c3-de2f-4482-84f0-ef9f97a71e49";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1061,7 +1067,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "00cad6bc-43b7-465d-9776-059ec5ad3c3f";
+				PROVISIONING_PROFILE = "0b8d70c3-de2f-4482-84f0-ef9f97a71e49";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1081,7 +1087,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "00cad6bc-43b7-465d-9776-059ec5ad3c3f";
+				PROVISIONING_PROFILE = "0b8d70c3-de2f-4482-84f0-ef9f97a71e49";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1099,7 +1105,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "00cad6bc-43b7-465d-9776-059ec5ad3c3f";
+				PROVISIONING_PROFILE = "0b8d70c3-de2f-4482-84f0-ef9f97a71e49";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1120,7 +1126,7 @@
 				INFOPLIST_FILE = DoubanMediaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "00cad6bc-43b7-465d-9776-059ec5ad3c3f";
+				PROVISIONING_PROFILE = "0b8d70c3-de2f-4482-84f0-ef9f97a71e49";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DoubanMedia.app/DoubanMedia";
 			};
 			name = Debug;
@@ -1137,7 +1143,7 @@
 				INFOPLIST_FILE = DoubanMediaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "00cad6bc-43b7-465d-9776-059ec5ad3c3f";
+				PROVISIONING_PROFILE = "0b8d70c3-de2f-4482-84f0-ef9f97a71e49";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DoubanMedia.app/DoubanMedia";
 			};
 			name = Release;

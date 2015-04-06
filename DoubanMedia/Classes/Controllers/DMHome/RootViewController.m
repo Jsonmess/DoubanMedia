@@ -11,6 +11,7 @@
 #import "PureLayout.h"
 #import "Com_navigationController.h"
 #import "DMFMChannelController.h"
+#import "TabViewManager.h"
 #define KitemCount 4  //Tabbar 选项卡数目
 @interface RootViewController  ()<TabbarDataSource,TabbarDelegate>
 {
@@ -21,9 +22,11 @@
 
 @implementation RootViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
 
     [super viewDidLoad];
+    [self.view setBackgroundColor:[UIColor redColor]];
     subViewControllers = [NSMutableArray array];
     [self setUpView];
     // Do any additional setup after loading the view, typically from a nib.
@@ -53,6 +56,7 @@
      UIViewController *doubanSettingController = [[UIViewController alloc]init];
     Com_navigationController *navSettingController = [[Com_navigationController alloc]
                                                    initWithRootViewController:doubanSettingController];
+
     [doubanSettingController.view setBackgroundColor:[UIColor yellowColor]];
     [subViewControllers addObject:navSettingController];
 }
@@ -61,6 +65,8 @@
 {
 	//tabbar
     tabView = [[RootTabView alloc]initWithFrame:CGRectZero];
+    //将tabView 保存到一个单例中，用于隐藏和显示
+    [[TabViewManager sharedTabViewManager] setTabView:tabView];
     [tabView setTabDataSource:self];
     [tabView setTabDelegate:self];
     [self initSubViewControllers];
@@ -129,6 +135,8 @@
 {
     [self RunButionAction:lindex To:nindex];
 }
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

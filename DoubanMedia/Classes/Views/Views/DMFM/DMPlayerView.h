@@ -27,6 +27,9 @@
 @property (nonatomic) UIButton *dislikeBtn;//标记不再收听
 @property (nonatomic) UIButton *nextSongBtn;//下一首
 @property (nonatomic) id<DMPlayerViewDelegate> playDelegate;
+-(void)setChannelName:(NSString *)channelName;
+-(void)setSongTitle:(NSString *)title;
+-(void)setAlbumImage:(UIImage *)image;
 //标记红心操作
 -(void)setlikeCurrentSongState;
 -(void)setDislikeSong;

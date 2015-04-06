@@ -15,7 +15,7 @@
 #import "AppDelegate.h"
 #import "FMChannel.h"
 #import "DMMusicPlayerController.h"
-@interface DMFMChannelController ()<UITableViewDataSource,UITableViewDelegate,DMChannelDelegate,NSFetchedResultsControllerDelegate>
+@interface DMFMChannelController ()<UITableViewDataSource,UITableViewDelegate,DMChannelDelegate,NSFetchedResultsControllerDelegate,UINavigationControllerDelegate>
 {
     DMChannelManager *networkManager;
         AppDelegate *appDelegate;
@@ -36,6 +36,7 @@ static NSString *reuseCell = @"FMChannelCell";
     [super viewDidLoad];
 	[self commonInit];
     [self setUpView];
+    [self.navigationController setDelegate:self];
     //在此处获取频道列表，为加载数据做准备
     [self getChannelInfo];
 }
@@ -47,6 +48,7 @@ static NSString *reuseCell = @"FMChannelCell";
         [fmTableView reloadData];
     }
     [super viewWillAppear:animated];
+    CGSize size = self.view.bounds.size;
 }
 -(void)commonInit
 {
@@ -211,5 +213,22 @@ static NSString *reuseCell = @"FMChannelCell";
 -(void)controllerDidChangeContent:(NSFetchedResultsController *)controller
 {
     [fmTableView reloadData];
+}
+-(void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated
+{
+    UIViewController *topController=navigationController.viewControllers[0];
+    if (topController!=viewController) {
+        CGRect frame=navigationController.view.frame;
+        frame.size.height+=kTabbarHeight;
+        navigationController.view.frame=frame;
+
+    }else
+    {
+        CGRect frame=navigationController.view.frame;
+        frame.size.height-=kTabbarHeight;
+        navigationController.view.frame=frame;
+    }
+
+//    [self viewWillLayoutSubviews];
 }
 @end
