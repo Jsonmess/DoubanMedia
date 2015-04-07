@@ -22,12 +22,8 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    //隐藏tabView
-    [[[TabViewManager sharedTabViewManager] getTabView] setHidden:YES];
-//    [self.view setBounds:CGRectMake(0, 0, 320, 568)];
-//    [self.view setNeedsLayout];
-    CGSize size = self.view.bounds.size;
-    [self.view setFrame:ScreenBounds];
+	//隐藏tabView
+	[[[TabViewManager sharedTabViewManager] getTabView] setHidden:YES];
 }
 //设置目录----
 -(void)setUpView
