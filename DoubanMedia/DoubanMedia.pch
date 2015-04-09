@@ -11,11 +11,14 @@
 #endif
 
 #define MR_SHORTHAND
-#import "CoreData+MagicalRecord.h"
+#import <CoreData+MagicalRecord.h>
 
 #ifdef __OBJC__
-	#import <UIKit/UIKit.h>
-	#import <Foundation/Foundation.h>
-	#define MR_SHORTHAND
-	#import "CoreData+MagicalRecord.h"
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <PureLayout.h>
+#import "DMGlobal.h"
+#define MR_SHORTHAND
+#import <CoreData+MagicalRecord.h>
+#import <ReactiveCocoa.h>
 #endif

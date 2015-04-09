@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DMFMChannelController : UITableViewController
+@interface DMFMChannelController : UIViewController
 
 @end

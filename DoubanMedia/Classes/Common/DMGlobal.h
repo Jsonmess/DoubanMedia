@@ -11,4 +11,6 @@
 #define ScreenBounds  [UIScreen mainScreen].bounds
 #define DMFont(fontSize) [UIFont systemFontOfSize:(fontSize)]
 #define DMColor(r,g,b,a) [UIColor colorWithRed:(r/255.0) green:(g/255.0) blue:(b/255.0) alpha:a]
+#define kTabbarHeight 48.0f //Tabbar 高度
+#define DMBoldFont(fontSize) [UIFont fontWithName:@"Helvetica-Bold" size:(fontSize)]
 #endif

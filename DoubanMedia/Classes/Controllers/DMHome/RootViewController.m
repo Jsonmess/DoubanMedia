@@ -11,10 +11,8 @@
 #import "PureLayout.h"
 #import "Com_navigationController.h"
 #import "DMFMChannelController.h"
-//debug
-#import "DBLoginViewController.h"
+#import "TabViewManager.h"
 #define KitemCount 4  //Tabbar 选项卡数目
-#define kTabbarHeight 44.0f //Tabbar 高度
 @interface RootViewController  ()<TabbarDataSource,TabbarDelegate>
 {
     NSMutableArray *subViewControllers;//子控制器组
@@ -24,14 +22,12 @@
 
 @implementation RootViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
 
     [super viewDidLoad];
     subViewControllers = [NSMutableArray array];
-    DBLoginViewController *test = [[DBLoginViewController alloc]init];
-    [test.view setFrame:self.view.frame];
-    [self.view addSubview: test.view];
-    //[self setUpView];
+    [self setUpView];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -59,6 +55,7 @@
      UIViewController *doubanSettingController = [[UIViewController alloc]init];
     Com_navigationController *navSettingController = [[Com_navigationController alloc]
                                                    initWithRootViewController:doubanSettingController];
+
     [doubanSettingController.view setBackgroundColor:[UIColor yellowColor]];
     [subViewControllers addObject:navSettingController];
 }
@@ -67,6 +64,8 @@
 {
 	//tabbar
     tabView = [[RootTabView alloc]initWithFrame:CGRectZero];
+    //将tabView 保存到一个单例中，用于隐藏和显示
+    [[TabViewManager sharedTabViewManager] setTabView:tabView];
     [tabView setTabDataSource:self];
     [tabView setTabDelegate:self];
     [self initSubViewControllers];
@@ -77,6 +76,7 @@
     //默认添加豆瓣fm
     UIViewController *fm = [subViewControllers firstObject];
     [self.view addSubview:fm.view];
+     [self.view bringSubviewToFront:tabView];
     [self setContainsWith:fm];
 }
 //切换模块
@@ -96,6 +96,7 @@
 
     //4.添加新的子控制器主视图控制器
     [self.view addSubview:current_c.view];
+    [self.view bringSubviewToFront:tabView];
     [self setContainsWith:current_c];
 
     
@@ -103,9 +104,7 @@
 //设置约束
 -(void)setContainsWith:(UIViewController *)controller
 {
-      [controller.view autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(0, 0, 0, 0)
-                                                excludingEdge:ALEdgeBottom];
-        [controller.view autoPinEdge:ALEdgeBottom toEdge:ALEdgeTop ofView:tabView];
+    [controller.view autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
     [self.view setNeedsLayout];
 }
 #pragma mark -----Tabbar代理
@@ -115,17 +114,16 @@
 }
 -(NSArray *)theSourceOfItemNormalIcons
 {
-    return @[@"home_my.png",@"morePage_musicRecognizer.png",
-             @"home_film.png",@"morePage_setting.png"];
+    return @[@"home_fm.png",@"home_film.png",
+             @"home_mm.png",@"morePage_setting.png"];
 }
 -(NSArray *)theSourceOfItemTitles
 {
-    return @[@"豆瓣FM",@"豆瓣音乐",@"豆瓣电影",@"应用设置"];
+    return @[@"豆瓣FM",@"豆瓣电影",@"豆瓣妹纸",@"应用设置"];
 }
 -(NSArray*)theSourceOfItemSelectedIcons
 {
-    return @[@"home_my.png",@"morePage_musicRecognizer.png",
-             @"home_film.png",@"morePage_setting.png"];
+    return @[@"home_fm.png",@"home_film.png",@"home_mm.png",@"morePage_setting.png"];
 }
 -(UIImage *)theSourceOfTabbarBackGroundImage
 {
@@ -136,6 +134,8 @@
 {
     [self RunButionAction:lindex To:nindex];
 }
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
