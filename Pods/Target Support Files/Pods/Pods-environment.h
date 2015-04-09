@@ -48,11 +48,11 @@
 #define COCOAPODS_VERSION_MINOR_AFNetworking_UIKit 5
 #define COCOAPODS_VERSION_PATCH_AFNetworking_UIKit 2
 
-// AFSoundManager
-#define COCOAPODS_POD_AVAILABLE_AFSoundManager
-#define COCOAPODS_VERSION_MAJOR_AFSoundManager 2
-#define COCOAPODS_VERSION_MINOR_AFSoundManager 1
-#define COCOAPODS_VERSION_PATCH_AFSoundManager 0
+// DOUAudioStreamer
+#define COCOAPODS_POD_AVAILABLE_DOUAudioStreamer
+#define COCOAPODS_VERSION_MAJOR_DOUAudioStreamer 0
+#define COCOAPODS_VERSION_MINOR_DOUAudioStreamer 2
+#define COCOAPODS_VERSION_PATCH_DOUAudioStreamer 9
 
 // MJRefresh
 #define COCOAPODS_POD_AVAILABLE_MJRefresh

@@ -8,7 +8,17 @@
 
 #import "DMMusicPlayerController.h"
 #import "TabViewManager.h"
-@interface DMMusicPlayerController ()<DMPlayerViewDelegate>
+#import "DMSysVolumeAjustManager.h"
+#import "DMPlayManager.h"
+#import "DMMusicPlayManager.h"
+#import <UIImageView+AFNetworking.h>
+@interface DMMusicPlayerController ()<DMPlayerViewDelegate,MusicPlayDelegate>
+{
+    DMPlayManager *playMananger;
+    DMMusicPlayManager *musicPlayer;
+    DMSongInfo *currentPlaySong;//记录正在播放的音乐对象
+}
+@property (nonatomic) DMPlayerView *mplayView ;
 @end
 
 @implementation DMMusicPlayerController
@@ -16,7 +26,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self commonInit];
     [self setUpView];
+    [self getSongList];
     // Do any additional setup after loading the view.
 }
 -(void)viewWillAppear:(BOOL)animated
@@ -24,8 +36,20 @@
     [super viewWillAppear:animated];
 	//隐藏tabView
 	[[[TabViewManager sharedTabViewManager] getTabView] setHidden:YES];
+    //添加对音量调节的监听
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(changeVolume:)
+                                                 name:@"AVSystemController_SystemVolumeDidChangeNotification"
+                                               object:nil];
 }
-//设置目录----
+-(void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    [[NSNotificationCenter defaultCenter ] removeObserver:self
+                                                     name:@"AVSystemController_SystemVolumeDidChangeNotification"
+                                                   object:nil];
+
+}//设置目录
 -(void)setUpView
 {
     [self setTitle:@"当前播放"];
@@ -38,13 +62,28 @@
     UIBarButtonItem *backitem=[[UIBarButtonItem alloc]initWithCustomView:leftbtn];
     self.navigationItem.leftBarButtonItem=backitem;
     [self.view setBackgroundColor:DMColor(242, 242, 242, 1.0f)];
-    if (_playView == nil)
+    if (_mplayView == nil)
     {
-        _playView = [[DMPlayerView alloc] initWithFrame:ScreenBounds];
-        [self.view addSubview:_playView];
-        [_playView.albumView setRoundImage:[UIImage imageNamed:@"Default.png"]];
-        [_playView.albumView  play];
+        _mplayView = [[DMPlayerView alloc] initWithFrame:ScreenBounds];
+        [_mplayView setPlayDelegate:self];
+        [self.view addSubview:_mplayView];
+        [_mplayView.albumView setRoundImage:[UIImage imageNamed:@"DBFM.png"]];
+        [_mplayView.albumView  play];
     }
+    //设置频道名称
+    [_mplayView setChannelName:[NSString stringWithFormat:@"·· %@ Mhz ··",self.playChannelTitle]];
+}
+-(void)commonInit
+{
+   playMananger = [DMPlayManager sharedDMPlayManager];
+    musicPlayer = [DMMusicPlayManager sharedMusicPlayManager];
+    [musicPlayer setDelegate:self];
+}
+//获取当前频道的音乐列表
+-(void)getSongList
+{
+    [playMananger loadPlaylistwithType:@"n" channelID:self.playChannelId
+                   CurrentPlayBackTime:0.0 CurrentSongID:nil];
 }
 #pragma mark --- actions
 -(void)backToList
@@ -53,7 +92,16 @@
     [[[TabViewManager sharedTabViewManager]getTabView] setHidden:NO];
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)changeVolume:(id)sender
+{
+    CGFloat value = [[DMSysVolumeAjustManager sharedSysVolumeAjustManager]
+                     getVolumeViewFromMPVolumeView].value;
+    [_mplayView.volumeSlider setValue: value];
+    [_mplayView syncVolumeValue:value];
+}
+
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
@@ -62,21 +110,49 @@
 //标记红心
 -(void)likeCurrentSong
 {
-	
+    [self actionWithType:@"r"];
 }
 //标记删除
 -(void)dislikeCurrentSong
 {
-
+    [self actionWithType:@"u"];
 }
 //下一曲
 -(void)playNextSong
 {
-
+    [self actionWithType:@"s"];
 }
-
--(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+//播放状态
+-(void)playState:(BOOL)state
 {
-    NSLog(@"点击了");
+    [musicPlayer actionPlayPause:state];
+}
+//播放中标记操作
+-(void)actionWithType:(NSString*)type
+{
+    [playMananger loadPlaylistwithType:type channelID:self.playChannelId
+                   CurrentPlayBackTime:[musicPlayer getCurrentAudioStreamer].currentTime
+                         CurrentSongID:currentPlaySong.sid];
+}
+-(void)getCurrentPlaySong:(DMSongInfo *)songInfo
+{
+    currentPlaySong = songInfo ;
+    //更新音乐封面+标题+歌手
+    NSURL *picUrl = [NSURL URLWithString:songInfo.picture];
+    dispatch_queue_t queue =dispatch_queue_create("loadImage",NULL);
+    dispatch_async(queue, ^{
+
+        NSData *resultData = [NSData dataWithContentsOfURL:picUrl];
+
+
+        dispatch_async(dispatch_get_main_queue(), ^{
+            _mplayView.albumView.roundImage=[UIImage imageWithData:resultData];
+
+        });
+
+    });
+    //设置标题
+    [_mplayView.songName setText:songInfo.title];
+    [_mplayView setNeedsLayout];
 }
 @end

@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "DMPlayerView.h"
 @interface DMMusicPlayerController : UIViewController
-@property (nonatomic) DMPlayerView *playView ;
+@property (nonatomic) NSString *playChannelTitle;//标题
+@property (nonatomic) NSString *playChannelId;//频道id
 @end

@@ -90,9 +90,4 @@
         [currentPlay setHidden:YES];
     }
 }
-#pragma mark -- get source
--(NSString *)getTitle
-{
-    return channelTitle.text;
-}
 @end

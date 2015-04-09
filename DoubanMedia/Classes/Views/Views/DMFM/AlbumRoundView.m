@@ -67,7 +67,7 @@
         stateImage = [UIImage imageNamed:@"pause"];
     }
     
-    self.playStateView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, stateImage.size.width, stateImage.size.height)];
+    self.playStateView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, stateImage.size.width*0.7, stateImage.size.height*0.7)];
     [self.playStateView setCenter:center];
     [self.playStateView setImage:stateImage];
     [self addSubview:self.playStateView];

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol JingRoundViewDelegate <NSObject>
+@protocol AlbumRoundViewDelegate <NSObject>
 
 -(void) playStatuUpdate:(BOOL)playState;
 
@@ -16,7 +16,7 @@
 
 @interface AlbumRoundView : UIView
 
-@property (assign, nonatomic) id<JingRoundViewDelegate> delegate;
+@property (assign, nonatomic) id<AlbumRoundViewDelegate> delegate;
 
 //专辑图片
 @property (strong, nonatomic) UIImage *roundImage;

@@ -169,7 +169,9 @@ static NSString *reuseCell = @"FMChannelCell";
     lastSelectedIndex = indexPath;
     [cell isNowPlayChannel:YES];
     DMMusicPlayerController * musicPlayer = [[DMMusicPlayerController alloc] init];
-    [musicPlayer.playView.playChannel setText:[cell getTitle]];
+     FMChannel *channel = [fectchedController objectAtIndexPath:indexPath];
+    [musicPlayer setPlayChannelTitle:channel.channelName];
+    [musicPlayer setPlayChannelId:channel.channelID];
     [self.navigationController pushViewController:musicPlayer animated:YES];
 	//设置当前播放频道为选中状态
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
