@@ -85,6 +85,9 @@
     if (isPlay)
     {
         [currentPlay setHidden:NO];
+    }else
+    {
+        [currentPlay setHidden:YES];
     }
 }
 @end

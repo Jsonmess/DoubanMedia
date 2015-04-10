@@ -2,79 +2,82 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2bb2a61-7e59-426b-aa34-7d54bf3010c4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Models/Managers/UserLogin/DMLoginManager.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Models/Managers/UserLogin/DMLoginManager.m" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperation.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperation.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperationManager.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperationManager.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/AFNetworking/AFNetworking/AFHTTPSessionManager.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/AFNetworking/AFNetworking/AFHTTPSessionManager.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/AFNetworking/AFNetworking/AFNetworking.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/AFNetworking/AFNetworking/AFURLConnectionOperation.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/AFNetworking/AFNetworking/AFURLConnectionOperation.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/AFNetworking/AFNetworking/AFURLSessionManager.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/AFNetworking/AFNetworking/AFURLSessionManager.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/AFNetworking/UIKit+AFNetworking/AFNetworkActivityIndicatorManager.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/AFNetworking/UIKit+AFNetworking/AFNetworkActivityIndicatorManager.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIAlertView+AFNetworking.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIAlertView+AFNetworking.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIButton+AFNetworking.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIButton+AFNetworking.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIImageView+AFNetworking.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIImageView+AFNetworking.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIKit+AFNetworking.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIProgressView+AFNetworking.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIProgressView+AFNetworking.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIRefreshControl+AFNetworking.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIRefreshControl+AFNetworking.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIWebView+AFNetworking.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIWebView+AFNetworking.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-AFNetworking/Pods-AFNetworking-Private.xcconfig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-AFNetworking/Pods-AFNetworking-dummy.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-AFNetworking/Pods-AFNetworking-prefix.pch" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-AFNetworking/Pods-AFNetworking.xcconfig" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/MJRefresh/README.md" afterPath="$PROJECT_DIR$/Pods/MJRefresh/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/MJRefresh/MJRefreshExample/MJRefreshExample/MJRefresh/MJRefreshFooter.h" afterPath="$PROJECT_DIR$/Pods/MJRefresh/MJRefreshExample/MJRefreshExample/MJRefresh/MJRefreshFooter.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/MJRefresh/MJRefreshExample/MJRefreshExample/MJRefresh/MJRefreshFooter.m" afterPath="$PROJECT_DIR$/Pods/MJRefresh/MJRefreshExample/MJRefreshExample/MJRefresh/MJRefreshFooter.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/MJRefresh/MJRefreshExample/MJRefreshExample/MJRefresh/MJRefreshHeader.h" afterPath="$PROJECT_DIR$/Pods/MJRefresh/MJRefreshExample/MJRefreshExample/MJRefresh/MJRefreshHeader.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/MJRefresh/MJRefreshExample/MJRefreshExample/MJRefresh/MJRefreshHeader.m" afterPath="$PROJECT_DIR$/Pods/MJRefresh/MJRefreshExample/MJRefreshExample/MJRefresh/MJRefreshHeader.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Models/Managers/SongPlay/DMMusicPlayManager.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Models/Managers/SongPlay/DMMusicPlayManager.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Models/ObjectModels/DMSongInfo.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Models/ObjectModels/DMSongInfo.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Models/Managers/SystemVolume/DMSysVolumeAjustManager.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Models/Managers/SystemVolume/DMSysVolumeAjustManager.m" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Resource/images/Home/FMPlayBg-568h@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Resource/images/Home/FMPlayBg@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/AFSoundManager/Classes/AFSoundItem.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/AFSoundManager/Classes/AFSoundItem.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/AFSoundManager/Classes/AFSoundManager.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/AFSoundManager/Classes/AFSoundPlayback.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/AFSoundManager/Classes/AFSoundPlayback.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/AFSoundManager/Classes/AFSoundQueue.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/AFSoundManager/Classes/AFSoundQueue.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/AFSoundManager/Classes/AFSoundRecord.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/AFSoundManager/Classes/AFSoundRecord.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/AFSoundManager/Classes/NSTimer+AFSoundManager.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/AFSoundManager/Classes/NSTimer+AFSoundManager.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/AFSoundManager/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/AFSoundManager/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFSoundManager/AFSoundItem.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFSoundManager/AFSoundManager.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFSoundManager/AFSoundPlayback.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFSoundManager/AFSoundQueue.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFSoundManager/AFSoundRecord.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFSoundManager/NSTimer+AFSoundManager.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/AFSoundManager/AFSoundItem.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/AFSoundManager/AFSoundManager.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/AFSoundManager/AFSoundPlayback.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/AFSoundManager/AFSoundQueue.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/AFSoundManager/AFSoundRecord.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/AFSoundManager/NSTimer+AFSoundManager.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/jsonmess.xcuserdatad/xcschemes/Pods-AFSoundManager.xcscheme" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-AFSoundManager/Pods-AFSoundManager-Private.xcconfig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-AFSoundManager/Pods-AFSoundManager-dummy.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-AFSoundManager/Pods-AFSoundManager-prefix.pch" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-AFSoundManager/Pods-AFSoundManager.xcconfig" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DoubanMedia/Resource/images/Home/pause.png" afterPath="$PROJECT_DIR$/DoubanMedia/Resource/images/Home/pause.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DoubanMedia/Resource/images/Home/start.png" afterPath="$PROJECT_DIR$/DoubanMedia/Resource/images/Home/start.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Views/Views/DMFM/AlbumRoundView.h" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Views/Views/DMFM/AlbumRoundView.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Views/Views/DMFM/AlbumRoundView.m" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Views/Views/DMFM/AlbumRoundView.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Controllers/DMFM/DMFMChannelController.m" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Controllers/DMFM/DMFMChannelController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Views/Views/DMFM/DMFMTableViewCell.h" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Views/Views/DMFM/DMFMTableViewCell.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Views/Views/DMFM/DMFMTableViewCell.m" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Views/Views/DMFM/DMFMTableViewCell.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Controllers/DMFM/DMMusicPlayerController.h" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Controllers/DMFM/DMMusicPlayerController.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Controllers/DMFM/DMMusicPlayerController.m" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Controllers/DMFM/DMMusicPlayerController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Models/Managers/SongPlay/DMPlayManager.h" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Models/Managers/SongPlay/DMPlayManager.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Models/Managers/SongPlay/DMPlayManager.m" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Models/Managers/SongPlay/DMPlayManager.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Views/Views/DMFM/DMPlayerView.h" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Views/Views/DMFM/DMPlayerView.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Views/Views/DMFM/DMPlayerView.m" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Views/Views/DMFM/DMPlayerView.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Views/Xibs/LaunchScreen.xib" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Views/Xibs/LaunchScreen.xib" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Manifest.lock" afterPath="$PROJECT_DIR$/Pods/Manifest.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Podfile.lock" afterPath="$PROJECT_DIR$/Podfile.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Podfile" afterPath="$PROJECT_DIR$/Podfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-AFNetworking/Pods-AFNetworking-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-AFNetworking/Pods-AFNetworking-Private.xcconfig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/jsonmess.xcuserdatad/xcschemes/Pods-AFNetworking.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/jsonmess.xcuserdatad/xcschemes/Pods-AFNetworking.xcscheme" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/jsonmess.xcuserdatad/xcschemes/Pods-AFSoundManager.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/jsonmess.xcuserdatad/xcschemes/Pods-AFSoundManager.xcscheme" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/jsonmess.xcuserdatad/xcschemes/Pods-MBProgressHUD.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/jsonmess.xcuserdatad/xcschemes/Pods-MBProgressHUD.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-MJRefresh/Pods-MJRefresh-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-MJRefresh/Pods-MJRefresh-Private.xcconfig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/jsonmess.xcuserdatad/xcschemes/Pods-MJRefresh.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/jsonmess.xcuserdatad/xcschemes/Pods-MJRefresh.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-MagicalRecord/Pods-MagicalRecord-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-MagicalRecord/Pods-MagicalRecord-Private.xcconfig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/jsonmess.xcuserdatad/xcschemes/Pods-MagicalRecord.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/jsonmess.xcuserdatad/xcschemes/Pods-MagicalRecord.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-NJKWebViewProgress/Pods-NJKWebViewProgress-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-NJKWebViewProgress/Pods-NJKWebViewProgress-Private.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-PureLayout/Pods-PureLayout-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-PureLayout/Pods-PureLayout-Private.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Reachability/Pods-Reachability-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Reachability/Pods-Reachability-Private.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-ReactiveCocoa/Pods-ReactiveCocoa-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-ReactiveCocoa/Pods-ReactiveCocoa-Private.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-SDWebImage/Pods-SDWebImage-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-SDWebImage/Pods-SDWebImage-Private.xcconfig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/jsonmess.xcuserdatad/xcschemes/Pods-SDWebImage.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/jsonmess.xcuserdatad/xcschemes/Pods-SDWebImage.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-SVWebViewController/Pods-SVWebViewController-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-SVWebViewController/Pods-SVWebViewController-Private.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-SpinKit/Pods-SpinKit-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-SpinKit/Pods-SpinKit-Private.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-ZBarSDK/Pods-ZBarSDK-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-ZBarSDK/Pods-ZBarSDK-Private.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods/Pods-acknowledgements.markdown" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods/Pods-acknowledgements.markdown" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods/Pods-acknowledgements.plist" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods/Pods-acknowledgements.plist" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods/Pods-environment.h" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods/Pods-environment.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods/Pods.debug.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods/Pods.debug.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods/Pods.release.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods/Pods.release.xcconfig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/jsonmess.xcuserdatad/xcschemes/Pods.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/jsonmess.xcuserdatad/xcschemes/Pods.xcscheme" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/SDWebImage/README.md" afterPath="$PROJECT_DIR$/Pods/SDWebImage/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDImageCache.h" afterPath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDImageCache.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDImageCache.m" afterPath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDImageCache.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDWebImageDownloader.h" afterPath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDWebImageDownloader.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDWebImageDownloader.m" afterPath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDWebImageDownloader.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDWebImageDownloaderOperation.h" afterPath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDWebImageDownloaderOperation.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDWebImageDownloaderOperation.m" afterPath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDWebImageDownloaderOperation.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDWebImageManager.h" afterPath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDWebImageManager.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDWebImageManager.m" afterPath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDWebImageManager.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDWebImagePrefetcher.h" afterPath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDWebImagePrefetcher.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDWebImagePrefetcher.m" afterPath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDWebImagePrefetcher.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/UIButton+WebCache.h" afterPath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/UIButton+WebCache.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/UIImageView+HighlightedWebCache.h" afterPath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/UIImageView+HighlightedWebCache.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/UIImageView+WebCache.h" afterPath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/UIImageView+WebCache.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/UIImageView+WebCache.m" afterPath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/UIImageView+WebCache.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DoubanMedia.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/DoubanMedia.xcodeproj/project.pbxproj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/project.pbxproj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -117,27 +120,57 @@
       <file leaf-file-name="DMGlobal.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DoubanMedia/Classes/Common/DMGlobal.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="117" max-vertical-offset="247">
+            <state vertical-scroll-proportion="0.0" vertical-offset="117" max-vertical-offset="273">
               <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Podfile" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Podfile" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Podfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.38902742" vertical-offset="0" max-vertical-offset="401">
-              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state vertical-scroll-proportion="-6.24" vertical-offset="0" max-vertical-offset="260">
+              <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RootTabView.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DoubanMedia/Classes/Views/Views/DMHome/TabTool/RootTabView.h">
+      <file leaf-file-name="DMMusicPlayManager.m" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DoubanMedia/Classes/Models/Managers/SongPlay/DMMusicPlayManager.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="650">
+            <state vertical-scroll-proportion="0.26584867" vertical-offset="13" max-vertical-offset="1092">
+              <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DMPlayManager.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DoubanMedia/Classes/Models/Managers/SongPlay/DMPlayManager.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DMMusicPlayManager.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DoubanMedia/Classes/Models/Managers/SongPlay/DMMusicPlayManager.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="403">
+              <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DMPlayManager.m" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DoubanMedia/Classes/Models/Managers/SongPlay/DMPlayManager.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1326">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -155,6 +188,8 @@
         <option value="$PROJECT_DIR$/DoubanMedia/Classes/Controllers/DMHome/ViewController.m" />
         <option value="$PROJECT_DIR$/DoubanMedia/Classes/Common/DMGlobal.h" />
         <option value="$PROJECT_DIR$/DoubanMedia/Classes/Views/Views/DMHome/TabTool/RootTabView.m" />
+        <option value="$PROJECT_DIR$/DoubanMedia/Classes/Models/Managers/SongPlay/DMMusicPlayManager.m" />
+        <option value="$PROJECT_DIR$/DoubanMedia/Classes/Models/Managers/SongPlay/DMMusicPlayManager.h" />
         <option value="$PROJECT_DIR$/Podfile" />
       </list>
     </option>
@@ -163,8 +198,8 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1455" />
-    <option name="y" value="-188" />
+    <option name="x" value="625" />
+    <option name="y" value="94" />
     <option name="width" value="1280" />
     <option name="height" value="729" />
   </component>
@@ -191,7 +226,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Cidr.FilesView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -224,90 +258,6 @@
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Pods" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Pods" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AFNetworking" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Pods" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Pods" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AFNetworking" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Support Files" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Pods" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Pods" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AFNetworking" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Serialization" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Pods" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Pods" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AFNetworking" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Security" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="DoubanMedia" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
             </PATH_ELEMENT>
@@ -326,15 +276,200 @@
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DoubanMedia" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DoubanMedia" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DoubanMedia" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DoubanMedia" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Classes" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DoubanMedia" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DoubanMedia" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Classes" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Models" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DoubanMedia" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DoubanMedia" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Classes" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Models" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Managers" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DoubanMedia" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DoubanMedia" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Classes" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Models" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Managers" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SongPlay" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DoubanMedia" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DoubanMedia" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Classes" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controllers" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DoubanMedia" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DoubanMedia" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Classes" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controllers" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DMHome" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DoubanMedia" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DoubanMedia" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Classes" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controllers" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DMFM" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Cidr.FilesView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="recentsLimit" value="5" />
     <property name="FullScreen" value="false" />
     <property name="OBJC.PRESERVED_TARGET_SELECTION" value="DoubanMedia" />
-    <property name="options.lastSelected" value="preferences.sourceCode.C/C++/Objective-C" />
+    <property name="options.lastSelected" value="CocoaPods" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
   </component>
@@ -364,27 +499,17 @@
       <method />
     </configuration>
     <configuration default="false" name="DoubanMedia" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="DoubanMedia" TARGET_NAME="DoubanMedia" CONFIG_NAME="Debug" SCHEME_NAME="DoubanMedia" RUN_TARGET_PROJECT_NAME="DoubanMedia" RUN_TARGET_NAME="DoubanMedia" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
-      <envs />
+      <envs>
+        <env name="NSZombieEnabled" value="YES" />
+      </envs>
       <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
         <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
       </EXTENSION>
-      <method />
-    </configuration>
-    <configuration default="false" name="Pods-AFSoundManager" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="Pods-AFSoundManager" CONFIG_NAME="Debug" SCHEME_NAME="Pods-AFSoundManager" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
-      <envs />
-      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
-        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
-      </EXTENSION>
+      <RunnerSettings RunnerId="AppRunner" />
+      <ConfigurationWrapper RunnerId="AppRunner" />
       <method />
     </configuration>
     <configuration default="false" name="Pods-MagicalRecord" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="Pods-MagicalRecord" CONFIG_NAME="Debug" SCHEME_NAME="Pods-MagicalRecord" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
-      <envs />
-      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
-        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
-      </EXTENSION>
-      <method />
-    </configuration>
-    <configuration default="false" name="Pods-MBProgressHUD" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="Pods-MBProgressHUD" CONFIG_NAME="Debug" SCHEME_NAME="Pods-MBProgressHUD" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
       <envs />
       <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
         <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
@@ -447,19 +572,49 @@
       </EXTENSION>
       <method />
     </configuration>
-    <list size="12">
+    <configuration default="false" name="Pods-SpinKit" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="Pods-SpinKit" CONFIG_NAME="Debug" SCHEME_NAME="Pods-SpinKit" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <configuration default="false" name="Pods-ZBarSDK" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="Pods-ZBarSDK" CONFIG_NAME="Debug" SCHEME_NAME="Pods-ZBarSDK" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <configuration default="false" name="Pods-Reachability" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="Pods-Reachability" CONFIG_NAME="Debug" SCHEME_NAME="Pods-Reachability" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <configuration default="false" name="Pods-DOUAudioStreamer" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="Pods-DOUAudioStreamer" CONFIG_NAME="Debug" SCHEME_NAME="Pods-DOUAudioStreamer" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <list size="14">
       <item index="0" class="java.lang.String" itemvalue="Application.DoubanMedia" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Pods-AFSoundManager" />
-      <item index="2" class="java.lang.String" itemvalue="Application.Pods-MagicalRecord" />
-      <item index="3" class="java.lang.String" itemvalue="Application.Pods-MBProgressHUD" />
-      <item index="4" class="java.lang.String" itemvalue="Application.Pods-MJRefresh" />
-      <item index="5" class="java.lang.String" itemvalue="Application.Pods-SDWebImage" />
-      <item index="6" class="java.lang.String" itemvalue="Application.Pods" />
-      <item index="7" class="java.lang.String" itemvalue="Application.Pods-PureLayout" />
-      <item index="8" class="java.lang.String" itemvalue="Application.Pods-ReactiveCocoa" />
-      <item index="9" class="java.lang.String" itemvalue="Application.Pods-NJKWebViewProgress" />
-      <item index="10" class="java.lang.String" itemvalue="Application.Pods-SVWebViewController" />
-      <item index="11" class="java.lang.String" itemvalue="Application.Pods-AFNetworking" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Pods-MagicalRecord" />
+      <item index="2" class="java.lang.String" itemvalue="Application.Pods-MJRefresh" />
+      <item index="3" class="java.lang.String" itemvalue="Application.Pods-SDWebImage" />
+      <item index="4" class="java.lang.String" itemvalue="Application.Pods" />
+      <item index="5" class="java.lang.String" itemvalue="Application.Pods-PureLayout" />
+      <item index="6" class="java.lang.String" itemvalue="Application.Pods-ReactiveCocoa" />
+      <item index="7" class="java.lang.String" itemvalue="Application.Pods-NJKWebViewProgress" />
+      <item index="8" class="java.lang.String" itemvalue="Application.Pods-SVWebViewController" />
+      <item index="9" class="java.lang.String" itemvalue="Application.Pods-AFNetworking" />
+      <item index="10" class="java.lang.String" itemvalue="Application.Pods-SpinKit" />
+      <item index="11" class="java.lang.String" itemvalue="Application.Pods-ZBarSDK" />
+      <item index="12" class="java.lang.String" itemvalue="Application.Pods-Reachability" />
+      <item index="13" class="java.lang.String" itemvalue="Application.Pods-DOUAudioStreamer" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -496,16 +651,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1455" y="-188" width="1280" height="729" extended-state="0" />
+    <frame x="625" y="94" width="1280" height="729" extended-state="0" />
     <editor active="false" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19092332" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286385" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3286385" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32810047" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286385" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2494043" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1858618" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30023828" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -514,9 +670,8 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1940532" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
@@ -538,10 +693,126 @@
     </option>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/DoubanMedia/Classes/Views/Views/DMHome/TabTool/RootTabView.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2223" max-vertical-offset="2379">
+          <caret line="171" column="0" selection-start-line="171" selection-start-column="0" selection-end-line="171" selection-end-column="0" />
+          <folding>
+            <element signature="e#135#158#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DoubanMedia/Classes/Common/DMGlobal.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="117" max-vertical-offset="273">
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Podfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="182" max-vertical-offset="260">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DoubanMedia/Classes/Models/Managers/SongPlay/DMMusicPlayManager.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DoubanMedia/Classes/Views/Views/DMHome/TabTool/RootTabView.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2223" max-vertical-offset="2379">
+          <caret line="171" column="0" selection-start-line="171" selection-start-column="0" selection-end-line="171" selection-end-column="0" />
+          <folding>
+            <element signature="e#135#158#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DoubanMedia/Classes/Common/DMGlobal.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="117" max-vertical-offset="273">
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Podfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="169" max-vertical-offset="260">
+          <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pods/Reachability/Reachability.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1313">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pods/Reachability/Reachability.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DoubanMedia/Classes/Views/Views/DMHome/TabTool/RootTabView.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="650">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DoubanMedia/Classes/Views/Views/DMHome/TabTool/RootTabView.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2223" max-vertical-offset="2379">
+          <caret line="171" column="0" selection-start-line="171" selection-start-column="0" selection-end-line="171" selection-end-column="0" />
+          <folding>
+            <element signature="e#135#158#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DoubanMedia/Classes/Common/DMGlobal.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="117" max-vertical-offset="273">
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Podfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DoubanMedia/Classes/Views/Views/DMHome/TabTool/RootTabView.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="650">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/DoubanMedia/Classes/Views/Views/DMHome/TabTool/RootTabView.m">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2223" max-vertical-offset="2379">
@@ -572,7 +843,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="650">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -606,7 +876,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="650">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -632,7 +901,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="650">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -658,21 +926,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="234">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Podfile">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DoubanMedia/Classes/Views/Views/DMHome/TabTool/RootTabView.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="487">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -696,10 +955,63 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Pods/Reachability/Reachability.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1300">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pods/Reachability/Reachability.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.765914" vertical-offset="2808" max-vertical-offset="6175">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DoubanMedia/Classes/Views/Views/DMHome/TabTool/RootTabView.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="487">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DoubanMedia/Classes/Models/Managers/SongPlay/DMPlayManager.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1326">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Podfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38902742" vertical-offset="0" max-vertical-offset="401">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state vertical-scroll-proportion="-6.24" vertical-offset="0" max-vertical-offset="260">
+          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DoubanMedia/Classes/Models/Managers/SongPlay/DMPlayManager.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="611">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DoubanMedia/Classes/Models/Managers/SongPlay/DMMusicPlayManager.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="403">
+          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DoubanMedia/Classes/Models/Managers/SongPlay/DMMusicPlayManager.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26584867" vertical-offset="13" max-vertical-offset="1092">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
           <folding />
         </state>
       </provider>

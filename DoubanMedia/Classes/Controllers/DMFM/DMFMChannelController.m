@@ -14,13 +14,18 @@
 #import "AccountInfo.h"
 #import "AppDelegate.h"
 #import "FMChannel.h"
-@interface DMFMChannelController ()<UITableViewDataSource,UITableViewDelegate,DMChannelDelegate,NSFetchedResultsControllerDelegate>
+#import "DMMusicPlayerController.h"
+@interface DMFMChannelController ()<UITableViewDataSource,UITableViewDelegate,
+DMChannelDelegate,NSFetchedResultsControllerDelegate>
 {
     DMChannelManager *networkManager;
         AppDelegate *appDelegate;
     BaseTableView *fmTableView;
     NSArray *dataSource;
     NSFetchedResultsController *fectchedController;
+    DMFMTableViewCell *lastSelected;//记录上一次播放的音乐频道
+    NSIndexPath *lastSelectedIndex;//记录上一次播放的音乐频道Index
+
 }
 @end
 static NSString *reuseCell = @"FMChannelCell";
@@ -37,6 +42,11 @@ static NSString *reuseCell = @"FMChannelCell";
 }
 -(void)viewWillAppear:(BOOL)animated
 {
+    if (lastSelectedIndex != nil)
+    {
+
+        [fmTableView reloadData];
+    }
     [super viewWillAppear:animated];
 }
 -(void)commonInit
@@ -92,14 +102,17 @@ static NSString *reuseCell = @"FMChannelCell";
 }
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
     // Return the number of sections.
     return [fectchedController sections].count;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
 
     // Return the number of rows in the section.
+
     return [[[fectchedController sections] objectAtIndex:section] numberOfObjects];
 }
 
@@ -122,6 +135,15 @@ static NSString *reuseCell = @"FMChannelCell";
     {
         [cell setCellContent:channel.channelName isDouBanRed:NO];
     }
+    //根据上次选中的index 进行判断
+    if (lastSelectedIndex == indexPath)
+    {
+         [cell isNowPlayChannel:YES];
+    }
+    else
+    {
+        [cell isNowPlayChannel:NO];
+    }
 
 
 
@@ -135,7 +157,23 @@ static NSString *reuseCell = @"FMChannelCell";
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
+	//获取播放列表并进入播放界面
+    DMFMTableViewCell *cell =(DMFMTableViewCell*)[tableView cellForRowAtIndexPath:indexPath];
+    if ( lastSelected != nil)
+    {
+        //1.取消上一次的播放选中
+        [lastSelected isNowPlayChannel:NO];
+    }
+    	//2.last = index；
+    lastSelected = cell;
+    lastSelectedIndex = indexPath;
+    [cell isNowPlayChannel:YES];
+    DMMusicPlayerController * musicPlayer = [[DMMusicPlayerController alloc] init];
+     FMChannel *channel = [fectchedController objectAtIndexPath:indexPath];
+    [musicPlayer setPlayChannelTitle:channel.channelName];
+    [musicPlayer setPlayChannelId:channel.channelID];
+    [self.navigationController pushViewController:musicPlayer animated:YES];
+	//设置当前播放频道为选中状态
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
 -(DMFMUserHeaderView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section

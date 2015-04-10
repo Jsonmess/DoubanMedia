@@ -9,12 +9,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-AFSoundManager.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-MBProgressHUD.xcscheme</key>
+		<key>Pods-DOUAudioStreamer.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -39,6 +34,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-Reachability.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-ReactiveCocoa.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -54,6 +54,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-SpinKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-ZBarSDK.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -62,57 +72,67 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2203F3FA0C4145F2F2DE08D6</key>
+		<key>14B95EA3913A6C694DAC718D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>31B2C2E5A42AAEBA5865817D</key>
+		<key>273F1678A471D0040AFD2468</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>35915341FEE364F9537F87A8</key>
+		<key>2B7107163D71A848E6BCF891</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5EAEC3248781F45000E31B17</key>
+		<key>33F2BA40C3E5BECC57F2BA06</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>68BE1FBDDC5CD190DADF5771</key>
+		<key>34363C9C5223F9FE81C2A50C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9EB3103F19061E3EA34A7E92</key>
+		<key>85BFFB1C666290E98196199E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9F9BF82EC1CE85FC4E715312</key>
+		<key>9BB79C9EE2CDC409235010E7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AA6893AD4E41EFAAAD4E664A</key>
+		<key>C22BAA1234065DB55C587779</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B8B9B2ACCD7C45670B9EC9AB</key>
+		<key>D0692CD2A27EA1E2A60E071A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BE1226FED7C7D8E6EB75C8EB</key>
+		<key>D675BD9F84CF85B239ADAF72</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E8A7D76D1A2727589B933C8F</key>
+		<key>D9F8DE4280E88AE9143671D8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E42D043AD377B690200E7185</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F83722A83325C5F874B25C5E</key>
 		<dict>
 			<key>primary</key>
 			<true/>

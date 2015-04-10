@@ -11,6 +11,7 @@
 #import "PureLayout.h"
 #import "Com_navigationController.h"
 #import "DMFMChannelController.h"
+#import "TabViewManager.h"
 #define KitemCount 4  //Tabbar 选项卡数目
 @interface RootViewController  ()<TabbarDataSource,TabbarDelegate>
 {
@@ -21,7 +22,8 @@
 
 @implementation RootViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
 
     [super viewDidLoad];
     subViewControllers = [NSMutableArray array];
@@ -53,6 +55,7 @@
      UIViewController *doubanSettingController = [[UIViewController alloc]init];
     Com_navigationController *navSettingController = [[Com_navigationController alloc]
                                                    initWithRootViewController:doubanSettingController];
+
     [doubanSettingController.view setBackgroundColor:[UIColor yellowColor]];
     [subViewControllers addObject:navSettingController];
 }
@@ -61,6 +64,8 @@
 {
 	//tabbar
     tabView = [[RootTabView alloc]initWithFrame:CGRectZero];
+    //将tabView 保存到一个单例中，用于隐藏和显示
+    [[TabViewManager sharedTabViewManager] setTabView:tabView];
     [tabView setTabDataSource:self];
     [tabView setTabDelegate:self];
     [self initSubViewControllers];
@@ -71,6 +76,7 @@
     //默认添加豆瓣fm
     UIViewController *fm = [subViewControllers firstObject];
     [self.view addSubview:fm.view];
+     [self.view bringSubviewToFront:tabView];
     [self setContainsWith:fm];
 }
 //切换模块
@@ -90,6 +96,7 @@
 
     //4.添加新的子控制器主视图控制器
     [self.view addSubview:current_c.view];
+    [self.view bringSubviewToFront:tabView];
     [self setContainsWith:current_c];
 
     
@@ -97,9 +104,7 @@
 //设置约束
 -(void)setContainsWith:(UIViewController *)controller
 {
-      [controller.view autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(0, 0, 0, 0)
-                                                excludingEdge:ALEdgeBottom];
-        [controller.view autoPinEdge:ALEdgeBottom toEdge:ALEdgeTop ofView:tabView];
+    [controller.view autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
     [self.view setNeedsLayout];
 }
 #pragma mark -----Tabbar代理
@@ -129,6 +134,8 @@
 {
     [self RunButionAction:lindex To:nindex];
 }
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
