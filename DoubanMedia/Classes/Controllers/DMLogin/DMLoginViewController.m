@@ -261,6 +261,7 @@
 {
     [_commitLogin setEnabled:YES];
 }
+
 -(void)logoutState:(kLogoutState)state
 {
 

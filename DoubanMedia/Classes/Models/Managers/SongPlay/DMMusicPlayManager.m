@@ -37,15 +37,19 @@
 -(void)addMusicItemFromArray:(NSArray *)musicArray shouldPlayNow:(BOOL)playNow
 {
     self.playList = [NSMutableArray arrayWithArray:musicArray];
-    if (!playNow)
+    if (self.playList .count <= 0)
     {
-        //立即播放
-        [self resetStreamer];
+        return;
     }
-    else
+    if (playNow)
     {
         //红心
         playIndex = 0;
+    }
+    else
+    {
+        //立即播放
+        [self resetStreamer];
     }
 }
 - (void)resetStreamer
@@ -79,7 +83,7 @@
     }
 }
 //更新播放器状态
-- (void)_updateStatus
+- (void)updateStatus
 {
     switch ([streamer status])
     {
@@ -131,7 +135,7 @@
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
     if (context == kStatusKVOKey) {
-        [self performSelector:@selector(_updateStatus)
+        [self performSelector:@selector(updateStatus)
                      onThread:[NSThread mainThread]
                    withObject:nil
                 waitUntilDone:NO];
