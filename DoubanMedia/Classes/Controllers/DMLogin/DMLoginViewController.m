@@ -17,7 +17,7 @@
 {
     DMLoginManager *loginManager;
 }
-@property(nonatomic)    UIImageView *cancelImageView;//返回
+@property(nonatomic)    UIButton *cancelBtn;//返回
 @property(nonatomic)    UIImageView *logo1ImageView;//logo1
 @property(nonatomic)    UILabel *loginLabel;//登录提示框
 @property(nonatomic)    UITextField *userName;//用户名
@@ -48,15 +48,21 @@
     [loginManager setLoginDelegate:self];
     //预加载验证码
     [loginManager getCaptchaImageFromDM];
+//    //ios6
+//    shouldHiddenStatusBar(YES);
+//    [self setNeedsStatusBarAppearanceUpdate];  
 
 }
 //设置视图
 -(void)setUpView
 {
     [self.view setBackgroundColor:DMColor(239,243,240,1.0f)];
-    _cancelImageView = [[UIImageView alloc] initWithFrame:CGRectZero];
-    [_cancelImageView setUserInteractionEnabled:YES];
-    [_cancelImageView setImage:[UIImage imageNamed:@"push_close_normal_btn@2x.png"]];
+    _cancelBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    UIImage *cancelImage = [UIImage imageNamed:@"push_close_normal_btn@2x.png"];
+    [_cancelBtn setBackgroundImage:cancelImage forState:UIControlStateNormal];
+    [_cancelBtn setBackgroundImage:cancelImage forState:UIControlStateHighlighted];
+    [_cancelBtn addTarget:self action:@selector(backToSuperController)
+         forControlEvents:UIControlEventTouchUpInside];
     _logo1ImageView = [[UIImageView alloc] initWithFrame:CGRectZero];
     [_logo1ImageView setImage:[UIImage imageNamed:@"splash_screen_logo.png"]];
     _loginLabel = [[UILabel alloc] initWithFrame:CGRectZero];
@@ -87,7 +93,7 @@
     [_logo2ImageView setImage:[UIImage imageNamed:@"splash_screen_wave.png"]];
 
 
-    [self.view addSubview:_cancelImageView];
+    [self.view addSubview:_cancelBtn];
 	[self.view addSubview:_logo1ImageView];
     [self.view addSubview:_userName];
     [self.view addSubview:_nameError];
@@ -106,11 +112,11 @@
 -(void)setUpViewContains
 {
     //返回
-    CGSize cancelSize = self.cancelImageView.image.size;
-    [self.cancelImageView autoPinEdgeToSuperviewEdge:ALEdgeTop];
-    [self.cancelImageView autoPinEdgeToSuperviewEdge:ALEdgeLeft];
-    [self.cancelImageView autoSetDimension:ALDimensionHeight toSize:cancelSize.height];
-    [self.cancelImageView autoSetDimension:ALDimensionWidth toSize:cancelSize.width];
+    CGSize cancelSize = self.cancelBtn.currentBackgroundImage.size;
+    [self.cancelBtn autoPinEdgeToSuperviewEdge:ALEdgeTop];
+    [self.cancelBtn autoPinEdgeToSuperviewEdge:ALEdgeLeft];
+    [self.cancelBtn autoSetDimension:ALDimensionHeight toSize:cancelSize.height];
+    [self.cancelBtn autoSetDimension:ALDimensionWidth toSize:cancelSize.width];
     //logo1
     CGSize logo1Size = self.logo1ImageView.image.size;
     [self.logo1ImageView autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:54.0f];
@@ -214,10 +220,10 @@
 {
     [loginManager getCaptchaImageFromDM];
 }
-//前往注册新账户
+//前往注册新账户---webUrl
 -(void)gotoRegisterAccount
 {
-    [loginManager logout];
+
 }
 //开始登录
 -(void)beginToLogin
@@ -262,10 +268,6 @@
     [_commitLogin setEnabled:YES];
 }
 
--(void)logoutState:(kLogoutState)state
-{
-
-}
 #pragma mark ---TextFiledDelegate
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
 {
@@ -304,7 +306,18 @@
     [self checkMobileNumberOrEmail:_userName.text];
 
 }
-
+////隐藏状态栏
+//-(BOOL)prefersStatusBarHidden
+//{
+//    [super prefersStatusBarHidden];
+//    return YES;
+//}
+//返回上一级
+-(void)backToSuperController
+{
+  //  shouldHiddenStatusBar(NO);
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 //检查手机号码和邮箱是否合法
 -(BOOL)checkMobileNumberOrEmail:(NSString *)userName
 {

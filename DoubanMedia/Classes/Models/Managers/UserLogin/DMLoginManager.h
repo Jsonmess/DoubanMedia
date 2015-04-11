@@ -22,6 +22,7 @@ typedef NS_ENUM(NSInteger, kLogoutState)
 @protocol DMLoginManagerDelegate<NSObject>
 //传出验证码图片地址
 -(void)setCaptchaImageUrl:(NSString *)url;
+@optional
 //登录状态
 -(void)loginState:(kLoginState)state;
 //注销状态

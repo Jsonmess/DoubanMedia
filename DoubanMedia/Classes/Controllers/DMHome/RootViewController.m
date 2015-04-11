@@ -26,6 +26,7 @@
 {
 
     [super viewDidLoad];
+    [self .view setBackgroundColor:[UIColor redColor]];
     subViewControllers = [NSMutableArray array];
     [self setUpView];
     // Do any additional setup after loading the view, typically from a nib.
@@ -97,16 +98,19 @@
     //4.添加新的子控制器主视图控制器
     [self.view addSubview:current_c.view];
     [self.view bringSubviewToFront:tabView];
-    [self setContainsWith:current_c];
 
+	//！！！！！切记，不要动态计算子控制器的View 大小 ！！！！！！！！！//
+//    [self setContainsWith:current_c];
+	[current_c.view setFrame:self.view.bounds];
     
 }
-//设置约束
--(void)setContainsWith:(UIViewController *)controller
-{
-    [controller.view autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
-    [self.view setNeedsLayout];
-}
+////设置约束
+//-(void)setContainsWith:(UIViewController *)controller
+//{
+//    //
+////    [controller.view autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
+////    [self.view setNeedsLayout];
+//}
 #pragma mark -----Tabbar代理
 -(NSInteger)numberOfTabItemsInTabbarView
 {

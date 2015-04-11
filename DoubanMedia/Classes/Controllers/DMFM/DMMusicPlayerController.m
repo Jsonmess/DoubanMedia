@@ -12,6 +12,7 @@
 #import "DMPlayManager.h"
 #import "DMMusicPlayManager.h"
 #import <UIImageView+AFNetworking.h>
+#import "DMLoginViewController.h"
 @interface DMMusicPlayerController ()<DMPlayerViewDelegate,MusicPlayDelegate>
 {
     DMPlayManager *playMananger;
@@ -91,7 +92,8 @@
 -(void)backToList
 {
     [self.navigationController popViewControllerAnimated:YES];
-    [[[TabViewManager sharedTabViewManager]getTabView] setHidden:NO];
+    [[[TabViewManager sharedTabViewManager] getTabView] setHidden:NO];
+
 }
 
 - (void)changeVolume:(id)sender

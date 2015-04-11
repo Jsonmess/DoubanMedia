@@ -40,10 +40,8 @@
     [userIcon setClipsToBounds:YES];
     [userIcon autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
     [userIcon autoPinEdge:ALEdgeLeading toEdge:ALEdgeLeading ofView:self withOffset:20.0f];
-
     [userName autoPinEdge:ALEdgeLeading toEdge:ALEdgeTrailing ofView:userIcon withOffset:8.0f];
     [userName autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
-
     [self setNeedsLayout];
 }
 
@@ -63,7 +61,11 @@
 		[userName setFont:DMFont(12.0f)];
         [userIcon setHidden:YES];
     }
+
     [self setNeedsLayout];
 }
-
+-(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self.delegate actionForLogin];
+}
 @end

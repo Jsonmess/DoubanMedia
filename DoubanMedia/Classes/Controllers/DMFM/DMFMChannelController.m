@@ -15,8 +15,9 @@
 #import "AppDelegate.h"
 #import "FMChannel.h"
 #import "DMMusicPlayerController.h"
+#import "DMLoginViewController.h"
 @interface DMFMChannelController ()<UITableViewDataSource,UITableViewDelegate,
-DMChannelDelegate,NSFetchedResultsControllerDelegate>
+DMChannelDelegate,NSFetchedResultsControllerDelegate,DMUserHeaderDelegate>
 {
     DMChannelManager *networkManager;
         AppDelegate *appDelegate;
@@ -42,11 +43,9 @@ static NSString *reuseCell = @"FMChannelCell";
 }
 -(void)viewWillAppear:(BOOL)animated
 {
-    if (lastSelectedIndex != nil)
-    {
+    [fmTableView reloadData];
 
-        [fmTableView reloadData];
-    }
+    //[self setNeedsStatusBarAppearanceUpdate];
     [super viewWillAppear:animated];
 }
 -(void)commonInit
@@ -100,6 +99,10 @@ static NSString *reuseCell = @"FMChannelCell";
 	[self.view addSubview: fmTableView];
 
 }
+//-(BOOL)prefersStatusBarHidden
+//{
+//    return NO;
+//}
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -170,7 +173,7 @@ static NSString *reuseCell = @"FMChannelCell";
      FMChannel *channel = [fectchedController objectAtIndexPath:indexPath];
     [musicPlayer setPlayChannelTitle:channel.channelName];
     [musicPlayer setPlayChannelId:channel.channelID];
-    [self.navigationController pushViewController:musicPlayer animated:YES];
+	[self.navigationController pushViewController:musicPlayer animated:YES];
 	//设置当前播放频道为选中状态
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
@@ -182,10 +185,14 @@ static NSString *reuseCell = @"FMChannelCell";
     //设置head 数据
     NSString *title = appDelegate.channels[section][@"section"];
     NSString *imagefile;
+    BOOL isNeedGetInterface = NO;//header用户交互
     if (section == 0)
     {
 		imagefile = @"user_normal.jpg";
+        isNeedGetInterface = YES;
     }
+    [view setDelegate:self];
+    [view setUserInteractionEnabled:isNeedGetInterface];
     [view setHeadViewContent:title Image:[UIImage imageNamed:imagefile]];
 
     return view;
@@ -214,5 +221,11 @@ static NSString *reuseCell = @"FMChannelCell";
 -(void)controllerDidChangeContent:(NSFetchedResultsController *)controller
 {
     [fmTableView reloadData];
+}
+//headerViewDelegate ---用户登录
+-(void)actionForLogin
+{
+    DMLoginViewController *login = [[DMLoginViewController alloc] init];
+    [self presentViewController:login animated:YES completion:nil];
 }
 @end
