@@ -123,8 +123,20 @@
 //循序播放
 - (void)actionPlayNext:(id)sender
 {
-    if (++playIndex >= [_playList count]) {
+    if (++playIndex >= [_playList count])
+    {
         playIndex = 0;
+    }
+    //未获取到新的播放列表
+    if (_playList.count <= 0)
+    {
+        UIAlertView *alertView = [[UIAlertView alloc]
+                                  initWithTitle:@"提示" message:@"当前音乐频道列表没有歌曲,\n请切换到其他频道"
+                                  delegate:self cancelButtonTitle:@"好的"
+                                  otherButtonTitles: nil];
+        [alertView setContentMode:UIViewContentModeCenter];
+        [alertView show];
+        return;
     }
     [self resetStreamer];
 }

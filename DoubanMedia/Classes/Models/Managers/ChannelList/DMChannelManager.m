@@ -150,20 +150,19 @@
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"section = %@",
                               [NSNumber numberWithInteger:0]];
     NSArray *channelsArray =[FMChannel MR_findAllWithPredicate:predicate];
-    if (channelsArray.count > 0)
+    if (channelsArray.count <= 0)
     {
-            [FMChannel MR_deleteAllMatchingPredicate:predicate
-                                       inContext:[NSManagedObjectContext MR_defaultContext]];
-
-        [firstContext MR_saveToPersistentStoreWithCompletion:^(BOOL success, NSError *error)
-         {
-
-             if (success)
-             {
-                 NSLog(@"清理本地频道数据成功");
-             }
-         }];
-    }
+//            [FMChannel MR_deleteAllMatchingPredicate:predicate
+//                                       inContext:[NSManagedObjectContext MR_defaultContext]];
+//
+//        [firstContext MR_saveToPersistentStoreWithCompletion:^(BOOL success, NSError *error)
+//         {
+//
+//             if (success)
+//             {
+//                 NSLog(@"清理本地频道数据成功");
+//             }
+//         }];
 
     [firstContext MR_saveToPersistentStoreWithCompletion:^(BOOL success, NSError *error)
      {
@@ -178,6 +177,6 @@
          }
          
      }];
-
+    }
 }
 @end

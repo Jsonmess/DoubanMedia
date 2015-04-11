@@ -127,14 +127,12 @@ static NSString *reuseCell = @"FMChannelCell";
                                         reuseIdentifier:reuseCell];
     }
     FMChannel *channel = [fectchedController objectAtIndexPath:indexPath];
-    if (indexPath.section == 0 && indexPath.row == 1)
+    BOOL isShowRedHot = NO;
+    if ([channel.channelName isEqualToString:@"我的红心"])
     {
-        [cell setCellContent: channel.channelName isDouBanRed:YES];
+        isShowRedHot = YES;
     }
-    else
-    {
-        [cell setCellContent:channel.channelName isDouBanRed:NO];
-    }
+      [cell setCellContent:channel.channelName isDouBanRed:isShowRedHot];
     //根据上次选中的index 进行判断
     if (lastSelectedIndex == indexPath)
     {
@@ -204,12 +202,14 @@ static NSString *reuseCell = @"FMChannelCell";
 -(void)shouldReloadData:(BOOL)isReadFromLocal
 {
 	//重新查询数据库
-    fectchedController = [FMChannel MR_fetchAllGroupedBy:@"section" withPredicate:nil sortedBy:@"section" ascending:YES];
+    fectchedController = [FMChannel MR_fetchAllGroupedBy:@"section" withPredicate:nil
+                                                sortedBy:@"section" ascending:YES];
     [fectchedController setDelegate:self];
     if (isReadFromLocal)
     {
         [fmTableView reloadData];
     }
+    
 }
 -(void)controllerDidChangeContent:(NSFetchedResultsController *)controller
 {

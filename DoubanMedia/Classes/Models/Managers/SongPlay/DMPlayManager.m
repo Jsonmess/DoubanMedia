@@ -75,21 +75,10 @@
             }
         }
         //开始播放
-        //
         BOOL playNow = NO;
         if ([type isEqualToString:@"r"])
         {
             playNow = YES;
-        }
-		//如果列表为空
-        if (songList.count <= 0)
-        {
-            UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"提示" message:@"当前音乐频道列表没有歌曲，\
-                                      请切换到其他频道"
-                                        delegate:self cancelButtonTitle:@"好的"
-                                    otherButtonTitles: nil];
-            [alertView show];
-            return ;
         }
         [playManager addMusicItemFromArray:songList shouldPlayNow:playNow];
     }
