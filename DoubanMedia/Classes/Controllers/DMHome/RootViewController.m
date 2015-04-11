@@ -26,7 +26,6 @@
 {
 
     [super viewDidLoad];
-    [self .view setBackgroundColor:[UIColor redColor]];
     subViewControllers = [NSMutableArray array];
     [self setUpView];
     // Do any additional setup after loading the view, typically from a nib.
@@ -78,7 +77,8 @@
     UIViewController *fm = [subViewControllers firstObject];
     [self.view addSubview:fm.view];
      [self.view bringSubviewToFront:tabView];
-    [self setContainsWith:fm];
+     [fm.view setFrame:self.view.bounds];
+//    [self setContainsWith:fm];
 }
 //切换模块
 -(void)RunButionAction:(NSInteger)oldtag To:(NSInteger)newtag
@@ -99,7 +99,7 @@
     [self.view addSubview:current_c.view];
     [self.view bringSubviewToFront:tabView];
 
-	//！！！！！切记，不要动态计算子控制器的View 大小 ！！！！！！！！！//
+	//！！！！！事故！切记，不要动态计算子控制器的View 大小 ！！！！！！！！！//
 //    [self setContainsWith:current_c];
 	[current_c.view setFrame:self.view.bounds];
     

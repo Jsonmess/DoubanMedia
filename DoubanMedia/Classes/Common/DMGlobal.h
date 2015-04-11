@@ -15,4 +15,6 @@
 #define DMBoldFont(fontSize) [UIFont fontWithName:@"Helvetica-Bold" size:(fontSize)]
 //状态栏
 #define shouldHiddenStatusBar(hidden) [[UIApplication sharedApplication] setStatusBarHidden:(hidden)]
+//用户头像BaseUrl
+#define UserAccountIconUrl @"http://img3.douban.com/icon/up"
 #endif

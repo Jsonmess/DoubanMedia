@@ -35,12 +35,36 @@
 @end
 
 @implementation DMLoginViewController
-
+-(instancetype)init
+{
+    if (self = [super init])
+    {
+        self.modalPresentationCapturesStatusBarAppearance = YES;
+        if ([self respondsToSelector:@selector(setNeedsStatusBarAppearanceUpdate)]) {
+            // iOS 7
+            [self prefersStatusBarHidden];
+            [self performSelector:@selector(setNeedsStatusBarAppearanceUpdate)];
+        }
+        else
+        {
+            //ios6
+            shouldHiddenStatusBar(YES);
+        }
+    }
+    return self;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self commonInit];
     [self setUpView];
     // Do any additional setup after loading the view.
+}
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [_userName resignFirstResponder];
+    [_password resignFirstResponder];
+    [_authCode resignFirstResponder];
 }
 -(void)commonInit
 {
@@ -48,9 +72,7 @@
     [loginManager setLoginDelegate:self];
     //预加载验证码
     [loginManager getCaptchaImageFromDM];
-//    //ios6
-//    shouldHiddenStatusBar(YES);
-//    [self setNeedsStatusBarAppearanceUpdate];  
+
 
 }
 //设置视图
@@ -223,7 +245,7 @@
 //前往注册新账户---webUrl
 -(void)gotoRegisterAccount
 {
-
+    [loginManager logout];//-------临时设置
 }
 //开始登录
 -(void)beginToLogin
@@ -263,9 +285,22 @@
 {
     [self.authImageView setImageWithURL:[NSURL URLWithString:url]];
 }
+//返回登录状态
 -(void)loginState:(kLoginState)state
 {
-    [_commitLogin setEnabled:YES];
+    switch (state) {
+        case kLoginError:
+		case kLoginFaild:
+            [self.registerBtn setEnabled:YES];
+            break;
+        case kLoginSuccess:
+            [self backToSuperController];
+            //通知更新父视图
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"LoginSucess" object:nil];
+            break;
+        default:
+            break;
+    }
 }
 
 #pragma mark ---TextFiledDelegate
@@ -306,12 +341,11 @@
     [self checkMobileNumberOrEmail:_userName.text];
 
 }
-////隐藏状态栏
-//-(BOOL)prefersStatusBarHidden
-//{
-//    [super prefersStatusBarHidden];
-//    return YES;
-//}
+//隐藏状态栏
+-(BOOL)prefersStatusBarHidden
+{
+    return YES;
+}
 //返回上一级
 -(void)backToSuperController
 {

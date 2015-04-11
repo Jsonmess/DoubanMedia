@@ -12,6 +12,7 @@
 #import "DMPlayManager.h"
 #import "DMMusicPlayManager.h"
 #import <UIImageView+AFNetworking.h>
+#import "UIImage+loadRemoteImage.h"
 #import "DMLoginViewController.h"
 @interface DMMusicPlayerController ()<DMPlayerViewDelegate,MusicPlayDelegate>
 {
@@ -158,19 +159,9 @@
 {
     currentPlaySong = songInfo ;
     //更新音乐封面+标题+歌手-----红心状态
-    NSURL *picUrl = [NSURL URLWithString:songInfo.picture];
-    dispatch_queue_t queue =dispatch_queue_create("loadImage",NULL);
-    dispatch_async(queue, ^{
-
-        NSData *resultData = [NSData dataWithContentsOfURL:picUrl];
-
-
-        dispatch_async(dispatch_get_main_queue(), ^{
-            _mplayView.albumView.roundImage=[UIImage imageWithData:resultData];
-
-        });
-
-    });
+    [UIImage getRemoteImageWithUrl:songInfo.picture Suceess:^(UIImage *image) {
+        _mplayView.albumView.roundImage = image;
+    }];
     //设置标题
     [_mplayView.songName setText:songInfo.title];
     //更新红心状态

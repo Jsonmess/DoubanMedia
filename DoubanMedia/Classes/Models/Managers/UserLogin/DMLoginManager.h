@@ -10,9 +10,9 @@
 
 typedef NS_ENUM(NSInteger, kLoginState)
 {
-    eLoginSuccess = 0,
-    eLoginFaild,
-    eLoginError
+    kLoginSuccess = 0,
+    kLoginFaild,
+    kLoginError
 };
 typedef NS_ENUM(NSInteger, kLogoutState)
 {
