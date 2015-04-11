@@ -14,12 +14,14 @@
 #import <UIImageView+AFNetworking.h>
 #import "UIImage+loadRemoteImage.h"
 #import "DMLoginViewController.h"
+#import <MediaPlayer/MediaPlayer.h>
 @interface DMMusicPlayerController ()<DMPlayerViewDelegate,MusicPlayDelegate>
 {
     DMPlayManager *playMananger;
     DMMusicPlayManager *musicPlayer;
     DMSongInfo *currentPlaySong;//记录正在播放的音乐对象
     BOOL isRedNow;
+    BOOL playState;//记录播放状态：暂停/播放；
 }
 @property (nonatomic) DMPlayerView *mplayView ;
 @end
@@ -44,6 +46,9 @@
                                              selector:@selector(changeVolume:)
                                                  name:@"AVSystemController_SystemVolumeDidChangeNotification"
                                                object:nil];
+    //注册远程控制
+    [[UIApplication sharedApplication]beginReceivingRemoteControlEvents];
+	[self becomeFirstResponder];
 }
 -(void)viewDidDisappear:(BOOL)animated
 {
@@ -51,6 +56,10 @@
     [[NSNotificationCenter defaultCenter ] removeObserver:self
                                                      name:@"AVSystemController_SystemVolumeDidChangeNotification"
                                                    object:nil];
+    //注销远程控制
+    [[UIApplication sharedApplication]endReceivingRemoteControlEvents];
+
+    [self resignFirstResponder];
 
 }//设置目录
 -(void)setUpView
@@ -82,6 +91,7 @@
     musicPlayer = [DMMusicPlayManager sharedMusicPlayManager];
     [musicPlayer setDelegate:self];
     isRedNow = YES;
+    playState = YES;//播放中
 }
 //获取当前频道的音乐列表
 -(void)getSongList
@@ -105,6 +115,10 @@
     [_mplayView syncVolumeValue:value];
 }
 
+-(BOOL)canBecomeFirstResponder
+{
+    return YES;
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -146,6 +160,7 @@
 //播放状态
 -(void)playState:(BOOL)state
 {
+    playState = state;
     [musicPlayer actionPlayPause:state];
 }
 //播放中标记操作
@@ -161,6 +176,10 @@
     //更新音乐封面+标题+歌手-----红心状态
     [UIImage getRemoteImageWithUrl:songInfo.picture Suceess:^(UIImage *image) {
         _mplayView.albumView.roundImage = image;
+        //更新锁屏信息
+        [self lockScreenPlaySongInfoWithSongName:songInfo.title
+                                          Artist:songInfo.artist
+                                           Album:image];
     }];
     //设置标题
     [_mplayView.songName setText:songInfo.title];
@@ -174,5 +193,49 @@
     [_mplayView.likeBtn setBackgroundImage:[UIImage imageNamed:redhotImage]
                                   forState:UIControlStateNormal];
     [_mplayView setNeedsLayout];
+}
+#pragma mark---远程控制
+- (void)remoteControlReceivedWithEvent:(UIEvent *)event
+{
+    if (event.type == UIEventTypeRemoteControl) {
+        switch (event.subtype) {
+            case UIEventSubtypeRemoteControlTogglePlayPause:
+
+				[musicPlayer actionPlayPause:playState];
+                break;
+            case UIEventSubtypeRemoteControlPlay:
+                [musicPlayer actionPlayPause:playState];
+                break;
+            case UIEventSubtypeRemoteControlNextTrack:
+                [self actionWithType:@"s"];
+                break;
+            default:
+                break;
+        }
+    }
+}
+//锁屏数据
+-(void)lockScreenPlaySongInfoWithSongName:(NSString *)songName
+                                   Artist:(NSString *)artist
+                                    Album:(UIImage *)album
+
+{
+    if(NSClassFromString(@"MPNowPlayingInfoCenter")){
+
+        NSMutableDictionary
+        *dict=[[NSMutableDictionary alloc]init];
+
+        [dict setObject:songName forKey:MPMediaItemPropertyTitle];
+
+        [dict setObject:artist forKey:MPMediaItemPropertyArtist];
+
+        [dict setObject:[[MPMediaItemArtwork alloc] initWithImage:album] forKey:MPMediaItemPropertyArtwork];
+
+        [[MPNowPlayingInfoCenter defaultCenter] setNowPlayingInfo:nil];
+        
+        [[MPNowPlayingInfoCenter defaultCenter]setNowPlayingInfo:dict];
+        
+    }
+    
 }
 @end

@@ -61,6 +61,7 @@
 		29A35B141AC6A3A100C2C2ED /* redMusicIncon.png in Resources */ = {isa = PBXBuildFile; fileRef = 29A35B131AC6A3A100C2C2ED /* redMusicIncon.png */; };
 		29A35B171AC6D5D700C2C2ED /* DMFMUserHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A35B161AC6D5D700C2C2ED /* DMFMUserHeaderView.m */; };
 		29A6FB5A1AD95F720076C393 /* UIImage+loadRemoteImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A6FB591AD95F720076C393 /* UIImage+loadRemoteImage.m */; };
+		29A6FB5C1AD9760F0076C393 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29A6FB5B1AD9760F0076C393 /* MediaPlayer.framework */; };
 		29B4D1081ABEBCA300899F29 /* TabItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B4D1071ABEBCA300899F29 /* TabItem.m */; };
 		29B4D1521ABEBE7200899F29 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 29B4D10C1ABEBE7200899F29 /* Default-568h@2x.png */; };
 		29B4D1531ABEBE7200899F29 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 29B4D10D1ABEBE7200899F29 /* Default.png */; };
@@ -201,6 +202,7 @@
 		29A35B161AC6D5D700C2C2ED /* DMFMUserHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMFMUserHeaderView.m; sourceTree = "<group>"; };
 		29A6FB581AD95F720076C393 /* UIImage+loadRemoteImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+loadRemoteImage.h"; sourceTree = "<group>"; };
 		29A6FB591AD95F720076C393 /* UIImage+loadRemoteImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+loadRemoteImage.m"; sourceTree = "<group>"; };
+		29A6FB5B1AD9760F0076C393 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		29B4D1061ABEBCA300899F29 /* TabItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabItem.h; sourceTree = "<group>"; };
 		29B4D1071ABEBCA300899F29 /* TabItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabItem.m; sourceTree = "<group>"; };
 		29B4D10C1ABEBE7200899F29 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29A6FB5C1AD9760F0076C393 /* MediaPlayer.framework in Frameworks */,
 				1B95DDCBFA3C0E32FBAA006C /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -748,6 +751,7 @@
 		67B9E8C8F08C500E4C0D83A0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				29A6FB5B1AD9760F0076C393 /* MediaPlayer.framework */,
 				91578B2819DE2AD8A3EE13F1 /* libPods.a */,
 			);
 			name = Frameworks;
