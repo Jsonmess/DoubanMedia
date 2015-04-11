@@ -154,7 +154,13 @@
     //歌曲名称
     [_songName autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_albumView
                 withOffset:ScreenBounds.size.height *0.04f];
-    [_songName autoSetDimension:ALDimensionHeight toSize:20.0f];
+    [_songName autoPinEdge:ALEdgeLeading toEdge:ALEdgeLeading ofView:self
+                withOffset:ScreenBounds.size.width *0.1f];
+    [_songName autoPinEdge:ALEdgeTrailing toEdge:ALEdgeTrailing ofView:self
+                withOffset:-ScreenBounds.size.width *0.1f];
+    [_songName setTextAlignment:NSTextAlignmentCenter];
+    [_songName setNumberOfLines:0];
+    [_songName setPreferredMaxLayoutWidth:ScreenBounds.size.width *0.8f];
     [_songName autoAlignAxis:ALAxisVertical toSameAxisOfView:_backgroundImage];
 
 

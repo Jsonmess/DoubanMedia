@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@protocol DMUserHeaderDelegate<NSObject>
+//点击登录
+-(void)actionForLogin;
+@end
 @interface DMFMUserHeaderView : UIView
+@property (nonatomic) id <DMUserHeaderDelegate>delegate;
 -(void)setHeadViewContent:(NSString *)title Image:(UIImage *)image;
 @end

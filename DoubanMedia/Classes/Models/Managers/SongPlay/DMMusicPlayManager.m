@@ -37,15 +37,19 @@
 -(void)addMusicItemFromArray:(NSArray *)musicArray shouldPlayNow:(BOOL)playNow
 {
     self.playList = [NSMutableArray arrayWithArray:musicArray];
-    if (!playNow)
+    if (self.playList .count <= 0)
     {
-        //立即播放
-        [self resetStreamer];
+        return;
     }
-    else
+    if (playNow)
     {
         //红心
         playIndex = 0;
+    }
+    else
+    {
+        //立即播放
+        [self resetStreamer];
     }
 }
 - (void)resetStreamer
@@ -79,7 +83,7 @@
     }
 }
 //更新播放器状态
-- (void)_updateStatus
+- (void)updateStatus
 {
     switch ([streamer status])
     {
@@ -119,8 +123,20 @@
 //循序播放
 - (void)actionPlayNext:(id)sender
 {
-    if (++playIndex >= [_playList count]) {
+    if (++playIndex >= [_playList count])
+    {
         playIndex = 0;
+    }
+    //未获取到新的播放列表
+    if (_playList.count <= 0)
+    {
+        UIAlertView *alertView = [[UIAlertView alloc]
+                                  initWithTitle:@"提示" message:@"当前音乐频道列表没有歌曲,\n请切换到其他频道"
+                                  delegate:self cancelButtonTitle:@"好的"
+                                  otherButtonTitles: nil];
+        [alertView setContentMode:UIViewContentModeCenter];
+        [alertView show];
+        return;
     }
     [self resetStreamer];
 }
@@ -131,7 +147,7 @@
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
     if (context == kStatusKVOKey) {
-        [self performSelector:@selector(_updateStatus)
+        [self performSelector:@selector(updateStatus)
                      onThread:[NSThread mainThread]
                    withObject:nil
                 waitUntilDone:NO];

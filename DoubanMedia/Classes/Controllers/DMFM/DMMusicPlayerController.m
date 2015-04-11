@@ -12,11 +12,14 @@
 #import "DMPlayManager.h"
 #import "DMMusicPlayManager.h"
 #import <UIImageView+AFNetworking.h>
+#import "UIImage+loadRemoteImage.h"
+#import "DMLoginViewController.h"
 @interface DMMusicPlayerController ()<DMPlayerViewDelegate,MusicPlayDelegate>
 {
     DMPlayManager *playMananger;
     DMMusicPlayManager *musicPlayer;
     DMSongInfo *currentPlaySong;//记录正在播放的音乐对象
+    BOOL isRedNow;
 }
 @property (nonatomic) DMPlayerView *mplayView ;
 @end
@@ -78,6 +81,7 @@
    playMananger = [DMPlayManager sharedDMPlayManager];
     musicPlayer = [DMMusicPlayManager sharedMusicPlayManager];
     [musicPlayer setDelegate:self];
+    isRedNow = YES;
 }
 //获取当前频道的音乐列表
 -(void)getSongList
@@ -89,7 +93,8 @@
 -(void)backToList
 {
     [self.navigationController popViewControllerAnimated:YES];
-    [[[TabViewManager sharedTabViewManager]getTabView] setHidden:NO];
+    [[[TabViewManager sharedTabViewManager] getTabView] setHidden:NO];
+
 }
 
 - (void)changeVolume:(id)sender
@@ -110,12 +115,28 @@
 //标记红心
 -(void)likeCurrentSong
 {
-    [self actionWithType:@"r"];
+	 NSString *redhotImage;
+    if (isRedNow)
+    {
+        //标记不喜欢
+        [self actionWithType:@"u"];
+        redhotImage = @"ic_player_fav_highlight.png";
+        isRedNow = NO;
+    }
+    else
+    {
+        //标记喜欢
+        [self actionWithType:@"r"];
+        redhotImage = @"ic_player_fav_selected.png";
+        isRedNow = YES;
+    }
+    [_mplayView.likeBtn setBackgroundImage:[UIImage imageNamed:redhotImage]
+                                  forState:UIControlStateNormal];
 }
 //标记删除
 -(void)dislikeCurrentSong
 {
-    [self actionWithType:@"u"];
+    [self actionWithType:@"b"];
 }
 //下一曲
 -(void)playNextSong
@@ -137,22 +158,21 @@
 -(void)getCurrentPlaySong:(DMSongInfo *)songInfo
 {
     currentPlaySong = songInfo ;
-    //更新音乐封面+标题+歌手
-    NSURL *picUrl = [NSURL URLWithString:songInfo.picture];
-    dispatch_queue_t queue =dispatch_queue_create("loadImage",NULL);
-    dispatch_async(queue, ^{
-
-        NSData *resultData = [NSData dataWithContentsOfURL:picUrl];
-
-
-        dispatch_async(dispatch_get_main_queue(), ^{
-            _mplayView.albumView.roundImage=[UIImage imageWithData:resultData];
-
-        });
-
-    });
+    //更新音乐封面+标题+歌手-----红心状态
+    [UIImage getRemoteImageWithUrl:songInfo.picture Suceess:^(UIImage *image) {
+        _mplayView.albumView.roundImage = image;
+    }];
     //设置标题
     [_mplayView.songName setText:songInfo.title];
+    //更新红心状态
+    NSString *redhotImage = @"ic_player_fav_highlight.png";
+    isRedNow = songInfo.like.integerValue > 0;
+    if (isRedNow)
+    {
+		redhotImage = @"ic_player_fav_selected.png";
+    }
+    [_mplayView.likeBtn setBackgroundImage:[UIImage imageNamed:redhotImage]
+                                  forState:UIControlStateNormal];
     [_mplayView setNeedsLayout];
 }
 @end

@@ -57,6 +57,7 @@
     self.roundImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
     [self.roundImageView setCenter:center];
     [self.roundImageView setImage:roundImage];
+    [self.roundImageView setContentMode:UIViewContentModeScaleAspectFill];
     [self addSubview:self.roundImageView];
     
     //set play state

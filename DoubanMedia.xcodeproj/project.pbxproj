@@ -60,6 +60,7 @@
 		29A35B121AC698F200C2C2ED /* DMFMTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A35B111AC698F200C2C2ED /* DMFMTableViewCell.m */; };
 		29A35B141AC6A3A100C2C2ED /* redMusicIncon.png in Resources */ = {isa = PBXBuildFile; fileRef = 29A35B131AC6A3A100C2C2ED /* redMusicIncon.png */; };
 		29A35B171AC6D5D700C2C2ED /* DMFMUserHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A35B161AC6D5D700C2C2ED /* DMFMUserHeaderView.m */; };
+		29A6FB5A1AD95F720076C393 /* UIImage+loadRemoteImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A6FB591AD95F720076C393 /* UIImage+loadRemoteImage.m */; };
 		29B4D1081ABEBCA300899F29 /* TabItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B4D1071ABEBCA300899F29 /* TabItem.m */; };
 		29B4D1521ABEBE7200899F29 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 29B4D10C1ABEBE7200899F29 /* Default-568h@2x.png */; };
 		29B4D1531ABEBE7200899F29 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 29B4D10D1ABEBE7200899F29 /* Default.png */; };
@@ -198,6 +199,8 @@
 		29A35B131AC6A3A100C2C2ED /* redMusicIncon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redMusicIncon.png; sourceTree = "<group>"; };
 		29A35B151AC6D5D700C2C2ED /* DMFMUserHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMFMUserHeaderView.h; sourceTree = "<group>"; };
 		29A35B161AC6D5D700C2C2ED /* DMFMUserHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMFMUserHeaderView.m; sourceTree = "<group>"; };
+		29A6FB581AD95F720076C393 /* UIImage+loadRemoteImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+loadRemoteImage.h"; sourceTree = "<group>"; };
+		29A6FB591AD95F720076C393 /* UIImage+loadRemoteImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+loadRemoteImage.m"; sourceTree = "<group>"; };
 		29B4D1061ABEBCA300899F29 /* TabItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabItem.h; sourceTree = "<group>"; };
 		29B4D1071ABEBCA300899F29 /* TabItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabItem.m; sourceTree = "<group>"; };
 		29B4D10C1ABEBE7200899F29 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -319,6 +322,8 @@
 				2978D1961AC035D4005CB2F3 /* Com_navigationController.m */,
 				2940BAF31AB87F3C00D1069A /* AppDelegate */,
 				2999D9761ABB12BA00F43C54 /* DMGlobal.h */,
+				29A6FB581AD95F720076C393 /* UIImage+loadRemoteImage.h */,
+				29A6FB591AD95F720076C393 /* UIImage+loadRemoteImage.m */,
 				29A35B091AC6879200C2C2ED /* UIImage+DMResizeImage.h */,
 				29A35B0A1AC6879200C2C2ED /* UIImage+DMResizeImage.m */,
 			);
@@ -982,6 +987,7 @@
 				2976254A1AB675DE00008804 /* main.m in Sources */,
 				297FFCD61AD01C3D00A6D3EE /* DMDeviceManager.m in Sources */,
 				29A35B0B1AC6879200C2C2ED /* UIImage+DMResizeImage.m in Sources */,
+				29A6FB5A1AD95F720076C393 /* UIImage+loadRemoteImage.m in Sources */,
 				29FC25E51AC452870055A770 /* AccountInfo.m in Sources */,
 				2999D9791ABB134400F43C54 /* RootTabView.m in Sources */,
 				29692FC51AD54E4700641CDF /* DMSongInfo.m in Sources */,
@@ -1132,7 +1138,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Qiang Zhu (N3YQQZE5KP)";
+				CODE_SIGN_IDENTITY = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -1144,7 +1150,7 @@
 				INFOPLIST_FILE = DoubanMediaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0b8d70c3-de2f-4482-84f0-ef9f97a71e49";
+				PROVISIONING_PROFILE = "00cad6bc-43b7-465d-9776-059ec5ad3c3f";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DoubanMedia.app/DoubanMedia";
 			};
 			name = Debug;
@@ -1153,7 +1159,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Qiang Zhu (N3YQQZE5KP)";
+				CODE_SIGN_IDENTITY = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -1161,7 +1167,7 @@
 				INFOPLIST_FILE = DoubanMediaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0b8d70c3-de2f-4482-84f0-ef9f97a71e49";
+				PROVISIONING_PROFILE = "00cad6bc-43b7-465d-9776-059ec5ad3c3f";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DoubanMedia.app/DoubanMedia";
 			};
 			name = Release;

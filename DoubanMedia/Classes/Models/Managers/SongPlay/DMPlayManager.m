@@ -75,13 +75,11 @@
             }
         }
         //开始播放
-        //
         BOOL playNow = NO;
         if ([type isEqualToString:@"r"])
         {
             playNow = YES;
         }
-        
         [playManager addMusicItemFromArray:songList shouldPlayNow:playNow];
     }
          failure:^(AFHTTPRequestOperation *operation, NSError *error)

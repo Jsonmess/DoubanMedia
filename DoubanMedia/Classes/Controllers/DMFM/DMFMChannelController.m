@@ -15,11 +15,13 @@
 #import "AppDelegate.h"
 #import "FMChannel.h"
 #import "DMMusicPlayerController.h"
+#import "DMLoginViewController.h"
+#import "UIImage+loadRemoteImage.h"
 @interface DMFMChannelController ()<UITableViewDataSource,UITableViewDelegate,
-DMChannelDelegate,NSFetchedResultsControllerDelegate>
+DMChannelDelegate,NSFetchedResultsControllerDelegate,DMUserHeaderDelegate>
 {
     DMChannelManager *networkManager;
-        AppDelegate *appDelegate;
+    AppDelegate *appDelegate;
     BaseTableView *fmTableView;
     NSArray *dataSource;
     NSFetchedResultsController *fectchedController;
@@ -35,18 +37,14 @@ static NSString *reuseCell = @"FMChannelCell";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	[self commonInit];
+    [self commonInit];
     [self setUpView];
     //在此处获取频道列表，为加载数据做准备
     [self getChannelInfo];
 }
 -(void)viewWillAppear:(BOOL)animated
 {
-    if (lastSelectedIndex != nil)
-    {
-
-        [fmTableView reloadData];
-    }
+    [fmTableView reloadData];
     [super viewWillAppear:animated];
 }
 -(void)commonInit
@@ -56,7 +54,6 @@ static NSString *reuseCell = @"FMChannelCell";
     networkManager = [[ DMChannelManager alloc] init];
     [networkManager setDelegate:self];
     appDelegate = [UIApplication sharedApplication].delegate;
-
 
 }
 -(void)getChannelInfo
@@ -78,7 +75,7 @@ static NSString *reuseCell = @"FMChannelCell";
         }
         else{
             [networkManager getChannel:1 withURLWithString:
-            [NSString stringWithFormat:@"http://douban.fm/j/explore/get_login_chls?uk=%@",user.userId]];
+             [NSString stringWithFormat:@"http://douban.fm/j/explore/get_login_chls?uk=%@",user.userId]];
         }
     }
     //上升最快的兆赫
@@ -91,15 +88,16 @@ static NSString *reuseCell = @"FMChannelCell";
 {
     [self setTitle:@"豆瓣FM"];
     CGRect frame = (CGRect){{0,0},{self.view.bounds.size.width,self.view.bounds.size.height -kTabbarHeight}};
-   fmTableView = [[BaseTableView alloc] initWithFrame:frame
-                                                    style:UITableViewStylePlain];
+    fmTableView = [[BaseTableView alloc] initWithFrame:frame
+                                                 style:UITableViewStylePlain];
 
     [fmTableView setDataSource:self];
     [fmTableView setDelegate:self];
     [fmTableView setSeparatorInset:UIEdgeInsetsMake(0, 0, 5.0f, 0)];
-	[self.view addSubview: fmTableView];
+    [self.view addSubview: fmTableView];
 
 }
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -127,25 +125,21 @@ static NSString *reuseCell = @"FMChannelCell";
                                         reuseIdentifier:reuseCell];
     }
     FMChannel *channel = [fectchedController objectAtIndexPath:indexPath];
-    if (indexPath.section == 0 && indexPath.row == 1)
+    BOOL isShowRedHot = NO;
+    if ([channel.channelName isEqualToString:@"我的红心"])
     {
-        [cell setCellContent: channel.channelName isDouBanRed:YES];
+        isShowRedHot = YES;
     }
-    else
-    {
-        [cell setCellContent:channel.channelName isDouBanRed:NO];
-    }
+    [cell setCellContent:channel.channelName isDouBanRed:isShowRedHot];
     //根据上次选中的index 进行判断
     if (lastSelectedIndex == indexPath)
     {
-         [cell isNowPlayChannel:YES];
+        [cell isNowPlayChannel:YES];
     }
     else
     {
         [cell isNowPlayChannel:NO];
     }
-
-
 
     return cell;
 }
@@ -157,23 +151,23 @@ static NSString *reuseCell = @"FMChannelCell";
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	//获取播放列表并进入播放界面
+    //获取播放列表并进入播放界面
     DMFMTableViewCell *cell =(DMFMTableViewCell*)[tableView cellForRowAtIndexPath:indexPath];
     if ( lastSelected != nil)
     {
         //1.取消上一次的播放选中
         [lastSelected isNowPlayChannel:NO];
     }
-    	//2.last = index；
+    //2.last = index；
     lastSelected = cell;
     lastSelectedIndex = indexPath;
     [cell isNowPlayChannel:YES];
     DMMusicPlayerController * musicPlayer = [[DMMusicPlayerController alloc] init];
-     FMChannel *channel = [fectchedController objectAtIndexPath:indexPath];
+    FMChannel *channel = [fectchedController objectAtIndexPath:indexPath];
     [musicPlayer setPlayChannelTitle:channel.channelName];
     [musicPlayer setPlayChannelId:channel.channelID];
     [self.navigationController pushViewController:musicPlayer animated:YES];
-	//设置当前播放频道为选中状态
+    //设置当前播放频道为选中状态
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
 -(DMFMUserHeaderView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
@@ -183,13 +177,34 @@ static NSString *reuseCell = @"FMChannelCell";
     [view setBackgroundColor:DMColor(230, 230, 230, 0.8f)];
     //设置head 数据
     NSString *title = appDelegate.channels[section][@"section"];
-    NSString *imagefile;
-    if (section == 0)
-    {
-		imagefile = @"user_normal.jpg";
-    }
-    [view setHeadViewContent:title Image:[UIImage imageNamed:imagefile]];
+    BOOL isNeedGetInterface = NO;//header用户交互
+    //查询数据库
+    NSArray *accounts = [AccountInfo MR_findAllInContext:[NSManagedObjectContext MR_context]];
 
+    if (accounts.count > 0 && section == 0)
+    {
+        AccountInfo *userInfo = [accounts firstObject];
+        title = userInfo.name;
+        //用户已经登录
+        NSString *imageUrl = [NSString stringWithFormat:@"%@%@.jpg",
+                              UserAccountIconUrl,userInfo.userId];
+        [UIImage getRemoteImageWithUrl:imageUrl Suceess:^(UIImage *image)
+         {
+             [view setHeadViewContent:title Image:image];
+         }];
+
+    }
+    else
+    {	   UIImage *imagefile = nil;
+        if (section == 0)
+        {
+            imagefile = [UIImage imageNamed:@"user_normal.jpg"];
+        }
+        isNeedGetInterface = YES;
+        [view setHeadViewContent:title Image:imagefile];
+    }
+    [view setDelegate:self];
+    [view setUserInteractionEnabled:isNeedGetInterface];
     return view;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
@@ -203,16 +218,25 @@ static NSString *reuseCell = @"FMChannelCell";
 #pragma mark --delegate
 -(void)shouldReloadData:(BOOL)isReadFromLocal
 {
-	//重新查询数据库
-    fectchedController = [FMChannel MR_fetchAllGroupedBy:@"section" withPredicate:nil sortedBy:@"section" ascending:YES];
+    //重新查询数据库
+    fectchedController = [FMChannel MR_fetchAllGroupedBy:@"section" withPredicate:nil
+                                                sortedBy:@"section" ascending:YES];
     [fectchedController setDelegate:self];
     if (isReadFromLocal)
     {
         [fmTableView reloadData];
     }
+
 }
 -(void)controllerDidChangeContent:(NSFetchedResultsController *)controller
 {
     [fmTableView reloadData];
+}
+//headerViewDelegate ---用户登录
+-(void)actionForLogin
+{
+    DMLoginViewController *login = [[DMLoginViewController alloc] init];
+    [login setModalPresentationStyle:UIModalPresentationFullScreen];
+    [self presentViewController:login animated:YES completion:nil];
 }
 @end

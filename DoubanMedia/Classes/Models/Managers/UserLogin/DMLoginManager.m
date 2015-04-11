@@ -72,18 +72,18 @@
         //r=0 登陆成功
         if ([(NSNumber *)[tempLoginInfoDictionary valueForKey:@"r"] intValue] == 0)
         {
-            [self.loginDelegate loginState:eLoginSuccess];
+            [self.loginDelegate loginState:kLoginSuccess];
             //保存用户数据到数据库
             [self saveUserInfoToDataBase:tempLoginInfoDictionary];
         }
         else{
 			//登录失败
             [self getCaptchaImageFromDM];
-            [self.loginDelegate loginState:eLoginFaild];
+            [self.loginDelegate loginState:kLoginFaild];
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         //网络故障或者未知错误
-        [self.loginDelegate loginState:eLoginError];
+        [self.loginDelegate loginState:kLoginError];
         [self getCaptchaImageFromDM];
     }];
 }

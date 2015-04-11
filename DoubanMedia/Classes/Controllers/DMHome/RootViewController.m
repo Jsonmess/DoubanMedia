@@ -77,7 +77,8 @@
     UIViewController *fm = [subViewControllers firstObject];
     [self.view addSubview:fm.view];
      [self.view bringSubviewToFront:tabView];
-    [self setContainsWith:fm];
+     [fm.view setFrame:self.view.bounds];
+//    [self setContainsWith:fm];
 }
 //切换模块
 -(void)RunButionAction:(NSInteger)oldtag To:(NSInteger)newtag
@@ -97,16 +98,19 @@
     //4.添加新的子控制器主视图控制器
     [self.view addSubview:current_c.view];
     [self.view bringSubviewToFront:tabView];
-    [self setContainsWith:current_c];
 
+	//！！！！！事故！切记，不要动态计算子控制器的View 大小 ！！！！！！！！！//
+//    [self setContainsWith:current_c];
+	[current_c.view setFrame:self.view.bounds];
     
 }
-//设置约束
--(void)setContainsWith:(UIViewController *)controller
-{
-    [controller.view autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
-    [self.view setNeedsLayout];
-}
+////设置约束
+//-(void)setContainsWith:(UIViewController *)controller
+//{
+//    //
+////    [controller.view autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
+////    [self.view setNeedsLayout];
+//}
 #pragma mark -----Tabbar代理
 -(NSInteger)numberOfTabItemsInTabbarView
 {
