@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "FMChannel.h"
+#import <AVFoundation/AVFoundation.h>
 @interface AppDelegate ()
 {
 
@@ -23,8 +24,18 @@
     [MagicalRecord setupCoreDataStackWithStoreNamed:@"DoubanMedia.sqlite"];
     //频道分类
     [self initTheChannels];
-    
+    //后台播放
+    [self playBackGround];
     return YES;
+}
+-(void)playBackGround
+{
+    AVAudioSession *session = [AVAudioSession sharedInstance];
+    if ([session setCategory:AVAudioSessionCategoryPlayback error:nil])
+    {
+        [session setActive:YES error:nil];
+
+    }
 }
 //初始化频道分类
 -(void)initTheChannels

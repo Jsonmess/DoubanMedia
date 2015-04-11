@@ -56,6 +56,10 @@
 {
     //清除streamer
     [self cleanStreamer];
+    if (playIndex > self.playList.count)
+    {
+        playIndex = 0;
+    }
     DMSongInfo *songInfo = self.playList[playIndex];
     streamer = [DOUAudioStreamer streamerWithAudioFile:songInfo];
     //添加状态
