@@ -203,6 +203,9 @@
 
 				[musicPlayer actionPlayPause:playState];
                 break;
+            case UIEventSubtypeRemoteControlPlay:
+                [musicPlayer actionPlayPause:playState];
+                break;
             case UIEventSubtypeRemoteControlNextTrack:
                 [self actionWithType:@"s"];
                 break;

@@ -13,9 +13,7 @@
 +(void )getRemoteImageWithUrl:(NSString *)url Suceess:(finishLoadImage)success
 {
     NSURL *picUrl = [NSURL URLWithString:url];
-    dispatch_queue_t queue =dispatch_queue_create("loadImage",NULL);
-    dispatch_async(queue, ^{
-
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSData *resultData = [NSData dataWithContentsOfURL:picUrl];
 
 
@@ -25,5 +23,6 @@
             success(image);
         });
     });
+    
 }
 @end
