@@ -271,9 +271,11 @@ NSString *statusString = @"";
             case UIEventSubtypeRemoteControlPause:
 
 				[musicPlayer actionPlayPause:NO];
+                [_mplayView.albumView pause];
                 break;
             case UIEventSubtypeRemoteControlPlay:
                 [musicPlayer actionPlayPause:YES];
+                [_mplayView.albumView play];
                 break;
             case UIEventSubtypeRemoteControlNextTrack:
                 [self actionWithType:@"s"];
@@ -287,23 +289,20 @@ NSString *statusString = @"";
 -(void)lockScreenPlaySongInfoWithSongName:(NSString *)songName
                                    Artist:(NSString *)artist
                                     Album:(UIImage *)album
+		{
+			if(NSClassFromString(@"MPNowPlayingInfoCenter"))
+			{
 
-{
-    if(NSClassFromString(@"MPNowPlayingInfoCenter")){
+				NSMutableDictionary *dict=[[NSMutableDictionary alloc]init];
 
-        NSMutableDictionary
-        *dict=[[NSMutableDictionary alloc]init];
+				[dict setObject:songName forKey:MPMediaItemPropertyTitle];
 
-        [dict setObject:songName forKey:MPMediaItemPropertyTitle];
+				[dict setObject:artist forKey:MPMediaItemPropertyArtist];
+				[dict setObject:[[MPMediaItemArtwork alloc] initWithImage:album] forKey:MPMediaItemPropertyArtwork];
+				[dict setObject:[NSNumber numberWithDouble:[currentPlaySong.length floatValue]]
+						 forKey:MPMediaItemPropertyPlaybackDuration];
+					[[MPNowPlayingInfoCenter defaultCenter] setNowPlayingInfo:dict];
+			}
 
-        [dict setObject:artist forKey:MPMediaItemPropertyArtist];
-        [dict setObject:[[MPMediaItemArtwork alloc] initWithImage:album] forKey:MPMediaItemPropertyArtwork];
-        [dict setObject:[NSNumber numberWithDouble:[currentPlaySong.length floatValue]]
-                 forKey:MPMediaItemPropertyPlaybackDuration];
-            [[MPNowPlayingInfoCenter defaultCenter] setNowPlayingInfo:dict];
-
-            // [[MPNowPlayingInfoCenter defaultCenter] setNowPlayingInfo:nil];
-    }
-    
-}
+	}
 @end
