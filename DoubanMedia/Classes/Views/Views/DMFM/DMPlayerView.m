@@ -51,7 +51,7 @@
     [_albumView setDelegate:self];
     //播放进度
     _playProgress = [[UILabel alloc] initWithFrame:CGRectZero];
-//    [_playProgress setText:@"00:00/00:00"];
+	[_playProgress setText:@"  "];
     [_playProgress setTextColor:DMColor(65, 205, 59, 1.0f)];
     [_playProgress setFont:DMFont(13.0f)];
     _songName = [[UILabel alloc] initWithFrame:CGRectZero];
