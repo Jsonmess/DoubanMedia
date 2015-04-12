@@ -238,6 +238,14 @@ NSString *statusString = @"";
     }
     NSString * timerLabelString = [NSMutableString stringWithFormat:@"%@/%@",currentTimeString,totalTime];
     [_mplayView.playProgress setText:timerLabelString];
+//    //更新远程控制
+//    [remoteInfoDic setObject:[NSNumber numberWithDouble:(double)currentTime]
+//                      forKey:MPNowPlayingInfoPropertyElapsedPlaybackTime];
+//    [remoteInfoDic setObject:[NSNumber numberWithDouble:[currentPlaySong.length doubleValue]]
+//                      forKey:MPNowPlayingInfoPropertyElapsedPlaybackTime];
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        [[MPNowPlayingInfoCenter defaultCenter] setNowPlayingInfo:remoteInfoDic];
+//    });
 }
 #pragma mark --others
 //格式化总时间
@@ -290,15 +298,11 @@ NSString *statusString = @"";
 
         [dict setObject:artist forKey:MPMediaItemPropertyArtist];
         [dict setObject:[[MPMediaItemArtwork alloc] initWithImage:album] forKey:MPMediaItemPropertyArtwork];
-        [dict setObject:[NSNumber numberWithDouble:[musicPlayer getCurrentAudioStreamer].currentTime]
-                 forKey:MPNowPlayingInfoPropertyElapsedPlaybackTime];
-        [dict setObject:[NSNumber numberWithDouble:[musicPlayer getCurrentAudioStreamer].duration]
+        [dict setObject:[NSNumber numberWithDouble:[currentPlaySong.length floatValue]]
                  forKey:MPMediaItemPropertyPlaybackDuration];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [[MPNowPlayingInfoCenter defaultCenter]setNowPlayingInfo:dict];
-        });
-        remoteInfoDic = [NSMutableDictionary dictionaryWithDictionary:dict];
-        // [[MPNowPlayingInfoCenter defaultCenter] setNowPlayingInfo:nil];
+            [[MPNowPlayingInfoCenter defaultCenter] setNowPlayingInfo:dict];
+
+            // [[MPNowPlayingInfoCenter defaultCenter] setNowPlayingInfo:nil];
     }
     
 }
