@@ -119,6 +119,7 @@
               else
               {
                   NSLog(@"将频道对象存入数据库失败----reason:/n%@",error);
+                  [self.delegate shouldReloadData:YES];
               }
 
           }];

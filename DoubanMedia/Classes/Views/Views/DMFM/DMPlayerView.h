@@ -29,6 +29,8 @@
 @property (nonatomic) UIButton *likeBtn; //标记喜欢
 @property (nonatomic) UIButton *dislikeBtn;//标记不再收听
 @property (nonatomic) UIButton *nextSongBtn;//下一首
+@property (nonatomic) UILabel *playProgress;//播放进度
+@property (nonatomic) UILabel *songArtist;//显示歌手
 @property (nonatomic) UISlider *volumeSlider;//控制音量
 @property (nonatomic) id<DMPlayerViewDelegate> playDelegate;
 -(void)setChannelName:(NSString *)channelName;

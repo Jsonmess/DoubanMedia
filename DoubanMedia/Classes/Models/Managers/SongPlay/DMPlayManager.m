@@ -80,6 +80,14 @@
         {
             playNow = YES;
         }
+        if ([c_id isEqualToString:@"-3"]&& songList.count <= 0)
+        {
+            UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"提示"
+                                                        message:@"您的红心频道为空了噢\n请从其他频道添加或登录您的账户同步"
+                                                              delegate:self cancelButtonTitle:@"好的"
+                                                     otherButtonTitles: nil];
+            [alertView show];
+        }
         [playManager addMusicItemFromArray:songList shouldPlayNow:playNow];
     }
          failure:^(AFHTTPRequestOperation *operation, NSError *error)

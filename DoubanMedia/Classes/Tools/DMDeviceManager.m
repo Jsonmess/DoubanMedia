@@ -13,17 +13,30 @@
 +(KDeviceType)getCurrentDeviceType
 {
     CGFloat width = ScreenBounds.size.width;
+     CGFloat height = ScreenBounds.size.height;
+
     if (width <= 320)
     {
-        return kiPhone5;
+        if (height > 480 )
+        {
+            return kiPhone5s;
+        }
+        else
+        {
+            return kiPhone4s;
+        }
 
-    }else if(width > 320 && width < 400 )
+    }else if (height > 750)
+    {
+        return kiPad;
+    }
+    else if(width > 320 && width < 400 )
     {
         return kiPhone6;
     }
     else
     {
-        return kIphone6Plus;
+        return kiPhone6Plus;
     }
 
 }

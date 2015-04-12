@@ -9,9 +9,11 @@
 #import <Foundation/Foundation.h>
 typedef NS_ENUM(NSInteger, KDeviceType)
 {
-    kiPhone5 = 0,
+    kiPhone4s = 0,
+    kiPhone5s,
     kiPhone6,
-    kIphone6Plus
+    kiPhone6Plus,
+    kiPad,
 };
 @interface DMDeviceManager : NSObject
 
