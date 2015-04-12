@@ -12,6 +12,7 @@
     CGFloat hasPlayTime;
     DOUAudioStreamer *streamer;
     NSInteger playIndex;//标记播放索引
+    NSTimer *timer;//更新播放进度
 }
 @property (nonatomic) NSMutableArray *playList;//用于存储SongInfo对象
 @end
@@ -69,7 +70,9 @@
                   context:kDurationKVOKey];
     [streamer addObserver:self forKeyPath:@"bufferingRatio" options:NSKeyValueObservingOptionNew
                   context:kBufferingRatioKVOKey];
-
+	//添加定时器
+    timer = [[NSTimer timerWithTimeInterval:0.5f target:self selector:@selector(<#selector#>) userInfo:nil repeats:YES];
+    [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSDefaultRunLoopMode];
     //将音乐对象传出
     [self.delegate getCurrentPlaySong:songInfo];
     [streamer play];
@@ -85,6 +88,16 @@
         [streamer removeObserver:self forKeyPath:@"bufferingRatio"];
         streamer = nil;
     }
+}
+//更新播放进度
+-(void)updateProgress
+{
+
+    NSTimeInterval len = streamer.duration;
+    NSTimeInterval current = streamer.currentTime;
+    songPlayProgress progress;
+//
+//    [self.delegate updatePlayProgress:progress(len,current)];
 }
 //更新播放器状态
 - (void)updateStatus

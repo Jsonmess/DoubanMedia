@@ -180,6 +180,8 @@
     }];
     //设置标题
     [_mplayView.songName setText:songInfo.title];
+    //设置歌手
+    [_mplayView.songArtist setText:songInfo.artist];
     //更新红心状态
     NSString *redhotImage = @"ic_player_fav_highlight.png";
     isRedNow = songInfo.like.integerValue > 0;
