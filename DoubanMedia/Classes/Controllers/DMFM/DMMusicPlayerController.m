@@ -271,9 +271,11 @@ NSString *statusString = @"";
             case UIEventSubtypeRemoteControlPause:
 
 				[musicPlayer actionPlayPause:NO];
+                [_mplayView.albumView pause];
                 break;
             case UIEventSubtypeRemoteControlPlay:
                 [musicPlayer actionPlayPause:YES];
+                [_mplayView.albumView play];
                 break;
             case UIEventSubtypeRemoteControlNextTrack:
                 [self actionWithType:@"s"];
