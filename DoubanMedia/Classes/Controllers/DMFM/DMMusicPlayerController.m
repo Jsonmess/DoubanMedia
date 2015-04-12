@@ -228,9 +228,12 @@
 
         [dict setObject:[[MPMediaItemArtwork alloc] initWithImage:album] forKey:MPMediaItemPropertyArtwork];
 
-        [[MPNowPlayingInfoCenter defaultCenter] setNowPlayingInfo:nil];
+        dispatch_async(dispatch_get_main_queue(), ^{
+			 [[MPNowPlayingInfoCenter defaultCenter]setNowPlayingInfo:dict];
+        });
+       // [[MPNowPlayingInfoCenter defaultCenter] setNowPlayingInfo:nil];
         
-        [[MPNowPlayingInfoCenter defaultCenter]setNowPlayingInfo:dict];
+
         
     }
     
