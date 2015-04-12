@@ -87,6 +87,7 @@ static NSString *reuseCell = @"FMChannelCell";
 -(void)setUpView
 {
     [self setTitle:@"豆瓣FM"];
+    [self.view setBackgroundColor:DMColor(250,250,248,1.0f)];
     CGRect frame = (CGRect){{0,0},{self.view.bounds.size.width,self.view.bounds.size.height -kTabbarHeight}};
     fmTableView = [[BaseTableView alloc] initWithFrame:frame
                                                  style:UITableViewStylePlain];
