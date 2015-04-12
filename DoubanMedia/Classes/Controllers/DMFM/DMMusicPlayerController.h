@@ -11,4 +11,5 @@
 @interface DMMusicPlayerController : UIViewController
 @property (nonatomic) NSString *playChannelTitle;//标题
 @property (nonatomic) NSString *playChannelId;//频道id
+- (void)lockScreenPlaySongInfoWithSongName:(NSString *)songName Artist:(NSString *)artist Album:(UIImage *)album;
 @end

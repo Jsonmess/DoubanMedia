@@ -287,23 +287,20 @@ NSString *statusString = @"";
 -(void)lockScreenPlaySongInfoWithSongName:(NSString *)songName
                                    Artist:(NSString *)artist
                                     Album:(UIImage *)album
+		{
+			if(NSClassFromString(@"MPNowPlayingInfoCenter"))
+			{
 
-{
-    if(NSClassFromString(@"MPNowPlayingInfoCenter")){
+				NSMutableDictionary *dict=[[NSMutableDictionary alloc]init];
 
-        NSMutableDictionary
-        *dict=[[NSMutableDictionary alloc]init];
+				[dict setObject:songName forKey:MPMediaItemPropertyTitle];
 
-        [dict setObject:songName forKey:MPMediaItemPropertyTitle];
+				[dict setObject:artist forKey:MPMediaItemPropertyArtist];
+				[dict setObject:[[MPMediaItemArtwork alloc] initWithImage:album] forKey:MPMediaItemPropertyArtwork];
+				[dict setObject:[NSNumber numberWithDouble:[currentPlaySong.length floatValue]]
+						 forKey:MPMediaItemPropertyPlaybackDuration];
+					[[MPNowPlayingInfoCenter defaultCenter] setNowPlayingInfo:dict];
+			}
 
-        [dict setObject:artist forKey:MPMediaItemPropertyArtist];
-        [dict setObject:[[MPMediaItemArtwork alloc] initWithImage:album] forKey:MPMediaItemPropertyArtwork];
-        [dict setObject:[NSNumber numberWithDouble:[currentPlaySong.length floatValue]]
-                 forKey:MPMediaItemPropertyPlaybackDuration];
-            [[MPNowPlayingInfoCenter defaultCenter] setNowPlayingInfo:dict];
-
-            // [[MPNowPlayingInfoCenter defaultCenter] setNowPlayingInfo:nil];
-    }
-    
-}
+	}
 @end

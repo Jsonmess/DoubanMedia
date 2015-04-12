@@ -24,7 +24,7 @@ PODS:
   - MagicalRecord (2.2):
     - MagicalRecord/Core (= 2.2)
   - MagicalRecord/Core (2.2)
-  - MJRefresh (1.4.3)
+  - MJRefresh (1.4.4)
   - NJKWebViewProgress (0.1.8)
   - PureLayout (2.0.5)
   - Reachability (3.2)
@@ -60,7 +60,7 @@ SPEC CHECKSUMS:
   AFNetworking: fefbce9660acb17f48ae0011292d4da0f457bf36
   DOUAudioStreamer: b2144219092952cb1483839691d521aa7762146b
   MagicalRecord: f8a56bb87ab6552f20c4bb8681a1958a197ea3cd
-  MJRefresh: 6eb09aefa9622f0908fdf42d63c2070478c04c42
+  MJRefresh: e4a25dd1f3afbe5c547ff0d434cb40997803bc81
   NJKWebViewProgress: a9d0ca8fbad5ebe5d2bc7d9aa16673b02d4a96e6
   PureLayout: a0fe75f1cf485801e7e00b723b8a3c32dca558e2
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
@@ -70,4 +70,4 @@ SPEC CHECKSUMS:
   SVWebViewController: c36dda7326e81fcae0abf5d02bf7bbf7e41be901
   ZBarSDK: 4c1b5daeb7d6cc67dc9355e690af0230a661f6ec
 
-COCOAPODS: 0.36.3
+COCOAPODS: 0.35.0
