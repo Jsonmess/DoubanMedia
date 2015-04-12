@@ -29,7 +29,6 @@
     return shared;
 }
 
-
 -(NSMutableArray *)getPlayList
 {
     return _playList;
@@ -61,6 +60,11 @@
     {
         playIndex = 0;
     }
+    //添加定时器
+    timer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self
+                                           selector:@selector(updateProgress)
+                                           userInfo:nil
+                                            repeats:YES];
     DMSongInfo *songInfo = self.playList[playIndex];
     streamer = [DOUAudioStreamer streamerWithAudioFile:songInfo];
     //添加状态
@@ -70,9 +74,6 @@
                   context:kDurationKVOKey];
     [streamer addObserver:self forKeyPath:@"bufferingRatio" options:NSKeyValueObservingOptionNew
                   context:kBufferingRatioKVOKey];
-	//添加定时器
-    timer = [[NSTimer timerWithTimeInterval:0.5f target:self selector:@selector(<#selector#>) userInfo:nil repeats:YES];
-    [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSDefaultRunLoopMode];
     //将音乐对象传出
     [self.delegate getCurrentPlaySong:songInfo];
     [streamer play];
@@ -88,49 +89,33 @@
         [streamer removeObserver:self forKeyPath:@"bufferingRatio"];
         streamer = nil;
     }
+    timer = nil;
 }
 //更新播放进度
 -(void)updateProgress
 {
-
-    NSTimeInterval len = streamer.duration;
     NSTimeInterval current = streamer.currentTime;
-    songPlayProgress progress;
-//
-//    [self.delegate updatePlayProgress:progress(len,current)];
+    [self.delegate updatePlayProgress:current];
 }
+
 //更新播放器状态
 - (void)updateStatus
 {
-    switch ([streamer status])
+
+    if ([streamer status] == DOUAudioStreamerFinished ||
+        [streamer status] == DOUAudioStreamerError)
     {
-        case DOUAudioStreamerPlaying:
-            break;
-
-        case DOUAudioStreamerPaused:
-
-            break;
-
-        case DOUAudioStreamerIdle:
-            break;
-
-        case DOUAudioStreamerFinished:
-            [self actionPlayNext:nil];
-            break;
-
-        case DOUAudioStreamerBuffering:
-            break;
-
-        case DOUAudioStreamerError:
-            break;
+        [self actionPlayNext:nil];
+        [timer invalidate];
     }
+    [self.delegate getPlayStreamerStatue:[streamer status]];
 }
 //播放暂停
 - (void)actionPlayPause:(BOOL)sender
 {
     if (sender)
     {
-		[streamer play];
+        [streamer play];
     }
     else
     {
@@ -161,7 +146,8 @@
 {
     return streamer;
 }
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object
+                        change:(NSDictionary *)change context:(void *)context
 {
     if (context == kStatusKVOKey) {
         [self performSelector:@selector(updateStatus)
@@ -170,20 +156,12 @@
                 waitUntilDone:NO];
     }
 //    else if (context == kDurationKVOKey) {
-//        [self performSelector:@selector(_timerAction:)
+//        [self performSelector:@selector(updateProgress)
 //                     onThread:[NSThread mainThread]
 //                   withObject:nil
 //                waitUntilDone:NO];
 //    }
-//    else if (context == kBufferingRatioKVOKey) {
-//        [self performSelector:@selector(_updateBufferingStatus)
-//                     onThread:[NSThread mainThread]
-//                   withObject:nil
-//                waitUntilDone:NO];
-//    }
-//    else {
-//        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
-//    }
+
 }
 
 @end

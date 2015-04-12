@@ -41,6 +41,7 @@
 -(void)setUpView
 {
     _backgroundImage = [[UIImageView alloc]initWithFrame:CGRectZero];
+    [_backgroundImage setBackgroundColor:DMColor(250,250,248,1.0f)];
     BtnParentView = [[UIView alloc] initWithFrame:CGRectZero];
     _playChannel = [[UILabel alloc] initWithFrame:CGRectZero];
     [_playChannel setFont:DMBoldFont(22.0f)];
@@ -50,17 +51,17 @@
     [_albumView setDelegate:self];
     //播放进度
     _playProgress = [[UILabel alloc] initWithFrame:CGRectZero];
-    [_playProgress setText:@"00:00/00:00"];
+//    [_playProgress setText:@"00:00/00:00"];
     [_playProgress setTextColor:DMColor(65, 205, 59, 1.0f)];
-    [_playProgress setFont:DMFont(14.0f)];
+    [_playProgress setFont:DMFont(13.0f)];
     _songName = [[UILabel alloc] initWithFrame:CGRectZero];
     [_songName setTextColor:_playChannel.textColor];
     //[_songName setText:@"锦鲤抄"];
-    [_songName setFont:DMFont(18.0f)];
+    [_songName setFont:DMFont(17.0f)];
     //歌手名称
     _songArtist = [[UILabel alloc] initWithFrame:CGRectZero];
     [_songArtist setTextColor:_playChannel.textColor];
-    [_songArtist setFont:DMFont(15.0f)];
+    [_songArtist setFont:DMFont(13.0f)];
 //    [_songArtist setText:@"银临"];
     //音量icon
     _volumeIcon  = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"play_sound@2x.png"]];
@@ -138,22 +139,35 @@
 {
     [_backgroundImage autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
     [_playChannel autoAlignAxis:ALAxisVertical toSameAxisOfView:_backgroundImage];
-    [_playChannel autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:_backgroundImage withOffset:ScreenBounds.size.height *0.15f];
+    [_playChannel autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:_backgroundImage
+                   withOffset:ScreenBounds.size.height *0.15f];
     //专辑
     [_albumView autoAlignAxis:ALAxisVertical toSameAxisOfView:_backgroundImage];
-    [_albumView autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_playChannel withOffset:ScreenBounds.size.height *0.07f];
+    [_albumView autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_playChannel
+                 withOffset:ScreenBounds.size.height *0.05f];
     //根据设备设置其宽高
-    CGFloat width,height;
-    switch ([DMDeviceManager getCurrentDeviceType]) {
-        case kiPhone5:
+    CGFloat width,height,songArtistLocate;
+    songArtistLocate = ScreenBounds.size.height *0.05f;
+    switch ([DMDeviceManager getCurrentDeviceType])
+    {
+        case kiPhone5s:
             width = 200.0f;
             break;
+        case kiPhone4s:
+            width = 175.0f;
+            break;
         case kiPhone6:
-            width = 250.0f;
+            width = 260.0f;
+            songArtistLocate = ScreenBounds.size.height *0.07f;
             break;
             //屏幕大于6plus以上
-        case kIphone6Plus:
-            width  = 350.0f;
+        case kiPhone6Plus:
+            width  = 320.0f;
+            songArtistLocate = ScreenBounds.size.height *0.06f;
+            break;
+            case kiPad:
+             width  = 360.0f;
+            songArtistLocate = ScreenBounds.size.height *0.12f;
             break;
 
         default:
@@ -163,27 +177,6 @@
 
     [_albumView autoSetDimension:ALDimensionHeight toSize:height];
     [_albumView autoSetDimension:ALDimensionWidth toSize:width];
-    //播放进度
-    [_playProgress autoAlignAxis:ALAxisVertical toSameAxisOfView:_backgroundImage];
-    [_playProgress autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_albumView withOffset:8.0f];
-    [_playProgress autoSetDimension:ALDimensionWidth toSize:ScreenBounds.size.width *0.6f];
-    [_playProgress setTextAlignment:NSTextAlignmentCenter];
-    //歌曲名称
-    [_songName autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_playProgress
-                withOffset:ScreenBounds.size.height *0.02f];
-    [_songName autoPinEdge:ALEdgeLeading toEdge:ALEdgeLeading ofView:self
-                withOffset:ScreenBounds.size.width *0.1f];
-    [_songName autoPinEdge:ALEdgeTrailing toEdge:ALEdgeTrailing ofView:self
-                withOffset:-ScreenBounds.size.width *0.1f];
-    [_songName setTextAlignment:NSTextAlignmentCenter];
-    [_songName setNumberOfLines:0];
-    [_songName setPreferredMaxLayoutWidth:ScreenBounds.size.width *0.8f];
-    [_songName autoAlignAxis:ALAxisVertical toSameAxisOfView:_backgroundImage];
-	//歌手
-    [_songArtist autoAlignAxis:ALAxisVertical toSameAxisOfView:_backgroundImage];
-    [_songArtist autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_songName withOffset:5.0f];
-    [_songArtist autoSetDimension:ALDimensionWidth toSize:ScreenBounds.size.width *0.6f];
-    [_songArtist setTextAlignment:NSTextAlignmentCenter];
 
     //按钮父视图
     [BtnParentView autoPinEdge:ALEdgeBottom toEdge:ALEdgeBottom ofView:_backgroundImage
@@ -204,13 +197,14 @@
     [_nextSongBtn autoPinEdge:ALEdgeBottom toEdge:ALEdgeBottom ofView:BtnParentView];
 
     NSArray *buttons = @[_likeBtn,_dislikeBtn,_nextSongBtn];
+    [buttons autoSetViewsDimension:ALDimensionWidth toSize:52.0f];
     CGFloat indexWidth = (ScreenBounds.size.width *0.8f -52.0f*buttons.count)/(buttons.count-1);
     [buttons autoDistributeViewsAlongAxis:ALAxisHorizontal
                                 alignedTo:ALAttributeHorizontal
                             withFixedSize:indexWidth insetSpacing:NO];
     //音量滑块
     [_volumeSlider autoPinEdge:ALEdgeBottom toEdge:ALEdgeTop ofView:BtnParentView
-                   withOffset:-ScreenBounds.size.height *0.03f];
+                   withOffset:-ScreenBounds.size.height *0.02f];
     [_volumeSlider autoSetDimension:ALDimensionHeight toSize:10.0f];
     [_volumeSlider autoPinEdge:ALEdgeLeading toEdge:ALEdgeLeading ofView:_likeBtn withOffset:10.0f];
     [_volumeSlider autoPinEdge:ALEdgeTrailing toEdge:ALEdgeTrailing ofView:_nextSongBtn withOffset:-10.0f];
@@ -221,6 +215,30 @@
     [_volumeIcon autoSetDimension:ALDimensionHeight toSize:size.height];
     [_volumeIcon autoSetDimension:ALDimensionWidth toSize:size.width];
     [_volumeIcon autoPinEdge:ALEdgeTrailing toEdge:ALEdgeLeading ofView:_volumeSlider withOffset:-5.0f];
+
+    //歌手
+    [_songArtist autoAlignAxis:ALAxisVertical toSameAxisOfView:_backgroundImage];
+
+    [_songArtist autoPinEdge:ALEdgeBottom toEdge:ALEdgeTop ofView:_volumeSlider
+                  withOffset:-songArtistLocate];
+    [_songArtist autoSetDimension:ALDimensionWidth toSize:ScreenBounds.size.width *0.6f];
+    [_songArtist setTextAlignment:NSTextAlignmentCenter];
+    //歌曲名称
+    [_songName autoPinEdge:ALEdgeBottom toEdge:ALEdgeTop ofView:_songArtist
+                withOffset:-4.0f];
+    [_songName autoPinEdge:ALEdgeLeading toEdge:ALEdgeLeading ofView:self
+                withOffset:ScreenBounds.size.width *0.1f];
+    [_songName autoPinEdge:ALEdgeTrailing toEdge:ALEdgeTrailing ofView:self
+                withOffset:-ScreenBounds.size.width *0.1f];
+    [_songName setTextAlignment:NSTextAlignmentCenter];
+    [_songName setNumberOfLines:0];
+    [_songName setPreferredMaxLayoutWidth:ScreenBounds.size.width *0.8f];
+    [_songName autoAlignAxis:ALAxisVertical toSameAxisOfView:_backgroundImage];
+    //播放进度
+    [_playProgress autoAlignAxis:ALAxisVertical toSameAxisOfView:_backgroundImage];
+    [_playProgress autoPinEdge:ALEdgeBottom toEdge:ALEdgeTop ofView:_songName withOffset:-3.0f];
+    [_playProgress autoSetDimension:ALDimensionWidth toSize:ScreenBounds.size.width *0.6f];
+    [_playProgress setTextAlignment:NSTextAlignmentCenter];
     [self setNeedsLayout];
 }
 

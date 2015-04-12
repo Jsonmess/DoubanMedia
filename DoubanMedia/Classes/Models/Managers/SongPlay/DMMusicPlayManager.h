@@ -9,13 +9,14 @@
 #import <Foundation/Foundation.h>
 #import "DMSongInfo.h"
 #import <DOUAudioStreamer.h>
-typedef void (^songPlayProgress)(NSTimeInterval len,NSTimeInterval currentTime);
 @protocol MusicPlayDelegate<NSObject>
 
 -(void)getCurrentPlaySong:(DMSongInfo *)songInfo;
 @optional
 //同步播放进度
--(void)updatePlayProgress:(songPlayProgress)progress;
+-(void)updatePlayProgress:(NSTimeInterval)currentTime;
+//播放状态
+-(void)getPlayStreamerStatue:(DOUAudioStreamerStatus)status;
 @end
 //泛型的指针
 static void *kStatusKVOKey = &kStatusKVOKey;

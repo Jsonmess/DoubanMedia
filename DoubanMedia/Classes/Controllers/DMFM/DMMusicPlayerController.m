@@ -21,6 +21,7 @@
     DMMusicPlayManager *musicPlayer;
     DMSongInfo *currentPlaySong;//记录正在播放的音乐对象
     BOOL isRedNow;
+    NSString *totalTime;//格式化的总时间
 }
 @property (nonatomic) DMPlayerView *mplayView ;
 @end
@@ -167,9 +168,14 @@
                    CurrentPlayBackTime:[musicPlayer getCurrentAudioStreamer].currentTime
                          CurrentSongID:currentPlaySong.sid];
 }
+
+
+#pragma mark ----MusicPlayDelegate
 -(void)getCurrentPlaySong:(DMSongInfo *)songInfo
 {
     currentPlaySong = songInfo ;
+    //格式歌曲时间
+    [self formatTotalTimeWithCurrentSongInfo:songInfo];
     //更新音乐封面+标题+歌手-----红心状态
     [UIImage getRemoteImageWithUrl:songInfo.picture Suceess:^(UIImage *image) {
         _mplayView.albumView.roundImage = image;
@@ -192,6 +198,61 @@
     [_mplayView.likeBtn setBackgroundImage:[UIImage imageNamed:redhotImage]
                                   forState:UIControlStateNormal];
     [_mplayView setNeedsLayout];
+}
+//播放器状态
+-(void)getPlayStreamerStatue:(DOUAudioStreamerStatus)status
+{
+NSString *statusString = @"";
+    switch (status)
+    {
+        case DOUAudioStreamerBuffering:
+            //缓冲中
+			statusString = @"缓冲中...";
+            break;
+        case DOUAudioStreamerError:
+            //播放错误
+			statusString = @"媒体获取失败";
+            break;
+        case DOUAudioStreamerPlaying:
+            //播放错误
+            statusString = @"开始播放";
+            break;
+        default:
+            break;
+    }
+    [_mplayView.playProgress setText:statusString];
+}
+//播放器进度
+-(void)updatePlayProgress:(NSTimeInterval)currentTime
+{
+//    NSLog(@"当前歌曲时间：%f-----%f",currentTime,len);
+   int currentTimeMinutes = (unsigned)currentTime/60;
+   int currentTimeSeconds = (unsigned)currentTime%60;
+    NSString * currentTimeString;
+    if (currentTimeSeconds < 10) {
+        currentTimeString = [NSMutableString stringWithFormat:@"%d:0%d",currentTimeMinutes,currentTimeSeconds];
+    }
+    else{
+        currentTimeString = [NSMutableString stringWithFormat:@"%d:%d",currentTimeMinutes,currentTimeSeconds];
+    }
+    NSString * timerLabelString = [NSMutableString stringWithFormat:@"%@/%@",currentTimeString,totalTime];
+    [_mplayView.playProgress setText:timerLabelString];
+}
+#pragma mark --others
+//格式化总时间
+-(void)formatTotalTimeWithCurrentSongInfo:(DMSongInfo*)songInfo
+{
+	   //初始化timeLabel的总时间
+   int TotalTimeSeconds = [songInfo.length intValue]%60;
+   int TotalTimeMinutes = [songInfo.length intValue]/60;
+    NSString *totalTimeString;
+    if (TotalTimeSeconds < 10) {
+        totalTimeString = [NSMutableString stringWithFormat:@"%d:0%d",TotalTimeMinutes,TotalTimeSeconds];
+    }
+    else{
+        totalTimeString = [NSMutableString stringWithFormat:@"%d:%d",TotalTimeMinutes,TotalTimeSeconds];
+    }
+    totalTime = totalTimeString;
 }
 #pragma mark---远程控制
 - (void)remoteControlReceivedWithEvent:(UIEvent *)event
