@@ -39,7 +39,7 @@
 {
     if (self = [super init])
     {
-        self.modalPresentationCapturesStatusBarAppearance = YES;
+        self.modalPresentationCapturesStatusBarAppearance = NO;
         if ([self respondsToSelector:@selector(setNeedsStatusBarAppearanceUpdate)]) {
             // iOS 7
             [self prefersStatusBarHidden];

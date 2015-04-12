@@ -21,7 +21,6 @@
     DMMusicPlayManager *musicPlayer;
     DMSongInfo *currentPlaySong;//记录正在播放的音乐对象
     BOOL isRedNow;
-    BOOL playState;//记录播放状态：暂停/播放；
 }
 @property (nonatomic) DMPlayerView *mplayView ;
 @end
@@ -91,7 +90,6 @@
     musicPlayer = [DMMusicPlayManager sharedMusicPlayManager];
     [musicPlayer setDelegate:self];
     isRedNow = YES;
-    playState = YES;//播放中
 }
 //获取当前频道的音乐列表
 -(void)getSongList
@@ -160,7 +158,6 @@
 //播放状态
 -(void)playState:(BOOL)state
 {
-    playState = state;
     [musicPlayer actionPlayPause:state];
 }
 //播放中标记操作
@@ -199,12 +196,12 @@
 {
     if (event.type == UIEventTypeRemoteControl) {
         switch (event.subtype) {
-            case UIEventSubtypeRemoteControlTogglePlayPause:
+            case UIEventSubtypeRemoteControlPause:
 
-				[musicPlayer actionPlayPause:playState];
+				[musicPlayer actionPlayPause:NO];
                 break;
             case UIEventSubtypeRemoteControlPlay:
-                [musicPlayer actionPlayPause:playState];
+                [musicPlayer actionPlayPause:YES];
                 break;
             case UIEventSubtypeRemoteControlNextTrack:
                 [self actionWithType:@"s"];
