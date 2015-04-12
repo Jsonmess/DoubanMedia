@@ -22,6 +22,7 @@
     DMSongInfo *currentPlaySong;//记录正在播放的音乐对象
     BOOL isRedNow;
     NSString *totalTime;//格式化的总时间
+    NSMutableDictionary *remoteInfoDic;//用于更新通知中心信息
 }
 @property (nonatomic) DMPlayerView *mplayView ;
 @end
@@ -237,6 +238,14 @@ NSString *statusString = @"";
     }
     NSString * timerLabelString = [NSMutableString stringWithFormat:@"%@/%@",currentTimeString,totalTime];
     [_mplayView.playProgress setText:timerLabelString];
+//    //更新远程控制
+//    [remoteInfoDic setObject:[NSNumber numberWithDouble:(double)currentTime]
+//                      forKey:MPNowPlayingInfoPropertyElapsedPlaybackTime];
+//    [remoteInfoDic setObject:[NSNumber numberWithDouble:[currentPlaySong.length doubleValue]]
+//                      forKey:MPNowPlayingInfoPropertyElapsedPlaybackTime];
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        [[MPNowPlayingInfoCenter defaultCenter] setNowPlayingInfo:remoteInfoDic];
+//    });
 }
 #pragma mark --others
 //格式化总时间
@@ -288,16 +297,12 @@ NSString *statusString = @"";
         [dict setObject:songName forKey:MPMediaItemPropertyTitle];
 
         [dict setObject:artist forKey:MPMediaItemPropertyArtist];
-
         [dict setObject:[[MPMediaItemArtwork alloc] initWithImage:album] forKey:MPMediaItemPropertyArtwork];
+        [dict setObject:[NSNumber numberWithDouble:[currentPlaySong.length floatValue]]
+                 forKey:MPMediaItemPropertyPlaybackDuration];
+            [[MPNowPlayingInfoCenter defaultCenter] setNowPlayingInfo:dict];
 
-        dispatch_async(dispatch_get_main_queue(), ^{
-			 [[MPNowPlayingInfoCenter defaultCenter]setNowPlayingInfo:dict];
-        });
-       // [[MPNowPlayingInfoCenter defaultCenter] setNowPlayingInfo:nil];
-        
-
-        
+            // [[MPNowPlayingInfoCenter defaultCenter] setNowPlayingInfo:nil];
     }
     
 }
