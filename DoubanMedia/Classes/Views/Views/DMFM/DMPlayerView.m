@@ -48,10 +48,20 @@
     [_playChannel setTextColor:DMColor(34, 100, 44, 1.0f)];
     _albumView = [[AlbumRoundView alloc] initWithFrame:CGRectZero];
     [_albumView setDelegate:self];
+    //播放进度
+    _playProgress = [[UILabel alloc] initWithFrame:CGRectZero];
+    [_playProgress setText:@"00:00/00:00"];
+    [_playProgress setTextColor:DMColor(65, 205, 59, 1.0f)];
+    [_playProgress setFont:DMFont(14.0f)];
     _songName = [[UILabel alloc] initWithFrame:CGRectZero];
     [_songName setTextColor:_playChannel.textColor];
     //[_songName setText:@"锦鲤抄"];
     [_songName setFont:DMFont(18.0f)];
+    //歌手名称
+    _songArtist = [[UILabel alloc] initWithFrame:CGRectZero];
+    [_songArtist setTextColor:_playChannel.textColor];
+    [_songArtist setFont:DMFont(15.0f)];
+//    [_songArtist setText:@"银临"];
     //音量icon
     _volumeIcon  = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"play_sound@2x.png"]];
     //音量滑块
@@ -110,7 +120,9 @@
     [self addSubview:_backgroundImage];
     [self addSubview:_playChannel];
     [self addSubview:_albumView];
+    [self addSubview:_playProgress];
     [self addSubview:_songName];
+    [self addSubview:_songArtist];
     [self addSubview:_volumeIcon];
     [self addSubview:_volumeSlider];
     [self addSubview:BtnParentView];
@@ -151,9 +163,14 @@
 
     [_albumView autoSetDimension:ALDimensionHeight toSize:height];
     [_albumView autoSetDimension:ALDimensionWidth toSize:width];
+    //播放进度
+    [_playProgress autoAlignAxis:ALAxisVertical toSameAxisOfView:_backgroundImage];
+    [_playProgress autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_albumView withOffset:8.0f];
+    [_playProgress autoSetDimension:ALDimensionWidth toSize:ScreenBounds.size.width *0.6f];
+    [_playProgress setTextAlignment:NSTextAlignmentCenter];
     //歌曲名称
-    [_songName autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_albumView
-                withOffset:ScreenBounds.size.height *0.04f];
+    [_songName autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_playProgress
+                withOffset:ScreenBounds.size.height *0.02f];
     [_songName autoPinEdge:ALEdgeLeading toEdge:ALEdgeLeading ofView:self
                 withOffset:ScreenBounds.size.width *0.1f];
     [_songName autoPinEdge:ALEdgeTrailing toEdge:ALEdgeTrailing ofView:self
@@ -162,7 +179,11 @@
     [_songName setNumberOfLines:0];
     [_songName setPreferredMaxLayoutWidth:ScreenBounds.size.width *0.8f];
     [_songName autoAlignAxis:ALAxisVertical toSameAxisOfView:_backgroundImage];
-
+	//歌手
+    [_songArtist autoAlignAxis:ALAxisVertical toSameAxisOfView:_backgroundImage];
+    [_songArtist autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_songName withOffset:5.0f];
+    [_songArtist autoSetDimension:ALDimensionWidth toSize:ScreenBounds.size.width *0.6f];
+    [_songArtist setTextAlignment:NSTextAlignmentCenter];
 
     //按钮父视图
     [BtnParentView autoPinEdge:ALEdgeBottom toEdge:ALEdgeBottom ofView:_backgroundImage
@@ -173,23 +194,17 @@
                     withOffset:-ScreenBounds.size.width *0.1f];
     [BtnParentView autoSetDimension:ALDimensionHeight toSize:36.0f];
     //按键--红心
-    CGSize redSize = _likeBtn.currentBackgroundImage.size;
     [_likeBtn autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:BtnParentView];
-    [_likeBtn autoSetDimension:ALDimensionWidth toSize:redSize.width*0.5f];
     [_likeBtn autoPinEdge:ALEdgeBottom toEdge:ALEdgeBottom ofView:BtnParentView];
     //标记删除
-    CGSize deleteSize = _dislikeBtn.currentBackgroundImage.size;
     [_dislikeBtn autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:BtnParentView];
-    [_dislikeBtn autoSetDimension:ALDimensionWidth toSize:deleteSize.width*0.5f];
     [_dislikeBtn autoPinEdge:ALEdgeBottom toEdge:ALEdgeBottom ofView:BtnParentView];
     //切换歌曲
-    CGSize nextSize = _nextSongBtn.currentBackgroundImage.size;
     [_nextSongBtn autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:BtnParentView];
-    [_nextSongBtn autoSetDimension:ALDimensionWidth toSize:nextSize.width*0.5f];
     [_nextSongBtn autoPinEdge:ALEdgeBottom toEdge:ALEdgeBottom ofView:BtnParentView];
 
     NSArray *buttons = @[_likeBtn,_dislikeBtn,_nextSongBtn];
-    CGFloat indexWidth = (ScreenBounds.size.width *0.8f -40.0f*buttons.count)/(buttons.count-1);
+    CGFloat indexWidth = (ScreenBounds.size.width *0.8f -52.0f*buttons.count)/(buttons.count-1);
     [buttons autoDistributeViewsAlongAxis:ALAxisHorizontal
                                 alignedTo:ALAttributeHorizontal
                             withFixedSize:indexWidth insetSpacing:NO];
