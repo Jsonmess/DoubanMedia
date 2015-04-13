@@ -17,6 +17,7 @@
 #import "DMMusicPlayerController.h"
 #import "DMLoginViewController.h"
 #import "UIImage+loadRemoteImage.h"
+#import <TMDiskCache.h>
 @interface DMFMChannelController ()<UITableViewDataSource,UITableViewDelegate,
 DMChannelDelegate,NSFetchedResultsControllerDelegate,DMUserHeaderDelegate>
 {
@@ -27,6 +28,7 @@ DMChannelDelegate,NSFetchedResultsControllerDelegate,DMUserHeaderDelegate>
     NSFetchedResultsController *fectchedController;
     DMFMTableViewCell *lastSelected;//记录上一次播放的音乐频道
     NSIndexPath *lastSelectedIndex;//记录上一次播放的音乐频道Index
+    DMMusicPlayerController *playController;//播放控制器
 
 }
 @end
@@ -87,6 +89,14 @@ static NSString *reuseCell = @"FMChannelCell";
 -(void)setUpView
 {
     [self setTitle:@"豆瓣FM"];
+    //添加右边item
+    UIButton *rightbtn=[UIButton buttonWithType:UIButtonTypeCustom];
+    [rightbtn setBackgroundImage:[UIImage imageNamed:@"Nav_play.png"] forState:UIControlStateNormal];
+    [rightbtn setBackgroundImage:[UIImage imageNamed: @"Nav_play.png"] forState:UIControlStateHighlighted];
+    [rightbtn addTarget:self action:@selector(goToNowPlaying) forControlEvents:UIControlEventTouchUpInside];
+    [rightbtn setFrame:CGRectMake(0, 0, 32.0f, 32.0f)];
+    UIBarButtonItem *backitem=[[UIBarButtonItem alloc]initWithCustomView:rightbtn];
+    self.navigationItem.rightBarButtonItem=backitem;
     [self.view setBackgroundColor:DMColor(250,250,248,1.0f)];
     CGRect frame = (CGRect){{0,0},{self.view.bounds.size.width,self.view.bounds.size.height -kTabbarHeight}};
     fmTableView = [[BaseTableView alloc] initWithFrame:frame
@@ -98,7 +108,18 @@ static NSString *reuseCell = @"FMChannelCell";
     [self.view addSubview: fmTableView];
 
 }
-
+#pragma mark --actions
+-(void)goToNowPlaying
+{
+    if (playController == nil)
+    {
+		//不允许进入空播放
+    }
+    else
+    {
+        [self.navigationController pushViewController:playController animated:YES];
+    }
+}
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -167,6 +188,7 @@ static NSString *reuseCell = @"FMChannelCell";
     FMChannel *channel = [fectchedController objectAtIndexPath:indexPath];
     [musicPlayer setPlayChannelTitle:channel.channelName];
     [musicPlayer setPlayChannelId:channel.channelID];
+    playController = musicPlayer;
     [self.navigationController pushViewController:musicPlayer animated:YES];
     //设置当前播放频道为选中状态
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
@@ -200,8 +222,9 @@ static NSString *reuseCell = @"FMChannelCell";
         if (section == 0)
         {
             imagefile = [UIImage imageNamed:@"user_normal.jpg"];
+            isNeedGetInterface = YES;
         }
-        isNeedGetInterface = YES;
+
         [view setHeadViewContent:title Image:imagefile];
     }
     [view setDelegate:self];

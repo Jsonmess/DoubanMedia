@@ -238,14 +238,7 @@ NSString *statusString = @"";
     }
     NSString * timerLabelString = [NSMutableString stringWithFormat:@"%@/%@",currentTimeString,totalTime];
     [_mplayView.playProgress setText:timerLabelString];
-//    //更新远程控制
-//    [remoteInfoDic setObject:[NSNumber numberWithDouble:(double)currentTime]
-//                      forKey:MPNowPlayingInfoPropertyElapsedPlaybackTime];
-//    [remoteInfoDic setObject:[NSNumber numberWithDouble:[currentPlaySong.length doubleValue]]
-//                      forKey:MPNowPlayingInfoPropertyElapsedPlaybackTime];
-//    dispatch_async(dispatch_get_main_queue(), ^{
-//        [[MPNowPlayingInfoCenter defaultCenter] setNowPlayingInfo:remoteInfoDic];
-//    });
+
 }
 #pragma mark --others
 //格式化总时间
