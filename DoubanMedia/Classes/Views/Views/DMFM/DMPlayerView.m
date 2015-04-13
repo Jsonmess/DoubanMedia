@@ -141,6 +141,9 @@
     [_playChannel autoAlignAxis:ALAxisVertical toSameAxisOfView:_backgroundImage];
     [_playChannel autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:_backgroundImage
                    withOffset:ScreenBounds.size.height *0.15f];
+    [_playChannel autoPinEdge:ALEdgeLeading toEdge:ALEdgeLeading ofView:_backgroundImage withOffset:ScreenBounds.size.width *0.1f];
+ 	[_playChannel autoPinEdge:ALEdgeTrailing toEdge:ALEdgeTrailing ofView:_backgroundImage withOffset:-ScreenBounds.size.width *0.1f];
+    [_playChannel setTextAlignment:NSTextAlignmentCenter];
     //专辑
     [_albumView autoAlignAxis:ALAxisVertical toSameAxisOfView:_backgroundImage];
     [_albumView autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_playChannel
@@ -236,8 +239,11 @@
     [_songName autoAlignAxis:ALAxisVertical toSameAxisOfView:_backgroundImage];
     //播放进度
     [_playProgress autoAlignAxis:ALAxisVertical toSameAxisOfView:_backgroundImage];
-    [_playProgress autoPinEdge:ALEdgeBottom toEdge:ALEdgeTop ofView:_songName withOffset:-3.0f];
-    [_playProgress autoSetDimension:ALDimensionWidth toSize:ScreenBounds.size.width *0.6f];
+    [_playProgress autoSetDimension:ALDimensionWidth
+                             toSize:ScreenBounds.size.width *0.6f];
+    [_playProgress autoSetDimension:ALDimensionHeight
+                             toSize:20.0f];
+    [_playProgress autoPinEdge:ALEdgeBottom toEdge:ALEdgeTop ofView:_songName withOffset:-5.0f];
     [_playProgress setTextAlignment:NSTextAlignmentCenter];
     [self setNeedsLayout];
 }

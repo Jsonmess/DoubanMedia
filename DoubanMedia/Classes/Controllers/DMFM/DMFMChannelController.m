@@ -17,6 +17,8 @@
 #import "DMMusicPlayerController.h"
 #import "DMLoginViewController.h"
 #import "UIImage+loadRemoteImage.h"
+#import <MJRefresh.h>
+#import <TMDiskCache.h>
 @interface DMFMChannelController ()<UITableViewDataSource,UITableViewDelegate,
 DMChannelDelegate,NSFetchedResultsControllerDelegate,DMUserHeaderDelegate>
 {
@@ -27,7 +29,7 @@ DMChannelDelegate,NSFetchedResultsControllerDelegate,DMUserHeaderDelegate>
     NSFetchedResultsController *fectchedController;
     DMFMTableViewCell *lastSelected;//记录上一次播放的音乐频道
     NSIndexPath *lastSelectedIndex;//记录上一次播放的音乐频道Index
-
+    DMMusicPlayerController *playController;//播放控制器
 }
 @end
 static NSString *reuseCell = @"FMChannelCell";
@@ -37,10 +39,8 @@ static NSString *reuseCell = @"FMChannelCell";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self commonInit];
     [self setUpView];
-    //在此处获取频道列表，为加载数据做准备
-    [self getChannelInfo];
+    [self commonInit];
 }
 -(void)viewWillAppear:(BOOL)animated
 {
@@ -54,11 +54,14 @@ static NSString *reuseCell = @"FMChannelCell";
     networkManager = [[ DMChannelManager alloc] init];
     [networkManager setDelegate:self];
     appDelegate = [UIApplication sharedApplication].delegate;
+    [fmTableView addLegendHeaderWithRefreshingTarget:self refreshingAction:@selector(getChannelInfo)];
+    [fmTableView.legendHeader beginRefreshing];
 
 }
 -(void)getChannelInfo
 {
     //推荐兆赫
+
     //查询数据，用户是否登录
     NSArray *users = [AccountInfo MR_findAll];
     if (users.count <= 0)
@@ -87,6 +90,14 @@ static NSString *reuseCell = @"FMChannelCell";
 -(void)setUpView
 {
     [self setTitle:@"豆瓣FM"];
+    //添加右边item
+    UIButton *rightbtn=[UIButton buttonWithType:UIButtonTypeCustom];
+    [rightbtn setBackgroundImage:[UIImage imageNamed:@"Nav_play.png"] forState:UIControlStateNormal];
+    [rightbtn setBackgroundImage:[UIImage imageNamed: @"Nav_play.png"] forState:UIControlStateHighlighted];
+    [rightbtn addTarget:self action:@selector(goToNowPlaying) forControlEvents:UIControlEventTouchUpInside];
+    [rightbtn setFrame:CGRectMake(0, 0, 32.0f, 32.0f)];
+    UIBarButtonItem *backitem=[[UIBarButtonItem alloc]initWithCustomView:rightbtn];
+    self.navigationItem.rightBarButtonItem=backitem;
     [self.view setBackgroundColor:DMColor(250,250,248,1.0f)];
     CGRect frame = (CGRect){{0,0},{self.view.bounds.size.width,self.view.bounds.size.height -kTabbarHeight}};
     fmTableView = [[BaseTableView alloc] initWithFrame:frame
@@ -98,7 +109,18 @@ static NSString *reuseCell = @"FMChannelCell";
     [self.view addSubview: fmTableView];
 
 }
-
+#pragma mark --actions
+-(void)goToNowPlaying
+{
+    if (playController == nil)
+    {
+		//不允许进入空播放
+    }
+    else
+    {
+        [self.navigationController pushViewController:playController animated:YES];
+    }
+}
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -167,6 +189,7 @@ static NSString *reuseCell = @"FMChannelCell";
     FMChannel *channel = [fectchedController objectAtIndexPath:indexPath];
     [musicPlayer setPlayChannelTitle:channel.channelName];
     [musicPlayer setPlayChannelId:channel.channelID];
+    playController = musicPlayer;
     [self.navigationController pushViewController:musicPlayer animated:YES];
     //设置当前播放频道为选中状态
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
@@ -177,7 +200,7 @@ static NSString *reuseCell = @"FMChannelCell";
                                 initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 30)];
     [view setBackgroundColor:DMColor(230, 230, 230, 0.8f)];
     //设置head 数据
-    NSString *title = appDelegate.channels[section][@"section"];
+   __block NSString *title = appDelegate.channels[section][@"section"];
     BOOL isNeedGetInterface = NO;//header用户交互
     //查询数据库
     NSArray *accounts = [AccountInfo MR_findAllInContext:[NSManagedObjectContext MR_context]];
@@ -189,9 +212,27 @@ static NSString *reuseCell = @"FMChannelCell";
         //用户已经登录
         NSString *imageUrl = [NSString stringWithFormat:@"%@%@.jpg",
                               UserAccountIconUrl,userInfo.userId];
+     __block  UIImage *tempImage = (UIImage*)[[TMDiskCache sharedCache]
+                                              objectForKey:@"userIcon"];
         [UIImage getRemoteImageWithUrl:imageUrl Suceess:^(UIImage *image)
          {
-             [view setHeadViewContent:title Image:image];
+             UIImage *theImage;
+             if (image != nil)
+             {
+                 theImage = image;
+                 [[TMDiskCache sharedCache] setObject:image forKey:@"userIcon"];
+             }
+             else
+             {
+                 if (tempImage == nil )
+                 {
+                     theImage = [UIImage imageNamed:@"user_normal.jpg"];
+                 }else
+                 {
+                     theImage = tempImage;
+                 }
+             }
+             [view setHeadViewContent:title Image:theImage];
          }];
 
     }
@@ -200,8 +241,9 @@ static NSString *reuseCell = @"FMChannelCell";
         if (section == 0)
         {
             imagefile = [UIImage imageNamed:@"user_normal.jpg"];
+            isNeedGetInterface = YES;
         }
-        isNeedGetInterface = YES;
+
         [view setHeadViewContent:title Image:imagefile];
     }
     [view setDelegate:self];
@@ -227,6 +269,8 @@ static NSString *reuseCell = @"FMChannelCell";
     {
         [fmTableView reloadData];
     }
+    //停止刷新
+    [fmTableView.legendHeader endRefreshing];
 
 }
 -(void)controllerDidChangeContent:(NSFetchedResultsController *)controller
