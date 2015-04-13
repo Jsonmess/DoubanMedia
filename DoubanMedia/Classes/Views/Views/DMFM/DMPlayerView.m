@@ -141,6 +141,8 @@
     [_playChannel autoAlignAxis:ALAxisVertical toSameAxisOfView:_backgroundImage];
     [_playChannel autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:_backgroundImage
                    withOffset:ScreenBounds.size.height *0.15f];
+    [_playChannel autoPinEdge:ALEdgeLeading toEdge:ALEdgeLeading ofView:_backgroundImage withOffset:ScreenBounds.size.width *0.1f];
+ 	[_playChannel autoPinEdge:ALEdgeTrailing toEdge:ALEdgeTrailing ofView:_backgroundImage withOffset:-ScreenBounds.size.width *0.1f];
     //专辑
     [_albumView autoAlignAxis:ALAxisVertical toSameAxisOfView:_backgroundImage];
     [_albumView autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_playChannel
@@ -237,11 +239,15 @@
     //播放进度
     [_playProgress autoAlignAxis:ALAxisVertical toSameAxisOfView:_backgroundImage];
     [_playProgress autoPinEdge:ALEdgeBottom toEdge:ALEdgeTop ofView:_songName withOffset:-3.0f];
-    [_playProgress autoSetDimension:ALDimensionWidth toSize:ScreenBounds.size.width *0.6f];
     [_playProgress setTextAlignment:NSTextAlignmentCenter];
     [self setNeedsLayout];
 }
-
+-(void)layoutSubviews
+{
+    [super layoutSubviews];
+	[_playProgress autoSetDimension:ALDimensionWidth
+                             toSize:ScreenBounds.size.width *0.6f];
+}
 #pragma mark ---- actions
 //设置频道text
 -(void)setChannelName:(NSString *)channelName

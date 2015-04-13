@@ -29,6 +29,7 @@
 -(void)setUpView
 {
     userIcon = [[UIImageView alloc] initWithFrame:CGRectZero];
+    [userIcon setImage:[UIImage imageNamed:@"user_normal.jpg"]];
     userName = [[UILabel alloc] initWithFrame:CGRectZero];
     [userIcon setContentMode:UIViewContentModeScaleAspectFit];
     [self addSubview:userName];
