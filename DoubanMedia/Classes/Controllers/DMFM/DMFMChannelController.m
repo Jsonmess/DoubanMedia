@@ -84,7 +84,7 @@ static NSString *reuseCell = @"FMChannelCell";
     [networkManager getChannel:2 withURLWithString:@"http://douban.fm/j/explore/up_trending_channels"];
     //热门兆赫
     [networkManager getChannel:3 withURLWithString:@"http://douban.fm/j/explore/hot_channels"];
-    [fmTableView reloadData];
+   // [fmTableView reloadData];
 }
 -(void)setUpView
 {
@@ -199,7 +199,8 @@ static NSString *reuseCell = @"FMChannelCell";
                                 initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 30)];
     [view setBackgroundColor:DMColor(230, 230, 230, 0.8f)];
     //设置head 数据
-   __block NSString *title = appDelegate.channels[section][@"section"];
+    NSString *thetitle = appDelegate.channels[section][@"section"];
+   	__block NSString *title = thetitle;
     BOOL isNeedGetInterface = NO;//header用户交互
     //查询数据库
     NSArray *accounts = [AccountInfo MR_findAllInContext:[NSManagedObjectContext MR_context]];
@@ -223,14 +224,14 @@ static NSString *reuseCell = @"FMChannelCell";
         }];
     }
     else
-    {	   UIImage *imagefile = nil;
+    {	  UIImage *imagefile = nil;
         if (section == 0)
         {
             imagefile = [UIImage imageNamed:@"user_normal.jpg"];
             isNeedGetInterface = YES;
         }
 
-        [view setHeadViewContent:title Image:imagefile];
+        [view setHeadViewContent:thetitle Image:imagefile];
     }
     [view setDelegate:self];
     [view setUserInteractionEnabled:isNeedGetInterface];
