@@ -200,7 +200,7 @@ static NSString *reuseCell = @"FMChannelCell";
     [view setBackgroundColor:DMColor(230, 230, 230, 0.8f)];
     //设置head 数据
     NSString *thetitle = appDelegate.channels[section][@"section"];
-   __block NSString *title = thetitle;
+   	__block NSString *title = thetitle;
     BOOL isNeedGetInterface = NO;//header用户交互
     //查询数据库
     NSArray *accounts = [AccountInfo MR_findAllInContext:[NSManagedObjectContext MR_context]];
