@@ -43,7 +43,7 @@ static NSString *reuseCell = @"FMChannelCell";
 }
 -(void)viewWillAppear:(BOOL)animated
 {
-    //[fmTableView reloadData];
+    [fmTableView reloadData];
     [super viewWillAppear:animated];
 }
 -(void)commonInit
@@ -199,7 +199,8 @@ static NSString *reuseCell = @"FMChannelCell";
                                 initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 30)];
     [view setBackgroundColor:DMColor(230, 230, 230, 0.8f)];
     //设置head 数据
-   __block NSString *title = appDelegate.channels[section][@"section"];
+    NSString *thetitle = appDelegate.channels[section][@"section"];
+   __block NSString *title = thetitle;
     BOOL isNeedGetInterface = NO;//header用户交互
     //查询数据库
     NSArray *accounts = [AccountInfo MR_findAllInContext:[NSManagedObjectContext MR_context]];
@@ -230,7 +231,7 @@ static NSString *reuseCell = @"FMChannelCell";
             isNeedGetInterface = YES;
         }
 
-        [view setHeadViewContent:title Image:imagefile];
+        [view setHeadViewContent:thetitle Image:imagefile];
     }
     [view setDelegate:self];
     [view setUserInteractionEnabled:isNeedGetInterface];
