@@ -47,12 +47,12 @@ static NSString *reuseCell = @"FMChannelCell";
 -(void)viewWillAppear:(BOOL)animated
 {
     [fmTableView reloadData];
+    //检查用户信息
+    [self checkUserInfo];
     [super viewWillAppear:animated];
 }
 -(void)commonInit
 {
-    //检查用户信息
-    userInfo = [self checkUserInfo];
     //在此处获取频道列表，为加载数据做准备
     [self getChannelInfo];
     networkManager = [[ DMChannelManager alloc] init];
@@ -92,14 +92,18 @@ static NSString *reuseCell = @"FMChannelCell";
     [networkManager getChannel:3 withURLWithString:@"http://douban.fm/j/explore/hot_channels"];
    // [fmTableView reloadData];
 }
--(NSMutableDictionary *)checkUserInfo
+-(void )checkUserInfo
 {
+    if (userInfo != nil)
+    {
+        return;
+    }
 	 NSArray *accounts = [AccountInfo MR_findAllInContext:[NSManagedObjectContext MR_context]];
     AccountInfo *user = [accounts firstObject];
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     [dic setValue:user.userId forKey:@"userID"];
     [dic setValue:user.name forKey:@"userName"];
-    return dic;
+    userInfo = dic;
 }
 -(void)setUpView
 {
