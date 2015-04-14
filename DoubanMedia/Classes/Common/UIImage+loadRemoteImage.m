@@ -7,19 +7,24 @@
 //
 
 #import "UIImage+loadRemoteImage.h"
-
+#import <SDWebImageDownloader.h>
 @implementation UIImage (loadRemoteImage)
-
-+(void )getRemoteImageWithUrl:(NSString *)url Suceess:(finishLoadImage)success
++(void )getRemoteImageWithUrl:(NSString *)url Suceess:(finishLoadImage)success faild:(errorLoadImage)faild
 {
     NSURL *picUrl = [NSURL URLWithString:url];
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        NSData *resultData = [NSData dataWithContentsOfURL:picUrl];
-		 UIImage *image = [UIImage imageWithData:resultData];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            success(image);
-        });
-    });
+    [[SDWebImageDownloader sharedDownloader] downloadImageWithURL:picUrl options:SDWebImageDownloaderLowPriority progress:nil
+    completed:^(UIImage *image, NSData *data, NSError *error, BOOL finished)
+    {
+        if (image != nil)
+        {
+			success(image);
+        }
+        else
+        {
+            faild(error);
+        }
+
+    }];
     
 }
 @end

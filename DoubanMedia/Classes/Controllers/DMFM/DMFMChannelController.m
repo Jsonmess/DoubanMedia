@@ -18,7 +18,6 @@
 #import "DMLoginViewController.h"
 #import "UIImage+loadRemoteImage.h"
 #import <MJRefresh.h>
-#import <TMDiskCache.h>
 @interface DMFMChannelController ()<UITableViewDataSource,UITableViewDelegate,
 DMChannelDelegate,NSFetchedResultsControllerDelegate,DMUserHeaderDelegate>
 {
@@ -212,29 +211,16 @@ static NSString *reuseCell = @"FMChannelCell";
         //用户已经登录
         NSString *imageUrl = [NSString stringWithFormat:@"%@%@.jpg",
                               UserAccountIconUrl,userInfo.userId];
-     __block  UIImage *tempImage = (UIImage*)[[TMDiskCache sharedCache]
-                                              objectForKey:@"userIcon"];
         [UIImage getRemoteImageWithUrl:imageUrl Suceess:^(UIImage *image)
-         {
-             UIImage *theImage;
-             if (image != nil)
-             {
-                 theImage = image;
-                 [[TMDiskCache sharedCache] setObject:image forKey:@"userIcon"];
-             }
-             else
-             {
-                 if (tempImage == nil )
-                 {
-                     theImage = [UIImage imageNamed:@"user_normal.jpg"];
-                 }else
-                 {
-                     theImage = tempImage;
-                 }
-             }
-             [view setHeadViewContent:title Image:theImage];
-         }];
+        {
 
+               UIImage * theImage = image;
+            [view setHeadViewContent:title Image:theImage];
+        } faild:^(NSError *error)
+        {
+			UIImage *theImage = [UIImage imageNamed:@"user_normal.jpg"];
+            [view setHeadViewContent:title Image:theImage];
+        }];
     }
     else
     {	   UIImage *imagefile = nil;
