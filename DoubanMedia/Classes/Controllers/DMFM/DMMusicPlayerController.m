@@ -40,8 +40,8 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-	//隐藏tabView
-	[[[TabViewManager sharedTabViewManager] getTabView] setHidden:YES];
+    //隐藏tabView
+    [[[TabViewManager sharedTabViewManager] getTabView] setHidden:YES];
     //添加对音量调节的监听
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(changeVolume:)
@@ -49,7 +49,7 @@
                                                object:nil];
     //注册远程控制
     [[UIApplication sharedApplication]beginReceivingRemoteControlEvents];
-	[self becomeFirstResponder];
+    [self becomeFirstResponder];
 }
 -(void)viewDidDisappear:(BOOL)animated
 {
@@ -66,7 +66,7 @@
 -(void)setUpView
 {
     [self setTitle:@"当前播放"];
-	//设置左边状态栏
+    //设置左边状态栏
     UIButton *leftbtn=[UIButton buttonWithType:UIButtonTypeCustom];
     [leftbtn setBackgroundImage:[UIImage imageNamed:@"BackToList.png"] forState:UIControlStateNormal];
     [leftbtn setBackgroundImage:[UIImage imageNamed: @"BackToList.png"] forState:UIControlStateHighlighted];
@@ -88,7 +88,7 @@
 }
 -(void)commonInit
 {
-   playMananger = [DMPlayManager sharedDMPlayManager];
+    playMananger = [DMPlayManager sharedDMPlayManager];
     musicPlayer = [DMMusicPlayManager sharedMusicPlayManager];
     [musicPlayer setDelegate:self];
     isRedNow = YES;
@@ -129,7 +129,7 @@
 //标记红心
 -(void)likeCurrentSong
 {
-	 NSString *redhotImage;
+    NSString *redhotImage;
     if (isRedNow)
     {
         //标记不喜欢
@@ -178,13 +178,20 @@
     //格式歌曲时间
     [self formatTotalTimeWithCurrentSongInfo:songInfo];
     //更新音乐封面+标题+歌手-----红心状态
-    [UIImage getRemoteImageWithUrl:songInfo.picture Suceess:^(UIImage *image) {
-        _mplayView.albumView.roundImage = image;
-        //更新锁屏信息
-        [self lockScreenPlaySongInfoWithSongName:songInfo.title
-                                          Artist:songInfo.artist
-                                           Album:image];
-    }];
+    [UIImage getRemoteImageWithUrl:songInfo.picture
+                           Suceess:^(UIImage *image)
+     {
+         _mplayView.albumView.roundImage = image;
+         //更新锁屏信息
+         [self lockScreenPlaySongInfoWithSongName:songInfo.title
+                                           Artist:songInfo.artist
+                                            Album:image];
+     } faild:^(NSError *error)
+     {
+         [self lockScreenPlaySongInfoWithSongName:songInfo.title
+                                           Artist:songInfo.artist
+                                            Album:nil];
+     }];
     //设置标题
     [_mplayView.songName setText:songInfo.title];
     //设置歌手
@@ -194,7 +201,7 @@
     isRedNow = songInfo.like.integerValue > 0;
     if (isRedNow)
     {
-		redhotImage = @"ic_player_fav_selected.png";
+        redhotImage = @"ic_player_fav_selected.png";
     }
     [_mplayView.likeBtn setBackgroundImage:[UIImage imageNamed:redhotImage]
                                   forState:UIControlStateNormal];
@@ -203,16 +210,16 @@
 //播放器状态
 -(void)getPlayStreamerStatue:(DOUAudioStreamerStatus)status
 {
-NSString *statusString = @"";
+    NSString *statusString = @"";
     switch (status)
     {
         case DOUAudioStreamerBuffering:
             //缓冲中
-			statusString = @"缓冲中...";
+            statusString = @"缓冲中...";
             break;
         case DOUAudioStreamerError:
             //播放错误
-			statusString = @"媒体获取失败";
+            statusString = @"媒体获取失败";
             break;
         case DOUAudioStreamerPlaying:
             //播放错误
@@ -226,9 +233,9 @@ NSString *statusString = @"";
 //播放器进度
 -(void)updatePlayProgress:(NSTimeInterval)currentTime
 {
-//    NSLog(@"当前歌曲时间：%f-----%f",currentTime,len);
-   int currentTimeMinutes = (unsigned)currentTime/60;
-   int currentTimeSeconds = (unsigned)currentTime%60;
+    //    NSLog(@"当前歌曲时间：%f-----%f",currentTime,len);
+    int currentTimeMinutes = (unsigned)currentTime/60;
+    int currentTimeSeconds = (unsigned)currentTime%60;
     NSString * currentTimeString;
     if (currentTimeSeconds < 10) {
         currentTimeString = [NSMutableString stringWithFormat:@"%d:0%d",currentTimeMinutes,currentTimeSeconds];
@@ -245,8 +252,8 @@ NSString *statusString = @"";
 -(void)formatTotalTimeWithCurrentSongInfo:(DMSongInfo*)songInfo
 {
 	   //初始化timeLabel的总时间
-   int TotalTimeSeconds = [songInfo.length intValue]%60;
-   int TotalTimeMinutes = [songInfo.length intValue]/60;
+    int TotalTimeSeconds = [songInfo.length intValue]%60;
+    int TotalTimeMinutes = [songInfo.length intValue]/60;
     NSString *totalTimeString;
     if (TotalTimeSeconds < 10) {
         totalTimeString = [NSMutableString stringWithFormat:@"%d:0%d",TotalTimeMinutes,TotalTimeSeconds];
@@ -263,7 +270,7 @@ NSString *statusString = @"";
         switch (event.subtype) {
             case UIEventSubtypeRemoteControlPause:
 
-				[musicPlayer actionPlayPause:NO];
+                [musicPlayer actionPlayPause:NO];
                 [_mplayView.albumView pause];
                 break;
             case UIEventSubtypeRemoteControlPlay:
@@ -282,20 +289,23 @@ NSString *statusString = @"";
 -(void)lockScreenPlaySongInfoWithSongName:(NSString *)songName
                                    Artist:(NSString *)artist
                                     Album:(UIImage *)album
-		{
-			if(NSClassFromString(@"MPNowPlayingInfoCenter"))
-			{
+{
+    if(NSClassFromString(@"MPNowPlayingInfoCenter"))
+    {
 
-				NSMutableDictionary *dict=[[NSMutableDictionary alloc]init];
+        NSMutableDictionary *dict=[[NSMutableDictionary alloc]init];
 
-				[dict setObject:songName forKey:MPMediaItemPropertyTitle];
+        [dict setObject:songName forKey:MPMediaItemPropertyTitle];
 
-				[dict setObject:artist forKey:MPMediaItemPropertyArtist];
-				[dict setObject:[[MPMediaItemArtwork alloc] initWithImage:album] forKey:MPMediaItemPropertyArtwork];
-				[dict setObject:[NSNumber numberWithDouble:[currentPlaySong.length floatValue]]
-						 forKey:MPMediaItemPropertyPlaybackDuration];
-					[[MPNowPlayingInfoCenter defaultCenter] setNowPlayingInfo:dict];
-			}
-
-	}
+        [dict setObject:artist forKey:MPMediaItemPropertyArtist];
+        if (album != nil)
+        {
+            [dict setObject:[[MPMediaItemArtwork alloc] initWithImage:album] forKey:MPMediaItemPropertyArtwork];
+        }
+        [dict setObject:[NSNumber numberWithDouble:[currentPlaySong.length floatValue]]
+                 forKey:MPMediaItemPropertyPlaybackDuration];
+        [[MPNowPlayingInfoCenter defaultCenter] setNowPlayingInfo:dict];
+    }
+    
+}
 @end

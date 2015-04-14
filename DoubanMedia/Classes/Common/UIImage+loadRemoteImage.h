@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 typedef void(^finishLoadImage)(UIImage *image);
+typedef void(^errorLoadImage)(NSError *error);
 @interface UIImage (loadRemoteImage)
 
-+(void )getRemoteImageWithUrl:(NSString *)url Suceess:(finishLoadImage)success;
++(void )getRemoteImageWithUrl:(NSString *)url Suceess:(finishLoadImage)success faild:(errorLoadImage)faild;
 
 @end
