@@ -49,7 +49,10 @@
 
 -(void)setHeadViewContent:(NSString *)title Image:(UIImage *)image
 {
-    [userName setText:title];
+    if (![userName.text isEqualToString:title])
+    {
+        [userName setText:title];
+    }
     //是用户header
     if (image != nil)
     {

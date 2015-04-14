@@ -43,7 +43,7 @@ static NSString *reuseCell = @"FMChannelCell";
 }
 -(void)viewWillAppear:(BOOL)animated
 {
-    [fmTableView reloadData];
+    //[fmTableView reloadData];
     [super viewWillAppear:animated];
 }
 -(void)commonInit
@@ -84,7 +84,7 @@ static NSString *reuseCell = @"FMChannelCell";
     [networkManager getChannel:2 withURLWithString:@"http://douban.fm/j/explore/up_trending_channels"];
     //热门兆赫
     [networkManager getChannel:3 withURLWithString:@"http://douban.fm/j/explore/hot_channels"];
-    [fmTableView reloadData];
+   // [fmTableView reloadData];
 }
 -(void)setUpView
 {
@@ -223,7 +223,7 @@ static NSString *reuseCell = @"FMChannelCell";
         }];
     }
     else
-    {	   UIImage *imagefile = nil;
+    {	  UIImage *imagefile = nil;
         if (section == 0)
         {
             imagefile = [UIImage imageNamed:@"user_normal.jpg"];
