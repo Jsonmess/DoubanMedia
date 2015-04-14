@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-MBProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-MJRefresh.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -54,11 +59,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-SpinKit.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-TMCache.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -77,72 +77,72 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0E4304AD008A1C4EDC80A358</key>
+		<key>1DE73C2803FE078AA2FE8E26</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>28592CF780C72A38C8F2986A</key>
+		<key>28B978D3A9FEC1EBD1146D54</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3FBDD01A9C1C2121CD400CBA</key>
+		<key>28C7C3E54CFC071D498DFB12</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>46CD8D717803DC1295BC9FB0</key>
+		<key>2AABE85755A49043007FD383</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>478DC39C9B0CC5CFA6FE7E92</key>
+		<key>34959CCB30F7C7203D09360D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>66E2D7FA097C6DD112508594</key>
+		<key>5A610D1D353ED1722C437B41</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7B7FA0BE9E19FD0BD750C4F6</key>
+		<key>6807BD96A5DD783AA2D2161A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8EADBF4426802CF772900891</key>
+		<key>683ECEB15D046A716A394670</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A073DD2310BC96F77D48C914</key>
+		<key>6FD5FFB23A052F449D102DE3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B4DD2E75EE5ED3AE3CEF90DB</key>
+		<key>71D72228B68F66797E3A6D87</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DA21B02E5FB04B66B7CC920D</key>
+		<key>7A02181907937695570CF5E4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F1C9CC43E8ADAABE883B264D</key>
+		<key>BA3AF658C8CF82000EBE0C3D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FB859442A5E734B6FEDF09D5</key>
+		<key>C8023ABEB3AE915ECD4B0FA1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FCFD2B5EC92AEBE1253F099B</key>
+		<key>FF7AAAAE441722316580A056</key>
 		<dict>
 			<key>primary</key>
 			<true/>

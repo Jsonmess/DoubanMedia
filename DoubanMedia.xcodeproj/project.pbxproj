@@ -16,6 +16,7 @@
 		2940BB051AB87F3C00D1069A /* DoubanMedia.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2940BAFB1AB87F3C00D1069A /* DoubanMedia.xcdatamodeld */; };
 		2940BB071AB87F3C00D1069A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2940BB021AB87F3C00D1069A /* LaunchScreen.xib */; };
 		2953C8B11AC2E02B00F62F07 /* DMLoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2953C8B01AC2E02B00F62F07 /* DMLoginManager.m */; };
+		295DF5121ADD35640096935A /* MBProgressHUD+DMProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 295DF5111ADD35640096935A /* MBProgressHUD+DMProgressHUD.m */; };
 		29692FC51AD54E4700641CDF /* DMSongInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 29692FC41AD54E4700641CDF /* DMSongInfo.m */; };
 		29692FC81AD55D8A00641CDF /* DMMusicPlayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 29692FC71AD55D8A00641CDF /* DMMusicPlayManager.m */; };
 		296F47121AC187B500231873 /* push_close_normal_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 296F470F1AC187B500231873 /* push_close_normal_btn@2x.png */; };
@@ -134,6 +135,8 @@
 		2940BB021AB87F3C00D1069A /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		2953C8AF1AC2E02B00F62F07 /* DMLoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMLoginManager.h; sourceTree = "<group>"; };
 		2953C8B01AC2E02B00F62F07 /* DMLoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMLoginManager.m; sourceTree = "<group>"; };
+		295DF5101ADD35640096935A /* MBProgressHUD+DMProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+DMProgressHUD.h"; sourceTree = "<group>"; };
+		295DF5111ADD35640096935A /* MBProgressHUD+DMProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+DMProgressHUD.m"; sourceTree = "<group>"; };
 		29692FC31AD54E4700641CDF /* DMSongInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMSongInfo.h; sourceTree = "<group>"; };
 		29692FC41AD54E4700641CDF /* DMSongInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMSongInfo.m; sourceTree = "<group>"; };
 		29692FC61AD55D8A00641CDF /* DMMusicPlayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMMusicPlayManager.h; sourceTree = "<group>"; };
@@ -382,6 +385,7 @@
 		2940BAFE1AB87F3C00D1069A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				295DF50F1ADD34F00096935A /* Indicator */,
 				29FC40381ABB0C0D005D97DC /* Views */,
 				2940BAFF1AB87F3C00D1069A /* Sbs */,
 				2940BB011AB87F3C00D1069A /* Xibs */,
@@ -403,6 +407,15 @@
 				2940BB021AB87F3C00D1069A /* LaunchScreen.xib */,
 			);
 			path = Xibs;
+			sourceTree = "<group>";
+		};
+		295DF50F1ADD34F00096935A /* Indicator */ = {
+			isa = PBXGroup;
+			children = (
+				295DF5101ADD35640096935A /* MBProgressHUD+DMProgressHUD.h */,
+				295DF5111ADD35640096935A /* MBProgressHUD+DMProgressHUD.m */,
+			);
+			path = Indicator;
 			sourceTree = "<group>";
 		};
 		296F470E1AC187B500231873 /* UserLogin */ = {
@@ -997,6 +1010,7 @@
 				29692FC51AD54E4700641CDF /* DMSongInfo.m in Sources */,
 				29A35B121AC698F200C2C2ED /* DMFMTableViewCell.m in Sources */,
 				29756D8D1ACD9F940011A8E7 /* AlbumRoundView.m in Sources */,
+				295DF5121ADD35640096935A /* MBProgressHUD+DMProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -138,6 +138,7 @@
                                   otherButtonTitles: nil];
         [alertView setContentMode:UIViewContentModeCenter];
         [alertView show];
+
         return;
     }
     [self resetStreamer];

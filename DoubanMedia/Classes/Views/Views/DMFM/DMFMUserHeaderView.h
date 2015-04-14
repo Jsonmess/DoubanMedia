@@ -13,5 +13,7 @@
 @end
 @interface DMFMUserHeaderView : UIView
 @property (nonatomic) id <DMUserHeaderDelegate>delegate;
+-(UIImageView *)getUserIconView;//用户头像显示
+-(UILabel*)getUserNameLabel;//用户名称
 -(void)setHeadViewContent:(NSString *)title Image:(UIImage *)image;
 @end
