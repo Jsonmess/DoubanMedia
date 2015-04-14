@@ -275,7 +275,7 @@
         [_authCode setValue:[UIColor redColor] forKeyPath:@"_placeholderLabel.textColor"];
         return;
     }
-    [loginManager LoginwithUsername:userName Password:passWord Captcha:authCode RememberOnorOff:@"On"];
+    [loginManager LoginwithUsername:userName Password:passWord Captcha:authCode RememberOnorOff:@"off"];
     [_commitLogin setEnabled:NO];
 
 }
@@ -291,7 +291,7 @@
     switch (state) {
         case kLoginError:
 		case kLoginFaild:
-            [self.registerBtn setEnabled:YES];
+            [self.commitLogin setEnabled:YES];
             break;
         case kLoginSuccess:
             [self backToSuperController];
