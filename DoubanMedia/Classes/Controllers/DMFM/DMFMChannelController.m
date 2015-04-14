@@ -94,7 +94,7 @@ static NSString *reuseCell = @"FMChannelCell";
 }
 -(NSMutableDictionary *)checkUserInfo
 {
-	 NSArray *accounts = [AccountInfo MR_findAllInContext:[NSManagedObjectContext MR_defaultContext]];
+	 NSArray *accounts = [AccountInfo MR_findAllInContext:[NSManagedObjectContext MR_context]];
     AccountInfo *user = [accounts firstObject];
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     [dic setValue:user.userId forKey:@"userID"];
