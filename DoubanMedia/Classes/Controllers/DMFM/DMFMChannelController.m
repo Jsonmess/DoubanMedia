@@ -131,7 +131,7 @@ static NSString *reuseCell = @"FMChannelCell";
 		//不允许进入空播放---淡出提示
         [MBProgressHUD showTextOnlyIndicatorWithView:self.view
                              Text:@"您还没挑选您要听的频道噢" Font:DMFont(13.0f)
-                           Margin:10.0f  showTime:3.0f];
+                           Margin:10.0f  showTime:1.8f];
     }
     else
     {

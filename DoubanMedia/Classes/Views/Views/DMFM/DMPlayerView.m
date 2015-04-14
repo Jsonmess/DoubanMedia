@@ -16,6 +16,7 @@
     UIPanGestureRecognizer *panGestureRecognizer;
     DMSysVolumeAjustManager *volumeManager;//播放音量管理
     CGFloat volumeValue;//记录音量值
+    UISlider *volumeSystemSilder;//系统控制音量
 
 }
 @property (nonatomic)UIImageView *backgroundImage;//背景图片
@@ -268,8 +269,12 @@
 -(void)setPlayMediaVolume:(UISlider*)sender
 {
     //PlayManager 进行操作
-    UISlider *slider = [volumeManager getVolumeViewFromMPVolumeView];
-    [slider setValue:sender.value animated:YES];
+    if (volumeSystemSilder == nil)
+    {
+        volumeSystemSilder = [volumeManager getVolumeViewFromMPVolumeView];
+    }
+    [volumeSystemSilder setValue:sender.value animated:YES];
+    
 }
 //红心
 -(void)likeTheSong:(id)sender
