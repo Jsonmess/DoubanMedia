@@ -2,28 +2,92 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2bb2a61-7e59-426b-aa34-7d54bf3010c4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Controllers/DMFM/DMMusicPlayerController.m" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Controllers/DMFM/DMMusicPlayerController.m" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/SpinKit/RTSpinKit9CubeGridAnimation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/SpinKit/RTSpinKitAnimating.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/SpinKit/RTSpinKitArcAltAnimation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/SpinKit/RTSpinKitArcAnimation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/SpinKit/RTSpinKitBounceAnimation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/SpinKit/RTSpinKitChasingDotsAnimation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/SpinKit/RTSpinKitCircleAnimation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/SpinKit/RTSpinKitCircleFlipAnimation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/SpinKit/RTSpinKitFadingCircleAltAnimation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/SpinKit/RTSpinKitFadingCircleAnimation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/SpinKit/RTSpinKitPlaneAnimation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/SpinKit/RTSpinKitPulseAnimation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/SpinKit/RTSpinKitThreeBounceAnimation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/SpinKit/RTSpinKitUtils.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/SpinKit/RTSpinKitView.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/SpinKit/RTSpinKitWanderingCubesAnimation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/SpinKit/RTSpinKitWaveAnimation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/SpinKit/RTSpinKitWordPressAnimation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/SpinKit/RTSpinKitView.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SpinKit/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SpinKit/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SpinKit/SpinKit/Animations/RTSpinKit9CubeGridAnimation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SpinKit/SpinKit/Animations/RTSpinKit9CubeGridAnimation.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SpinKit/SpinKit/Animations/RTSpinKitArcAltAnimation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SpinKit/SpinKit/Animations/RTSpinKitArcAltAnimation.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SpinKit/SpinKit/Animations/RTSpinKitArcAnimation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SpinKit/SpinKit/Animations/RTSpinKitArcAnimation.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SpinKit/SpinKit/Animations/RTSpinKitBounceAnimation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SpinKit/SpinKit/Animations/RTSpinKitBounceAnimation.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SpinKit/SpinKit/Animations/RTSpinKitChasingDotsAnimation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SpinKit/SpinKit/Animations/RTSpinKitChasingDotsAnimation.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SpinKit/SpinKit/Animations/RTSpinKitCircleAnimation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SpinKit/SpinKit/Animations/RTSpinKitCircleAnimation.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SpinKit/SpinKit/Animations/RTSpinKitCircleFlipAnimation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SpinKit/SpinKit/Animations/RTSpinKitCircleFlipAnimation.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SpinKit/SpinKit/Animations/RTSpinKitFadingCircleAltAnimation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SpinKit/SpinKit/Animations/RTSpinKitFadingCircleAltAnimation.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SpinKit/SpinKit/Animations/RTSpinKitFadingCircleAnimation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SpinKit/SpinKit/Animations/RTSpinKitFadingCircleAnimation.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SpinKit/SpinKit/Animations/RTSpinKitPlaneAnimation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SpinKit/SpinKit/Animations/RTSpinKitPlaneAnimation.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SpinKit/SpinKit/Animations/RTSpinKitPulseAnimation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SpinKit/SpinKit/Animations/RTSpinKitPulseAnimation.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SpinKit/SpinKit/Animations/RTSpinKitThreeBounceAnimation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SpinKit/SpinKit/Animations/RTSpinKitThreeBounceAnimation.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SpinKit/SpinKit/Animations/RTSpinKitWanderingCubesAnimation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SpinKit/SpinKit/Animations/RTSpinKitWanderingCubesAnimation.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SpinKit/SpinKit/Animations/RTSpinKitWaveAnimation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SpinKit/SpinKit/Animations/RTSpinKitWaveAnimation.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SpinKit/SpinKit/Animations/RTSpinKitWordPressAnimation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SpinKit/SpinKit/Animations/RTSpinKitWordPressAnimation.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SpinKit/SpinKit/RTSpinKitAnimating.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SpinKit/SpinKit/RTSpinKitUtils.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SpinKit/SpinKit/RTSpinKitUtils.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SpinKit/SpinKit/RTSpinKitView.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SpinKit/SpinKit/RTSpinKitView.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-SpinKit/Pods-SpinKit-Private.xcconfig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-SpinKit/Pods-SpinKit-dummy.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-SpinKit/Pods-SpinKit-prefix.pch" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-SpinKit/Pods-SpinKit.xcconfig" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Controllers/DMFM/DMFMChannelController.m" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Controllers/DMFM/DMFMChannelController.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Manifest.lock" afterPath="$PROJECT_DIR$/Pods/Manifest.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Podfile.lock" afterPath="$PROJECT_DIR$/Podfile.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Podfile" afterPath="$PROJECT_DIR$/Podfile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-AFNetworking/Pods-AFNetworking-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-AFNetworking/Pods-AFNetworking-Private.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/jsonmess.xcuserdatad/xcschemes/Pods-AFNetworking.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/jsonmess.xcuserdatad/xcschemes/Pods-AFNetworking.xcscheme" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-DOUAudioStreamer/Pods-DOUAudioStreamer-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-DOUAudioStreamer/Pods-DOUAudioStreamer-Private.xcconfig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-MJRefresh/Pods-MJRefresh-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-MJRefresh/Pods-MJRefresh-Private.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/jsonmess.xcuserdatad/xcschemes/Pods-MJRefresh.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/jsonmess.xcuserdatad/xcschemes/Pods-MJRefresh.xcscheme" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-MagicalRecord/Pods-MagicalRecord-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-MagicalRecord/Pods-MagicalRecord-Private.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/jsonmess.xcuserdatad/xcschemes/Pods-MagicalRecord.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/jsonmess.xcuserdatad/xcschemes/Pods-MagicalRecord.xcscheme" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-NJKWebViewProgress/Pods-NJKWebViewProgress-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-NJKWebViewProgress/Pods-NJKWebViewProgress-Private.xcconfig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-PureLayout/Pods-PureLayout-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-PureLayout/Pods-PureLayout-Private.xcconfig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Reachability/Pods-Reachability-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Reachability/Pods-Reachability-Private.xcconfig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-ReactiveCocoa/Pods-ReactiveCocoa-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-ReactiveCocoa/Pods-ReactiveCocoa-Private.xcconfig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-SDWebImage/Pods-SDWebImage-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-SDWebImage/Pods-SDWebImage-Private.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/jsonmess.xcuserdatad/xcschemes/Pods-SDWebImage.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/jsonmess.xcuserdatad/xcschemes/Pods-SDWebImage.xcscheme" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-SVWebViewController/Pods-SVWebViewController-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-SVWebViewController/Pods-SVWebViewController-Private.xcconfig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-SpinKit/Pods-SpinKit-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-SpinKit/Pods-SpinKit-Private.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-TMCache/Pods-TMCache-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-TMCache/Pods-TMCache-Private.xcconfig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-ZBarSDK/Pods-ZBarSDK-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-ZBarSDK/Pods-ZBarSDK-Private.xcconfig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods/Pods-acknowledgements.markdown" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods/Pods-acknowledgements.markdown" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods/Pods-acknowledgements.plist" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods/Pods-acknowledgements.plist" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods/Pods-environment.h" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods/Pods-environment.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods/Pods-resources.sh" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods/Pods-resources.sh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods/Pods.debug.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods/Pods.debug.xcconfig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods/Pods.release.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods/Pods.release.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/jsonmess.xcuserdatad/xcschemes/Pods.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/jsonmess.xcuserdatad/xcschemes/Pods.xcscheme" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/project.pbxproj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/jsonmess.xcuserdatad/xcschemes/xcschememanagement.plist" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/jsonmess.xcuserdatad/xcschemes/xcschememanagement.plist" />
@@ -75,7 +139,7 @@
       <file leaf-file-name="Podfile" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Podfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.51724136" vertical-offset="0" max-vertical-offset="377">
+            <state vertical-scroll-proportion="0.5927052" vertical-offset="0" max-vertical-offset="329">
               <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
@@ -85,35 +149,35 @@
       <file leaf-file-name="DMMusicPlayerController.m" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DoubanMedia/Classes/Controllers/DMFM/DMMusicPlayerController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3263" max-vertical-offset="3887">
-              <caret line="251" column="42" selection-start-line="251" selection-start-column="42" selection-end-line="251" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="3354" max-vertical-offset="4121">
+              <caret line="258" column="42" selection-start-line="258" selection-start-column="42" selection-end-line="258" selection-end-column="42" />
               <folding>
-                <marker date="1428933832000" expanded="false" signature="155:445" placeholder="..." />
-                <marker date="1428933832000" expanded="true" signature="523:797" placeholder="..." />
-                <marker date="1428933832000" expanded="true" signature="524:748" placeholder="{...}" />
-                <marker date="1428933832000" expanded="true" signature="842:9516" placeholder="..." />
-                <marker date="1428933832000" expanded="true" signature="864:1016" placeholder="{...}" />
-                <marker date="1428933832000" expanded="true" signature="1054:1618" placeholder="{...}" />
-                <marker date="1428933832000" expanded="true" signature="1658:2061" placeholder="{...}" />
-                <marker date="1428933832000" expanded="true" signature="2085:3193" placeholder="{...}" />
-                <marker date="1428933832000" expanded="true" signature="3212:3389" placeholder="{...}" />
-                <marker date="1428933832000" expanded="true" signature="3423:3562" placeholder="{...}" />
-                <marker date="1428933832000" expanded="true" signature="3606:3744" placeholder="{...}" />
-                <marker date="1428933832000" expanded="true" signature="3778:4002" placeholder="{...}" />
-                <marker date="1428933832000" expanded="true" signature="4035:4054" placeholder="{...}" />
-                <marker date="1428933832000" expanded="true" signature="4087:4182" placeholder="{...}" />
-                <marker date="1428933832000" expanded="true" signature="4245:4723" placeholder="{...}" />
-                <marker date="1428933832000" expanded="true" signature="4757:4792" placeholder="{...}" />
-                <marker date="1428933832000" expanded="true" signature="4819:4854" placeholder="{...}" />
-                <marker date="1428933832000" expanded="true" signature="4891:4935" placeholder="{...}" />
-                <marker date="1428933832000" expanded="true" signature="4984:5210" placeholder="{...}" />
-                <marker date="1428933832000" expanded="true" signature="5297:6267" placeholder="{...}" />
-                <marker date="1428933832000" expanded="true" signature="5489:5766" placeholder="^(UIImage *image){...}" />
-                <marker date="1428933832000" expanded="true" signature="6336:6810" placeholder="{...}" />
-                <marker date="1428933832000" expanded="true" signature="6873:7512" placeholder="{...}" />
-                <marker date="1428933832000" expanded="true" signature="7608:8078" placeholder="{...}" />
-                <marker date="1428933832000" expanded="true" signature="8155:8751" placeholder="{...}" />
-                <marker date="1428933832000" expanded="true" signature="8944:9515" placeholder="{...}" />
+                <marker date="1428987423000" expanded="false" signature="155:445" placeholder="..." />
+                <marker date="1428987423000" expanded="true" signature="523:797" placeholder="..." />
+                <marker date="1428987423000" expanded="true" signature="524:748" placeholder="{...}" />
+                <marker date="1428987423000" expanded="true" signature="842:9929" placeholder="..." />
+                <marker date="1428987423000" expanded="true" signature="864:1016" placeholder="{...}" />
+                <marker date="1428987423000" expanded="true" signature="1054:1093" placeholder="{...}" />
+                <marker date="1428987423000" expanded="true" signature="1658:2061" placeholder="{...}" />
+                <marker date="1428987423000" expanded="true" signature="2085:3193" placeholder="{...}" />
+                <marker date="1428987423000" expanded="true" signature="3212:3389" placeholder="{...}" />
+                <marker date="1428987423000" expanded="true" signature="3423:3562" placeholder="{...}" />
+                <marker date="1428987423000" expanded="true" signature="3606:3744" placeholder="{...}" />
+                <marker date="1428987423000" expanded="true" signature="3778:4002" placeholder="{...}" />
+                <marker date="1428987423000" expanded="true" signature="4035:4054" placeholder="{...}" />
+                <marker date="1428987423000" expanded="true" signature="4087:4182" placeholder="{...}" />
+                <marker date="1428987423000" expanded="true" signature="4245:4723" placeholder="{...}" />
+                <marker date="1428987423000" expanded="true" signature="4757:4792" placeholder="{...}" />
+                <marker date="1428987423000" expanded="true" signature="4819:4854" placeholder="{...}" />
+                <marker date="1428987423000" expanded="true" signature="4891:4935" placeholder="{...}" />
+                <marker date="1428987423000" expanded="true" signature="4984:5210" placeholder="{...}" />
+                <marker date="1428987423000" expanded="true" signature="5297:6267" placeholder="{...}" />
+                <marker date="1428987423000" expanded="true" signature="5489:5766" placeholder="^(UIImage *image){...}" />
+                <marker date="1428987423000" expanded="true" signature="6336:6810" placeholder="{...}" />
+                <marker date="1428987423000" expanded="true" signature="6873:7512" placeholder="{...}" />
+                <marker date="1428987423000" expanded="true" signature="7608:8078" placeholder="{...}" />
+                <marker date="1428987423000" expanded="true" signature="8155:8751" placeholder="{...}" />
+                <marker date="1428987423000" expanded="true" signature="9927:9928" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -182,6 +246,7 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="-15" />
     <option name="y" value="23" />
     <option name="width" value="1280" />
     <option name="height" value="729" />
@@ -537,13 +602,6 @@
       </EXTENSION>
       <method />
     </configuration>
-    <configuration default="false" name="Pods-SpinKit" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="Pods-SpinKit" CONFIG_NAME="Debug" SCHEME_NAME="Pods-SpinKit" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
-      <envs />
-      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
-        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
-      </EXTENSION>
-      <method />
-    </configuration>
     <configuration default="false" name="Pods-ZBarSDK" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="Pods-ZBarSDK" CONFIG_NAME="Debug" SCHEME_NAME="Pods-ZBarSDK" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
       <envs />
       <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
@@ -572,6 +630,13 @@
       </EXTENSION>
       <method />
     </configuration>
+    <configuration default="false" name="Pods-MBProgressHUD" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="Pods-MBProgressHUD" CONFIG_NAME="Debug" SCHEME_NAME="Pods-MBProgressHUD" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
     <list size="15">
       <item index="0" class="java.lang.String" itemvalue="Application.DoubanMedia" />
       <item index="1" class="java.lang.String" itemvalue="Application.Pods-MagicalRecord" />
@@ -583,11 +648,11 @@
       <item index="7" class="java.lang.String" itemvalue="Application.Pods-NJKWebViewProgress" />
       <item index="8" class="java.lang.String" itemvalue="Application.Pods-SVWebViewController" />
       <item index="9" class="java.lang.String" itemvalue="Application.Pods-AFNetworking" />
-      <item index="10" class="java.lang.String" itemvalue="Application.Pods-SpinKit" />
-      <item index="11" class="java.lang.String" itemvalue="Application.Pods-ZBarSDK" />
-      <item index="12" class="java.lang.String" itemvalue="Application.Pods-Reachability" />
-      <item index="13" class="java.lang.String" itemvalue="Application.Pods-DOUAudioStreamer" />
-      <item index="14" class="java.lang.String" itemvalue="Application.Pods-TMCache" />
+      <item index="10" class="java.lang.String" itemvalue="Application.Pods-ZBarSDK" />
+      <item index="11" class="java.lang.String" itemvalue="Application.Pods-Reachability" />
+      <item index="12" class="java.lang.String" itemvalue="Application.Pods-DOUAudioStreamer" />
+      <item index="13" class="java.lang.String" itemvalue="Application.Pods-TMCache" />
+      <item index="14" class="java.lang.String" itemvalue="Application.Pods-MBProgressHUD" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -624,12 +689,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="729" extended-state="6" />
-    <editor active="false" />
+    <frame x="-15" y="23" width="1280" height="729" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44131455" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.44131455" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32707354" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32707354" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32707354" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286385" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -640,13 +705,13 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1059,7 +1124,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.455" vertical-offset="0" max-vertical-offset="400">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1073,42 +1137,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DoubanMedia/Classes/Controllers/DMFM/DMMusicPlayerController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3263" max-vertical-offset="3887">
-          <caret line="251" column="42" selection-start-line="251" selection-start-column="42" selection-end-line="251" selection-end-column="42" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="3354" max-vertical-offset="4121">
+          <caret line="258" column="42" selection-start-line="258" selection-start-column="42" selection-end-line="258" selection-end-column="42" />
           <folding>
-            <marker date="1428933832000" expanded="false" signature="155:445" placeholder="..." />
-            <marker date="1428933832000" expanded="true" signature="523:797" placeholder="..." />
-            <marker date="1428933832000" expanded="true" signature="524:748" placeholder="{...}" />
-            <marker date="1428933832000" expanded="true" signature="842:9516" placeholder="..." />
-            <marker date="1428933832000" expanded="true" signature="864:1016" placeholder="{...}" />
-            <marker date="1428933832000" expanded="true" signature="1054:1618" placeholder="{...}" />
-            <marker date="1428933832000" expanded="true" signature="1658:2061" placeholder="{...}" />
-            <marker date="1428933832000" expanded="true" signature="2085:3193" placeholder="{...}" />
-            <marker date="1428933832000" expanded="true" signature="3212:3389" placeholder="{...}" />
-            <marker date="1428933832000" expanded="true" signature="3423:3562" placeholder="{...}" />
-            <marker date="1428933832000" expanded="true" signature="3606:3744" placeholder="{...}" />
-            <marker date="1428933832000" expanded="true" signature="3778:4002" placeholder="{...}" />
-            <marker date="1428933832000" expanded="true" signature="4035:4054" placeholder="{...}" />
-            <marker date="1428933832000" expanded="true" signature="4087:4182" placeholder="{...}" />
-            <marker date="1428933832000" expanded="true" signature="4245:4723" placeholder="{...}" />
-            <marker date="1428933832000" expanded="true" signature="4757:4792" placeholder="{...}" />
-            <marker date="1428933832000" expanded="true" signature="4819:4854" placeholder="{...}" />
-            <marker date="1428933832000" expanded="true" signature="4891:4935" placeholder="{...}" />
-            <marker date="1428933832000" expanded="true" signature="4984:5210" placeholder="{...}" />
-            <marker date="1428933832000" expanded="true" signature="5297:6267" placeholder="{...}" />
-            <marker date="1428933832000" expanded="true" signature="5489:5766" placeholder="^(UIImage *image){...}" />
-            <marker date="1428933832000" expanded="true" signature="6336:6810" placeholder="{...}" />
-            <marker date="1428933832000" expanded="true" signature="6873:7512" placeholder="{...}" />
-            <marker date="1428933832000" expanded="true" signature="7608:8078" placeholder="{...}" />
-            <marker date="1428933832000" expanded="true" signature="8155:8751" placeholder="{...}" />
-            <marker date="1428933832000" expanded="true" signature="8944:9515" placeholder="{...}" />
+            <marker date="1428987423000" expanded="false" signature="155:445" placeholder="..." />
+            <marker date="1428987423000" expanded="true" signature="523:797" placeholder="..." />
+            <marker date="1428987423000" expanded="true" signature="524:748" placeholder="{...}" />
+            <marker date="1428987423000" expanded="true" signature="842:9929" placeholder="..." />
+            <marker date="1428987423000" expanded="true" signature="864:1016" placeholder="{...}" />
+            <marker date="1428987423000" expanded="true" signature="1054:1093" placeholder="{...}" />
+            <marker date="1428987423000" expanded="true" signature="1658:2061" placeholder="{...}" />
+            <marker date="1428987423000" expanded="true" signature="2085:3193" placeholder="{...}" />
+            <marker date="1428987423000" expanded="true" signature="3212:3389" placeholder="{...}" />
+            <marker date="1428987423000" expanded="true" signature="3423:3562" placeholder="{...}" />
+            <marker date="1428987423000" expanded="true" signature="3606:3744" placeholder="{...}" />
+            <marker date="1428987423000" expanded="true" signature="3778:4002" placeholder="{...}" />
+            <marker date="1428987423000" expanded="true" signature="4035:4054" placeholder="{...}" />
+            <marker date="1428987423000" expanded="true" signature="4087:4182" placeholder="{...}" />
+            <marker date="1428987423000" expanded="true" signature="4245:4723" placeholder="{...}" />
+            <marker date="1428987423000" expanded="true" signature="4757:4792" placeholder="{...}" />
+            <marker date="1428987423000" expanded="true" signature="4819:4854" placeholder="{...}" />
+            <marker date="1428987423000" expanded="true" signature="4891:4935" placeholder="{...}" />
+            <marker date="1428987423000" expanded="true" signature="4984:5210" placeholder="{...}" />
+            <marker date="1428987423000" expanded="true" signature="5297:6267" placeholder="{...}" />
+            <marker date="1428987423000" expanded="true" signature="5489:5766" placeholder="^(UIImage *image){...}" />
+            <marker date="1428987423000" expanded="true" signature="6336:6810" placeholder="{...}" />
+            <marker date="1428987423000" expanded="true" signature="6873:7512" placeholder="{...}" />
+            <marker date="1428987423000" expanded="true" signature="7608:8078" placeholder="{...}" />
+            <marker date="1428987423000" expanded="true" signature="8155:8751" placeholder="{...}" />
+            <marker date="1428987423000" expanded="true" signature="9927:9928" placeholder="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Podfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.51724136" vertical-offset="0" max-vertical-offset="377">
+        <state vertical-scroll-proportion="0.5927052" vertical-offset="0" max-vertical-offset="329">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>

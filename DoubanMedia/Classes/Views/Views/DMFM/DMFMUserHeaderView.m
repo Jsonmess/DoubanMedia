@@ -36,6 +36,7 @@
     [self addSubview:userName];
     [self addSubview:userIcon];
     [userName setTextColor:DMColor(120, 122, 122, 1.0f)];
+    [userName setFont:DMFont(12.0f)];
     [userIcon autoSetDimension:ALDimensionHeight toSize:20.0f];
     [userIcon autoSetDimension:ALDimensionWidth toSize:20.0f];
     [userIcon.layer setCornerRadius:10.0f];
@@ -46,7 +47,14 @@
     [userName autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
     [self setNeedsLayout];
 }
-
+-(UIImageView *)getUserIconView
+{
+    return userIcon;
+}
+-(UILabel*)getUserNameLabel
+{
+    return userName;
+}
 -(void)setHeadViewContent:(NSString *)title Image:(UIImage *)image
 {
 
@@ -56,13 +64,11 @@
     if (image != nil)
     {
         [userIcon setHidden:NO];
-        [userName setFont:DMFont(12.0f)];
         [userIcon setImage:image];
 
     }
     else
     {
-		[userName setFont:DMFont(12.0f)];
         [userIcon setHidden:YES];
     }
 

@@ -16,8 +16,9 @@
 #import "FMChannel.h"
 #import "DMMusicPlayerController.h"
 #import "DMLoginViewController.h"
-#import "UIImage+loadRemoteImage.h"
+#import  <UIImageView+WebCache.h>
 #import <MJRefresh.h>
+#import "MBProgressHUD+DMProgressHUD.h"
 @interface DMFMChannelController ()<UITableViewDataSource,UITableViewDelegate,
 DMChannelDelegate,NSFetchedResultsControllerDelegate,DMUserHeaderDelegate>
 {
@@ -29,6 +30,8 @@ DMChannelDelegate,NSFetchedResultsControllerDelegate,DMUserHeaderDelegate>
     DMFMTableViewCell *lastSelected;//记录上一次播放的音乐频道
     NSIndexPath *lastSelectedIndex;//记录上一次播放的音乐频道Index
     DMMusicPlayerController *playController;//播放控制器
+    MBProgressHUD *loadChannelInfo;
+    NSMutableDictionary *userInfo;//临时记录用户信息
 }
 @end
 static NSString *reuseCell = @"FMChannelCell";
@@ -48,6 +51,8 @@ static NSString *reuseCell = @"FMChannelCell";
 }
 -(void)commonInit
 {
+    //检查用户信息
+    userInfo = [self checkUserInfo];
     //在此处获取频道列表，为加载数据做准备
     [self getChannelInfo];
     networkManager = [[ DMChannelManager alloc] init];
@@ -55,12 +60,13 @@ static NSString *reuseCell = @"FMChannelCell";
     appDelegate = [UIApplication sharedApplication].delegate;
     [fmTableView addLegendHeaderWithRefreshingTarget:self refreshingAction:@selector(getChannelInfo)];
     [fmTableView.legendHeader beginRefreshing];
+    loadChannelInfo = [MBProgressHUD createProgressOnlyWithView:self.view ShouldRemoveOnHide:NO];
 
 }
 -(void)getChannelInfo
 {
-    //推荐兆赫
 
+    [loadChannelInfo show:YES];
     //查询数据，用户是否登录
     NSArray *users = [AccountInfo MR_findAll];
     if (users.count <= 0)
@@ -85,6 +91,15 @@ static NSString *reuseCell = @"FMChannelCell";
     //热门兆赫
     [networkManager getChannel:3 withURLWithString:@"http://douban.fm/j/explore/hot_channels"];
    // [fmTableView reloadData];
+}
+-(NSMutableDictionary *)checkUserInfo
+{
+	 NSArray *accounts = [AccountInfo MR_findAllInContext:[NSManagedObjectContext MR_defaultContext]];
+    AccountInfo *user = [accounts firstObject];
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    [dic setValue:user.userId forKey:@"userID"];
+    [dic setValue:user.name forKey:@"userName"];
+    return dic;
 }
 -(void)setUpView
 {
@@ -113,7 +128,10 @@ static NSString *reuseCell = @"FMChannelCell";
 {
     if (playController == nil)
     {
-		//不允许进入空播放
+		//不允许进入空播放---淡出提示
+        [MBProgressHUD showTextOnlyIndicatorWithView:self.view
+                             Text:@"您还没挑选您要听的频道噢" Font:DMFont(13.0f)
+                           Margin:10.0f  showTime:3.0f];
     }
     else
     {
@@ -195,43 +213,41 @@ static NSString *reuseCell = @"FMChannelCell";
 }
 -(DMFMUserHeaderView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    DMFMUserHeaderView *view = [[DMFMUserHeaderView alloc]
-                                initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 30)];
+    static NSString *reuseHeaderView = @"HeaderView";
+     DMFMUserHeaderView *view = [tableView dequeueReusableHeaderFooterViewWithIdentifier:reuseHeaderView];
+    if (view == nil)
+    {
+    				view = [[DMFMUserHeaderView alloc]
+                                    initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 30)];
+    }
+
     [view setBackgroundColor:DMColor(230, 230, 230, 0.8f)];
     //设置head 数据
-    NSString *thetitle = appDelegate.channels[section][@"section"];
-   	__block NSString *title = thetitle;
+    NSString *title = appDelegate.channels[section][@"section"];
     BOOL isNeedGetInterface = NO;//header用户交互
-    //查询数据库
-    NSArray *accounts = [AccountInfo MR_findAllInContext:[NSManagedObjectContext MR_context]];
-
-    if (accounts.count > 0 && section == 0)
+		UIImage *imagefile = [UIImage imageNamed:@"user_normal.jpg"];
+    if (userInfo.count > 0 && section == 0)
     {
-        AccountInfo *userInfo = [accounts firstObject];
-        title = userInfo.name;
+        title = [userInfo valueForKey:@"userName"];
         //用户已经登录
         NSString *imageUrl = [NSString stringWithFormat:@"%@%@.jpg",
-                              UserAccountIconUrl,userInfo.userId];
-        [UIImage getRemoteImageWithUrl:imageUrl Suceess:^(UIImage *image)
-        {
-
-               UIImage * theImage = image;
-            [view setHeadViewContent:title Image:theImage];
-        } faild:^(NSError *error)
-        {
-			UIImage *theImage = [UIImage imageNamed:@"user_normal.jpg"];
-            [view setHeadViewContent:title Image:theImage];
-        }];
+                              UserAccountIconUrl,[userInfo valueForKey:@"userID"]];
+        [[view getUserIconView] sd_setImageWithURL:[NSURL URLWithString:imageUrl]
+                                  placeholderImage:imagefile
+                                           options:SDWebImageHighPriority];
+        [[view getUserNameLabel] setText:title];
     }
     else
-    {	  UIImage *imagefile = nil;
+    {
         if (section == 0)
         {
-            imagefile = [UIImage imageNamed:@"user_normal.jpg"];
             isNeedGetInterface = YES;
+            [view setHeadViewContent:title Image:imagefile];
         }
-
-        [view setHeadViewContent:thetitle Image:imagefile];
+        else
+        {
+            [view setHeadViewContent:title Image:nil];
+        }
     }
     [view setDelegate:self];
     [view setUserInteractionEnabled:isNeedGetInterface];
@@ -257,8 +273,8 @@ static NSString *reuseCell = @"FMChannelCell";
         [fmTableView reloadData];
     }
     //停止刷新
+    [loadChannelInfo hide:YES];
     [fmTableView.legendHeader endRefreshing];
-
 }
 -(void)controllerDidChangeContent:(NSFetchedResultsController *)controller
 {
