@@ -61,14 +61,15 @@ static NSString *reuseCell = @"FMChannelCell";
     [fmTableView addLegendHeaderWithRefreshingTarget:self refreshingAction:@selector(getChannelInfo)];
     [fmTableView.legendHeader beginRefreshing];
     loadChannelInfo = [MBProgressHUD createProgressOnlyWithView:self.view ShouldRemoveOnHide:NO];
-
 }
 -(void)getChannelInfo
 {
 
     [loadChannelInfo show:YES];
     //查询数据，用户是否登录
-    NSArray *users = [AccountInfo MR_findAll];
+    NSManagedObjectContext *context = [NSManagedObjectContext MR_contextWithParent:
+                                       [NSManagedObjectContext MR_defaultContext]];
+    NSArray *users = [AccountInfo MR_findAllInContext:context];
     if (users.count <= 0)
     {
         [networkManager getChannel:1 withURLWithString:@"http://douban.fm/j/explore/get_recommend_chl"];
@@ -95,11 +96,34 @@ static NSString *reuseCell = @"FMChannelCell";
 -(void )checkUserInfo
 {
 	 NSArray *accounts = [AccountInfo MR_findAllInContext:[NSManagedObjectContext MR_context]];
+    //如果没有登录则开启登录监听
+    if (accounts.count <= 0)
+    {
+        //添加监听登录状态
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadChannelListAfterLogin:)
+                                                     name:@"LoginSucess"
+                                                   object:nil];
+    }
     AccountInfo *user = [accounts firstObject];
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
-    [dic setValue:user.userId forKey:@"userID"];
-    [dic setValue:user.name forKey:@"userName"];
+    if (user.userId)
+    {
+        [dic setValue:user.userId forKey:@"userID"];
+    }
+
+    if (user.name)
+    {
+        [dic setValue:user.name forKey:@"userName"];
+    }
+    
     userInfo = dic;
+}
+//频道列表点击登录后的监听回调
+-(void)reloadChannelListAfterLogin:(NSNotification*)notification
+{
+    [self getChannelInfo];
+    //移除监听
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"LoginSucess" object:nil];
 }
 -(void)setUpView
 {
