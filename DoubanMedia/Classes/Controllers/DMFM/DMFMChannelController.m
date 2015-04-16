@@ -47,12 +47,14 @@ static NSString *reuseCell = @"FMChannelCell";
 -(void)viewWillAppear:(BOOL)animated
 {
     [fmTableView reloadData];
+    shouldHiddenStatusBar(NO);
+    setStatusBarStyle(UIStatusBarStyleDefault);
+    //检查用户信息
+    [self checkUserInfo];
     [super viewWillAppear:animated];
 }
 -(void)commonInit
 {
-    //检查用户信息
-    userInfo = [self checkUserInfo];
     //在此处获取频道列表，为加载数据做准备
     [self getChannelInfo];
     networkManager = [[ DMChannelManager alloc] init];
@@ -61,14 +63,15 @@ static NSString *reuseCell = @"FMChannelCell";
     [fmTableView addLegendHeaderWithRefreshingTarget:self refreshingAction:@selector(getChannelInfo)];
     [fmTableView.legendHeader beginRefreshing];
     loadChannelInfo = [MBProgressHUD createProgressOnlyWithView:self.view ShouldRemoveOnHide:NO];
-
 }
 -(void)getChannelInfo
 {
 
     [loadChannelInfo show:YES];
     //查询数据，用户是否登录
-    NSArray *users = [AccountInfo MR_findAll];
+    NSManagedObjectContext *context = [NSManagedObjectContext MR_contextWithParent:
+                                       [NSManagedObjectContext MR_defaultContext]];
+    NSArray *users = [AccountInfo MR_findAllInContext:context];
     if (users.count <= 0)
     {
         [networkManager getChannel:1 withURLWithString:@"http://douban.fm/j/explore/get_recommend_chl"];
@@ -92,14 +95,37 @@ static NSString *reuseCell = @"FMChannelCell";
     [networkManager getChannel:3 withURLWithString:@"http://douban.fm/j/explore/hot_channels"];
    // [fmTableView reloadData];
 }
--(NSMutableDictionary *)checkUserInfo
+-(void )checkUserInfo
 {
-	 NSArray *accounts = [AccountInfo MR_findAllInContext:[NSManagedObjectContext MR_defaultContext]];
+	 NSArray *accounts = [AccountInfo MR_findAllInContext:[NSManagedObjectContext MR_context]];
+    //如果没有登录则开启登录监听
+    if (accounts.count <= 0)
+    {
+        //添加监听登录状态
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadChannelListAfterLogin:)
+                                                     name:@"LoginSucess"
+                                                   object:nil];
+    }
     AccountInfo *user = [accounts firstObject];
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
-    [dic setValue:user.userId forKey:@"userID"];
-    [dic setValue:user.name forKey:@"userName"];
-    return dic;
+    if (user.userId)
+    {
+        [dic setValue:user.userId forKey:@"userID"];
+    }
+
+    if (user.name)
+    {
+        [dic setValue:user.name forKey:@"userName"];
+    }
+    
+    userInfo = dic;
+}
+//频道列表点击登录后的监听回调
+-(void)reloadChannelListAfterLogin:(NSNotification*)notification
+{
+    [self getChannelInfo];
+    //移除监听
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"LoginSucess" object:nil];
 }
 -(void)setUpView
 {
@@ -131,7 +157,7 @@ static NSString *reuseCell = @"FMChannelCell";
 		//不允许进入空播放---淡出提示
         [MBProgressHUD showTextOnlyIndicatorWithView:self.view
                              Text:@"您还没挑选您要听的频道噢" Font:DMFont(13.0f)
-                           Margin:10.0f  showTime:3.0f];
+                           Margin:10.0f  showTime:1.8f];
     }
     else
     {

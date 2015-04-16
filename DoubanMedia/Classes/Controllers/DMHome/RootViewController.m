@@ -11,6 +11,7 @@
 #import "PureLayout.h"
 #import "Com_navigationController.h"
 #import "DMFMChannelController.h"
+#import "DMFilmListController.h"
 #import "TabViewManager.h"
 #define KitemCount 4  //Tabbar 选项卡数目
 @interface RootViewController  ()<TabbarDataSource,TabbarDelegate>
@@ -39,18 +40,17 @@
     Com_navigationController *navFMController = [[Com_navigationController alloc]
                                                initWithRootViewController:doubanFmController];
     [subViewControllers addObject:navFMController];
-    //豆瓣音乐
-     UIViewController *doubanMusicController = [[UIViewController alloc]init];
-    Com_navigationController *navMusicController = [[Com_navigationController alloc]
-                                               initWithRootViewController:doubanMusicController];
-    [doubanMusicController.view setBackgroundColor:[UIColor greenColor]];
-    [subViewControllers addObject:navMusicController];
     //豆瓣电影
-     UIViewController *doubanFilmController = [[UIViewController alloc]init];
+    DMFilmListController *doubanFilmController = [[DMFilmListController alloc]init];
     Com_navigationController *navFilmController = [[Com_navigationController alloc]
-                                                    initWithRootViewController:doubanFilmController];
-    [doubanFilmController.view setBackgroundColor:[UIColor blueColor]];
+                                                   initWithRootViewController:doubanFilmController];
     [subViewControllers addObject:navFilmController];
+    //豆瓣妹纸
+     UIViewController *doubanGirlController = [[UIViewController alloc]init];
+    Com_navigationController *navGirlController = [[Com_navigationController alloc]
+                                                    initWithRootViewController:doubanGirlController];
+    [doubanGirlController.view setBackgroundColor:[UIColor greenColor]];
+    [subViewControllers addObject:navGirlController];
 	//应用设置
      UIViewController *doubanSettingController = [[UIViewController alloc]init];
     Com_navigationController *navSettingController = [[Com_navigationController alloc]

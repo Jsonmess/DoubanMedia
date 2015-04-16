@@ -111,6 +111,7 @@
 {
     CGFloat value = [[DMSysVolumeAjustManager sharedSysVolumeAjustManager]
                      getVolumeViewFromMPVolumeView].value;
+    
     [_mplayView.volumeSlider setValue: value];
     [_mplayView syncVolumeValue:value];
 }

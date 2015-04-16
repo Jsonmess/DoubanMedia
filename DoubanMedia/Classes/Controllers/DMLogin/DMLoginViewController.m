@@ -35,29 +35,16 @@
 @end
 
 @implementation DMLoginViewController
--(instancetype)init
-{
-    if (self = [super init])
-    {
-        self.modalPresentationCapturesStatusBarAppearance = NO;
-        if ([self respondsToSelector:@selector(setNeedsStatusBarAppearanceUpdate)]) {
-            // iOS 7
-            [self prefersStatusBarHidden];
-            [self performSelector:@selector(setNeedsStatusBarAppearanceUpdate)];
-        }
-        else
-        {
-            //ios6
-            shouldHiddenStatusBar(YES);
-        }
-    }
-    return self;
-}
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self commonInit];
     [self setUpView];
     // Do any additional setup after loading the view.
+}
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+       shouldHiddenStatusBar(YES);
 }
 -(void)viewWillDisappear:(BOOL)animated
 {
@@ -275,7 +262,7 @@
         [_authCode setValue:[UIColor redColor] forKeyPath:@"_placeholderLabel.textColor"];
         return;
     }
-    [loginManager LoginwithUsername:userName Password:passWord Captcha:authCode RememberOnorOff:@"On"];
+    [loginManager LoginwithUsername:userName Password:passWord Captcha:authCode RememberOnorOff:@"off"];
     [_commitLogin setEnabled:NO];
 
 }
@@ -291,7 +278,7 @@
     switch (state) {
         case kLoginError:
 		case kLoginFaild:
-            [self.registerBtn setEnabled:YES];
+            [self.commitLogin setEnabled:YES];
             break;
         case kLoginSuccess:
             [self backToSuperController];
@@ -341,11 +328,7 @@
     [self checkMobileNumberOrEmail:_userName.text];
 
 }
-//隐藏状态栏
--(BOOL)prefersStatusBarHidden
-{
-    return YES;
-}
+
 //返回上一级
 -(void)backToSuperController
 {

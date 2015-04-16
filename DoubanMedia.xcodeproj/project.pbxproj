@@ -17,6 +17,7 @@
 		2940BB071AB87F3C00D1069A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2940BB021AB87F3C00D1069A /* LaunchScreen.xib */; };
 		2953C8B11AC2E02B00F62F07 /* DMLoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2953C8B01AC2E02B00F62F07 /* DMLoginManager.m */; };
 		295DF5121ADD35640096935A /* MBProgressHUD+DMProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 295DF5111ADD35640096935A /* MBProgressHUD+DMProgressHUD.m */; };
+		295DF5161ADD516B0096935A /* DMFilmListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 295DF5151ADD516B0096935A /* DMFilmListController.m */; };
 		29692FC51AD54E4700641CDF /* DMSongInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 29692FC41AD54E4700641CDF /* DMSongInfo.m */; };
 		29692FC81AD55D8A00641CDF /* DMMusicPlayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 29692FC71AD55D8A00641CDF /* DMMusicPlayManager.m */; };
 		296F47121AC187B500231873 /* push_close_normal_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 296F470F1AC187B500231873 /* push_close_normal_btn@2x.png */; };
@@ -54,7 +55,9 @@
 		297FFD051AD03CF700A6D3EE /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = 297FFCEE1AD03CF700A6D3EE /* start.png */; };
 		297FFD111AD1780A00A6D3EE /* DMPlayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 297FFD101AD1780A00A6D3EE /* DMPlayManager.m */; };
 		297FFD181AD2173700A6D3EE /* TabViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 297FFD171AD2173700A6D3EE /* TabViewManager.m */; };
+		29851C5B1ADFE333004BC01A /* DMFilmCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 29851C5A1ADFE333004BC01A /* DMFilmCell.m */; };
 		2999D9791ABB134400F43C54 /* RootTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2999D9781ABB134400F43C54 /* RootTabView.m */; };
+		29A1491D1ADF797000CAAAAF /* DMFilmListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A1491C1ADF797000CAAAAF /* DMFilmListView.m */; };
 		29A35B081AC6624900C2C2ED /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A35B071AC6624900C2C2ED /* BaseTableViewCell.m */; };
 		29A35B0B1AC6879200C2C2ED /* UIImage+DMResizeImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A35B0A1AC6879200C2C2ED /* UIImage+DMResizeImage.m */; };
 		29A35B0E1AC68DEF00C2C2ED /* BaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A35B0D1AC68DEF00C2C2ED /* BaseTableView.m */; };
@@ -137,6 +140,8 @@
 		2953C8B01AC2E02B00F62F07 /* DMLoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMLoginManager.m; sourceTree = "<group>"; };
 		295DF5101ADD35640096935A /* MBProgressHUD+DMProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+DMProgressHUD.h"; sourceTree = "<group>"; };
 		295DF5111ADD35640096935A /* MBProgressHUD+DMProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+DMProgressHUD.m"; sourceTree = "<group>"; };
+		295DF5141ADD516B0096935A /* DMFilmListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMFilmListController.h; sourceTree = "<group>"; };
+		295DF5151ADD516B0096935A /* DMFilmListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMFilmListController.m; sourceTree = "<group>"; };
 		29692FC31AD54E4700641CDF /* DMSongInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMSongInfo.h; sourceTree = "<group>"; };
 		29692FC41AD54E4700641CDF /* DMSongInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMSongInfo.m; sourceTree = "<group>"; };
 		29692FC61AD55D8A00641CDF /* DMMusicPlayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMMusicPlayManager.h; sourceTree = "<group>"; };
@@ -189,9 +194,13 @@
 		297FFD101AD1780A00A6D3EE /* DMPlayManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMPlayManager.m; sourceTree = "<group>"; };
 		297FFD161AD2173700A6D3EE /* TabViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabViewManager.h; sourceTree = "<group>"; };
 		297FFD171AD2173700A6D3EE /* TabViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabViewManager.m; sourceTree = "<group>"; };
+		29851C591ADFE333004BC01A /* DMFilmCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMFilmCell.h; sourceTree = "<group>"; };
+		29851C5A1ADFE333004BC01A /* DMFilmCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMFilmCell.m; sourceTree = "<group>"; };
 		2999D9761ABB12BA00F43C54 /* DMGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMGlobal.h; sourceTree = "<group>"; };
 		2999D9771ABB134400F43C54 /* RootTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTabView.h; sourceTree = "<group>"; };
 		2999D9781ABB134400F43C54 /* RootTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTabView.m; sourceTree = "<group>"; };
+		29A1491B1ADF797000CAAAAF /* DMFilmListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMFilmListView.h; sourceTree = "<group>"; };
+		29A1491C1ADF797000CAAAAF /* DMFilmListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMFilmListView.m; sourceTree = "<group>"; };
 		29A35B061AC6624900C2C2ED /* BaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
 		29A35B071AC6624900C2C2ED /* BaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCell.m; sourceTree = "<group>"; };
 		29A35B091AC6879200C2C2ED /* UIImage+DMResizeImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+DMResizeImage.h"; sourceTree = "<group>"; };
@@ -348,6 +357,7 @@
 		2940BAF61AB87F3C00D1069A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				295DF5131ADD50E80096935A /* DMFilm */,
 				29BE7A481AC1663000963F97 /* DMLogin */,
 				2978D1991AC059AC005CB2F3 /* DMFM */,
 				29FC403B1ABB0C1A005D97DC /* DMHome */,
@@ -416,6 +426,15 @@
 				295DF5111ADD35640096935A /* MBProgressHUD+DMProgressHUD.m */,
 			);
 			path = Indicator;
+			sourceTree = "<group>";
+		};
+		295DF5131ADD50E80096935A /* DMFilm */ = {
+			isa = PBXGroup;
+			children = (
+				295DF5141ADD516B0096935A /* DMFilmListController.h */,
+				295DF5151ADD516B0096935A /* DMFilmListController.m */,
+			);
+			path = DMFilm;
 			sourceTree = "<group>";
 		};
 		296F470E1AC187B500231873 /* UserLogin */ = {
@@ -567,6 +586,17 @@
 				29692FC71AD55D8A00641CDF /* DMMusicPlayManager.m */,
 			);
 			path = SongPlay;
+			sourceTree = "<group>";
+		};
+		29A1491A1ADF796700CAAAAF /* DMFilm */ = {
+			isa = PBXGroup;
+			children = (
+				29A1491B1ADF797000CAAAAF /* DMFilmListView.h */,
+				29A1491C1ADF797000CAAAAF /* DMFilmListView.m */,
+				29851C591ADFE333004BC01A /* DMFilmCell.h */,
+				29851C5A1ADFE333004BC01A /* DMFilmCell.m */,
+			);
+			path = DMFilm;
 			sourceTree = "<group>";
 		};
 		29A35B0F1AC698BC00C2C2ED /* DMFM */ = {
@@ -721,6 +751,7 @@
 		29FC40381ABB0C0D005D97DC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				29A1491A1ADF796700CAAAAF /* DMFilm */,
 				29A35B0F1AC698BC00C2C2ED /* DMFM */,
 				29FC40391ABB0C0D005D97DC /* DMHome */,
 				29A35B061AC6624900C2C2ED /* BaseTableViewCell.h */,
@@ -982,10 +1013,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29851C5B1ADFE333004BC01A /* DMFilmCell.m in Sources */,
 				297FFD181AD2173700A6D3EE /* TabViewManager.m in Sources */,
 				2978D1971AC035D4005CB2F3 /* Com_navigationController.m in Sources */,
 				297FFD111AD1780A00A6D3EE /* DMPlayManager.m in Sources */,
 				29692FC81AD55D8A00641CDF /* DMMusicPlayManager.m in Sources */,
+				295DF5161ADD516B0096935A /* DMFilmListController.m in Sources */,
 				29B4D1081ABEBCA300899F29 /* TabItem.m in Sources */,
 				297AE74D1ACA4FA90037448C /* FMChannel.m in Sources */,
 				29B4D1921ABF0D6C00899F29 /* RootViewController.m in Sources */,
@@ -1011,6 +1044,7 @@
 				29A35B121AC698F200C2C2ED /* DMFMTableViewCell.m in Sources */,
 				29756D8D1ACD9F940011A8E7 /* AlbumRoundView.m in Sources */,
 				295DF5121ADD35640096935A /* MBProgressHUD+DMProgressHUD.m in Sources */,
+				29A1491D1ADF797000CAAAAF /* DMFilmListView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1072,7 +1106,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "0b8d70c3-de2f-4482-84f0-ef9f97a71e49";
+				PROVISIONING_PROFILE = "00cad6bc-43b7-465d-9776-059ec5ad3c3f";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1109,7 +1143,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "0b8d70c3-de2f-4482-84f0-ef9f97a71e49";
+				PROVISIONING_PROFILE = "00cad6bc-43b7-465d-9776-059ec5ad3c3f";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1129,7 +1163,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0b8d70c3-de2f-4482-84f0-ef9f97a71e49";
+				PROVISIONING_PROFILE = "00cad6bc-43b7-465d-9776-059ec5ad3c3f";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1147,7 +1181,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0b8d70c3-de2f-4482-84f0-ef9f97a71e49";
+				PROVISIONING_PROFILE = "00cad6bc-43b7-465d-9776-059ec5ad3c3f";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
