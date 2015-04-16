@@ -47,6 +47,8 @@ static NSString *reuseCell = @"FMChannelCell";
 -(void)viewWillAppear:(BOOL)animated
 {
     [fmTableView reloadData];
+    shouldHiddenStatusBar(NO);
+    setStatusBarStyle(UIStatusBarStyleDefault);
     //检查用户信息
     [self checkUserInfo];
     [super viewWillAppear:animated];

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "DMFilmListView.h"
 @interface DMFilmListController : UIViewController
 
 @end
