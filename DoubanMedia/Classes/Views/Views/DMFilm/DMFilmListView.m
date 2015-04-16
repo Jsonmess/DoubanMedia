@@ -22,7 +22,6 @@
      self =[super initWithFrame:frame];
     if (self)
     {
-        [self setBackgroundColor:[UIColor redColor]];
         [self setUpView];
     }
     return self;
