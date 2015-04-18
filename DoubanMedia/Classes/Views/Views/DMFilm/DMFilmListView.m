@@ -14,6 +14,7 @@
                             UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic) UICollectionView *filmCollectionView;
+@property (nonatomic) UIView *advertiseView;//广告位--预留
 @end
 @implementation DMFilmListView
 -(instancetype)initWithFrame:(CGRect)frame
@@ -29,6 +30,17 @@
 -(void)setUpView
 {
     [self setBackgroundColor:DMColor(250,250,248,1.0f)];
+    //广告位----ipad 不展示广告 、iphone展示
+    if ([DMDeviceManager getCurrentDeviceType] != kiPad)
+    {
+        _advertiseView = [[UIView alloc] initWithFrame:CGRectZero];
+        [_advertiseView setBackgroundColor:DMColor(244, 244, 244, 1.0f)];
+        [self addSubview:_advertiseView];
+        [_advertiseView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(0, 0, 0, 0)
+                                                 excludingEdge:ALEdgeBottom];
+        [_advertiseView autoSetDimension:ALDimensionHeight toSize:40.0f];
+    }
+    //
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     _filmCollectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flowLayout];
     [_filmCollectionView setBackgroundColor:DMColor(250,250,248,1.0f)];
@@ -56,17 +68,24 @@
     [_filmCollectionView registerClass:[DMFilmCell class] forCellWithReuseIdentifier:@"filmCell"];
 
     [self addSubview:_filmCollectionView];
-
-    
-    [self setViewContains];
-
+    if ([DMDeviceManager getCurrentDeviceType] != kiPad)
+    {
+        [_filmCollectionView autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_advertiseView];
+        [_filmCollectionView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(0, 0,kTabbarHeight,0)
+                                                      excludingEdge:ALEdgeTop];
+    }
+    else
+    {
+        [_filmCollectionView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(0, 0,kTabbarHeight,0)];
+    }
+    [self layoutSubviews];
 }
 
--(void)setViewContains
+-(void)layoutSubviews
 {
+    [super layoutSubviews];
 
-    [_filmCollectionView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(0, 0,kTabbarHeight,0)];
-    [self layoutSubviews];
+    NSLog(@"------------------%@",NSStringFromCGRect(_filmCollectionView.frame));
 }
 #pragma mark ------ UICollectionView
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView

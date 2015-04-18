@@ -7,6 +7,7 @@
 //
 
 #import "DMFilmListController.h"
+#import "DMDeviceManager.h"
 @interface DMFilmListController()
 {
 	DMFilmListView *filmListView;
@@ -32,10 +33,16 @@
         [_segemtControl setFrame:CGRectZero];
         [_segemtControl setSelectedSegmentIndex:0];
         CGFloat theWidth =self.navigationController.navigationBar.bounds.size.width;
-        [_segemtControl setFrame:CGRectMake(theWidth*3/10, 5.0f, theWidth*2/5, 34.0f)];
+        [_segemtControl setFrame:CGRectMake(theWidth*3/10, 8.0f, theWidth*2/5, 28.0f)];
+    }
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+
+        self.extendedLayoutIncludesOpaqueBars = NO;
+        self.modalPresentationCapturesStatusBarAppearance = NO;
     }
     [self.navigationController.navigationBar addSubview:_segemtControl];
-    //
+
     filmListView = [[DMFilmListView alloc] initWithFrame:self.view.bounds];
     self.view = filmListView;
 }
