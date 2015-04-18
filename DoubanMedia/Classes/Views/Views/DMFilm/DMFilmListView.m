@@ -44,10 +44,20 @@
     [_filmCollectionView setBackgroundColor:[UIColor darkGrayColor]];
     [_filmCollectionView setDataSource:self];
     [_filmCollectionView setDelegate:self];
+    CGFloat spacing ;
+    switch ([DMDeviceManager getCurrentDeviceType])
+    {
+        case kiPad:
+            spacing = 15.0f;
+            break;
 
+        default:
+            spacing = 10.0f;
+            break;
+    }
     [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
 
-    [flowLayout setSectionInset:UIEdgeInsetsMake(10.0f, 15.0f, 10.0f, 15.0f)];
+    [flowLayout setSectionInset:UIEdgeInsetsMake(10.0f, spacing, 10.0f, spacing)];
     CGFloat spaceWidth = 20.0f;
     CGFloat cellWidth = (ScreenBounds.size.width-spaceWidth*2-10*2.0f)/3;
     CGFloat cellHeight = cellWidth *5/3;
@@ -81,7 +91,6 @@
               							  cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     DMFilmCell *cell = [ collectionView dequeueReusableCellWithReuseIdentifier:@"filmCell" forIndexPath:indexPath];
-	
     return cell;
 
 }
