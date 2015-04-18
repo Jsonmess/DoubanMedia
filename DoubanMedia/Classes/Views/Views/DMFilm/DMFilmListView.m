@@ -14,7 +14,6 @@
                             UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic) UICollectionView *filmCollectionView;
-@property (nonatomic) UISegmentedControl *segemtControl;
 @end
 @implementation DMFilmListView
 -(instancetype)initWithFrame:(CGRect)frame
@@ -30,15 +29,6 @@
 -(void)setUpView
 {
     [self setBackgroundColor:DMColor(250,250,248,1.0f)];
-    //设置导航栏
-    //    if(!_segemtControl)
-    //    {
-    //        NSArray *array = @[@"正在热映",@"即将上映"];
-    //        _segemtControl = [[UISegmentedControl alloc] initWithItems:array];
-    //        [_segemtControl setSegmentedControlStyle:UISegmentedControlStylePlain];
-    //        [_segemtControl setFrame:CGRectZero];
-    //        [_segemtControl setSelectedSegmentIndex:0];
-    //    }
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     _filmCollectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flowLayout];
     [_filmCollectionView setBackgroundColor:DMColor(250,250,248,1.0f)];
