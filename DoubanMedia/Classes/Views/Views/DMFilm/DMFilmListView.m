@@ -80,12 +80,6 @@
     [self layoutSubviews];
 }
 
--(void)layoutSubviews
-{
-    [super layoutSubviews];
-
-    NSLog(@"------------------%@",NSStringFromCGRect(_filmCollectionView.frame));
-}
 #pragma mark ------ UICollectionView
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
