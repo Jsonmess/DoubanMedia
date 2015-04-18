@@ -53,7 +53,7 @@
 
     [_filmName autoAlignAxis:ALAxisVertical toSameAxisOfView:_filmImageView];
     [_filmName autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_filmImageView withOffset:3.0f];
-    
+
 
 }
 @end
