@@ -35,7 +35,7 @@
 }
 -(void)setUpView
 {
-    [self setBackgroundColor:[UIColor grayColor]];
+ 
     show_star0 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:star_gray]];
     show_star1 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:star_gray]];
     show_star2 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:star_gray]];

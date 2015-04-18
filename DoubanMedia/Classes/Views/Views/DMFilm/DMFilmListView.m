@@ -29,6 +29,7 @@
 
 -(void)setUpView
 {
+    [self setBackgroundColor:DMColor(250,250,248,1.0f)];
     //设置导航栏
     //    if(!_segemtControl)
     //    {
@@ -38,10 +39,9 @@
     //        [_segemtControl setFrame:CGRectZero];
     //        [_segemtControl setSelectedSegmentIndex:0];
     //    }
-
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     _filmCollectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flowLayout];
-    [_filmCollectionView setBackgroundColor:[UIColor darkGrayColor]];
+    [_filmCollectionView setBackgroundColor:DMColor(250,250,248,1.0f)];
     [_filmCollectionView setDataSource:self];
     [_filmCollectionView setDelegate:self];
     CGFloat spacing ;
