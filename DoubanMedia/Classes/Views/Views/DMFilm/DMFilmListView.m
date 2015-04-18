@@ -52,7 +52,6 @@
         case kiPad:
             spacing = 15.0f;
             break;
-
         default:
             spacing = 10.0f;
             break;
