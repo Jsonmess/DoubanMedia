@@ -123,6 +123,11 @@
 
 }
 
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self.delegate filmListView:self didSelectedIndex:indexPath];
+}
+
 #pragma mark ---- filmListManagerDelegate
 -(void)reloadFilmDataWithfilmType:(kFilmViewType)type
 {

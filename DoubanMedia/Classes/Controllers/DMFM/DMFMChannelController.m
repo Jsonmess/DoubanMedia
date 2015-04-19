@@ -97,7 +97,8 @@ static NSString *reuseCell = @"FMChannelCell";
 }
 -(void )checkUserInfo
 {
-	 NSArray *accounts = [AccountInfo MR_findAllInContext:[NSManagedObjectContext MR_context]];
+
+	 NSArray *accounts = [AccountInfo MR_findAllInContext:[NSManagedObjectContext MR_defaultContext]];
     //如果没有登录则开启登录监听
     if (accounts.count <= 0)
     {

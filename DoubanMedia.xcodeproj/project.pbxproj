@@ -13,6 +13,8 @@
 		29141D7B1AC7ABB100FDDC85 /* DMChannelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 29141D7A1AC7ABB100FDDC85 /* DMChannelManager.m */; };
 		293C18A41AE2B0580033398A /* DMFilmListManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 293C18A31AE2B0580033398A /* DMFilmListManager.m */; };
 		293C18DA1AE358920033398A /* FilmInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 293C18D91AE358920033398A /* FilmInfo.m */; };
+		293C18DE1AE3A6D80033398A /* DMFilmDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 293C18DD1AE3A6D80033398A /* DMFilmDetailController.m */; };
+		293C18E21AE3D1300033398A /* DMFilmInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 293C18E11AE3D1300033398A /* DMFilmInfoCell.m */; };
 		293D45361AD41FE900BD2406 /* DMSysVolumeAjustManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 293D45351AD41FE900BD2406 /* DMSysVolumeAjustManager.m */; };
 		2940BB031AB87F3C00D1069A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2940BAF51AB87F3C00D1069A /* AppDelegate.m */; };
 		2940BB051AB87F3C00D1069A /* DoubanMedia.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2940BAFB1AB87F3C00D1069A /* DoubanMedia.xcdatamodeld */; };
@@ -128,6 +130,10 @@
 		293C18A31AE2B0580033398A /* DMFilmListManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMFilmListManager.m; sourceTree = "<group>"; };
 		293C18D81AE358920033398A /* FilmInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilmInfo.h; sourceTree = "<group>"; };
 		293C18D91AE358920033398A /* FilmInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilmInfo.m; sourceTree = "<group>"; };
+		293C18DC1AE3A6D80033398A /* DMFilmDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMFilmDetailController.h; sourceTree = "<group>"; };
+		293C18DD1AE3A6D80033398A /* DMFilmDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMFilmDetailController.m; sourceTree = "<group>"; };
+		293C18E01AE3D1300033398A /* DMFilmInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMFilmInfoCell.h; sourceTree = "<group>"; };
+		293C18E11AE3D1300033398A /* DMFilmInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMFilmInfoCell.m; sourceTree = "<group>"; };
 		293D45341AD41FE900BD2406 /* DMSysVolumeAjustManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMSysVolumeAjustManager.h; sourceTree = "<group>"; };
 		293D45351AD41FE900BD2406 /* DMSysVolumeAjustManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMSysVolumeAjustManager.m; sourceTree = "<group>"; };
 		2940BAF41AB87F3C00D1069A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -301,6 +307,15 @@
 			path = FilmList;
 			sourceTree = "<group>";
 		};
+		293C18DF1AE3D1010033398A /* FMFilmDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				293C18E01AE3D1300033398A /* DMFilmInfoCell.h */,
+				293C18E11AE3D1300033398A /* DMFilmInfoCell.m */,
+			);
+			path = FMFilmDetailView;
+			sourceTree = "<group>";
+		};
 		293D45331AD41FE900BD2406 /* SystemVolume */ = {
 			isa = PBXGroup;
 			children = (
@@ -434,6 +449,8 @@
 			children = (
 				295DF5141ADD516B0096935A /* DMFilmListController.h */,
 				295DF5151ADD516B0096935A /* DMFilmListController.m */,
+				293C18DC1AE3A6D80033398A /* DMFilmDetailController.h */,
+				293C18DD1AE3A6D80033398A /* DMFilmDetailController.m */,
 			);
 			path = DMFilm;
 			sourceTree = "<group>";
@@ -595,6 +612,7 @@
 		29A1491A1ADF796700CAAAAF /* DMFilm */ = {
 			isa = PBXGroup;
 			children = (
+				293C18DF1AE3D1010033398A /* FMFilmDetailView */,
 				29A1491B1ADF797000CAAAAF /* DMFilmListView.h */,
 				29A1491C1ADF797000CAAAAF /* DMFilmListView.m */,
 				29851C591ADFE333004BC01A /* DMFilmCell.h */,
@@ -1019,6 +1037,7 @@
 				29BD5F321AE2205000AB3E23 /* JSStarRating.m in Sources */,
 				297AE74D1ACA4FA90037448C /* FMChannel.m in Sources */,
 				29B4D1921ABF0D6C00899F29 /* RootViewController.m in Sources */,
+				293C18DE1AE3A6D80033398A /* DMFilmDetailController.m in Sources */,
 				29BE7A4B1AC1668700963F97 /* DMLoginViewController.m in Sources */,
 				29141D7B1AC7ABB100FDDC85 /* DMChannelManager.m in Sources */,
 				2978D19C1AC064BC005CB2F3 /* DMFMChannelController.m in Sources */,
@@ -1035,6 +1054,7 @@
 				2976254A1AB675DE00008804 /* main.m in Sources */,
 				297FFCD61AD01C3D00A6D3EE /* DMDeviceManager.m in Sources */,
 				29A35B0B1AC6879200C2C2ED /* UIImage+DMResizeImage.m in Sources */,
+				293C18E21AE3D1300033398A /* DMFilmInfoCell.m in Sources */,
 				29A6FB5A1AD95F720076C393 /* UIImage+loadRemoteImage.m in Sources */,
 				29FC25E51AC452870055A770 /* AccountInfo.m in Sources */,
 				2999D9791ABB134400F43C54 /* RootTabView.m in Sources */,
@@ -1161,7 +1181,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "00cad6bc-43b7-465d-9776-059ec5ad3c3f";
+				PROVISIONING_PROFILE = "0eec9bb8-fc23-4cfe-9e88-19578e7e5d72";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1179,7 +1199,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "00cad6bc-43b7-465d-9776-059ec5ad3c3f";
+				PROVISIONING_PROFILE = "0eec9bb8-fc23-4cfe-9e88-19578e7e5d72";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

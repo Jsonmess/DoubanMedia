@@ -10,7 +10,8 @@
 #import "DMDeviceManager.h"
 #import "DMFilmListManager.h"
 #import "MBProgressHUD+DMProgressHUD.h"
-@interface DMFilmListController()
+#import "DMFilmDetailController.h"
+@interface DMFilmListController()<DMFilmListViewDelegate>
 {
 	DMFilmListView *filmListView;
     DMFilmListManager *theManager;
@@ -44,6 +45,7 @@
         NSArray *array = @[@"正在热映",@"即将上映"];
         _segemtControl = [[UISegmentedControl alloc] initWithItems:array];
         [_segemtControl setSegmentedControlStyle:UISegmentedControlStyleBar];
+        [_segemtControl setTag:100];
         [_segemtControl setFrame:CGRectZero];
         [_segemtControl setSelectedSegmentIndex:0];
         [_segemtControl addTarget:self action:@selector(changeGetFilmInfoList) forControlEvents:UIControlEventValueChanged];
@@ -59,6 +61,7 @@
     }
 
     filmListView = [[DMFilmListView alloc] initWithFrame:self.view.bounds];
+    [filmListView setDelegate:self];
     [theManager setDelegate:(id)filmListView];
     self.view = filmListView;
     [self getFilmInfoListWithType:kFilmOnView];//开始获取数据
@@ -79,5 +82,10 @@
             break;
     }
 }
-
+#pragma mark ---filmListDelegate
+-(void)filmListView:(DMFilmListView *)listView didSelectedIndex:(NSIndexPath *)indexPath
+{
+     DMFilmDetailController *controller = [[DMFilmDetailController alloc] init];
+     [self.navigationController pushViewController:controller animated:YES];
+}
 @end
