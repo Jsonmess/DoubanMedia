@@ -135,9 +135,9 @@
                               				[NSNumber numberWithBool:isOnShow]];
     fetchedController = [FilmInfo MR_fetchAllGroupedBy:nil withPredicate:predicate
                                               sortedBy:nil ascending:YES];
-//    if (isReadFromLocal)
-//    {
-        [self.filmCollectionView reloadData];
-//    }
+
+   [self.filmCollectionView reloadData];
+    [self.filmHud hide:YES afterDelay:0.5f];
 }
+
 @end

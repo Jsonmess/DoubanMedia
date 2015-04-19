@@ -9,6 +9,7 @@
 #import "DMFilmListController.h"
 #import "DMDeviceManager.h"
 #import "DMFilmListManager.h"
+#import "MBProgressHUD+DMProgressHUD.h"
 @interface DMFilmListController()
 {
 	DMFilmListView *filmListView;
@@ -30,6 +31,9 @@
 }
 -(void)getFilmInfoListWithType:(kFilmViewType)type
 {
+    //开始loading提示
+ MBProgressHUD *hud = [MBProgressHUD showTextAndProgressViewIndicatorWithView:self.view Text:@"电影信息加载中..." Font:DMBoldFont(14.0f) Margin:10.0f];
+    [filmListView setFilmHud:hud];
     [theManager getFilmList:type];
 }
 -(void)setUpView
@@ -57,7 +61,6 @@
     filmListView = [[DMFilmListView alloc] initWithFrame:self.view.bounds];
     [theManager setDelegate:(id)filmListView];
     self.view = filmListView;
-
     [self getFilmInfoListWithType:kFilmOnView];//开始获取数据
 }
 
