@@ -9,9 +9,17 @@
 #import "DMFilmListView.h"
 #import "DMFilmCell.h"
 #import "DMDeviceManager.h"
+#import "FilmInfo.h"
+#import "DMFilmListManager.h"
 #define CellSpacingWidth
 @interface DMFilmListView()<UICollectionViewDataSource,
-                            UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
+                            UICollectionViewDelegate,
+						UICollectionViewDelegateFlowLayout,filmManagerDelegate,
+						NSFetchedResultsControllerDelegate>
+{
+    NSFetchedResultsController *fetchedController;
+    BOOL isComing;//是否正在上映
+}
 
 @property (nonatomic) UICollectionView *filmCollectionView;
 @property (nonatomic) UIView *advertiseView;//广告位--预留
@@ -83,20 +91,53 @@
 #pragma mark ------ UICollectionView
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-    return 1;
+    return [fetchedController sections].count;
 }
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 30;
+    return [[[fetchedController sections] objectAtIndex:section] numberOfObjects];
 }
 -(DMFilmCell*)collectionView:(UICollectionView *)collectionView
               							  cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     DMFilmCell *cell = [ collectionView dequeueReusableCellWithReuseIdentifier:@"filmCell" forIndexPath:indexPath];
+    FilmInfo *filmInfo = [fetchedController objectAtIndexPath:indexPath];
+    NSString * filmImageStr;
+    switch ([DMDeviceManager getCurrentDeviceType])
+    {
+        case kiPad:
+            filmImageStr = filmInfo.filmLargeImage;
+            break;
+        default:
+            filmImageStr = filmInfo.filmSmallImage;
+            break;
+    }
+    CGFloat score = filmInfo.filmRating.floatValue;
+    NSString *thePubdate ;
+    if (!filmInfo.isNowShow.boolValue)
+    {
+        thePubdate = filmInfo.filmPubdate;
+    }
+    [cell setContentWithFilmInfo:[NSURL URLWithString:filmImageStr] filmName:filmInfo.filmTitle score:score willOnView:thePubdate];
     return cell;
 
 }
 
-
-
+#pragma mark ---- filmListManagerDelegate
+-(void)reloadFilmDataWithfilmType:(kFilmViewType)type
+{
+    BOOL isOnShow = NO;
+    if (type == kFilmOnView)
+    {
+        isOnShow = YES;
+    }
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"isNowShow=%@",
+                              				[NSNumber numberWithBool:isOnShow]];
+    fetchedController = [FilmInfo MR_fetchAllGroupedBy:nil withPredicate:predicate
+                                              sortedBy:nil ascending:YES];
+//    if (isReadFromLocal)
+//    {
+        [self.filmCollectionView reloadData];
+//    }
+}
 @end

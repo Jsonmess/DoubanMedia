@@ -31,9 +31,10 @@
     self.filmSmallImage = images[@"medium"];
      self.filmId = dic[@"id"];
      self.filmTitle = dic[@"title"];
-     self.filmCollection = dic[@"collection"];
+     self.filmCollection = [NSString stringWithFormat:@"%@",dic[@"collection"]];
      self.filmOrignal_title = dic[@"orignal_title"];
-     self.filmWish = dic[@"wish"];
+    NSNumber *wish = dic[@"wish"];
+     self.filmWish = [NSString stringWithFormat:@"%@",wish];
     self.location = @"北京";//暂时不用此属性--定位后期使用
     self.isNowShow = [NSNumber numberWithBool:isNowView];
 }

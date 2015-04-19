@@ -8,6 +8,7 @@
 
 #import "DMFilmListManager.h"
 #import <AFNetworking.h>
+#import "FilmInfo.h"
 #define onViewFilm @"/v2/movie/nowplaying" //正在热映
 #define willView @"/v2/movie/coming" //即将上映
 
@@ -30,9 +31,11 @@
 -(void)getFilmList:(kFilmViewType)type
 {
     NSString *filmPath ;
+    BOOL isOnShow = NO;
     if (type == kFilmOnView)
     {
         filmPath = onViewFilm;
+        isOnShow = YES;
     }
     else
     {
@@ -47,13 +50,49 @@
                   success:^(AFHTTPRequestOperation *operation, id responseObject)
         {
 
-            NSDictionary * dic = responseObject[@"entries"];
+            NSArray * entries = responseObject[@"entries"];
+			//1.查询数据库
+            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"isNowShow=%@",
+                                      [NSNumber numberWithBool:isOnShow]];
+            NSManagedObjectContext *context = [NSManagedObjectContext MR_contextWithParent:[NSManagedObjectContext MR_defaultContext]];
+            NSArray *localFilmList = [FilmInfo MR_findAllWithPredicate:predicate inContext:context];
 
-            NSLog(@"电影信息\n%@",dic);
+            if (localFilmList.count > 0 )
+            {
+				//清空数据表数据
+                [FilmInfo MR_deleteAllMatchingPredicate:predicate inContext:[NSManagedObjectContext MR_defaultContext]];
+                [context MR_saveToPersistentStoreWithCompletion:^(BOOL success, NSError *error)
+                {
+                    NSLog(@"电影信息数据已清空");
+                }];
+            }
+			//2.创建数据
+            if (entries.count >0)
+            {
+                for (NSDictionary *dic  in entries)
+                {
+                    FilmInfo * filmInfo = [FilmInfo MR_createInContext:context];
+                    [filmInfo setFilmInfoDictionary:dic filmStatus:isOnShow];
+
+                }
+                //3.写入数据库
+                [context MR_saveToPersistentStoreWithCompletion:^(BOOL success, NSError *error)
+                {
+                    NSLog(@"电影数据写入成功");
+					[self.delegate reloadFilmDataWithfilmType:type];
+                }];
+            }
+            else
+            {
+                [self.delegate reloadFilmDataWithfilmType:type];
+            }
+
         }
                   failure:^(AFHTTPRequestOperation *operation, NSError *error)
     	{
-
+				//请求失败----从本地数据库中读取
+				[self.delegate reloadFilmDataWithfilmType:type];
+            
     	}];
 
 }

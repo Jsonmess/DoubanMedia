@@ -23,6 +23,7 @@
     if (self = [super initWithFrame:frame])
     {
         [self setUpView];
+        [self setBackgroundColor:DMColor(240, 240, 240, 0.7f)];
     }
     return self;
 }
@@ -37,7 +38,7 @@
 	//名称
     _filmName = [[UILabel alloc] initWithFrame:CGRectZero];
     [_filmName setText:@"速度与激情7"];
-    [_filmName setNumberOfLines:0];
+    [_filmName setLineBreakMode:NSLineBreakByTruncatingTail];
     [_filmName setTextAlignment:NSTextAlignmentCenter];
     //日期
     _filmShowDate = [[UILabel alloc] initWithFrame:CGRectZero];
@@ -65,24 +66,28 @@
 -(void)setContains
 {
     [_filmImageView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(7, 5, 5, 5) excludingEdge:ALEdgeBottom];
-    CGFloat theRatio,filmNameFont,filmNameHeight,filmStarRatio;
+    CGFloat theRatio,filmNameFont,filmNameHeight,filmStarRatio,scoreFont;
     switch ([DMDeviceManager getCurrentDeviceType]) {
         case kiPad:
             theRatio = 13/16.0f;
             filmNameFont = 18.0f;
             filmNameHeight = 30.0f;
             filmStarRatio = 0.3f;
+            scoreFont = 13.0f;
             break;
         default:
             theRatio=7/11.0f;
             filmNameFont = 12.0f;
             filmNameHeight = 20.0f;
             filmStarRatio = 0.2f;
+            scoreFont = 10.0f;
             break;
     }
     [_filmImageView autoSetDimension:ALDimensionHeight toSize:self.bounds.size.height *theRatio];
 	//名称
     [_filmName autoAlignAxis:ALAxisVertical toSameAxisOfView:_filmImageView];
+    [_filmName autoPinEdge:ALEdgeLeading toEdge:ALEdgeLeading ofView:self];
+    [_filmName autoPinEdge:ALEdgeTrailing toEdge:ALEdgeTrailing ofView:self];
     [_filmName setFont:DMBoldFont(filmNameFont)];
     [_filmName autoSetDimension:ALDimensionHeight toSize:filmNameHeight];
     [_filmName autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_filmImageView withOffset:3.0f];
@@ -96,6 +101,7 @@
     [_starRate autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_filmName withOffset:5.0f];
 
     //显示分数
+    [filmScore setFont:DMFont(scoreFont)];
     [filmScore autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(0, 0, 0, 0) excludingEdge:ALEdgeLeft];
     [filmScore autoSetDimension:ALDimensionWidth toSize:self.bounds.size.width *filmStarRatio];
  	//星级
@@ -109,20 +115,25 @@
 
 -(void)setContentWithFilmInfo:(NSURL *)filmPoster filmName:(NSString *)title score:(CGFloat)score willOnView:(NSString *)showdate
 {
+
     [_filmImageView sd_setImageWithURL:filmPoster placeholderImage:[UIImage imageNamed:@"defaultmovie@2x.png"] options:SDWebImageLowPriority|SDWebImageRetryFailed];
     [_filmName setText:title];
-    if (showdate == nil)
+	[filmScore setText:[NSString stringWithFormat:@"%.1f",score]];
+    BOOL shouldHiddenRate = NO;
+    if (showdate != nil)
     {
-         [_starRate setHidden:NO];
-        [filmScore setText:[NSString stringWithFormat:@"%f",score]];
-        [starRating showStarbyRatingValueWithRatingValue:score];
+        shouldHiddenRate = YES;
     }
-    else
-    {
-        [_starRate setHidden:YES];
-        [_filmShowDate setText:showdate];
-    }
+    else if (score <= 0)
+        {
+            showdate = @"暂无评分";
+            shouldHiddenRate = YES;
+        }
 
-    [self layoutIfNeeded];
+    [_starRate setHidden:shouldHiddenRate];
+
+    [starRating showStarbyRatingValueWithRatingValue:score];
+    [_filmShowDate setText:showdate];
+
 }
 @end

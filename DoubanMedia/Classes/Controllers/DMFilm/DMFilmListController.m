@@ -21,7 +21,6 @@
 {
     [super viewDidLoad];
     [self commonInit];
-    [self getFilmInfoListWithType:kFilmOnView];//默认
     [self setUpView];
 }
 
@@ -56,7 +55,10 @@
     }
 
     filmListView = [[DMFilmListView alloc] initWithFrame:self.view.bounds];
+    [theManager setDelegate:(id)filmListView];
     self.view = filmListView;
+
+    [self getFilmInfoListWithType:kFilmOnView];//开始获取数据
 }
 
 #pragma mark ----actions
@@ -74,4 +76,5 @@
             break;
     }
 }
+
 @end

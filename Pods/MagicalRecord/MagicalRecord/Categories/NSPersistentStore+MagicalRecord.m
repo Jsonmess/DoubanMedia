@@ -48,7 +48,7 @@ static NSPersistentStore *defaultPersistentStore_ = nil;
     
     for (NSString *path in paths) 
     {
-        NSString *filepath = [path stringByAppendingPathComponent:[NSString stringWithFormat:@"%@/%@",storeFileName,storeFileName]];
+        NSString *filepath = [path stringByAppendingPathComponent:storeFileName];
         if ([fm fileExistsAtPath:filepath])
         {
             return [NSURL fileURLWithPath:filepath];
@@ -56,7 +56,7 @@ static NSPersistentStore *defaultPersistentStore_ = nil;
     }
 
     //set default url
-    return [NSURL fileURLWithPath:[[self MR_applicationDocumentsDirectory] stringByAppendingPathComponent:[NSString stringWithFormat:@"%@/%@",storeFileName,storeFileName]]];
+    return [NSURL fileURLWithPath:[[self MR_applicationDocumentsDirectory] stringByAppendingPathComponent:storeFileName]];
 }
 
 + (NSURL *) MR_cloudURLForUbiqutiousContainer:(NSString *)bucketName;
