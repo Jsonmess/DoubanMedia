@@ -21,7 +21,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
 	//初始化数据库
-    [MagicalRecord setupCoreDataStackWithStoreNamed:@"DBMedia.sqlite"];
+    [MagicalRecord setupCoreDataStackWithAutoMigratingSqliteStoreNamed:@"DoubanMedia.sqlite"];
     //频道分类
     [self initTheChannels];
     //后台播放

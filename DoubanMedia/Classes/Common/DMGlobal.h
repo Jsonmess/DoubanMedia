@@ -18,4 +18,5 @@
 #define setStatusBarStyle(style) [[UIApplication sharedApplication] setStatusBarStyle:(style)]
 //用户头像BaseUrl
 #define UserAccountIconUrl @"http://img3.douban.com/icon/up"
+#define DoubanApiBaseUrl @"http://api.douban.com"
 #endif

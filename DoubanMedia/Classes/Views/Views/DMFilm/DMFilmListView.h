@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "MBProgressHUD+DMProgressHUD.h"
 @interface DMFilmListView : UIView
 
+@property (nonatomic) MBProgressHUD *filmHud;//指示器
 @end

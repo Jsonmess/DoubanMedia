@@ -113,12 +113,12 @@
           {
               if(success)
               {
-                  NSLog(@"成功获取频道列表--->将频道对象存入数据库");
+                  //NSLog(@"成功获取频道列表--->将频道对象存入数据库");
                   [self.delegate shouldReloadData:NO];
               }
               else
               {
-                  NSLog(@"将频道对象存入数据库失败----reason:/n%@",error);
+                 // NSLog(@"将频道对象存入数据库失败----reason:/n%@",error);
                   [self.delegate shouldReloadData:YES];
               }
 
@@ -127,7 +127,7 @@
         failure:^(AFHTTPRequestOperation *operation, NSError *error)
 
     {
-         NSLog(@"获取频道列表失败,reason:\n%@",error);
+         //NSLog(@"获取频道列表失败,reason:\n%@",error);
          //请求不到频道列表-----从数据库中读取
          [self.delegate shouldReloadData:YES];
      }];

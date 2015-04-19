@@ -78,7 +78,6 @@
     [self.view addSubview:fm.view];
      [self.view bringSubviewToFront:tabView];
      [fm.view setFrame:self.view.bounds];
-//    [self setContainsWith:fm];
 }
 //切换模块
 -(void)RunButionAction:(NSInteger)oldtag To:(NSInteger)newtag

@@ -18,5 +18,9 @@
 //text 提示
 +(MBProgressHUD *)createProgressOnlyWithView:(UIView *)view
                           ShouldRemoveOnHide:(BOOL)isHide;
-
+//显示文字和指示器
++(MBProgressHUD*)showTextAndProgressViewIndicatorWithView:(UIView*)view
+                                           Text:(NSString *)text
+                                           Font:(UIFont*)font
+                                         Margin:(CGFloat)margin;
 @end

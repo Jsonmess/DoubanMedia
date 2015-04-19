@@ -14,6 +14,4 @@
 @property (nonatomic) id<DMChannelDelegate>delegate;
 //获取频道列表数据
 -(void)getChannel:(NSUInteger)channelIndex withURLWithString:(NSString *)urlWithString;
-//直接从数据库中读取
--(void)readDataFromDataBase;
 @end

@@ -1,6 +1,6 @@
 platform :ios ,'6.0'
 
-pod 'MagicalRecord','~>2.0'
+pod 'MagicalRecord','2.2'
 pod 'SDWebImage','~>3.7'
 pod 'MJRefresh','~>1.3'
 pod 'DOUAudioStreamer','~>0.2.9'
