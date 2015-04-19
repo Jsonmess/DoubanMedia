@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7517.1" systemVersion="14C1510" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7549" systemVersion="14C1514" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="AccountInfo" representedClassName="AccountInfo" syncable="YES">
         <attribute name="banned" optional="YES" attributeType="String" minValueString="0" syncable="YES"/>
         <attribute name="cookies" optional="YES" attributeType="String" syncable="YES"/>
@@ -9,6 +9,19 @@
         <attribute name="played" optional="YES" attributeType="String" minValueString="0" syncable="YES"/>
         <attribute name="userId" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="FilmInfo" representedClassName="FilmInfo" syncable="YES">
+        <attribute name="filmCollection" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="filmId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="filmLargeImage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="filmOrignal_title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="filmPubdate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="filmRating" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="filmSmallImage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="filmTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="filmWish" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isNowShow" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="FMChannel" representedClassName="FMChannel" syncable="YES">
         <attribute name="channelID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="channelName" optional="YES" attributeType="String" syncable="YES"/>
@@ -17,5 +30,6 @@
     <elements>
         <element name="AccountInfo" positionX="-63" positionY="-18" width="128" height="150"/>
         <element name="FMChannel" positionX="-63" positionY="36" width="128" height="90"/>
+        <element name="FilmInfo" positionX="-54" positionY="45" width="128" height="210"/>
     </elements>
 </model>

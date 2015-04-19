@@ -11,6 +11,8 @@
 		29141D6C1AC703E100FDDC85 /* home_mm@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 29141D6B1AC703E100FDDC85 /* home_mm@2x.png */; };
 		29141D6E1AC7070200FDDC85 /* home_fm@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 29141D6D1AC7070200FDDC85 /* home_fm@2x.png */; };
 		29141D7B1AC7ABB100FDDC85 /* DMChannelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 29141D7A1AC7ABB100FDDC85 /* DMChannelManager.m */; };
+		293C18A41AE2B0580033398A /* DMFilmListManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 293C18A31AE2B0580033398A /* DMFilmListManager.m */; };
+		293C18DA1AE358920033398A /* FilmInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 293C18D91AE358920033398A /* FilmInfo.m */; };
 		293D45361AD41FE900BD2406 /* DMSysVolumeAjustManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 293D45351AD41FE900BD2406 /* DMSysVolumeAjustManager.m */; };
 		2940BB031AB87F3C00D1069A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2940BAF51AB87F3C00D1069A /* AppDelegate.m */; };
 		2940BB051AB87F3C00D1069A /* DoubanMedia.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2940BAFB1AB87F3C00D1069A /* DoubanMedia.xcdatamodeld */; };
@@ -122,6 +124,10 @@
 		29141D6D1AC7070200FDDC85 /* home_fm@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_fm@2x.png"; sourceTree = "<group>"; };
 		29141D791AC7ABB100FDDC85 /* DMChannelManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMChannelManager.h; sourceTree = "<group>"; };
 		29141D7A1AC7ABB100FDDC85 /* DMChannelManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMChannelManager.m; sourceTree = "<group>"; };
+		293C18A21AE2B0580033398A /* DMFilmListManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMFilmListManager.h; sourceTree = "<group>"; };
+		293C18A31AE2B0580033398A /* DMFilmListManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMFilmListManager.m; sourceTree = "<group>"; };
+		293C18D81AE358920033398A /* FilmInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilmInfo.h; sourceTree = "<group>"; };
+		293C18D91AE358920033398A /* FilmInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilmInfo.m; sourceTree = "<group>"; };
 		293D45341AD41FE900BD2406 /* DMSysVolumeAjustManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMSysVolumeAjustManager.h; sourceTree = "<group>"; };
 		293D45351AD41FE900BD2406 /* DMSysVolumeAjustManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMSysVolumeAjustManager.m; sourceTree = "<group>"; };
 		2940BAF41AB87F3C00D1069A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -286,6 +292,15 @@
 			path = ChannelList;
 			sourceTree = "<group>";
 		};
+		293C18A11AE2B0350033398A /* FilmList */ = {
+			isa = PBXGroup;
+			children = (
+				293C18A21AE2B0580033398A /* DMFilmListManager.h */,
+				293C18A31AE2B0580033398A /* DMFilmListManager.m */,
+			);
+			path = FilmList;
+			sourceTree = "<group>";
+		};
 		293D45331AD41FE900BD2406 /* SystemVolume */ = {
 			isa = PBXGroup;
 			children = (
@@ -436,6 +451,7 @@
 		296F47151AC188E800231873 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				293C18A11AE2B0350033398A /* FilmList */,
 				293D45331AD41FE900BD2406 /* SystemVolume */,
 				297FFD0E1AD177F000A6D3EE /* SongPlay */,
 				29141D781AC7AB9300FDDC85 /* ChannelList */,
@@ -462,6 +478,8 @@
 				297AE74C1ACA4FA90037448C /* FMChannel.m */,
 				29692FC31AD54E4700641CDF /* DMSongInfo.h */,
 				29692FC41AD54E4700641CDF /* DMSongInfo.m */,
+				293C18D81AE358920033398A /* FilmInfo.h */,
+				293C18D91AE358920033398A /* FilmInfo.m */,
 			);
 			path = ObjectModels;
 			sourceTree = "<group>";
@@ -993,6 +1011,7 @@
 				29851C5B1ADFE333004BC01A /* DMFilmCell.m in Sources */,
 				297FFD181AD2173700A6D3EE /* TabViewManager.m in Sources */,
 				2978D1971AC035D4005CB2F3 /* Com_navigationController.m in Sources */,
+				293C18A41AE2B0580033398A /* DMFilmListManager.m in Sources */,
 				297FFD111AD1780A00A6D3EE /* DMPlayManager.m in Sources */,
 				29692FC81AD55D8A00641CDF /* DMMusicPlayManager.m in Sources */,
 				295DF5161ADD516B0096935A /* DMFilmListController.m in Sources */,
@@ -1009,6 +1028,7 @@
 				29D07B891ACAF33F00B3D69E /* DMPlayerView.m in Sources */,
 				2953C8B11AC2E02B00F62F07 /* DMLoginManager.m in Sources */,
 				297AE7521ACAC14F0037448C /* DMMusicPlayerController.m in Sources */,
+				293C18DA1AE358920033398A /* FilmInfo.m in Sources */,
 				2940BB031AB87F3C00D1069A /* AppDelegate.m in Sources */,
 				293D45361AD41FE900BD2406 /* DMSysVolumeAjustManager.m in Sources */,
 				29A35B081AC6624900C2C2ED /* BaseTableViewCell.m in Sources */,
@@ -1141,7 +1161,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "00cad6bc-43b7-465d-9776-059ec5ad3c3f";
+				PROVISIONING_PROFILE = "0eec9bb8-fc23-4cfe-9e88-19578e7e5d72";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1159,7 +1179,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "00cad6bc-43b7-465d-9776-059ec5ad3c3f";
+				PROVISIONING_PROFILE = "0eec9bb8-fc23-4cfe-9e88-19578e7e5d72";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

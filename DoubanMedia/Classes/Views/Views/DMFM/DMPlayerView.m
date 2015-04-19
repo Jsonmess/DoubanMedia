@@ -46,6 +46,7 @@
     BtnParentView = [[UIView alloc] initWithFrame:CGRectZero];
     _playChannel = [[UILabel alloc] initWithFrame:CGRectZero];
     [_playChannel setFont:DMBoldFont(22.0f)];
+    [_playChannel setLineBreakMode:NSLineBreakByTruncatingMiddle];
     // [_playChannel setText:@"。。。当前频道。。。"];
     [_playChannel setTextColor:DMColor(34, 100, 44, 1.0f)];
     _albumView = [[AlbumRoundView alloc] initWithFrame:CGRectZero];

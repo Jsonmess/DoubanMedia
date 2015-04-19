@@ -8,9 +8,11 @@
 
 #import "DMFilmListController.h"
 #import "DMDeviceManager.h"
+#import "DMFilmListManager.h"
 @interface DMFilmListController()
 {
 	DMFilmListView *filmListView;
+    DMFilmListManager *theManager;
 }
 @property (nonatomic) UISegmentedControl *segemtControl;
 @end
@@ -18,10 +20,19 @@
 -(void)viewDidLoad
 {
     [super viewDidLoad];
-
+    [self commonInit];
+    [self getFilmInfoListWithType:kFilmOnView];//默认
     [self setUpView];
 }
 
+-(void)commonInit
+{
+    theManager = [[DMFilmListManager alloc] init];
+}
+-(void)getFilmInfoListWithType:(kFilmViewType)type
+{
+    [theManager getFilmList:type];
+}
 -(void)setUpView
 {
     // 设置导航栏
@@ -32,8 +43,10 @@
         [_segemtControl setSegmentedControlStyle:UISegmentedControlStyleBar];
         [_segemtControl setFrame:CGRectZero];
         [_segemtControl setSelectedSegmentIndex:0];
+        [_segemtControl addTarget:self action:@selector(changeGetFilmInfoList) forControlEvents:UIControlEventValueChanged];
         CGFloat theWidth =self.navigationController.navigationBar.bounds.size.width;
         [_segemtControl setFrame:CGRectMake(theWidth*3/10, 8.0f, theWidth*2/5, 28.0f)];
+        [self.navigationController.navigationBar addSubview:_segemtControl];
     }
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
         self.edgesForExtendedLayout = UIRectEdgeNone;
@@ -41,10 +54,24 @@
         self.extendedLayoutIncludesOpaqueBars = NO;
         self.modalPresentationCapturesStatusBarAppearance = NO;
     }
-    [self.navigationController.navigationBar addSubview:_segemtControl];
 
     filmListView = [[DMFilmListView alloc] initWithFrame:self.view.bounds];
     self.view = filmListView;
 }
 
+#pragma mark ----actions
+-(void)changeGetFilmInfoList
+{
+    switch (_segemtControl.selectedSegmentIndex)
+    {
+        case 0:
+            [self getFilmInfoListWithType:kFilmOnView];
+            break;
+            case 1:
+            [self getFilmInfoListWithType:kFilmWillView];
+            break;
+        default:
+            break;
+    }
+}
 @end
