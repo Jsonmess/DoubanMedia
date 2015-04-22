@@ -70,11 +70,19 @@
     {
         NSDictionary *tempLoginInfoDictionary = responseObject;
         //r=0 登陆成功
+
         if ([(NSNumber *)[tempLoginInfoDictionary valueForKey:@"r"] intValue] == 0)
         {
             [self.loginDelegate loginState:kLoginSuccess];
             //保存用户数据到数据库
             [self saveUserInfoToDataBase:tempLoginInfoDictionary];
+            //用于自动登录Web页面---待改进
+            NSDictionary *theUserInfo = @{
+                                       @"account":username,
+                                       @"password":password
+                                       };
+            [[NSUserDefaults standardUserDefaults] setObject:theUserInfo forKey:@"userInformation"];
+
         }
         else{
 			//登录失败
@@ -86,6 +94,25 @@
         [self.loginDelegate loginState:kLoginError];
         [self getCaptchaImageFromDM];
     }];
+}
+//网页登录
+-(void)webLoginDouban
+{
+    NSDictionary *theUserInfo = [[NSUserDefaults standardUserDefaults] objectForKey:@"userInformation"];
+    if (theUserInfo != nil)
+    {
+        [OperationManager POST:DoubanWebLogin parameters:theUserInfo
+    	success:^(AFHTTPRequestOperation *operation, id responseObject)
+        {
+            [self.loginDelegate webLoginState:kLoginSuccess];
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error)
+        {
+			[self.loginDelegate webLoginState:kLoginFaild];
+        }];
+    }else
+    {
+        [self.loginDelegate webLoginState:kLoginFaild];
+    }
 }
 //注销操作
 -(void)logout

@@ -19,4 +19,8 @@
 //用户头像BaseUrl
 #define UserAccountIconUrl @"http://img3.douban.com/icon/up"
 #define DoubanApiBaseUrl @"http://api.douban.com"
+//豆瓣电影BaseUrl
+#define DoubanFilmBaseUrl @"http://movie.douban.com"
+//网页用户登录地址
+#define DoubanWebLogin @"http://www.douban.com/accounts/login"
 #endif

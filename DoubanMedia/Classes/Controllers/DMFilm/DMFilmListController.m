@@ -9,8 +9,9 @@
 #import "DMFilmListController.h"
 #import "DMDeviceManager.h"
 #import "DMFilmListManager.h"
+#import "JSWebViewController.h"
 #import "MBProgressHUD+DMProgressHUD.h"
-@interface DMFilmListController()
+@interface DMFilmListController()<DMFilmListViewDelegate>
 {
 	DMFilmListView *filmListView;
     DMFilmListManager *theManager;
@@ -44,6 +45,7 @@
         NSArray *array = @[@"正在热映",@"即将上映"];
         _segemtControl = [[UISegmentedControl alloc] initWithItems:array];
         [_segemtControl setSegmentedControlStyle:UISegmentedControlStyleBar];
+        [_segemtControl setTag:100];
         [_segemtControl setFrame:CGRectZero];
         [_segemtControl setSelectedSegmentIndex:0];
         [_segemtControl addTarget:self action:@selector(changeGetFilmInfoList) forControlEvents:UIControlEventValueChanged];
@@ -59,6 +61,7 @@
     }
 
     filmListView = [[DMFilmListView alloc] initWithFrame:self.view.bounds];
+    [filmListView setDelegate:self];
     [theManager setDelegate:(id)filmListView];
     self.view = filmListView;
     [self getFilmInfoListWithType:kFilmOnView];//开始获取数据
@@ -79,5 +82,14 @@
             break;
     }
 }
-
+#pragma mark ---filmListDelegate
+-(void)filmListView:(DMFilmListView *)listView didSelectedfilmId:(NSString *)filmId
+{
+    //这里直接接入浏览器
+    [theManager getTheFilmInfoWithFilmId:filmId];
+    NSString *urlStr = [NSString stringWithFormat:@"%@/subject/%@/mobile",DoubanFilmBaseUrl,filmId];
+    NSURL *url = [NSURL URLWithString:urlStr];
+    JSWebViewController *filmDetailController = [[JSWebViewController alloc] initWithRequset:[NSURLRequest requestWithURL:url]];
+    [self presentViewController:filmDetailController animated:YES completion:nil];
+}
 @end

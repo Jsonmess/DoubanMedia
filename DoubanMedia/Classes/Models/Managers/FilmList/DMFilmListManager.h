@@ -24,4 +24,7 @@ typedef NS_ENUM(NSInteger, kFilmViewType)
 @property (nonatomic) id<filmManagerDelegate>delegate;
 //获取电影列表
 -(void)getFilmList:(kFilmViewType)type;
+
+//获取具体单部电影信息--未加入电影位置
+-(void)getTheFilmInfoWithFilmId:(NSString *)filmId;
 @end

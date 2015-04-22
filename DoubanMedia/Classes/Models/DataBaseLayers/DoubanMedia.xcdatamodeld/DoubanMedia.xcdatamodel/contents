@@ -29,7 +29,7 @@
     </entity>
     <elements>
         <element name="AccountInfo" positionX="-63" positionY="-18" width="128" height="150"/>
-        <element name="FMChannel" positionX="-63" positionY="36" width="128" height="90"/>
         <element name="FilmInfo" positionX="-54" positionY="45" width="128" height="210"/>
+        <element name="FMChannel" positionX="-63" positionY="36" width="128" height="90"/>
     </elements>
 </model>

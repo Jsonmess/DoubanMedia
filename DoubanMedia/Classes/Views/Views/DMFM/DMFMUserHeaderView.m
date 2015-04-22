@@ -32,7 +32,8 @@
     userIcon = [[UIImageView alloc] initWithFrame:CGRectZero];
     [userIcon setImage:[UIImage imageNamed:@"user_normal.jpg"]];
     userName = [[UILabel alloc] initWithFrame:CGRectZero];
-    [userName setText:@"  "];
+    [userName setText:@"用户"];
+    [userName setTextAlignment:NSTextAlignmentLeft];
     [userIcon setContentMode:UIViewContentModeScaleAspectFit];
     [self addSubview:userName];
     [self addSubview:userIcon];
@@ -45,6 +46,7 @@
     [userIcon autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
     [userIcon autoPinEdge:ALEdgeLeading toEdge:ALEdgeLeading ofView:self withOffset:20.0f];
     [userName autoPinEdge:ALEdgeLeading toEdge:ALEdgeTrailing ofView:userIcon withOffset:8.0f];
+    [userName autoSetDimension:ALDimensionWidth toSize:100.0f];
     [userName autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
     [self setNeedsLayout];
 }
