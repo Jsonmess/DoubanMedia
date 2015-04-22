@@ -9,8 +9,8 @@
 #import "DMFilmListController.h"
 #import "DMDeviceManager.h"
 #import "DMFilmListManager.h"
+#import "JSWebViewController.h"
 #import "MBProgressHUD+DMProgressHUD.h"
-#import "DMFilmDetailController.h"
 @interface DMFilmListController()<DMFilmListViewDelegate>
 {
 	DMFilmListView *filmListView;
@@ -83,9 +83,13 @@
     }
 }
 #pragma mark ---filmListDelegate
--(void)filmListView:(DMFilmListView *)listView didSelectedIndex:(NSIndexPath *)indexPath
+-(void)filmListView:(DMFilmListView *)listView didSelectedfilmId:(NSString *)filmId
 {
-     DMFilmDetailController *controller = [[DMFilmDetailController alloc] init];
-     [self.navigationController pushViewController:controller animated:YES];
+    //这里直接接入浏览器
+    [theManager getTheFilmInfoWithFilmId:filmId];
+    NSString *urlStr = [NSString stringWithFormat:@"%@/subject/%@/mobile",DoubanFilmBaseUrl,filmId];
+    NSURL *url = [NSURL URLWithString:urlStr];
+    JSWebViewController *filmDetailController = [[JSWebViewController alloc] initWithRequset:[NSURLRequest requestWithURL:url]];
+    [self presentViewController:filmDetailController animated:YES completion:nil];
 }
 @end

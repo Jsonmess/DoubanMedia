@@ -263,10 +263,9 @@
         return;
     }
     [loginManager LoginwithUsername:userName Password:passWord Captcha:authCode RememberOnorOff:@"off"];
-    [_commitLogin setEnabled:NO];
+       [_commitLogin setEnabled:NO];
 
 }
-
 #pragma mark ---DMLoginManagerDelegate
 -(void)setCaptchaImageUrl:(NSString *)url
 {

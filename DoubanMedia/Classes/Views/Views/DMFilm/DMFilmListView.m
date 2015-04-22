@@ -125,7 +125,8 @@
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self.delegate filmListView:self didSelectedIndex:indexPath];
+ FilmInfo *filmInfo = [fetchedController objectAtIndexPath:indexPath];
+    [self.delegate filmListView:self didSelectedfilmId:filmInfo.filmId];
 }
 
 #pragma mark ---- filmListManagerDelegate

@@ -11,7 +11,7 @@
 #import "FilmInfo.h"
 #define onViewFilm @"/v2/movie/nowplaying" //正在热映
 #define willView @"/v2/movie/coming" //即将上映
-
+#define kDoubanMovieKey @"0df993c66c0c636e29ecbb5344252a4a"
 @interface DMFilmListManager()
 {
 	AFHTTPRequestOperationManager *operationManager;
@@ -44,7 +44,7 @@
     NSString *filmListUrl = [NSString stringWithFormat:@"%@%@",DoubanApiBaseUrl,filmPath];
     NSDictionary *paramDic = @{
 					@"alt":@"json",
-                    @"apikey":@"0df993c66c0c636e29ecbb5344252a4a"
+                    @"apikey":kDoubanMovieKey
                     };
     [operationManager GET:filmListUrl parameters:paramDic
                   success:^(AFHTTPRequestOperation *operation, id responseObject)
@@ -95,5 +95,25 @@
             
     	}];
 
+}
+
+//获取具体单部电影信息--未加入电影位置
+-(void)getTheFilmInfoWithFilmId:(NSString *)filmId
+{
+    NSString *baseFilmUrl = @"https://api.douban.com/v2/movie/subject/";
+    NSString *url = [NSString stringWithFormat:@"%@%@",baseFilmUrl,filmId];
+    NSDictionary *parameter = @{
+								@"alt":@"json",
+								@"apikey":kDoubanMovieKey
+                                };
+    [operationManager GET:url parameters:parameter
+		success:^(AFHTTPRequestOperation *operation, id responseObject)
+    {
+ 		//只需要获取moble地址
+
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error)
+    {
+
+    }];
 }
 @end
