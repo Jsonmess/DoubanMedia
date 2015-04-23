@@ -11,6 +11,7 @@
 		29141D6C1AC703E100FDDC85 /* home_mm@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 29141D6B1AC703E100FDDC85 /* home_mm@2x.png */; };
 		29141D6E1AC7070200FDDC85 /* home_fm@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 29141D6D1AC7070200FDDC85 /* home_fm@2x.png */; };
 		29141D7B1AC7ABB100FDDC85 /* DMChannelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 29141D7A1AC7ABB100FDDC85 /* DMChannelManager.m */; };
+		292794811AE9228000BA295B /* DMMeiziController.m in Sources */ = {isa = PBXBuildFile; fileRef = 292794801AE9228000BA295B /* DMMeiziController.m */; };
 		293C18A41AE2B0580033398A /* DMFilmListManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 293C18A31AE2B0580033398A /* DMFilmListManager.m */; };
 		293C18DA1AE358920033398A /* FilmInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 293C18D91AE358920033398A /* FilmInfo.m */; };
 		293C18E21AE3D1300033398A /* DMFilmInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 293C18E11AE3D1300033398A /* DMFilmInfoCell.m */; };
@@ -128,6 +129,8 @@
 		29141D6D1AC7070200FDDC85 /* home_fm@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_fm@2x.png"; sourceTree = "<group>"; };
 		29141D791AC7ABB100FDDC85 /* DMChannelManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMChannelManager.h; sourceTree = "<group>"; };
 		29141D7A1AC7ABB100FDDC85 /* DMChannelManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMChannelManager.m; sourceTree = "<group>"; };
+		2927947F1AE9228000BA295B /* DMMeiziController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMMeiziController.h; sourceTree = "<group>"; };
+		292794801AE9228000BA295B /* DMMeiziController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMMeiziController.m; sourceTree = "<group>"; };
 		293C18A21AE2B0580033398A /* DMFilmListManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMFilmListManager.h; sourceTree = "<group>"; };
 		293C18A31AE2B0580033398A /* DMFilmListManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMFilmListManager.m; sourceTree = "<group>"; };
 		293C18D81AE358920033398A /* FilmInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilmInfo.h; sourceTree = "<group>"; };
@@ -302,6 +305,15 @@
 			path = ChannelList;
 			sourceTree = "<group>";
 		};
+		2927947E1AE9226100BA295B /* DMMeizi */ = {
+			isa = PBXGroup;
+			children = (
+				2927947F1AE9228000BA295B /* DMMeiziController.h */,
+				292794801AE9228000BA295B /* DMMeiziController.m */,
+			);
+			path = DMMeizi;
+			sourceTree = "<group>";
+		};
 		293C18A11AE2B0350033398A /* FilmList */ = {
 			isa = PBXGroup;
 			children = (
@@ -377,6 +389,7 @@
 		2940BAF61AB87F3C00D1069A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2927947E1AE9226100BA295B /* DMMeizi */,
 				295DF5131ADD50E80096935A /* DMFilm */,
 				29BE7A481AC1663000963F97 /* DMLogin */,
 				2978D1991AC059AC005CB2F3 /* DMFM */,
@@ -1061,6 +1074,7 @@
 				29A35B081AC6624900C2C2ED /* BaseTableViewCell.m in Sources */,
 				2976254A1AB675DE00008804 /* main.m in Sources */,
 				297FFCD61AD01C3D00A6D3EE /* DMDeviceManager.m in Sources */,
+				292794811AE9228000BA295B /* DMMeiziController.m in Sources */,
 				29A35B0B1AC6879200C2C2ED /* UIImage+DMResizeImage.m in Sources */,
 				293C18E21AE3D1300033398A /* DMFilmInfoCell.m in Sources */,
 				29A6FB5A1AD95F720076C393 /* UIImage+loadRemoteImage.m in Sources */,
@@ -1189,7 +1203,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0eec9bb8-fc23-4cfe-9e88-19578e7e5d72";
+				PROVISIONING_PROFILE = "a874dd33-ab96-4bb6-b6a0-713eac969559";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1207,7 +1221,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0eec9bb8-fc23-4cfe-9e88-19578e7e5d72";
+				PROVISIONING_PROFILE = "a874dd33-ab96-4bb6-b6a0-713eac969559";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
