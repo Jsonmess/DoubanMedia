@@ -220,12 +220,7 @@
 
 
 }
--(void)webViewDidStartLoad:(UIWebView *)webView
-{
-    [MBProgressHUD showTextOnlyIndicatorWithView:self.view Text:@"努力加载中..."
-                                            Font:DMFont(14.0f)   Margin:10.0f
-                                        showTime:1.0f];
-}
+
 -(void)webViewDidFinishLoad:(UIWebView *)webView
 {
     //设置标题
