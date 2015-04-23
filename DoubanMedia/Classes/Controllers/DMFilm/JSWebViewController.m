@@ -64,7 +64,7 @@
 -(void)setUpView
 {
     CGRect webRect = [UIScreen mainScreen].bounds;
-    webRect  = (CGRect){{0,20},{webRect.size.width,webRect.size.height-20.0f}};
+    webRect  = (CGRect){{0,20},{webRect.size.width,webRect.size.height-20.0f-40.0f}};
     theWebView = [[UIWebView alloc] initWithFrame: webRect];
     [theWebView setDelegate:self];
     [theWebView.scrollView setDelegate:self];
@@ -98,7 +98,7 @@
     [topBarView addSubview:shareBtn];
     [self.view addSubview:topBarView];
     //底部视图
-    bottomBarView = [[UIImageView alloc] initWithFrame:CGRectMake(0, self.view.bounds.size.height-80.0f, self.view.bounds.size.width, 80.0f)];
+    bottomBarView = [[UIImageView alloc] initWithFrame:CGRectMake(0, self.view.bounds.size.height-40.0f, self.view.bounds.size.width, 40.0f)];
     [bottomBarView setUserInteractionEnabled:YES];
     [bottomBarView setBackgroundColor:[UIColor whiteColor]];
     [self.view addSubview:bottomBarView];
@@ -109,7 +109,7 @@
 	  [pbackBtn setImage:[UIImage imageNamed:@"SVWebViewControllerBack"] forState:UIControlStateHighlighted];
     [pbackBtn addTarget:self action:@selector(goBackThePage) forControlEvents:UIControlEventTouchUpInside];
     [pbackBtn setContentMode:UIViewContentModeScaleAspectFit];
-    [pbackBtn setFrame:CGRectMake(20, 20, 40, 30)];
+    [pbackBtn setFrame:CGRectMake(20, 5, 40, 30)];
     [bottomBarView addSubview:pbackBtn];
 	//前进
     pforwardBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -117,7 +117,7 @@
     [pforwardBtn setImage:[UIImage imageNamed:@"SVWebViewControllerNext"] forState:UIControlStateHighlighted];
     [pforwardBtn addTarget:self action:@selector(goForWardPage) forControlEvents:UIControlEventTouchUpInside];
     [pforwardBtn setContentMode:UIViewContentModeScaleAspectFit];
-    [pforwardBtn setFrame:CGRectMake(0.5*(self.view.bounds.size.width-40), 20, 40, 30)];
+    [pforwardBtn setFrame:CGRectMake(0.5*(self.view.bounds.size.width-40), 5, 40, 30)];
     [bottomBarView addSubview:pforwardBtn];
     //刷新
 
@@ -126,7 +126,7 @@
     [pfreshBtn setImage:[UIImage imageNamed:@"refresh_pressed"] forState:UIControlStateHighlighted];
     [pfreshBtn addTarget:self action:@selector(RefreshPage) forControlEvents:UIControlEventTouchUpInside];
     [pfreshBtn setContentMode:UIViewContentModeScaleAspectFit];
-    [pfreshBtn setFrame:CGRectMake(self.view.bounds.size.width-60.0f, 20, 40, 30)];
+    [pfreshBtn setFrame:CGRectMake(self.view.bounds.size.width-60.0f, 5, 40, 30)];
     [bottomBarView addSubview:pfreshBtn];
     //首次直接打开网页
     [self openRequrest];

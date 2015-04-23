@@ -143,7 +143,7 @@
                                               sortedBy:nil ascending:YES];
 
    [self.filmCollectionView reloadData];
-    [self.filmHud hide:YES afterDelay:0.5f];
+    [self.filmHud hide:YES afterDelay:0.2f];
 }
 
 @end
