@@ -36,6 +36,8 @@
         [session setActive:YES error:nil];
 
     }
+    //注册远程控制
+    [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
 }
 //初始化频道分类
 -(void)initTheChannels
@@ -89,7 +91,10 @@
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
 
-- (void)applicationWillTerminate:(UIApplication *)application {
+- (void)applicationWillTerminate:(UIApplication *)application
+{
+    //注销远程控制
+    [[UIApplication sharedApplication]endReceivingRemoteControlEvents];
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     // Saves changes in the application's managed object context before the application terminates.
     [self saveContext];

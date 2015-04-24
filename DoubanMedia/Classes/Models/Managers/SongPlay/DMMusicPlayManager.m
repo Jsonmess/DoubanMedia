@@ -76,8 +76,46 @@
                   context:kBufferingRatioKVOKey];
     //将音乐对象传出
     [self.delegate getCurrentPlaySong:songInfo];
-    [streamer play];
 
+
+    //应用前后台判断
+    [self PlayMusic];
+
+}
+-(void)PlayMusic{
+
+    UIBackgroundTaskIdentifier bgTask = 0;
+
+
+
+    if([UIApplication sharedApplication].applicationState== UIApplicationStateBackground) {
+
+        NSLog(@"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx后台播放");
+
+        [streamer play];
+
+        UIApplication*app = [UIApplication sharedApplication];
+
+        UIBackgroundTaskIdentifier newTask = [app beginBackgroundTaskWithExpirationHandler:nil];
+
+        if(bgTask!= UIBackgroundTaskInvalid) {
+
+            [app endBackgroundTask: bgTask];
+            
+        }
+        
+        bgTask = newTask;
+        
+    }
+    
+    else {
+        
+        NSLog(@"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx前台播放");
+        
+        [streamer play];
+        
+    }
+    
 }
 - (void)cleanStreamer
 {
@@ -115,7 +153,7 @@
 {
     if (sender)
     {
-        [streamer play];
+        [self PlayMusic];
     }
     else
     {
