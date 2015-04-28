@@ -1374,14 +1374,14 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/DoubanMedia/DoubanMedia.pch";
 				INFOPLIST_FILE = DoubanMedia/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/DoubanMedia/Classes/Assets/SDKs/WeiChat",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0eec9bb8-fc23-4cfe-9e88-19578e7e5d72";
+				PROVISIONING_PROFILE = "a874dd33-ab96-4bb6-b6a0-713eac969559";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1400,14 +1400,14 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/DoubanMedia/DoubanMedia.pch";
 				INFOPLIST_FILE = DoubanMedia/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/DoubanMedia/Classes/Assets/SDKs/WeiChat",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0eec9bb8-fc23-4cfe-9e88-19578e7e5d72";
+				PROVISIONING_PROFILE = "a874dd33-ab96-4bb6-b6a0-713eac969559";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

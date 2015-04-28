@@ -76,7 +76,7 @@
     [_collectionView registerClass:[DMMeiZiClassCell class] forCellWithReuseIdentifier:@"meiZiCell"];
     [self addSubview:_collectionView];
     //contains
-    [_collectionView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
+    [_collectionView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(0, 0, kTabbarHeight, 0)];
     [self setNeedsLayout];
 
 }

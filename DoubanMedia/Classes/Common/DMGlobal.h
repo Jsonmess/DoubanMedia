@@ -26,8 +26,8 @@
 #define DoubanApiBaseUrl @"http://api.douban.com"
 //豆瓣电影BaseUrl
 #define DoubanFilmBaseUrl @"http://movie.douban.com"
-//网页用户登录地址
-#define DoubanWebLogin @"http://www.douban.com/accounts/login"
+//网页用户登录地址---暂时屏蔽这功能
+#define DoubanWebLogin @"http"//@"http://www.douban.com/accounts/login"
 //分享
 #define weiChatId @"wx9c24150848b0f85f"
 #define tencentId @"1104495079"
