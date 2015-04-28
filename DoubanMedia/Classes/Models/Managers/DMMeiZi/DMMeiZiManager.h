@@ -14,7 +14,6 @@ typedef NS_ENUM(NSInteger, kGetDataStatus)
     kGetDataStatusFaild,
     kGetDataStatusError
 };
-
 @protocol DMMeiZiManagerDelegate<NSObject>
 -(void)getDataStatus:(kGetDataStatus)status;
 @end

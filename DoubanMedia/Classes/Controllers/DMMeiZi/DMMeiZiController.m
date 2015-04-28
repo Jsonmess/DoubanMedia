@@ -34,6 +34,9 @@
 -(void)meiZiView:(DMMeiZiView *)theView shouldLoadMeiZiClasses:(NSDictionary *)source
 {
     DMMeiZiDetailController *detailController = [[DMMeiZiDetailController alloc] init];
+    detailController.douBanMeiZiSource = source[@"MeiZiUrl"];
+    [detailController setTheTitle:source[@"theClasses"]];
+    
     [self.navigationController pushViewController:detailController animated:YES];
 }
 /*

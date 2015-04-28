@@ -13,4 +13,5 @@
 #import <UIActivityIndicator-for-SDWebImage/UIImageView+UIActivityIndicatorForSDWebImage.h>
 @interface DMMeiZiDetailController : UIViewController<UICollectionViewDelegateFlowLayout>
 @property (nonatomic, strong) NSString *douBanMeiZiSource;
+@property (nonatomic, strong) NSString *theTitle;
 @end

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^loadImageSuccess)(UIImage * image);//用于返回图片资源
 @interface DMMeiZiDetailCell : UICollectionViewCell
 @property (nonatomic) UIImageView *theImageView;//展示妹纸图片
 
@@ -23,5 +24,5 @@
  *
  *  @param theImage 图像url
  */
--(void)setContentWithImageUrl:(NSString *)picUrl;
+-(void)setContentWithImageUrl:(NSString *)picUrl loadSuccess:(loadImageSuccess)sucess;
 @end

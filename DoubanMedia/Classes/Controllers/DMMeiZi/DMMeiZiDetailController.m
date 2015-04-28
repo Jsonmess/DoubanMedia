@@ -23,36 +23,48 @@
 @property (nonatomic, strong) UICollectionView *collectionView;
 @end
 @implementation DMMeiZiDetailController
-- (instancetype)init
+
+-(void)viewWillAppear:(BOOL)animated
 {
-    self = [super init];
-    if (self)
-    {
-        _douBanMeiZiSource = MEIZI_ALL;
-        _page = 0;
-        _meiziArray = [[NSMutableArray alloc] init];
-        sourceManager = [[DMMeiZiManager alloc] init];
-        [sourceManager setDelegate:self];
-        [self setupView];
-    }
-    return self;
+    [super viewWillAppear:animated];
+	[self setupHeaderAndFooter];
 }
-
-
-- (void)viewDidLoad {
+-(void)viewDidLoad
+{
     [super viewDidLoad];
-    [self setupHeaderAndFooter];
-    [self refreshMeizi];
+    [self commonInit];
+     [self setupView];
 }
+-(void)commonInit
+{
+    _page = 0;
+    _meiziArray = [[NSMutableArray alloc] init];
+    sourceManager = [[DMMeiZiManager alloc] init];
+    [sourceManager setDelegate:self];
 
+}
 - (void)setupView
 {
-    UICollectionViewFlowLayout *tempLayout = [[UICollectionViewFlowLayout alloc] init];
-    NHBalancedFlowLayout *layout = (NHBalancedFlowLayout *)tempLayout;
+    //设置导航栏
+    _theTitle = [_theTitle stringByReplacingOccurrencesOfString:@" " withString:@""];
+    [self setTitle:_theTitle];
+    //设置左边状态栏
+    UIButton *leftbtn=[UIButton buttonWithType:UIButtonTypeCustom];
+    [leftbtn setBackgroundImage:[UIImage imageNamed:@"Back_Setting.png"] forState:UIControlStateNormal];
+    [leftbtn setBackgroundImage:[UIImage imageNamed: @"Back_Setting.png"] forState:UIControlStateHighlighted];
+    [leftbtn addTarget:self action:@selector(backToList) forControlEvents:UIControlEventTouchUpInside];
+    [leftbtn setFrame:CGRectMake(0, 0, 28.0f, 28.0f)];
+    UIBarButtonItem *backitem=[[UIBarButtonItem alloc]initWithCustomView:leftbtn];
+    self.navigationItem.leftBarButtonItem=backitem;
+
+    NHBalancedFlowLayout *layout = [[NHBalancedFlowLayout alloc] init];
     layout.minimumLineSpacing = 1.0;
     layout.minimumInteritemSpacing = 1.0;
     layout.sectionInset = UIEdgeInsetsZero;
-    self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
+    layout.sectionInset = UIEdgeInsetsMake(5.0f, 0, 5.0f, 0);
+    CGRect theFrame = (CGRect){{0,0},{self.view.bounds.size.width,self.view.bounds.size.height - kTabbarHeight}};
+    self.collectionView = [[UICollectionView alloc] initWithFrame:theFrame collectionViewLayout:layout];
+    [self.collectionView setBackgroundColor:DMColor(230,230,238,1.0f)];
     [self.collectionView setDelegate:self];
     [self.collectionView setDataSource:self];
     
@@ -63,20 +75,24 @@
 
 - (void)setupHeaderAndFooter
 {
-//    [self.collectionView addLegendHeaderWithRefreshingTarget:self
-//                                            refreshingAction:@selector(refreshMeizi)];
-//    [self.collectionView addLegendFooterWithRefreshingTarget:self
-//                                            refreshingAction:@selector(loadMoreMeizi)];
-//    self.collectionView.footer.automaticallyRefresh = NO;
-//    self.collectionView.footer.hidden = YES;
-//    self.collectionView.header.textColor = [UIColor whiteColor];
-//    self.collectionView.footer.textColor = [UIColor whiteColor];
-//    [self.collectionView.header beginRefreshing];
+    [self.collectionView addLegendHeaderWithRefreshingTarget:self
+                                            refreshingAction:@selector(refreshMeizi)];
+    [self.collectionView addLegendFooterWithRefreshingTarget:self
+                                            refreshingAction:@selector(loadMoreMeizi)];
+    self.collectionView.footer.automaticallyRefresh = NO;
+    self.collectionView.footer.hidden = YES;
+//    self.collectionView.header.textColor = [UIColor blackColor];
+//    self.collectionView.footer.textColor = [UIColor blackColor];
+    [self.collectionView.header beginRefreshing];
 }
 
 - (void)refreshMeizi
 {
     _page = 0;
+    if (_douBanMeiZiSource == nil)
+    {
+        return;
+    }
     [sourceManager getMeiziWithUrl:_douBanMeiZiSource page:_page
                         completion:^(NSArray *meiziArray, NSInteger nextPage)
      {
@@ -133,7 +149,11 @@
 
     DMMeiZi *meizi = _meiziArray[indexPath.row];
 
-    [cell setContentWithImageUrl:meizi.path];
+    [cell setContentWithImageUrl:meizi.path
+                     loadSuccess:^(UIImage *image)
+    {
+		meizi.image = image;
+    }];
 
     return cell;
 }
@@ -147,6 +167,7 @@
     }
     DMMeiZi *meizi = _meiziArray[indexPath.row];
     NYTPhotosViewController *photoViewController = [[NYTPhotosViewController alloc] initWithPhotos:_meiziArray initialPhoto:meizi];
+    shouldHiddenStatusBar(YES);
     photoViewController.delegate = self;
     [self presentViewController:photoViewController animated:YES completion:nil];
 }
@@ -182,6 +203,10 @@
                                                                     inSection:0]];
     return cell;
 }
+-(void)photosViewControllerWillDismiss:(NYTPhotosViewController *)photosViewController
+{
+    shouldHiddenStatusBar(NO);
+}
 #pragma mark ---DMMeiZiManagerDelegate
 
 -(void)getDataStatus:(kGetDataStatus)status
@@ -199,5 +224,11 @@
 
         break;
     }
+}
+#pragma mark --- otherActions
+
+-(void)backToList
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 @end

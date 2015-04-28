@@ -22,6 +22,7 @@
 -(void)setUpView
 {
     _theImageView = [[UIImageView alloc] initWithFrame:CGRectZero];
+    [self setBackgroundColor:DMColor(25, 25, 25, 1.0f)];
     [self addSubview:_theImageView];
     [_theImageView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
     [self setNeedsLayout];
@@ -44,7 +45,7 @@
  *
  *  @param theImage 图像url
  */
--(void)setContentWithImageUrl:(NSString *)picUrl
+-(void)setContentWithImageUrl:(NSString *)picUrl loadSuccess:(loadImageSuccess)sucess
 {
     NSAssert(picUrl != nil, @"传入图像地址不可以为空");
     __weak DMMeiZiDetailCell *weakSelf = self;
@@ -52,9 +53,9 @@
                          completed:^(UIImage *image, NSError *error,
                                      SDImageCacheType cacheType, NSURL *imageURL)
    		 {
-             //[weakSelf setBounds:(CGRect){{0,0},image.size}];
-             [weakSelf setNeedsLayout];
+             sucess(image);
         }	usingActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+    [weakSelf setNeedsLayout];
 
 }
 @end
