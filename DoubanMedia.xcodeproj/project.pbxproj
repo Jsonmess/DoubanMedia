@@ -81,6 +81,10 @@
 		299F2DF91AEF5B56001606AE /* PGActionSheetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 299F2DF61AEF5B56001606AE /* PGActionSheetCell.m */; };
 		299F2DFA1AEF5B56001606AE /* PGHtmlActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 299F2DF81AEF5B56001606AE /* PGHtmlActionSheet.m */; };
 		299F2DFD1AEF5BBF001606AE /* UIImage+DMImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 299F2DFC1AEF5BBF001606AE /* UIImage+DMImage.m */; };
+		299F2E021AEF60A5001606AE /* SVWebViewControllerBackDisable@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 299F2E001AEF60A5001606AE /* SVWebViewControllerBackDisable@2x.png */; };
+		299F2E031AEF60A5001606AE /* SVWebViewControllerNextDisable@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 299F2E011AEF60A5001606AE /* SVWebViewControllerNextDisable@2x.png */; };
+		299F2E051AEF6139001606AE /* RefreshBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 299F2E041AEF6139001606AE /* RefreshBtn@2x.png */; };
+		299F2E071AEF61CC001606AE /* RefreshBtnDisable@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 299F2E061AEF61CC001606AE /* RefreshBtnDisable@2x.png */; };
 		29A1491D1ADF797000CAAAAF /* DMFilmListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A1491C1ADF797000CAAAAF /* DMFilmListView.m */; };
 		29A35B081AC6624900C2C2ED /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A35B071AC6624900C2C2ED /* BaseTableViewCell.m */; };
 		29A35B0B1AC6879200C2C2ED /* UIImage+DMResizeImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A35B0A1AC6879200C2C2ED /* UIImage+DMResizeImage.m */; };
@@ -255,6 +259,10 @@
 		299F2DFB1AEF5BBF001606AE /* UIImage+DMImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+DMImage.h"; sourceTree = "<group>"; };
 		299F2DFC1AEF5BBF001606AE /* UIImage+DMImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+DMImage.m"; sourceTree = "<group>"; };
 		299F2DFE1AEF5BD2001606AE /* DMGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMGlobal.h; sourceTree = "<group>"; };
+		299F2E001AEF60A5001606AE /* SVWebViewControllerBackDisable@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SVWebViewControllerBackDisable@2x.png"; sourceTree = "<group>"; };
+		299F2E011AEF60A5001606AE /* SVWebViewControllerNextDisable@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SVWebViewControllerNextDisable@2x.png"; sourceTree = "<group>"; };
+		299F2E041AEF6139001606AE /* RefreshBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RefreshBtn@2x.png"; sourceTree = "<group>"; };
+		299F2E061AEF61CC001606AE /* RefreshBtnDisable@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RefreshBtnDisable@2x.png"; sourceTree = "<group>"; };
 		29A1491B1ADF797000CAAAAF /* DMFilmListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMFilmListView.h; sourceTree = "<group>"; };
 		29A1491C1ADF797000CAAAAF /* DMFilmListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMFilmListView.m; sourceTree = "<group>"; };
 		29A35B061AC6624900C2C2ED /* BaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
@@ -837,6 +845,10 @@
 		29B4D1121ABEBE7200899F29 /* DoubanMovie */ = {
 			isa = PBXGroup;
 			children = (
+				299F2E061AEF61CC001606AE /* RefreshBtnDisable@2x.png */,
+				299F2E041AEF6139001606AE /* RefreshBtn@2x.png */,
+				299F2E001AEF60A5001606AE /* SVWebViewControllerBackDisable@2x.png */,
+				299F2E011AEF60A5001606AE /* SVWebViewControllerNextDisable@2x.png */,
 				29B4D1131ABEBE7200899F29 /* defaultmovie@2x.png */,
 			);
 			path = DoubanMovie;
@@ -1077,6 +1089,7 @@
 				299F2DED1AEF5B02001606AE /* share_site_qzone_on@2x.png in Resources */,
 				2940BB071AB87F3C00D1069A /* LaunchScreen.xib in Resources */,
 				29B4D1861ABEBE7200899F29 /* home_film@2x.png in Resources */,
+				299F2E031AEF60A5001606AE /* SVWebViewControllerNextDisable@2x.png in Resources */,
 				296F47121AC187B500231873 /* push_close_normal_btn@2x.png in Resources */,
 				29B4D18B1ABEBE7200899F29 /* TabBarItem_Selected@2x.png in Resources */,
 				29B4D1571ABEBE7200899F29 /* defaultmovie@2x.png in Resources */,
@@ -1114,10 +1127,12 @@
 				8A544CE265375C9223304D52 /* Podfile in Resources */,
 				297FFCFF1AD03CF700A6D3EE /* ic_player_next_highlight.png in Resources */,
 				29B4D17D1ABEBE7200899F29 /* original_top.png in Resources */,
+				299F2E051AEF6139001606AE /* RefreshBtn@2x.png in Resources */,
 				297FFCFB1AD03CF700A6D3EE /* ic_player_fav_selected.png in Resources */,
 				29B4D1551ABEBE7200899F29 /* Icon.png in Resources */,
 				297FFCF91AD03CF700A6D3EE /* ic_player_fav_disable.png in Resources */,
 				29B4D1521ABEBE7200899F29 /* Default-568h@2x.png in Resources */,
+				299F2E021AEF60A5001606AE /* SVWebViewControllerBackDisable@2x.png in Resources */,
 				29C1B2131AE7C10A008E8F6E /* navigationBarBg.png in Resources */,
 				299F2DDA1AEF437E001606AE /* localMeiZiImages.bundle in Resources */,
 				29BD5F311AE2205000AB3E23 /* ic_star_red@2x.png in Resources */,
@@ -1127,6 +1142,7 @@
 				29B4D17F1ABEBE7200899F29 /* radio_top.png in Resources */,
 				29B4D1541ABEBE7200899F29 /* Default@2x.png in Resources */,
 				29A35B141AC6A3A100C2C2ED /* redMusicIncon.png in Resources */,
+				299F2E071AEF61CC001606AE /* RefreshBtnDisable@2x.png in Resources */,
 				299F2DEB1AEF5B02001606AE /* intro_share_wechat@2x.png in Resources */,
 				29B4D1811ABEBE7200899F29 /* surge_top.png in Resources */,
 				29B4D17C1ABEBE7200899F29 /* new_top.png in Resources */,

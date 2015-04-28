@@ -104,9 +104,10 @@
     [self.view addSubview:bottomBarView];
 	//后退
     pbackBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [pbackBtn setHidden:YES];
+    [pbackBtn setEnabled:NO];
     [pbackBtn setImage:[UIImage imageNamed:@"SVWebViewControllerBack"] forState:UIControlStateNormal];
 	  [pbackBtn setImage:[UIImage imageNamed:@"SVWebViewControllerBack"] forState:UIControlStateHighlighted];
+     [pbackBtn setImage:[UIImage imageNamed:@"SVWebViewControllerBackDisable"] forState:UIControlStateDisabled];
     [pbackBtn addTarget:self action:@selector(goBackThePage) forControlEvents:UIControlEventTouchUpInside];
     [pbackBtn setContentMode:UIViewContentModeScaleAspectFit];
     [pbackBtn setFrame:CGRectMake(20, 5, 40, 30)];
@@ -115,6 +116,7 @@
     pforwardBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [pforwardBtn setImage:[UIImage imageNamed:@"SVWebViewControllerNext"] forState:UIControlStateNormal];
     [pforwardBtn setImage:[UIImage imageNamed:@"SVWebViewControllerNext"] forState:UIControlStateHighlighted];
+        [pforwardBtn setImage:[UIImage imageNamed:@"SVWebViewControllerNextDisable"] forState:UIControlStateDisabled];
     [pforwardBtn addTarget:self action:@selector(goForWardPage) forControlEvents:UIControlEventTouchUpInside];
     [pforwardBtn setContentMode:UIViewContentModeScaleAspectFit];
     [pforwardBtn setFrame:CGRectMake(0.5*(self.view.bounds.size.width-40), 5, 40, 30)];
@@ -122,10 +124,10 @@
     //刷新
 
     UIButton *pfreshBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [pfreshBtn setImage:[UIImage imageNamed:@"refresh_pressed"] forState:UIControlStateNormal];
-    [pfreshBtn setImage:[UIImage imageNamed:@"refresh_pressed"] forState:UIControlStateHighlighted];
+    [pfreshBtn setImage:[UIImage imageNamed:@"RefreshBtn"] forState:UIControlStateNormal];
+    [pfreshBtn setImage:[UIImage imageNamed:@"RefreshBtn"] forState:UIControlStateHighlighted];
     [pfreshBtn addTarget:self action:@selector(RefreshPage) forControlEvents:UIControlEventTouchUpInside];
-    [pfreshBtn setContentMode:UIViewContentModeScaleAspectFit];
+    [pfreshBtn setContentMode:UIViewContentModeScaleAspectFill];
     [pfreshBtn setFrame:CGRectMake(self.view.bounds.size.width-60.0f, 5, 40, 30)];
     [bottomBarView addSubview:pfreshBtn];
     //首次直接打开网页
@@ -227,28 +229,11 @@
     [theTitle setText:[webView stringByEvaluatingJavaScriptFromString:@"document.title"]];
         [theWebView.scrollView setBounces:NO];
     //检查是否可以前进和后退
-    [pforwardBtn setHidden:([theWebView canGoForward] == YES?NO:YES)];
-	[pbackBtn setHidden:([theWebView canGoBack] == YES?NO:YES)];
+
+    [pforwardBtn setEnabled:[theWebView canGoForward]];
+	[pbackBtn setEnabled:[theWebView canGoBack]];
 }
-//- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-//    int currentPostion = scrollView.contentOffset.y;
-//    if (currentPostion - _lastPosition > 15) {
-//        _lastPosition = currentPostion;
-//        [UIView animateWithDuration:0.4f animations:^{
-//            [bottomBarView setTransform:CGAffineTransformMakeTranslation(0, 70.0f)];
-//        }];
-//    }
-//    else if (_lastPosition - currentPostion > 15)
-//    {
-//        _lastPosition = currentPostion;
-//        NSLog(@"ScrollDown now");
-//        [UIView animateWithDuration:0.4f animations:^{
-//            [bottomBarView setTransform:CGAffineTransformMakeTranslation(0, 0)];
-//        }];
-//
-//    }
-//
-//}
+
 #pragma mark --- loginDelegate
 -(void)webLoginState:(kLoginState)state
 {
