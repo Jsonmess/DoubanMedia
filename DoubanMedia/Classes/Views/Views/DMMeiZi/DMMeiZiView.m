@@ -9,6 +9,7 @@
 #import "DMMeiZiView.h"
 #import "DMDeviceManager.h"
 #import "DMMeiZiClassCell.h"
+#import "DMMeiZiConstant.h"
 @interface DMMeiZiView()<UICollectionViewDelegate,UICollectionViewDataSource
 										,UICollectionViewDelegateFlowLayout>
 {
@@ -103,4 +104,54 @@
     [cell setContentWithImage:theImage theText:localMeiZiClasses[indexPath.row]];
     return cell;
 }
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    DMMeiZiClassCell * cell =(DMMeiZiClassCell*)[collectionView cellForItemAtIndexPath:indexPath];
+    NSDictionary *dic = @{
+                          @"MeiZiUrl":[self getMeiZiUrlWithIndex:indexPath],
+                          @"theClasses":[cell getTheCellTitle]
+                          };
+    [self.delegate meiZiView:self shouldLoadMeiZiClasses:dic];
+
+}
+#pragma mark----others
+-(NSString *)getMeiZiUrlWithIndex:(NSIndexPath*)indexPath
+{
+    NSString *theUrl = @"";
+    if (indexPath.section == 0)
+    {
+        switch (indexPath.row)
+        {
+            case 0:
+                theUrl = MEIZI_ALL;
+                break;
+            case 1:
+                theUrl = MEIZI_FRESH;
+                break;
+            case 2:
+                theUrl = MEIZI_LITERATURE;
+                break;
+            case 3:
+                theUrl = MEIZI_LEGS;
+                break;
+            case 4:
+                theUrl = MEIZI_CALLIPYGE;
+                break;
+            case 5:
+                theUrl = MEIZI_CLEAVAGE;
+                break;
+            case 6:
+                theUrl = MEIZI_FUNNY;
+                break;
+            case 7:
+                theUrl = MEIZI_RATING;
+                break;
+
+            default:
+                break;
+        }
+    }
+    return theUrl;
+}
+
 @end

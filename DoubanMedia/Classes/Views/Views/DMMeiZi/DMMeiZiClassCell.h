@@ -24,4 +24,11 @@
  *  @param theTitle 标题
  */
 -(void)setContentWithImageUrl:(NSString *)picUrl theText:(NSString *)theTitle;
+/**
+ *  获取当前分类
+ *
+ *  @return 妹纸分类
+ */
+-(NSString *)getTheCellTitle;
+
 @end

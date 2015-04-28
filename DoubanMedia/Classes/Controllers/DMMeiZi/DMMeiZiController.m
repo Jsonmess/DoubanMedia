@@ -8,7 +8,8 @@
 
 #import "DMMeiZiController.h"
 #import "DMMeiZiView.h"
-@interface DMMeiZiController ()
+#import "DMMeiZiDetailController.h"
+@interface DMMeiZiController ()<DMMeiZiViewDelegate>
 
 @end
 
@@ -18,6 +19,7 @@
     [super viewDidLoad];
     [self setTitle:@"豆瓣妹纸"];
     DMMeiZiView *theView = [[DMMeiZiView alloc] initWithFrame:self.view.bounds];
+    [theView setDelegate:self];
     self.view = theView;
 
     // Do any additional setup after loading the view.
@@ -29,6 +31,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)meiZiView:(DMMeiZiView *)theView shouldLoadMeiZiClasses:(NSDictionary *)source
+{
+    DMMeiZiDetailController *detailController = [[DMMeiZiDetailController alloc] init];
+    [self.navigationController pushViewController:detailController animated:YES];
+}
 /*
 #pragma mark - Navigation
 

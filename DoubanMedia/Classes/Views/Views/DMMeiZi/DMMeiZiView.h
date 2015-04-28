@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+@class DMMeiZiView;
+@protocol DMMeiZiViewDelegate <NSObject>
+
+-(void)meiZiView:(DMMeiZiView*)theView shouldLoadMeiZiClasses:(NSDictionary *)source;
+
+@end
 
 @interface DMMeiZiView : UIView
-
+@property(nonatomic) id<DMMeiZiViewDelegate>delegate;
 @end

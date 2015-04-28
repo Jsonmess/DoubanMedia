@@ -85,6 +85,10 @@
 		299F2E031AEF60A5001606AE /* SVWebViewControllerNextDisable@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 299F2E011AEF60A5001606AE /* SVWebViewControllerNextDisable@2x.png */; };
 		299F2E051AEF6139001606AE /* RefreshBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 299F2E041AEF6139001606AE /* RefreshBtn@2x.png */; };
 		299F2E071AEF61CC001606AE /* RefreshBtnDisable@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 299F2E061AEF61CC001606AE /* RefreshBtnDisable@2x.png */; };
+		299F2E0B1AEF6D74001606AE /* DMMeiZiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 299F2E0A1AEF6D74001606AE /* DMMeiZiManager.m */; };
+		299F2E0F1AEF702B001606AE /* DMMeiZi.m in Sources */ = {isa = PBXBuildFile; fileRef = 299F2E0E1AEF702B001606AE /* DMMeiZi.m */; };
+		299F2E121AEF7612001606AE /* DMMeiZiDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 299F2E111AEF7612001606AE /* DMMeiZiDetailController.m */; };
+		299F2E151AEF7838001606AE /* DMMeiZiDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 299F2E141AEF7838001606AE /* DMMeiZiDetailCell.m */; };
 		29A1491D1ADF797000CAAAAF /* DMFilmListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A1491C1ADF797000CAAAAF /* DMFilmListView.m */; };
 		29A35B081AC6624900C2C2ED /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A35B071AC6624900C2C2ED /* BaseTableViewCell.m */; };
 		29A35B0B1AC6879200C2C2ED /* UIImage+DMResizeImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A35B0A1AC6879200C2C2ED /* UIImage+DMResizeImage.m */; };
@@ -263,6 +267,15 @@
 		299F2E011AEF60A5001606AE /* SVWebViewControllerNextDisable@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SVWebViewControllerNextDisable@2x.png"; sourceTree = "<group>"; };
 		299F2E041AEF6139001606AE /* RefreshBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RefreshBtn@2x.png"; sourceTree = "<group>"; };
 		299F2E061AEF61CC001606AE /* RefreshBtnDisable@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RefreshBtnDisable@2x.png"; sourceTree = "<group>"; };
+		299F2E091AEF6D74001606AE /* DMMeiZiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMMeiZiManager.h; sourceTree = "<group>"; };
+		299F2E0A1AEF6D74001606AE /* DMMeiZiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMMeiZiManager.m; sourceTree = "<group>"; };
+		299F2E0C1AEF6F02001606AE /* DMMeiZiConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMMeiZiConstant.h; sourceTree = "<group>"; };
+		299F2E0D1AEF702B001606AE /* DMMeiZi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMMeiZi.h; sourceTree = "<group>"; };
+		299F2E0E1AEF702B001606AE /* DMMeiZi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMMeiZi.m; sourceTree = "<group>"; };
+		299F2E101AEF7612001606AE /* DMMeiZiDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMMeiZiDetailController.h; sourceTree = "<group>"; };
+		299F2E111AEF7612001606AE /* DMMeiZiDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMMeiZiDetailController.m; sourceTree = "<group>"; };
+		299F2E131AEF7838001606AE /* DMMeiZiDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMMeiZiDetailCell.h; sourceTree = "<group>"; };
+		299F2E141AEF7838001606AE /* DMMeiZiDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMMeiZiDetailCell.m; sourceTree = "<group>"; };
 		29A1491B1ADF797000CAAAAF /* DMFilmListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMFilmListView.h; sourceTree = "<group>"; };
 		29A1491C1ADF797000CAAAAF /* DMFilmListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMFilmListView.m; sourceTree = "<group>"; };
 		29A35B061AC6624900C2C2ED /* BaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
@@ -545,6 +558,7 @@
 		296F47151AC188E800231873 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				299F2E081AEF6D50001606AE /* DMMeiZi */,
 				293C18A11AE2B0350033398A /* FilmList */,
 				293D45331AD41FE900BD2406 /* SystemVolume */,
 				297FFD0E1AD177F000A6D3EE /* SongPlay */,
@@ -576,6 +590,8 @@
 				29692FC41AD54E4700641CDF /* DMSongInfo.m */,
 				293C18D81AE358920033398A /* FilmInfo.h */,
 				293C18D91AE358920033398A /* FilmInfo.m */,
+				299F2E0D1AEF702B001606AE /* DMMeiZi.h */,
+				299F2E0E1AEF702B001606AE /* DMMeiZi.m */,
 			);
 			path = ObjectModels;
 			sourceTree = "<group>";
@@ -723,6 +739,8 @@
 			children = (
 				299F2D991AEF42DF001606AE /* DMMeiZiController.h */,
 				299F2D9A1AEF42DF001606AE /* DMMeiZiController.m */,
+				299F2E101AEF7612001606AE /* DMMeiZiDetailController.h */,
+				299F2E111AEF7612001606AE /* DMMeiZiDetailController.m */,
 			);
 			path = DMMeiZi;
 			sourceTree = "<group>";
@@ -734,6 +752,8 @@
 				299F2DB91AEF430D001606AE /* DMMeiZiClassCell.m */,
 				299F2DBC1AEF430D001606AE /* DMMeiZiView.h */,
 				299F2DBD1AEF430D001606AE /* DMMeiZiView.m */,
+				299F2E131AEF7838001606AE /* DMMeiZiDetailCell.h */,
+				299F2E141AEF7838001606AE /* DMMeiZiDetailCell.m */,
 			);
 			path = DMMeiZi;
 			sourceTree = "<group>";
@@ -766,6 +786,16 @@
 				299F2DF81AEF5B56001606AE /* PGHtmlActionSheet.m */,
 			);
 			path = Share;
+			sourceTree = "<group>";
+		};
+		299F2E081AEF6D50001606AE /* DMMeiZi */ = {
+			isa = PBXGroup;
+			children = (
+				299F2E091AEF6D74001606AE /* DMMeiZiManager.h */,
+				299F2E0A1AEF6D74001606AE /* DMMeiZiManager.m */,
+				299F2E0C1AEF6F02001606AE /* DMMeiZiConstant.h */,
+			);
+			path = DMMeiZi;
 			sourceTree = "<group>";
 		};
 		29A1491A1ADF796700CAAAAF /* DMFilm */ = {
@@ -1217,6 +1247,7 @@
 				2978D1971AC035D4005CB2F3 /* Com_navigationController.m in Sources */,
 				293C18A41AE2B0580033398A /* DMFilmListManager.m in Sources */,
 				297FFD111AD1780A00A6D3EE /* DMPlayManager.m in Sources */,
+				299F2E0B1AEF6D74001606AE /* DMMeiZiManager.m in Sources */,
 				29692FC81AD55D8A00641CDF /* DMMusicPlayManager.m in Sources */,
 				295DF5161ADD516B0096935A /* DMFilmListController.m in Sources */,
 				299F2DF01AEF5B16001606AE /* DMShareEntity.m in Sources */,
@@ -1228,6 +1259,7 @@
 				299F2DCD1AEF430D001606AE /* DMMeiZiView.m in Sources */,
 				29B4D1921ABF0D6C00899F29 /* RootViewController.m in Sources */,
 				29BE7A4B1AC1668700963F97 /* DMLoginViewController.m in Sources */,
+				299F2E151AEF7838001606AE /* DMMeiZiDetailCell.m in Sources */,
 				299F2DCB1AEF430D001606AE /* DMMeiZiClassCell.m in Sources */,
 				29141D7B1AC7ABB100FDDC85 /* DMChannelManager.m in Sources */,
 				2978D19C1AC064BC005CB2F3 /* DMFMChannelController.m in Sources */,
@@ -1251,7 +1283,9 @@
 				29FC25E51AC452870055A770 /* AccountInfo.m in Sources */,
 				2999D9791ABB134400F43C54 /* RootTabView.m in Sources */,
 				29692FC51AD54E4700641CDF /* DMSongInfo.m in Sources */,
+				299F2E121AEF7612001606AE /* DMMeiZiDetailController.m in Sources */,
 				29A35B121AC698F200C2C2ED /* DMFMTableViewCell.m in Sources */,
+				299F2E0F1AEF702B001606AE /* DMMeiZi.m in Sources */,
 				29756D8D1ACD9F940011A8E7 /* AlbumRoundView.m in Sources */,
 				295DF5121ADD35640096935A /* MBProgressHUD+DMProgressHUD.m in Sources */,
 				29A1491D1ADF797000CAAAAF /* DMFilmListView.m in Sources */,
@@ -1381,7 +1415,7 @@
 					"$(PROJECT_DIR)/DoubanMedia/Classes/Assets/SDKs/WeiChat",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a874dd33-ab96-4bb6-b6a0-713eac969559";
+				PROVISIONING_PROFILE = "0eec9bb8-fc23-4cfe-9e88-19578e7e5d72";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1407,7 +1441,7 @@
 					"$(PROJECT_DIR)/DoubanMedia/Classes/Assets/SDKs/WeiChat",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a874dd33-ab96-4bb6-b6a0-713eac969559";
+				PROVISIONING_PROFILE = "0eec9bb8-fc23-4cfe-9e88-19578e7e5d72";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

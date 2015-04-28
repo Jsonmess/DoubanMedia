@@ -34,4 +34,5 @@
 //微信、QQ应用地址
 #define WEIXINAPPSTROE_URL  @"http://itunes.apple.com/cn/app/wei-xin/id414478124?mt=8"
 #define QQAPPSTORE_URL      @"http://itunes.apple.com/cn/app/qq-2012/id444934666?mt=8"
+
 #endif

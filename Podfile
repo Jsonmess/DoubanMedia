@@ -1,4 +1,4 @@
-platform :ios ,'6.0'
+platform :ios ,'7.0'
 
 pod 'MagicalRecord','2.2'
 pod 'SDWebImage','~>3.7'
@@ -13,3 +13,7 @@ pod 'ZBarSDK','~>1.2'
 pod 'Reachability','~>3.2'
 pod 'TMCache' ,'~>1.2.4'
 pod 'MBProgressHUD','~>0.9.1'
+pod 'MJExtension','~>1.0.0'
+pod 'NYTPhotoViewer','~>0.1.2'
+pod 'UIActivityIndicator-for-SDWebImage','~>1.2'
+pod 'NHBalancedFlowLayout' ,'~>0.2'

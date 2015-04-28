@@ -96,4 +96,8 @@
     theTitle = [NSString stringWithFormat:@"   %@",theTitle];
     [theClassText setText:theTitle];
 }
+-(NSString *)getTheCellTitle
+{
+    return theClassText.text;
+}
 @end
