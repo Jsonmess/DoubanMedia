@@ -12,7 +12,7 @@
 #import "Com_navigationController.h"
 #import "DMFMChannelController.h"
 #import "DMFilmListController.h"
-#import "DMMeiziController.h"
+#import "DMMeiZiController.h"
 #import "TabViewManager.h"
 #define KitemCount 4  //Tabbar 选项卡数目
 @interface RootViewController  ()<TabbarDataSource,TabbarDelegate>
@@ -47,7 +47,7 @@
                                                    initWithRootViewController:doubanFilmController];
     [subViewControllers addObject:navFilmController];
     //豆瓣妹纸
-     DMMeiziController *doubanGirlController = [[DMMeiziController alloc]init];
+     DMMeiZiController *doubanGirlController = [[DMMeiZiController alloc]init];
     Com_navigationController *navGirlController = [[Com_navigationController alloc]
                                                     initWithRootViewController:doubanGirlController];
     [subViewControllers addObject:navGirlController];
