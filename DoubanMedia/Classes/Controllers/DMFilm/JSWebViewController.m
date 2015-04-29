@@ -9,6 +9,7 @@
 #import "JSWebViewController.h"
 #import "DMLoginManager.h"
 #import "MBProgressHUD+DMProgressHUD.h"
+#import "DMShareEntity.h"
 @interface JSWebViewController ()<UIWebViewDelegate,DMLoginManagerDelegate,UIScrollViewDelegate>
 {
     UIWebView *theWebView;
@@ -25,6 +26,8 @@
     UIButton *pbackBtn;//后退
     UIButton *pforwardBtn;//前进
     int _lastPosition;//辅助判断滚动方向
+    DMShareEntity *ShareEntity;//用于分享
+
 }
 @end
 
@@ -144,6 +147,7 @@
 	//pop
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
 //分享
 -(void)share
 {
@@ -219,8 +223,6 @@
             return NO;
         }else
            return YES;
-
-
 }
 
 -(void)webViewDidFinishLoad:(UIWebView *)webView
