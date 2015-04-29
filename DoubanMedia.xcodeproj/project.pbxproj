@@ -89,6 +89,22 @@
 		299F2E0F1AEF702B001606AE /* DMMeiZi.m in Sources */ = {isa = PBXBuildFile; fileRef = 299F2E0E1AEF702B001606AE /* DMMeiZi.m */; };
 		299F2E121AEF7612001606AE /* DMMeiZiDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 299F2E111AEF7612001606AE /* DMMeiZiDetailController.m */; };
 		299F2E151AEF7838001606AE /* DMMeiZiDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 299F2E141AEF7838001606AE /* DMMeiZiDetailCell.m */; };
+		299F2E391AF06D3D001606AE /* NYTPhotoViewerCloseButtonX.png in Resources */ = {isa = PBXBuildFile; fileRef = 299F2E191AF06D3D001606AE /* NYTPhotoViewerCloseButtonX.png */; };
+		299F2E3A1AF06D3D001606AE /* NYTPhotoViewerCloseButtonX@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 299F2E1A1AF06D3D001606AE /* NYTPhotoViewerCloseButtonX@2x.png */; };
+		299F2E3B1AF06D3D001606AE /* NYTPhotoViewerCloseButtonX@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 299F2E1B1AF06D3D001606AE /* NYTPhotoViewerCloseButtonX@3x.png */; };
+		299F2E3C1AF06D3D001606AE /* NYTPhotoViewerCloseButtonXLandscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 299F2E1C1AF06D3D001606AE /* NYTPhotoViewerCloseButtonXLandscape.png */; };
+		299F2E3D1AF06D3D001606AE /* NYTPhotoViewerCloseButtonXLandscape@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 299F2E1D1AF06D3D001606AE /* NYTPhotoViewerCloseButtonXLandscape@2x.png */; };
+		299F2E3E1AF06D3D001606AE /* NYTPhotoViewerCloseButtonXLandscape@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 299F2E1E1AF06D3D001606AE /* NYTPhotoViewerCloseButtonXLandscape@3x.png */; };
+		299F2E3F1AF06D3D001606AE /* NYTOperatingSystemCompatibilityUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 299F2E221AF06D3D001606AE /* NYTOperatingSystemCompatibilityUtility.m */; };
+		299F2E401AF06D3D001606AE /* NYTPhotoCaptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 299F2E241AF06D3D001606AE /* NYTPhotoCaptionView.m */; };
+		299F2E411AF06D3D001606AE /* NYTPhotoDismissalInteractionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 299F2E261AF06D3D001606AE /* NYTPhotoDismissalInteractionController.m */; };
+		299F2E421AF06D3D001606AE /* NYTPhotosDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 299F2E281AF06D3D001606AE /* NYTPhotosDataSource.m */; };
+		299F2E431AF06D3D001606AE /* NYTPhotosOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 299F2E2A1AF06D3D001606AE /* NYTPhotosOverlayView.m */; };
+		299F2E441AF06D3D001606AE /* NYTPhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 299F2E2C1AF06D3D001606AE /* NYTPhotosViewController.m */; };
+		299F2E451AF06D3D001606AE /* NYTPhotoTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 299F2E2E1AF06D3D001606AE /* NYTPhotoTransitionAnimator.m */; };
+		299F2E461AF06D3D001606AE /* NYTPhotoTransitionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 299F2E301AF06D3D001606AE /* NYTPhotoTransitionController.m */; };
+		299F2E471AF06D3D001606AE /* NYTPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 299F2E321AF06D3D001606AE /* NYTPhotoViewController.m */; };
+		299F2E481AF06D3D001606AE /* NYTScalingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 299F2E341AF06D3D001606AE /* NYTScalingImageView.m */; };
 		29A1491D1ADF797000CAAAAF /* DMFilmListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A1491C1ADF797000CAAAAF /* DMFilmListView.m */; };
 		29A35B081AC6624900C2C2ED /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A35B071AC6624900C2C2ED /* BaseTableViewCell.m */; };
 		29A35B0B1AC6879200C2C2ED /* UIImage+DMResizeImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A35B0A1AC6879200C2C2ED /* UIImage+DMResizeImage.m */; };
@@ -276,6 +292,35 @@
 		299F2E111AEF7612001606AE /* DMMeiZiDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMMeiZiDetailController.m; sourceTree = "<group>"; };
 		299F2E131AEF7838001606AE /* DMMeiZiDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMMeiZiDetailCell.h; sourceTree = "<group>"; };
 		299F2E141AEF7838001606AE /* DMMeiZiDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMMeiZiDetailCell.m; sourceTree = "<group>"; };
+		299F2E191AF06D3D001606AE /* NYTPhotoViewerCloseButtonX.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NYTPhotoViewerCloseButtonX.png; sourceTree = "<group>"; };
+		299F2E1A1AF06D3D001606AE /* NYTPhotoViewerCloseButtonX@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NYTPhotoViewerCloseButtonX@2x.png"; sourceTree = "<group>"; };
+		299F2E1B1AF06D3D001606AE /* NYTPhotoViewerCloseButtonX@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NYTPhotoViewerCloseButtonX@3x.png"; sourceTree = "<group>"; };
+		299F2E1C1AF06D3D001606AE /* NYTPhotoViewerCloseButtonXLandscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NYTPhotoViewerCloseButtonXLandscape.png; sourceTree = "<group>"; };
+		299F2E1D1AF06D3D001606AE /* NYTPhotoViewerCloseButtonXLandscape@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NYTPhotoViewerCloseButtonXLandscape@2x.png"; sourceTree = "<group>"; };
+		299F2E1E1AF06D3D001606AE /* NYTPhotoViewerCloseButtonXLandscape@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NYTPhotoViewerCloseButtonXLandscape@3x.png"; sourceTree = "<group>"; };
+		299F2E211AF06D3D001606AE /* NYTOperatingSystemCompatibilityUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYTOperatingSystemCompatibilityUtility.h; sourceTree = "<group>"; };
+		299F2E221AF06D3D001606AE /* NYTOperatingSystemCompatibilityUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYTOperatingSystemCompatibilityUtility.m; sourceTree = "<group>"; };
+		299F2E231AF06D3D001606AE /* NYTPhotoCaptionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYTPhotoCaptionView.h; sourceTree = "<group>"; };
+		299F2E241AF06D3D001606AE /* NYTPhotoCaptionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYTPhotoCaptionView.m; sourceTree = "<group>"; };
+		299F2E251AF06D3D001606AE /* NYTPhotoDismissalInteractionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYTPhotoDismissalInteractionController.h; sourceTree = "<group>"; };
+		299F2E261AF06D3D001606AE /* NYTPhotoDismissalInteractionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYTPhotoDismissalInteractionController.m; sourceTree = "<group>"; };
+		299F2E271AF06D3D001606AE /* NYTPhotosDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYTPhotosDataSource.h; sourceTree = "<group>"; };
+		299F2E281AF06D3D001606AE /* NYTPhotosDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYTPhotosDataSource.m; sourceTree = "<group>"; };
+		299F2E291AF06D3D001606AE /* NYTPhotosOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYTPhotosOverlayView.h; sourceTree = "<group>"; };
+		299F2E2A1AF06D3D001606AE /* NYTPhotosOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYTPhotosOverlayView.m; sourceTree = "<group>"; };
+		299F2E2B1AF06D3D001606AE /* NYTPhotosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYTPhotosViewController.h; sourceTree = "<group>"; };
+		299F2E2C1AF06D3D001606AE /* NYTPhotosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYTPhotosViewController.m; sourceTree = "<group>"; };
+		299F2E2D1AF06D3D001606AE /* NYTPhotoTransitionAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYTPhotoTransitionAnimator.h; sourceTree = "<group>"; };
+		299F2E2E1AF06D3D001606AE /* NYTPhotoTransitionAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYTPhotoTransitionAnimator.m; sourceTree = "<group>"; };
+		299F2E2F1AF06D3D001606AE /* NYTPhotoTransitionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYTPhotoTransitionController.h; sourceTree = "<group>"; };
+		299F2E301AF06D3D001606AE /* NYTPhotoTransitionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYTPhotoTransitionController.m; sourceTree = "<group>"; };
+		299F2E311AF06D3D001606AE /* NYTPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYTPhotoViewController.h; sourceTree = "<group>"; };
+		299F2E321AF06D3D001606AE /* NYTPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYTPhotoViewController.m; sourceTree = "<group>"; };
+		299F2E331AF06D3D001606AE /* NYTScalingImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYTScalingImageView.h; sourceTree = "<group>"; };
+		299F2E341AF06D3D001606AE /* NYTScalingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYTScalingImageView.m; sourceTree = "<group>"; };
+		299F2E361AF06D3D001606AE /* NYTPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYTPhoto.h; sourceTree = "<group>"; };
+		299F2E371AF06D3D001606AE /* NYTPhotoContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYTPhotoContainer.h; sourceTree = "<group>"; };
+		299F2E381AF06D3D001606AE /* NYTPhotosViewControllerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYTPhotosViewControllerDataSource.h; sourceTree = "<group>"; };
 		29A1491B1ADF797000CAAAAF /* DMFilmListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMFilmListView.h; sourceTree = "<group>"; };
 		29A1491C1ADF797000CAAAAF /* DMFilmListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMFilmListView.m; sourceTree = "<group>"; };
 		29A35B061AC6624900C2C2ED /* BaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
@@ -425,6 +470,7 @@
 		2940BAF11AB87F3C00D1069A /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				299F2E161AF06D3D001606AE /* NYTPhotoViewer */,
 				299F2D8B1AEF42AB001606AE /* SDKs */,
 				29BD5F291AE2205000AB3E23 /* JSStarRating */,
 			);
@@ -798,6 +844,82 @@
 			path = DMMeiZi;
 			sourceTree = "<group>";
 		};
+		299F2E161AF06D3D001606AE /* NYTPhotoViewer */ = {
+			isa = PBXGroup;
+			children = (
+				299F2E171AF06D3D001606AE /* Assets */,
+				299F2E1F1AF06D3D001606AE /* Classes */,
+			);
+			path = NYTPhotoViewer;
+			sourceTree = "<group>";
+		};
+		299F2E171AF06D3D001606AE /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				299F2E181AF06D3D001606AE /* ios */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		299F2E181AF06D3D001606AE /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				299F2E191AF06D3D001606AE /* NYTPhotoViewerCloseButtonX.png */,
+				299F2E1A1AF06D3D001606AE /* NYTPhotoViewerCloseButtonX@2x.png */,
+				299F2E1B1AF06D3D001606AE /* NYTPhotoViewerCloseButtonX@3x.png */,
+				299F2E1C1AF06D3D001606AE /* NYTPhotoViewerCloseButtonXLandscape.png */,
+				299F2E1D1AF06D3D001606AE /* NYTPhotoViewerCloseButtonXLandscape@2x.png */,
+				299F2E1E1AF06D3D001606AE /* NYTPhotoViewerCloseButtonXLandscape@3x.png */,
+			);
+			path = ios;
+			sourceTree = "<group>";
+		};
+		299F2E1F1AF06D3D001606AE /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				299F2E201AF06D3D001606AE /* ios */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		299F2E201AF06D3D001606AE /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				299F2E211AF06D3D001606AE /* NYTOperatingSystemCompatibilityUtility.h */,
+				299F2E221AF06D3D001606AE /* NYTOperatingSystemCompatibilityUtility.m */,
+				299F2E231AF06D3D001606AE /* NYTPhotoCaptionView.h */,
+				299F2E241AF06D3D001606AE /* NYTPhotoCaptionView.m */,
+				299F2E251AF06D3D001606AE /* NYTPhotoDismissalInteractionController.h */,
+				299F2E261AF06D3D001606AE /* NYTPhotoDismissalInteractionController.m */,
+				299F2E271AF06D3D001606AE /* NYTPhotosDataSource.h */,
+				299F2E281AF06D3D001606AE /* NYTPhotosDataSource.m */,
+				299F2E291AF06D3D001606AE /* NYTPhotosOverlayView.h */,
+				299F2E2A1AF06D3D001606AE /* NYTPhotosOverlayView.m */,
+				299F2E2B1AF06D3D001606AE /* NYTPhotosViewController.h */,
+				299F2E2C1AF06D3D001606AE /* NYTPhotosViewController.m */,
+				299F2E2D1AF06D3D001606AE /* NYTPhotoTransitionAnimator.h */,
+				299F2E2E1AF06D3D001606AE /* NYTPhotoTransitionAnimator.m */,
+				299F2E2F1AF06D3D001606AE /* NYTPhotoTransitionController.h */,
+				299F2E301AF06D3D001606AE /* NYTPhotoTransitionController.m */,
+				299F2E311AF06D3D001606AE /* NYTPhotoViewController.h */,
+				299F2E321AF06D3D001606AE /* NYTPhotoViewController.m */,
+				299F2E331AF06D3D001606AE /* NYTScalingImageView.h */,
+				299F2E341AF06D3D001606AE /* NYTScalingImageView.m */,
+				299F2E351AF06D3D001606AE /* Protocols */,
+			);
+			path = ios;
+			sourceTree = "<group>";
+		};
+		299F2E351AF06D3D001606AE /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				299F2E361AF06D3D001606AE /* NYTPhoto.h */,
+				299F2E371AF06D3D001606AE /* NYTPhotoContainer.h */,
+				299F2E381AF06D3D001606AE /* NYTPhotosViewControllerDataSource.h */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		29A1491A1ADF796700CAAAAF /* DMFilm */ = {
 			isa = PBXGroup;
 			children = (
@@ -1126,6 +1248,8 @@
 				297FFCFC1AD03CF700A6D3EE /* ic_player_fav_selected_highlight.png in Resources */,
 				29BD5F301AE2205000AB3E23 /* ic_star_half@2x.png in Resources */,
 				29B4D1801ABEBE7200899F29 /* red_top.png in Resources */,
+				299F2E3C1AF06D3D001606AE /* NYTPhotoViewerCloseButtonXLandscape.png in Resources */,
+				299F2E391AF06D3D001606AE /* NYTPhotoViewerCloseButtonX.png in Resources */,
 				299F2D941AEF42AB001606AE /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				297FFCF01AD03CF700A6D3EE /* cell_bg@2x.png in Resources */,
 				296F47131AC187B500231873 /* splash_screen_logo.png in Resources */,
@@ -1134,6 +1258,7 @@
 				297FFD051AD03CF700A6D3EE /* start.png in Resources */,
 				299F2DEC1AEF5B02001606AE /* share_site_qq_on@2x.png in Resources */,
 				29B4D17B1ABEBE7200899F29 /* musicincon.png in Resources */,
+				299F2E3E1AF06D3D001606AE /* NYTPhotoViewerCloseButtonXLandscape@3x.png in Resources */,
 				29B4D17A1ABEBE7200899F29 /* Dock_play.png in Resources */,
 				29B4D18F1ABEBE7200899F29 /* setlist.plist in Resources */,
 				29B4D1841ABEBE7200899F29 /* Settingforward_pressed@2x.png in Resources */,
@@ -1149,6 +1274,7 @@
 				29B4D1821ABEBE7200899F29 /* Author.jpg in Resources */,
 				297FFD011AD03CF700A6D3EE /* pause.png in Resources */,
 				299F2DEA1AEF5B02001606AE /* intro_share_circle@2x.png in Resources */,
+				299F2E3B1AF06D3D001606AE /* NYTPhotoViewerCloseButtonX@3x.png in Resources */,
 				297FFCF41AD03CF700A6D3EE /* ic_menu_normal.png in Resources */,
 				29B4D17E1ABEBE7200899F29 /* PlayStop.png in Resources */,
 				29C1B2141AE7C10A008E8F6E /* top_menu_share.png in Resources */,
@@ -1156,6 +1282,7 @@
 				297FFCF51AD03CF700A6D3EE /* ic_player_ban.png in Resources */,
 				8A544CE265375C9223304D52 /* Podfile in Resources */,
 				297FFCFF1AD03CF700A6D3EE /* ic_player_next_highlight.png in Resources */,
+				299F2E3D1AF06D3D001606AE /* NYTPhotoViewerCloseButtonXLandscape@2x.png in Resources */,
 				29B4D17D1ABEBE7200899F29 /* original_top.png in Resources */,
 				299F2E051AEF6139001606AE /* RefreshBtn@2x.png in Resources */,
 				297FFCFB1AD03CF700A6D3EE /* ic_player_fav_selected.png in Resources */,
@@ -1164,6 +1291,7 @@
 				29B4D1521ABEBE7200899F29 /* Default-568h@2x.png in Resources */,
 				299F2E021AEF60A5001606AE /* SVWebViewControllerBackDisable@2x.png in Resources */,
 				29C1B2131AE7C10A008E8F6E /* navigationBarBg.png in Resources */,
+				299F2E3A1AF06D3D001606AE /* NYTPhotoViewerCloseButtonX@2x.png in Resources */,
 				299F2DDA1AEF437E001606AE /* localMeiZiImages.bundle in Resources */,
 				29BD5F311AE2205000AB3E23 /* ic_star_red@2x.png in Resources */,
 				29B4D1791ABEBE7200899F29 /* CoverIcon.jpg in Resources */,
@@ -1244,6 +1372,7 @@
 				29C1B2171AE7C12D008E8F6E /* JSWebViewController.m in Sources */,
 				299F2DAB1AEF42DF001606AE /* DMMeiZiController.m in Sources */,
 				297FFD181AD2173700A6D3EE /* TabViewManager.m in Sources */,
+				299F2E461AF06D3D001606AE /* NYTPhotoTransitionController.m in Sources */,
 				2978D1971AC035D4005CB2F3 /* Com_navigationController.m in Sources */,
 				293C18A41AE2B0580033398A /* DMFilmListManager.m in Sources */,
 				297FFD111AD1780A00A6D3EE /* DMPlayManager.m in Sources */,
@@ -1252,10 +1381,12 @@
 				295DF5161ADD516B0096935A /* DMFilmListController.m in Sources */,
 				299F2DF01AEF5B16001606AE /* DMShareEntity.m in Sources */,
 				29B4D1081ABEBCA300899F29 /* TabItem.m in Sources */,
+				299F2E421AF06D3D001606AE /* NYTPhotosDataSource.m in Sources */,
 				299F2DFD1AEF5BBF001606AE /* UIImage+DMImage.m in Sources */,
 				299F2DF91AEF5B56001606AE /* PGActionSheetCell.m in Sources */,
 				29BD5F321AE2205000AB3E23 /* JSStarRating.m in Sources */,
 				297AE74D1ACA4FA90037448C /* FMChannel.m in Sources */,
+				299F2E3F1AF06D3D001606AE /* NYTOperatingSystemCompatibilityUtility.m in Sources */,
 				299F2DCD1AEF430D001606AE /* DMMeiZiView.m in Sources */,
 				29B4D1921ABF0D6C00899F29 /* RootViewController.m in Sources */,
 				29BE7A4B1AC1668700963F97 /* DMLoginViewController.m in Sources */,
@@ -1263,6 +1394,7 @@
 				299F2DCB1AEF430D001606AE /* DMMeiZiClassCell.m in Sources */,
 				29141D7B1AC7ABB100FDDC85 /* DMChannelManager.m in Sources */,
 				2978D19C1AC064BC005CB2F3 /* DMFMChannelController.m in Sources */,
+				299F2E481AF06D3D001606AE /* NYTScalingImageView.m in Sources */,
 				299F2DF31AEF5B39001606AE /* ShareActionTool.m in Sources */,
 				2940BB051AB87F3C00D1069A /* DoubanMedia.xcdatamodeld in Sources */,
 				29A35B171AC6D5D700C2C2ED /* DMFMUserHeaderView.m in Sources */,
@@ -1272,11 +1404,15 @@
 				2953C8B11AC2E02B00F62F07 /* DMLoginManager.m in Sources */,
 				297AE7521ACAC14F0037448C /* DMMusicPlayerController.m in Sources */,
 				293C18DA1AE358920033398A /* FilmInfo.m in Sources */,
+				299F2E451AF06D3D001606AE /* NYTPhotoTransitionAnimator.m in Sources */,
 				2940BB031AB87F3C00D1069A /* AppDelegate.m in Sources */,
 				293D45361AD41FE900BD2406 /* DMSysVolumeAjustManager.m in Sources */,
 				29A35B081AC6624900C2C2ED /* BaseTableViewCell.m in Sources */,
 				2976254A1AB675DE00008804 /* main.m in Sources */,
 				297FFCD61AD01C3D00A6D3EE /* DMDeviceManager.m in Sources */,
+				299F2E471AF06D3D001606AE /* NYTPhotoViewController.m in Sources */,
+				299F2E401AF06D3D001606AE /* NYTPhotoCaptionView.m in Sources */,
+				299F2E441AF06D3D001606AE /* NYTPhotosViewController.m in Sources */,
 				29A35B0B1AC6879200C2C2ED /* UIImage+DMResizeImage.m in Sources */,
 				293C18E21AE3D1300033398A /* DMFilmInfoCell.m in Sources */,
 				29A6FB5A1AD95F720076C393 /* UIImage+loadRemoteImage.m in Sources */,
@@ -1287,7 +1423,9 @@
 				29A35B121AC698F200C2C2ED /* DMFMTableViewCell.m in Sources */,
 				299F2E0F1AEF702B001606AE /* DMMeiZi.m in Sources */,
 				29756D8D1ACD9F940011A8E7 /* AlbumRoundView.m in Sources */,
+				299F2E411AF06D3D001606AE /* NYTPhotoDismissalInteractionController.m in Sources */,
 				295DF5121ADD35640096935A /* MBProgressHUD+DMProgressHUD.m in Sources */,
+				299F2E431AF06D3D001606AE /* NYTPhotosOverlayView.m in Sources */,
 				29A1491D1ADF797000CAAAAF /* DMFilmListView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1415,7 +1553,7 @@
 					"$(PROJECT_DIR)/DoubanMedia/Classes/Assets/SDKs/WeiChat",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a874dd33-ab96-4bb6-b6a0-713eac969559";
+				PROVISIONING_PROFILE = "0eec9bb8-fc23-4cfe-9e88-19578e7e5d72";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1441,7 +1579,7 @@
 					"$(PROJECT_DIR)/DoubanMedia/Classes/Assets/SDKs/WeiChat",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a874dd33-ab96-4bb6-b6a0-713eac969559";
+				PROVISIONING_PROFILE = "0eec9bb8-fc23-4cfe-9e88-19578e7e5d72";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

@@ -15,7 +15,10 @@
 #import "NYTPhoto.h"
 #import "NYTPhotosOverlayView.h"
 #import "NYTPhotoCaptionView.h"
-
+#import "DMDeviceManager.h"
+#import <TencentOpenAPI/TencentApiInterface.h>
+#import "ShareActionTool.h"
+#import "DMShareEntity.h"
 NSString * const NYTPhotosViewControllerDidDisplayPhotoNotification = @"NYTPhotosViewControllerDidDisplayPhotoNotification";
 NSString * const NYTPhotosViewControllerWillDismissNotification = @"NYTPhotosViewControllerWillDismissNotification";
 NSString * const NYTPhotosViewControllerDidDismissNotification = @"NYTPhotosViewControllerDidDismissNotification";
@@ -84,6 +87,7 @@ static const UIEdgeInsets NYTPhotosViewControllerCloseButtinImageInsets = {3, 0,
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.view.tintColor = [UIColor whiteColor];
     self.view.backgroundColor = [UIColor blackColor];
     self.pageViewController.view.backgroundColor = [UIColor clearColor];
@@ -224,23 +228,19 @@ static const UIEdgeInsets NYTPhotosViewControllerCloseButtinImageInsets = {3, 0,
     [self dismissAnimated:YES];
 }
 
-- (void)actionButtonTapped:(id)sender {
-    BOOL clientDidHandle = NO;
-    
-    if ([self.delegate respondsToSelector:@selector(photosViewController:handleActionButtonTappedForPhoto:)]) {
-        clientDidHandle = [self.delegate photosViewController:self handleActionButtonTappedForPhoto:self.currentlyDisplayedPhoto];
-    }
-    
-    if (!clientDidHandle && self.currentlyDisplayedPhoto.image) {
-        UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:@[self.currentlyDisplayedPhoto.image] applicationActivities:nil];
-        activityViewController.completionHandler = ^(NSString *activityType, BOOL completed) {
-            if (completed && [self.delegate respondsToSelector:@selector(photosViewController:actionCompletedWithActivityType:)]) {
-                [self.delegate photosViewController:self actionCompletedWithActivityType:activityType];
-            }
-        };
-        
-        [self presentViewController:activityViewController animated:YES completion:nil];
-    }
+- (void)actionButtonTapped:(id)sender
+{
+    DMShareEntity *entity = [[DMShareEntity alloc] init];
+	//图片
+    NSData *imageData = UIImageJPEGRepresentation(self.currentlyDisplayedPhoto.image, 1.0f);
+    entity.shareImageData = imageData;
+    //标题
+    entity.theTitle = @"豆瓣妹纸";
+    entity.urlString = self.currentlyDisplayedPhoto.path;
+    entity.detailText = self.currentlyDisplayedPhoto.attributedCaptionTitle.string;
+    ShareActionTool *shareAction = [[ShareActionTool alloc]
+                                    initWithSuperNavigationController:self.navigationController];
+    [shareAction shareToThirdActionWithSuperView:self.view shareEntity:entity];
 }
 
 - (UIBarButtonItem *)leftBarButtonItem {

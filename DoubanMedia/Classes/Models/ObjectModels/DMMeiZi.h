@@ -7,9 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <NYTPhotoViewer/NYTPhoto.h>
+#import "NYTPhoto.h"
 @interface DMMeiZi : NSObject <NYTPhoto>
-@property (nonatomic, strong) NSString *path;
 @property (nonatomic, strong) NSString *width;
 @property (nonatomic, strong) NSString *height;
 @property (nonatomic, strong) NSString *source;
@@ -25,5 +24,5 @@
 @property (nonatomic) NSAttributedString *attributedCaptionTitle;
 @property (nonatomic) NSAttributedString *attributedCaptionSummary;
 @property (nonatomic) NSAttributedString *attributedCaptionCredit;
-
+@property (nonatomic, strong) NSString *path;
 @end

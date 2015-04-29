@@ -48,13 +48,6 @@ install_resource()
   esac
 }
           install_resource "MJRefresh/MJRefreshExample/MJRefreshExample/MJRefresh/MJRefresh.bundle"
-                    install_resource "NYTPhotoViewer/Pod/Assets/ios/NYTPhotoViewerCloseButtonX.png"
-                    install_resource "NYTPhotoViewer/Pod/Assets/ios/NYTPhotoViewerCloseButtonX@2x.png"
-                    install_resource "NYTPhotoViewer/Pod/Assets/ios/NYTPhotoViewerCloseButtonX@3x.png"
-                    install_resource "NYTPhotoViewer/Pod/Assets/ios/NYTPhotoViewerCloseButtonXLandscape.png"
-                    install_resource "NYTPhotoViewer/Pod/Assets/ios/NYTPhotoViewerCloseButtonXLandscape@2x.png"
-                    install_resource "NYTPhotoViewer/Pod/Assets/ios/NYTPhotoViewerCloseButtonXLandscape@3x.png"
-                    install_resource "NYTPhotoViewer/Pod/Assets/ios"
                     install_resource "SVWebViewController/SVWebViewController/SVWebViewController.bundle/SVWebViewControllerBack.png"
                     install_resource "SVWebViewController/SVWebViewController/SVWebViewController.bundle/SVWebViewControllerBack@2x.png"
                     install_resource "SVWebViewController/SVWebViewController/SVWebViewController.bundle/SVWebViewControllerNext.png"
