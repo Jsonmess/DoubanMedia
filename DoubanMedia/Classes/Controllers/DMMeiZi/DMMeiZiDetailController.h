@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <MJRefresh/MJRefresh.h>
 #import <NHBalancedFlowLayout/NHBalancedFlowLayout.h>
-#import <NYTPhotoViewer/NYTPhotosViewController.h>
+#import "NYTPhotosViewController.h"
 #import <UIActivityIndicator-for-SDWebImage/UIImageView+UIActivityIndicatorForSDWebImage.h>
 @interface DMMeiZiDetailController : UIViewController<UICollectionViewDelegateFlowLayout>
 @property (nonatomic, strong) NSString *douBanMeiZiSource;

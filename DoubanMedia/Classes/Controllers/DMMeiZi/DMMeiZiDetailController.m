@@ -12,10 +12,11 @@
 #import "DMMeiZi.h"
 #import "TabViewManager.h"
 #import "DMMeiZiDetailCell.h"
+#import "MBProgressHUD+DMProgressHUD.h"
 
 @interface DMMeiZiDetailController() < NYTPhotosViewControllerDelegate,DMMeiZiManagerDelegate,
-												UICollectionViewDelegate,UICollectionViewDataSource
-										,NHBalancedFlowLayoutDelegate>
+UICollectionViewDelegate,UICollectionViewDataSource
+,NHBalancedFlowLayoutDelegate>
 {
     DMMeiZiManager *sourceManager;
 }
@@ -28,7 +29,7 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-	[self setupHeaderAndFooter];
+    [self setupHeaderAndFooter];
     //隐藏tabBar
     [[TabViewManager sharedTabViewManager].getTabView setHidden:YES];
 }
@@ -36,7 +37,7 @@
 {
     [super viewDidLoad];
     [self commonInit];
-     [self setupView];
+    [self setupView];
 }
 -(void)commonInit
 {
@@ -69,7 +70,7 @@
     [self.collectionView setBackgroundColor:DMColor(230,230,238,1.0f)];
     [self.collectionView setDelegate:self];
     [self.collectionView setDataSource:self];
-    
+
     [self.collectionView registerClass:[DMMeiZiDetailCell class] forCellWithReuseIdentifier:@"MeiziCell"];
     [self.view addSubview:_collectionView];
 
@@ -97,34 +98,34 @@
     [sourceManager getMeiziWithUrl:_douBanMeiZiSource page:_page
                         completion:^(NSArray *meiziArray, NSInteger nextPage)
      {
-        if (meiziArray.count > 0)
-        {
-            [_meiziArray removeAllObjects];
-            [_meiziArray addObjectsFromArray:meiziArray];
-            _page = nextPage;
-            [self.collectionView.footer resetNoMoreData];
-            [self.collectionView reloadData];
-        }else
-        {
-            [self.collectionView.footer noticeNoMoreData];
-        }
-        [self.collectionView.header endRefreshing];
-    }];
+         if (meiziArray.count > 0)
+         {
+             [_meiziArray removeAllObjects];
+             [_meiziArray addObjectsFromArray:meiziArray];
+             _page = nextPage;
+             [self.collectionView.footer resetNoMoreData];
+             [self.collectionView reloadData];
+         }else
+         {
+             [self.collectionView.footer noticeNoMoreData];
+         }
+         [self.collectionView.header endRefreshing];
+     }];
 }
 
 - (void)loadMoreMeizi
 {
     [sourceManager getMeiziWithUrl:_douBanMeiZiSource page:_page
                         completion:^(NSArray *meiziArray, NSInteger nextPage) {
-        if (meiziArray.count > 0) {
-            [_meiziArray addObjectsFromArray:meiziArray];
-            _page = nextPage;
-            [self.collectionView reloadData];
-        } else {
-            [self.collectionView.footer noticeNoMoreData];
-        }
-        [self.collectionView.footer endRefreshing];
-    }];
+                            if (meiziArray.count > 0) {
+                                [_meiziArray addObjectsFromArray:meiziArray];
+                                _page = nextPage;
+                                [self.collectionView reloadData];
+                            } else {
+                                [self.collectionView.footer noticeNoMoreData];
+                            }
+                            [self.collectionView.footer endRefreshing];
+                        }];
 }
 
 #pragma mark CollectionView DataSource && Delegate
@@ -144,17 +145,19 @@
     return size;
 }
 
-- (DMMeiZiDetailCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+- (DMMeiZiDetailCell *)collectionView:(UICollectionView *)collectionView
+               cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    DMMeiZiDetailCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MeiziCell" forIndexPath:indexPath];
+    DMMeiZiDetailCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MeiziCell"
+                                                                        forIndexPath:indexPath];
 
     DMMeiZi *meizi = _meiziArray[indexPath.row];
 
     [cell setContentWithImageUrl:meizi.path
                      loadSuccess:^(UIImage *image)
-    {
-		meizi.image = image;
-    }];
+     {
+         meizi.image = image;
+     }];
 
     return cell;
 }
@@ -167,7 +170,8 @@
         return;
     }
     DMMeiZi *meizi = _meiziArray[indexPath.row];
-    NYTPhotosViewController *photoViewController = [[NYTPhotosViewController alloc] initWithPhotos:_meiziArray initialPhoto:meizi];
+    NYTPhotosViewController *photoViewController = [[NYTPhotosViewController alloc] initWithPhotos:_meiziArray
+                                                                                      initialPhoto:meizi];
     shouldHiddenStatusBar(YES);
     photoViewController.delegate = self;
     [self presentViewController:photoViewController animated:YES completion:nil];
@@ -180,17 +184,17 @@
     DMMeiZi *meizi = (DMMeiZi *)photo;
     if (!meizi.image) {
         [[SDWebImageManager sharedManager]
-         			downloadImageWithURL:[NSURL URLWithString:meizi.path]
-                                                options:8|9
-                                                progress:^(NSInteger receivedSize, NSInteger expectedSize)
-                                                {}
-                                                completed:^(UIImage *image, NSError *error,
-                                                            SDImageCacheType cacheType,
-                                                            BOOL finished, NSURL *imageURL)
-     												   {
-                                                          meizi.image = image;
-                                                          [photosViewController updateImageForPhoto:meizi];
-                                                      }];
+         downloadImageWithURL:[NSURL URLWithString:meizi.path]
+         options:8|9
+         progress:^(NSInteger receivedSize, NSInteger expectedSize)
+         {}
+         completed:^(UIImage *image, NSError *error,
+                     SDImageCacheType cacheType,
+                     BOOL finished, NSURL *imageURL)
+         {
+             meizi.image = image;
+             [photosViewController updateImageForPhoto:meizi];
+         }];
     }
 
 }
@@ -200,8 +204,8 @@
 {
     DMMeiZiDetailCell *cell = (DMMeiZiDetailCell *)[self.collectionView
                                                     cellForItemAtIndexPath:[NSIndexPath
-                                                                    indexPathForRow:[_meiziArray indexOfObject:photo]
-                                                                    inSection:0]];
+                                                           indexPathForRow:[_meiziArray indexOfObject:photo]
+                                                                 inSection:0]];
     return cell;
 }
 -(void)photosViewControllerWillDismiss:(NYTPhotosViewController *)photosViewController
@@ -212,18 +216,27 @@
 
 -(void)getDataStatus:(kGetDataStatus)status
 {
+
     switch (status)
     {
         case kGetDataStatusFaild:
-            
+
+            [MBProgressHUD showTextOnlyIndicatorWithView:self.view
+                                                    Text:@"您的网络不给力噢" Font:DMFont(12.0f)
+                                                  Margin:12.0f  offsetY:ScreenBounds.size.height*0.2f
+                                                showTime:1.5f];
             break;
 
         case kGetDataStatusError:
+            [MBProgressHUD showTextOnlyIndicatorWithView:self.view
+                                                    Text:@"请求失败，请您检查网络" Font:DMFont(12.0f)
+                                                  Margin:12.0f  offsetY:ScreenBounds.size.height*0.2f
+                                                showTime:1.5f];
 
             break;
         default:
 
-        break;
+            break;
     }
 }
 #pragma mark --- otherActions

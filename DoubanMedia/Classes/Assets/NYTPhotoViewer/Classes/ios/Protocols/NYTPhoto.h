@@ -17,7 +17,10 @@
  *  The image to display.
  */
 @property (nonatomic, readonly) UIImage *image;
-
+/**
+ * 需求添加---用于分享链接
+ */
+@property (nonatomic, strong) NSString *path;
 /**
  *  A placeholder image for display while the image is loading.
  */
