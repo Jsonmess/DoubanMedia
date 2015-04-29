@@ -154,8 +154,13 @@ static const UIEdgeInsets NYTPhotosViewControllerCloseButtinImageInsets = {3, 0,
         _overlayView = [[NYTPhotosOverlayView alloc] initWithFrame:CGRectMake(0, 0, NYTPhotoCaptionViewHorizontalMargin * 2.0, 0)];
         _overlayView.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"NYTPhotoViewerCloseButtonX"] landscapeImagePhone:[UIImage imageNamed:@"NYTPhotoViewerCloseButtonXLandscape"] style:UIBarButtonItemStylePlain target:self action:@selector(doneButtonTapped:)];
         _overlayView.leftBarButtonItem.imageInsets = NYTPhotosViewControllerCloseButtinImageInsets;
-        _overlayView.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(actionButtonTapped:)];
-        
+        UIButton *rightbtn=[UIButton buttonWithType:UIButtonTypeCustom];
+        [rightbtn setBackgroundImage:[UIImage imageNamed:@"douban_meizhi_share"] forState:UIControlStateNormal];
+        [rightbtn setBackgroundImage:[UIImage imageNamed: @"douban_meizhi_share"] forState:UIControlStateHighlighted];
+        [rightbtn addTarget:self action:@selector(actionButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+        [rightbtn setFrame:CGRectMake(0, 5, 24.0f, 24.0f)];
+        UIBarButtonItem *backitem=[[UIBarButtonItem alloc]initWithCustomView:rightbtn];
+        _overlayView.rightBarButtonItem=backitem;
         _notificationCenter = [[NSNotificationCenter alloc] init];
         
         [self setupPageViewControllerWithInitialPhoto:initialPhoto];
@@ -294,7 +299,7 @@ static const UIEdgeInsets NYTPhotosViewControllerCloseButtinImageInsets = {3, 0,
     if (self.currentlyDisplayedPhoto.image || self.currentlyDisplayedPhoto.placeholderImage) {
         startingView = self.currentPhotoViewController.scalingImageView.imageView;
     }
-    
+
     self.transitionController.startingView = startingView;
     self.transitionController.endingView = self.referenceViewForCurrentPhoto;
     

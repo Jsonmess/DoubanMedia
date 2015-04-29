@@ -165,7 +165,7 @@
             message.thumbData = [self solveWeiXinThumbData:_entity.shareImageData
                                              withImageType:_entity.thumbnailType];
         }
-        else if (_entity.urlString)
+         if (_entity.urlString)
         {
             shareObj = [WXWebpageObject object];
             [shareObj setWebpageUrl:_entity.urlString];
@@ -173,6 +173,7 @@
                                              withImageType:_entity.thumbnailType];
         }
         message.title = _entity.theTitle;
+        message.description = _entity.detailText;
         message.mediaObject = shareObj;
         req.message = message;
         [WXApi sendReq:req];
@@ -194,10 +195,11 @@
             NSURL *url = [NSURL URLWithString: _entity.urlString];
             NSString *title = _entity.theTitle;
             NSData *imageData = _entity.shareImageData;
+            NSString * description = _entity.detailText;
             
             QQApiNewsObject *shareObject = [QQApiNewsObject  objectWithURL:url
                                                                      title:title
-                                                               description:nil
+                                                               description:description
                                                           previewImageData:imageData];
             
             SendMessageToQQReq *req = [SendMessageToQQReq reqWithContent:shareObject];

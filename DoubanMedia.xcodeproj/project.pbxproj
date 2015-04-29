@@ -105,6 +105,7 @@
 		299F2E461AF06D3D001606AE /* NYTPhotoTransitionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 299F2E301AF06D3D001606AE /* NYTPhotoTransitionController.m */; };
 		299F2E471AF06D3D001606AE /* NYTPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 299F2E321AF06D3D001606AE /* NYTPhotoViewController.m */; };
 		299F2E481AF06D3D001606AE /* NYTScalingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 299F2E341AF06D3D001606AE /* NYTScalingImageView.m */; };
+		299F2E4A1AF0D835001606AE /* douban_meizhi_share.png in Resources */ = {isa = PBXBuildFile; fileRef = 299F2E491AF0D835001606AE /* douban_meizhi_share.png */; };
 		29A1491D1ADF797000CAAAAF /* DMFilmListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A1491C1ADF797000CAAAAF /* DMFilmListView.m */; };
 		29A35B081AC6624900C2C2ED /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A35B071AC6624900C2C2ED /* BaseTableViewCell.m */; };
 		29A35B0B1AC6879200C2C2ED /* UIImage+DMResizeImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A35B0A1AC6879200C2C2ED /* UIImage+DMResizeImage.m */; };
@@ -321,6 +322,7 @@
 		299F2E361AF06D3D001606AE /* NYTPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYTPhoto.h; sourceTree = "<group>"; };
 		299F2E371AF06D3D001606AE /* NYTPhotoContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYTPhotoContainer.h; sourceTree = "<group>"; };
 		299F2E381AF06D3D001606AE /* NYTPhotosViewControllerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYTPhotosViewControllerDataSource.h; sourceTree = "<group>"; };
+		299F2E491AF0D835001606AE /* douban_meizhi_share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = douban_meizhi_share.png; sourceTree = "<group>"; };
 		29A1491B1ADF797000CAAAAF /* DMFilmListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMFilmListView.h; sourceTree = "<group>"; };
 		29A1491C1ADF797000CAAAAF /* DMFilmListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMFilmListView.m; sourceTree = "<group>"; };
 		29A35B061AC6624900C2C2ED /* BaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
@@ -864,6 +866,7 @@
 		299F2E181AF06D3D001606AE /* ios */ = {
 			isa = PBXGroup;
 			children = (
+				299F2E491AF0D835001606AE /* douban_meizhi_share.png */,
 				299F2E191AF06D3D001606AE /* NYTPhotoViewerCloseButtonX.png */,
 				299F2E1A1AF06D3D001606AE /* NYTPhotoViewerCloseButtonX@2x.png */,
 				299F2E1B1AF06D3D001606AE /* NYTPhotoViewerCloseButtonX@3x.png */,
@@ -1317,6 +1320,7 @@
 				297FFD041AD03CF700A6D3EE /* refresh_pressed.png in Resources */,
 				29FC40371ABB0BAA005D97DC /* Main.storyboard in Resources */,
 				29B4D18C1ABEBE7200899F29 /* AboutAuthor.txt in Resources */,
+				299F2E4A1AF0D835001606AE /* douban_meizhi_share.png in Resources */,
 				29BD5F2F1AE2205000AB3E23 /* ic_star_gray@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
