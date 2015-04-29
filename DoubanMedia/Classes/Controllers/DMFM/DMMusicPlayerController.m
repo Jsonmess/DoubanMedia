@@ -47,8 +47,6 @@
                                              selector:@selector(changeVolume:)
                                                  name:@"AVSystemController_SystemVolumeDidChangeNotification"
                                                object:nil];
-    //注册远程控制
-    [[UIApplication sharedApplication]beginReceivingRemoteControlEvents];
     [self becomeFirstResponder];
 }
 -(void)viewDidDisappear:(BOOL)animated
@@ -57,8 +55,6 @@
     [[NSNotificationCenter defaultCenter ] removeObserver:self
                                                      name:@"AVSystemController_SystemVolumeDidChangeNotification"
                                                    object:nil];
-    //注销远程控制
-    [[UIApplication sharedApplication]endReceivingRemoteControlEvents];
 
     [self resignFirstResponder];
 

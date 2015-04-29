@@ -12,6 +12,7 @@
 #import "Com_navigationController.h"
 #import "DMFMChannelController.h"
 #import "DMFilmListController.h"
+#import "DMMeiZiController.h"
 #import "TabViewManager.h"
 #define KitemCount 4  //Tabbar 选项卡数目
 @interface RootViewController  ()<TabbarDataSource,TabbarDelegate>
@@ -46,10 +47,9 @@
                                                    initWithRootViewController:doubanFilmController];
     [subViewControllers addObject:navFilmController];
     //豆瓣妹纸
-     UIViewController *doubanGirlController = [[UIViewController alloc]init];
+     DMMeiZiController *doubanGirlController = [[DMMeiZiController alloc]init];
     Com_navigationController *navGirlController = [[Com_navigationController alloc]
                                                     initWithRootViewController:doubanGirlController];
-    [doubanGirlController.view setBackgroundColor:[UIColor greenColor]];
     [subViewControllers addObject:navGirlController];
 	//应用设置
      UIViewController *doubanSettingController = [[UIViewController alloc]init];

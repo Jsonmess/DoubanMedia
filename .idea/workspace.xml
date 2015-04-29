@@ -2,157 +2,314 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2bb2a61-7e59-426b-aa34-7d54bf3010c4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/MagicalRecordStack/AutoMigratingMagicalRecordStack.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/MagicalRecordStack/AutoMigratingMagicalRecordStack.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/MagicalRecordStack/AutoMigratingWithSourceAndTargetModelMagicalRecordStack.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/MagicalRecordStack/AutoMigratingWithSourceAndTargetModelMagicalRecordStack.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/MagicalRecordStack/ClassicSQLiteMagicalRecordStack.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/MagicalRecordStack/ClassicSQLiteMagicalRecordStack.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/MagicalRecordStack/ClassicWithBackgroundCoordinatorSQLiteMagicalRecordStack.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/MagicalRecordStack/ClassicWithBackgroundCoordinatorSQLiteMagicalRecordStack.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Vendors/MagicalRecord/CoreData+MagicalRecord.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/MagicalRecordStack/InMemoryMagicalRecordStack.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/MagicalRecordStack/InMemoryMagicalRecordStack.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/Categories/CoreData/Import/MagicalImportFunctions.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Vendors/MagicalRecord/Categories/DataImport/MagicalImportFunctions.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/Categories/CoreData/Import/MagicalImportFunctions.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Vendors/MagicalRecord/Categories/DataImport/MagicalImportFunctions.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/MagicalMigrationManager.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/MagicalMigrationManager.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/MagicalRecord/MagicalRecord+Actions.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Vendors/MagicalRecord/Core/MagicalRecord+Actions.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/MagicalRecord/MagicalRecord+Actions.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Vendors/MagicalRecord/Core/MagicalRecord+Actions.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Vendors/MagicalRecord/Core/MagicalRecord+ErrorHandling.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Vendors/MagicalRecord/Core/MagicalRecord+ErrorHandling.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/MagicalRecord/MagicalRecord+Options.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Vendors/MagicalRecord/Core/MagicalRecord+Options.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/MagicalRecord/MagicalRecord+Options.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Vendors/MagicalRecord/Core/MagicalRecord+Options.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/MagicalRecord/MagicalRecord+Setup.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Vendors/MagicalRecord/Core/MagicalRecord+Setup.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/MagicalRecord/MagicalRecord+Setup.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Vendors/MagicalRecord/Core/MagicalRecord+Setup.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Vendors/MagicalRecord/Core/MagicalRecord+ShorthandSupport.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Vendors/MagicalRecord/Core/MagicalRecord+ShorthandSupport.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/MagicalRecord/MagicalRecord+VersionInformation.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/MagicalRecord/MagicalRecord+VersionInformation.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Vendors/MagicalRecord/Core/MagicalRecord+iCloud.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Vendors/MagicalRecord/Core/MagicalRecord+iCloud.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/MagicalRecord.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Vendors/MagicalRecord/Core/MagicalRecord.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Vendors/MagicalRecord/Core/MagicalRecord.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/MagicalRecord/MagicalRecordDeprecated.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Vendors/MagicalRecord/Core/MagicalRecordDeprecated.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/MagicalRecord/MagicalRecordInternal.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/MagicalRecord/MagicalRecordInternal.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/MagicalRecord/MagicalRecordLogging.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Vendors/MagicalRecord/Core/MagicalRecordLogging.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/MagicalRecord/MagicalRecordMOGeneratorProtocol.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/MagicalRecord/MagicalRecordShorthand.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Vendors/MagicalRecord/Core/MagicalRecordShorthand.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/MagicalRecord/MagicalRecordShorthand.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/MagicalRecordStack/MagicalRecordStack+Actions.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/MagicalRecordStack/MagicalRecordStack+Actions.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/MagicalRecordStack/MagicalRecordStack+Private.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/MagicalRecordStack/MagicalRecordStack.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/MagicalRecordStack/MagicalRecordStack.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/MagicalRecordStack/ManuallyMigratingMagicalRecordStack.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/MagicalRecordStack/ManuallyMigratingMagicalRecordStack.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/Categories/Foundation/NSArray+MagicalRecord.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/Categories/Foundation/NSArray+MagicalRecord.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/Categories/CoreData/Import/NSAttributeDescription+MagicalDataImport.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Vendors/MagicalRecord/Categories/DataImport/NSAttributeDescription+MagicalDataImport.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/Categories/CoreData/Import/NSAttributeDescription+MagicalDataImport.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Vendors/MagicalRecord/Categories/DataImport/NSAttributeDescription+MagicalDataImport.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/Categories/Foundation/NSDictionary+MagicalRecordAdditions.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/Categories/Foundation/NSDictionary+MagicalRecordAdditions.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/Categories/CoreData/Import/NSEntityDescription+MagicalDataImport.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Vendors/MagicalRecord/Categories/DataImport/NSEntityDescription+MagicalDataImport.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/Categories/CoreData/Import/NSEntityDescription+MagicalDataImport.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Vendors/MagicalRecord/Categories/DataImport/NSEntityDescription+MagicalDataImport.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/Categories/Foundation/NSError+MagicalRecordErrorHandling.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/Categories/Foundation/NSError+MagicalRecordErrorHandling.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/Categories/CoreData/NSFetchedResultsController+MagicalFetching.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/Categories/CoreData/NSFetchedResultsController+MagicalFetching.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/Categories/CoreData/NSManagedObject/NSManagedObject+MagicalAggregation.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Vendors/MagicalRecord/Categories/NSManagedObject/NSManagedObject+MagicalAggregation.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/Categories/CoreData/NSManagedObject/NSManagedObject+MagicalAggregation.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Vendors/MagicalRecord/Categories/NSManagedObject/NSManagedObject+MagicalAggregation.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/Categories/CoreData/NSManagedObject/NSManagedObject+MagicalDataImport.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Vendors/MagicalRecord/Categories/NSManagedObject/NSManagedObject+MagicalDataImport.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/Categories/CoreData/NSManagedObject/NSManagedObject+MagicalDataImport.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Vendors/MagicalRecord/Categories/NSManagedObject/NSManagedObject+MagicalDataImport.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/Categories/CoreData/NSManagedObject/NSManagedObject+MagicalFetching.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/Categories/CoreData/NSManagedObject/NSManagedObject+MagicalFetching.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/Categories/CoreData/NSManagedObject/NSManagedObject+MagicalFinders.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Vendors/MagicalRecord/Categories/NSManagedObject/NSManagedObject+MagicalFinders.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/Categories/CoreData/NSManagedObject/NSManagedObject+MagicalFinders.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Vendors/MagicalRecord/Categories/NSManagedObject/NSManagedObject+MagicalFinders.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/Categories/CoreData/NSManagedObject/NSManagedObject+MagicalRecord.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Vendors/MagicalRecord/Categories/NSManagedObject/NSManagedObject+MagicalRecord.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/Categories/CoreData/NSManagedObject/NSManagedObject+MagicalRecord.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Vendors/MagicalRecord/Categories/NSManagedObject/NSManagedObject+MagicalRecord.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/Categories/CoreData/NSManagedObject/NSManagedObject+MagicalRequests.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Vendors/MagicalRecord/Categories/NSManagedObject/NSManagedObject+MagicalRequests.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/Categories/CoreData/NSManagedObject/NSManagedObject+MagicalRequests.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Vendors/MagicalRecord/Categories/NSManagedObject/NSManagedObject+MagicalRequests.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/Categories/CoreData/NSManagedObjectContext/NSManagedObjectContext+MagicalObserving.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Vendors/MagicalRecord/Categories/NSManagedObjectContext/NSManagedObjectContext+MagicalObserving.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/Categories/CoreData/NSManagedObjectContext/NSManagedObjectContext+MagicalObserving.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Vendors/MagicalRecord/Categories/NSManagedObjectContext/NSManagedObjectContext+MagicalObserving.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/Categories/CoreData/NSManagedObjectContext/NSManagedObjectContext+MagicalRecord.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Vendors/MagicalRecord/Categories/NSManagedObjectContext/NSManagedObjectContext+MagicalRecord.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/Categories/CoreData/NSManagedObjectContext/NSManagedObjectContext+MagicalRecord.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Vendors/MagicalRecord/Categories/NSManagedObjectContext/NSManagedObjectContext+MagicalRecord.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/Categories/CoreData/NSManagedObjectContext/NSManagedObjectContext+MagicalSaves.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Vendors/MagicalRecord/Categories/NSManagedObjectContext/NSManagedObjectContext+MagicalSaves.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/Categories/CoreData/NSManagedObjectContext/NSManagedObjectContext+MagicalSaves.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Vendors/MagicalRecord/Categories/NSManagedObjectContext/NSManagedObjectContext+MagicalSaves.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Vendors/MagicalRecord/Categories/NSManagedObjectContext/NSManagedObjectContext+MagicalThreading.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Vendors/MagicalRecord/Categories/NSManagedObjectContext/NSManagedObjectContext+MagicalThreading.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/Categories/CoreData/NSManagedObjectModel+MagicalRecord.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Vendors/MagicalRecord/Categories/NSManagedObjectModel+MagicalRecord.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/Categories/CoreData/NSManagedObjectModel+MagicalRecord.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Vendors/MagicalRecord/Categories/NSManagedObjectModel+MagicalRecord.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/Categories/CoreData/Import/NSNumber+MagicalDataImport.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Vendors/MagicalRecord/Categories/DataImport/NSNumber+MagicalDataImport.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/Categories/CoreData/Import/NSNumber+MagicalDataImport.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Vendors/MagicalRecord/Categories/DataImport/NSNumber+MagicalDataImport.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/Categories/CoreData/Import/NSObject+MagicalDataImport.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Vendors/MagicalRecord/Categories/DataImport/NSObject+MagicalDataImport.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/Categories/CoreData/Import/NSObject+MagicalDataImport.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Vendors/MagicalRecord/Categories/DataImport/NSObject+MagicalDataImport.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/Categories/CoreData/NSPersistentStore+MagicalRecord.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Vendors/MagicalRecord/Categories/NSPersistentStore+MagicalRecord.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/Categories/CoreData/NSPersistentStore+MagicalRecord.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Vendors/MagicalRecord/Categories/NSPersistentStore+MagicalRecord.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/Categories/CoreData/NSPersistentStore+MagicalRecordPrivate.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/Categories/CoreData/NSPersistentStoreCoordinator/NSPersistentStoreCoordinator+MagicalAutoMigrations.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/Categories/CoreData/NSPersistentStoreCoordinator/NSPersistentStoreCoordinator+MagicalAutoMigrations.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/Categories/CoreData/NSPersistentStoreCoordinator/NSPersistentStoreCoordinator+MagicalInMemoryStoreAdditions.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/Categories/CoreData/NSPersistentStoreCoordinator/NSPersistentStoreCoordinator+MagicalInMemoryStoreAdditions.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/Categories/CoreData/NSPersistentStoreCoordinator/NSPersistentStoreCoordinator+MagicalManualMigrations.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/Categories/CoreData/NSPersistentStoreCoordinator/NSPersistentStoreCoordinator+MagicalManualMigrations.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/Categories/CoreData/NSPersistentStoreCoordinator/NSPersistentStoreCoordinator+MagicalRecord.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Vendors/MagicalRecord/Categories/NSPersistentStoreCoordinator+MagicalRecord.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/Categories/CoreData/NSPersistentStoreCoordinator/NSPersistentStoreCoordinator+MagicalRecord.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Vendors/MagicalRecord/Categories/NSPersistentStoreCoordinator+MagicalRecord.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/Categories/CoreData/Import/NSRelationshipDescription+MagicalDataImport.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Vendors/MagicalRecord/Categories/DataImport/NSRelationshipDescription+MagicalDataImport.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/Categories/CoreData/Import/NSRelationshipDescription+MagicalDataImport.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Vendors/MagicalRecord/Categories/DataImport/NSRelationshipDescription+MagicalDataImport.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/Categories/CoreData/Import/NSString+MagicalDataImport.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Vendors/MagicalRecord/Categories/DataImport/NSString+MagicalDataImport.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/Categories/CoreData/Import/NSString+MagicalDataImport.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Vendors/MagicalRecord/Categories/DataImport/NSString+MagicalDataImport.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/MagicalRecordStack/SQLiteMagicalRecordStack.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/MagicalRecordStack/SQLiteMagicalRecordStack.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/MagicalRecordStack/SQLiteWithSavingContextMagicalRecordStack.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/Library/MagicalRecordStack/SQLiteWithSavingContextMagicalRecordStack.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Common/AppDelegate/AppDelegate.m" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Common/AppDelegate/AppDelegate.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Controllers/DMFM/DMFMChannelController.m" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Controllers/DMFM/DMFMChannelController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/MagicalRecord/MagicalRecord/Categories/NSPersistentStoreCoordinator+MagicalRecord.m" afterPath="$PROJECT_DIR$/Pods/MagicalRecord/MagicalRecord/Categories/NSPersistentStoreCoordinator+MagicalRecord.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Models/ObjectModels/DMMeiZi.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Models/ObjectModels/DMMeiZi.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Models/Managers/DMMeiZi/DMMeiZiConstant.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Models/Managers/DMMeiZi/DMMeiZiManager.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Models/Managers/DMMeiZi/DMMeiZiManager.m" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFNetworking/AFHTTPRequestOperation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFNetworking/AFHTTPRequestOperationManager.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFNetworking/AFHTTPSessionManager.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFNetworking/AFNetworkActivityIndicatorManager.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFNetworking/AFNetworkReachabilityManager.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFNetworking/AFNetworking.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFNetworking/AFSecurityPolicy.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFNetworking/AFURLConnectionOperation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFNetworking/AFURLRequestSerialization.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFNetworking/AFURLResponseSerialization.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFNetworking/AFURLSessionManager.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFNetworking/UIActivityIndicatorView+AFNetworking.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFNetworking/UIAlertView+AFNetworking.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFNetworking/UIButton+AFNetworking.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFNetworking/UIImageView+AFNetworking.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFNetworking/UIKit+AFNetworking.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFNetworking/UIProgressView+AFNetworking.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFNetworking/UIRefreshControl+AFNetworking.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFNetworking/UIWebView+AFNetworking.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/DOUAudioStreamer/DOUAudioAnalyzer+Default.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/DOUAudioStreamer/DOUAudioAnalyzer.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/DOUAudioStreamer/DOUAudioAnalyzer_Private.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/DOUAudioStreamer/DOUAudioBase.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/DOUAudioStreamer/DOUAudioDecoder.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/DOUAudioStreamer/DOUAudioEventLoop.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/DOUAudioStreamer/DOUAudioFile.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/DOUAudioStreamer/DOUAudioFilePreprocessor.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/DOUAudioStreamer/DOUAudioFileProvider.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/DOUAudioStreamer/DOUAudioFrequencyAnalyzer.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/DOUAudioStreamer/DOUAudioLPCM.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/DOUAudioStreamer/DOUAudioPlaybackItem.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/DOUAudioStreamer/DOUAudioRenderer.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/DOUAudioStreamer/DOUAudioSpatialAnalyzer.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/DOUAudioStreamer/DOUAudioStreamer+Options.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/DOUAudioStreamer/DOUAudioStreamer.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/DOUAudioStreamer/DOUAudioStreamer_Private.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/DOUAudioStreamer/DOUAudioVisualizer.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/DOUAudioStreamer/DOUEAGLView.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/DOUAudioStreamer/DOUMPMediaLibraryAssetLoader.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/DOUAudioStreamer/DOUSimpleHTTPRequest.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/DOUAudioStreamer/NSData+DOUMappedFile.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MBProgressHUD/MBProgressHUD.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MJRefresh/MJRefresh.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MJRefresh/MJRefreshComponent.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MJRefresh/MJRefreshConst.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MJRefresh/MJRefreshFooter.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MJRefresh/MJRefreshGifFooter.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MJRefresh/MJRefreshGifHeader.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MJRefresh/MJRefreshHeader.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MJRefresh/MJRefreshLegendFooter.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MJRefresh/MJRefreshLegendHeader.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MJRefresh/UIScrollView+MJExtension.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MJRefresh/UIScrollView+MJRefresh.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MJRefresh/UIView+MJExtension.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MagicalRecord/CoreData+MagicalRecord.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MagicalRecord/MagicalImportFunctions.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MagicalRecord/MagicalRecord+Actions.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MagicalRecord/MagicalRecord+ErrorHandling.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MagicalRecord/MagicalRecord+Options.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MagicalRecord/MagicalRecord+Setup.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MagicalRecord/MagicalRecord+ShorthandSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MagicalRecord/MagicalRecord+iCloud.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MagicalRecord/MagicalRecord.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MagicalRecord/MagicalRecordShorthand.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MagicalRecord/NSAttributeDescription+MagicalDataImport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MagicalRecord/NSEntityDescription+MagicalDataImport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MagicalRecord/NSManagedObject+MagicalAggregation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MagicalRecord/NSManagedObject+MagicalDataImport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MagicalRecord/NSManagedObject+MagicalFinders.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MagicalRecord/NSManagedObject+MagicalRecord.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MagicalRecord/NSManagedObject+MagicalRequests.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MagicalRecord/NSManagedObjectContext+MagicalObserving.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MagicalRecord/NSManagedObjectContext+MagicalRecord.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MagicalRecord/NSManagedObjectContext+MagicalSaves.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MagicalRecord/NSManagedObjectContext+MagicalThreading.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MagicalRecord/NSManagedObjectModel+MagicalRecord.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MagicalRecord/NSNumber+MagicalDataImport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MagicalRecord/NSObject+MagicalDataImport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MagicalRecord/NSPersistentStore+MagicalRecord.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MagicalRecord/NSPersistentStoreCoordinator+MagicalRecord.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MagicalRecord/NSRelationshipDescription+MagicalDataImport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MagicalRecord/NSString+MagicalDataImport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/NJKWebViewProgress/NJKWebViewProgress.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/PureLayout/ALView+PureLayout.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/PureLayout/NSArray+PureLayout.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/PureLayout/NSLayoutConstraint+PureLayout.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/PureLayout/PureLayout+Internal.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/PureLayout/PureLayout.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/PureLayout/PureLayoutDefines.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/Reachability/Reachability.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/NSArray+RACSequenceAdditions.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/NSData+RACSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/NSDictionary+RACSequenceAdditions.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/NSEnumerator+RACSequenceAdditions.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/NSFileHandle+RACSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/NSIndexSet+RACSequenceAdditions.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/NSInvocation+RACTypeParsing.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/NSNotificationCenter+RACSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/NSObject+RACDeallocating.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/NSObject+RACDescription.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/NSObject+RACKVOWrapper.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/NSObject+RACLifting.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/NSObject+RACPropertySubscribing.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/NSObject+RACSelectorSignal.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/NSOrderedSet+RACSequenceAdditions.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/NSSet+RACSequenceAdditions.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/NSString+RACKeyPathUtilities.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/NSString+RACSequenceAdditions.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/NSString+RACSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/NSURLConnection+RACSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/NSUserDefaults+RACSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/RACArraySequence.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/RACBacktrace.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/RACBehaviorSubject.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/RACBlockTrampoline.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/RACChannel.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/RACCommand.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/RACCompoundDisposable.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/RACDelegateProxy.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/RACDisposable.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/RACDynamicSequence.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/RACDynamicSignal.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/RACEXTKeyPathCoding.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/RACEXTRuntimeExtensions.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/RACEXTScope.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/RACEagerSequence.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/RACEmptySequence.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/RACEmptySignal.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/RACErrorSignal.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/RACEvent.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/RACGroupedSignal.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/RACImmediateScheduler.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/RACIndexSetSequence.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/RACKVOChannel.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/RACKVOProxy.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/RACKVOTrampoline.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/RACMulticastConnection+Private.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/RACMulticastConnection.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/RACObjCRuntime.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/RACPassthroughSubscriber.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/RACQueueScheduler+Subclass.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/RACQueueScheduler.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/RACReplaySubject.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/RACReturnSignal.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/RACScheduler+Private.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/RACScheduler+Subclass.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/RACScheduler.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/RACScopedDisposable.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/RACSequence.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/RACSerialDisposable.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/RACSignal+Operations.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/RACSignal.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/RACSignalSequence.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/RACStream+Private.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/RACStream.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/RACStringSequence.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/RACSubject.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/RACSubscriber+Private.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/RACSubscriber.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/RACSubscriptingAssignmentTrampoline.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/RACSubscriptionScheduler.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/RACTargetQueueScheduler.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/RACTestScheduler.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/RACTuple.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/RACTupleSequence.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/RACUnarySequence.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/RACUnit.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/RACValueTransformer.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/RACmetamacros.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/UIActionSheet+RACSignalSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/UIAlertView+RACSignalSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/UIBarButtonItem+RACCommandSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/UIButton+RACCommandSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/UICollectionReusableView+RACSignalSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/UIControl+RACSignalSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/UIControl+RACSignalSupportPrivate.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/UIDatePicker+RACSignalSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/UIGestureRecognizer+RACSignalSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/UIImagePickerController+RACSignalSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/UIRefreshControl+RACCommandSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/UISegmentedControl+RACSignalSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/UISlider+RACSignalSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/UIStepper+RACSignalSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/UISwitch+RACSignalSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/UITableViewCell+RACSignalSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/UITableViewHeaderFooterView+RACSignalSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/UITextField+RACSignalSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/UITextView+RACSignalSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/SDWebImage/NSData+ImageContentType.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/SDWebImage/SDImageCache.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/SDWebImage/SDWebImageCompat.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/SDWebImage/SDWebImageDecoder.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/SDWebImage/SDWebImageDownloader.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/SDWebImage/SDWebImageDownloaderOperation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/SDWebImage/SDWebImageManager.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/SDWebImage/SDWebImageOperation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/SDWebImage/SDWebImagePrefetcher.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/SDWebImage/UIButton+WebCache.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/SDWebImage/UIImage+GIF.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/SDWebImage/UIImage+MultiFormat.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/SDWebImage/UIImageView+HighlightedWebCache.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/SDWebImage/UIImageView+WebCache.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/SDWebImage/UIView+WebCacheOperation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/SVWebViewController/SVModalWebViewController.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/SVWebViewController/SVWebViewController.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/SVWebViewController/SVWebViewControllerActivity.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/SVWebViewController/SVWebViewControllerActivityChrome.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/SVWebViewController/SVWebViewControllerActivitySafari.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/TMCache/TMCache.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/TMCache/TMDiskCache.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/TMCache/TMMemoryCache.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ZBarSDK/ZBarCVImage.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ZBarSDK/ZBarCameraSimulator.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ZBarSDK/ZBarCaptureReader.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ZBarSDK/ZBarHelpController.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ZBarSDK/ZBarImage.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ZBarSDK/ZBarImageScanner.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ZBarSDK/ZBarReaderController.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ZBarSDK/ZBarReaderView.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ZBarSDK/ZBarReaderViewController.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ZBarSDK/ZBarSDK.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ZBarSDK/ZBarSymbol.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ZBarSDK/bch15_5.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ZBarSDK/binarize.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ZBarSDK/codabar.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ZBarSDK/code128.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ZBarSDK/code39.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ZBarSDK/code93.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ZBarSDK/config.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ZBarSDK/databar.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ZBarSDK/debug.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ZBarSDK/decoder.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ZBarSDK/ean.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ZBarSDK/error.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ZBarSDK/event.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ZBarSDK/i25.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ZBarSDK/image.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ZBarSDK/img_scanner.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ZBarSDK/isaac.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ZBarSDK/mutex.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ZBarSDK/pdf417.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ZBarSDK/pdf417_hash.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ZBarSDK/posix.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ZBarSDK/processor.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ZBarSDK/qr_finder.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ZBarSDK/qrcode.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ZBarSDK/qrdec.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ZBarSDK/refcnt.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ZBarSDK/rs.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ZBarSDK/svg.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ZBarSDK/symbol.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ZBarSDK/thread.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ZBarSDK/timer.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ZBarSDK/util.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ZBarSDK/video.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ZBarSDK/win.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ZBarSDK/window.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ZBarSDK/x.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ZBarSDK/zbar.h" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/MJRefresh/README.md" afterPath="$PROJECT_DIR$/Pods/MJRefresh/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.m" afterPath="$PROJECT_DIR$/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.h" afterPath="$PROJECT_DIR$/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.m" afterPath="$PROJECT_DIR$/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/AFNetworking/AFNetworking/AFURLSessionManager.m" afterPath="$PROJECT_DIR$/Pods/AFNetworking/AFNetworking/AFURLSessionManager.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/PureLayout/PureLayout/PureLayout/ALView+PureLayout.m" afterPath="$PROJECT_DIR$/Pods/PureLayout/PureLayout/PureLayout/ALView+PureLayout.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Common/DMGlobal.h" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Common/DMGlobal.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/DoubanMedia.iml" afterPath="$PROJECT_DIR$/.idea/DoubanMedia.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/PureLayout/LICENSE" afterPath="$PROJECT_DIR$/Pods/PureLayout/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/MJRefresh/MJRefreshExample/MJRefreshExample/MJRefresh/MJRefreshHeader.m" afterPath="$PROJECT_DIR$/Pods/MJRefresh/MJRefreshExample/MJRefreshExample/MJRefresh/MJRefreshHeader.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Manifest.lock" afterPath="$PROJECT_DIR$/Pods/Manifest.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Podfile.lock" afterPath="$PROJECT_DIR$/Podfile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Podfile" afterPath="$PROJECT_DIR$/Podfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-AFNetworking/Pods-AFNetworking-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-AFNetworking/Pods-AFNetworking-Private.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/jsonmess.xcuserdatad/xcschemes/Pods-AFNetworking.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/jsonmess.xcuserdatad/xcschemes/Pods-AFNetworking.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-DOUAudioStreamer/Pods-DOUAudioStreamer-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-DOUAudioStreamer/Pods-DOUAudioStreamer-Private.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-MBProgressHUD/Pods-MBProgressHUD-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-MBProgressHUD/Pods-MBProgressHUD-Private.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-MJRefresh/Pods-MJRefresh-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-MJRefresh/Pods-MJRefresh-Private.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/jsonmess.xcuserdatad/xcschemes/Pods-MJRefresh.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/jsonmess.xcuserdatad/xcschemes/Pods-MJRefresh.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-MagicalRecord/Pods-MagicalRecord-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-MagicalRecord/Pods-MagicalRecord-Private.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/jsonmess.xcuserdatad/xcschemes/Pods-MagicalRecord.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/jsonmess.xcuserdatad/xcschemes/Pods-MagicalRecord.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-NJKWebViewProgress/Pods-NJKWebViewProgress-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-NJKWebViewProgress/Pods-NJKWebViewProgress-Private.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-PureLayout/Pods-PureLayout-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-PureLayout/Pods-PureLayout-Private.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Reachability/Pods-Reachability-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Reachability/Pods-Reachability-Private.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-ReactiveCocoa/Pods-ReactiveCocoa-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-ReactiveCocoa/Pods-ReactiveCocoa-Private.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-SDWebImage/Pods-SDWebImage-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-SDWebImage/Pods-SDWebImage-Private.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/jsonmess.xcuserdatad/xcschemes/Pods-SDWebImage.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/jsonmess.xcuserdatad/xcschemes/Pods-SDWebImage.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-SVWebViewController/Pods-SVWebViewController-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-SVWebViewController/Pods-SVWebViewController-Private.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-TMCache/Pods-TMCache-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-TMCache/Pods-TMCache-Private.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-ZBarSDK/Pods-ZBarSDK-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-ZBarSDK/Pods-ZBarSDK-Private.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods/Pods-acknowledgements.markdown" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods/Pods-acknowledgements.markdown" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods/Pods-acknowledgements.plist" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods/Pods-acknowledgements.plist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods/Pods-environment.h" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods/Pods-environment.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods/Pods-resources.sh" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods/Pods-resources.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods/Pods.debug.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods/Pods.debug.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods/Pods.release.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods/Pods.release.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/jsonmess.xcuserdatad/xcschemes/Pods.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/jsonmess.xcuserdatad/xcschemes/Pods.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/PureLayout/PureLayout/PureLayout/PureLayoutDefines.h" afterPath="$PROJECT_DIR$/Pods/PureLayout/PureLayout/PureLayout/PureLayoutDefines.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/PureLayout/README.md" afterPath="$PROJECT_DIR$/Pods/PureLayout/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIAlertView+AFNetworking.m" afterPath="$PROJECT_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIAlertView+AFNetworking.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIImageView+AFNetworking.h" afterPath="$PROJECT_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIImageView+AFNetworking.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DoubanMedia.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/DoubanMedia.xcodeproj/project.pbxproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/project.pbxproj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/jsonmess.xcuserdatad/xcschemes/xcschememanagement.plist" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/jsonmess.xcuserdatad/xcschemes/xcschememanagement.plist" />
     </list>
@@ -172,7 +329,7 @@
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_b1644c80fbc04405437fad41906cc2f68d198202" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_5d970c4349e308eea45e9d7041722fa732a30b4a" />
   <component name="FavoritesManager">
     <favorites_list name="DoubanMedia" />
   </component>
@@ -193,18 +350,18 @@
       <file leaf-file-name="DMGlobal.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DoubanMedia/Classes/Common/DMGlobal.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="169" max-vertical-offset="325">
-              <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="182" max-vertical-offset="559">
+              <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Podfile" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Podfile" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Podfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="182" max-vertical-offset="273">
-              <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.6175" vertical-offset="0" max-vertical-offset="400">
+              <caret line="19" column="9" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -220,7 +377,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NSManagedObject+MagicalRecord.m" pinned="false" current-in-tab="true">
+      <file leaf-file-name="NSManagedObject+MagicalRecord.m" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DoubanMedia/Classes/Vendors/MagicalRecord/Categories/NSManagedObject/NSManagedObject+MagicalRecord.m">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="273" max-vertical-offset="4290">
@@ -233,36 +390,9 @@
       <file leaf-file-name="DMMusicPlayerController.m" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DoubanMedia/Classes/Controllers/DMFM/DMMusicPlayerController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3380" max-vertical-offset="4134">
+            <state vertical-scroll-proportion="0.0" vertical-offset="3380" max-vertical-offset="4082">
               <caret line="260" column="5" selection-start-line="260" selection-start-column="5" selection-end-line="260" selection-end-column="5" />
-              <folding>
-                <marker date="1429018179000" expanded="false" signature="155:445" placeholder="..." />
-                <marker date="1429018179000" expanded="true" signature="523:797" placeholder="..." />
-                <marker date="1429018179000" expanded="true" signature="524:748" placeholder="{...}" />
-                <marker date="1429018179000" expanded="true" signature="842:9934" placeholder="..." />
-                <marker date="1429018179000" expanded="true" signature="864:1016" placeholder="{...}" />
-                <marker date="1429018179000" expanded="true" signature="1054:1093" placeholder="{...}" />
-                <marker date="1429018179000" expanded="true" signature="1658:2061" placeholder="{...}" />
-                <marker date="1429018179000" expanded="true" signature="2085:3193" placeholder="{...}" />
-                <marker date="1429018179000" expanded="true" signature="3212:3389" placeholder="{...}" />
-                <marker date="1429018179000" expanded="true" signature="3423:3562" placeholder="{...}" />
-                <marker date="1429018179000" expanded="true" signature="3606:3744" placeholder="{...}" />
-                <marker date="1429018179000" expanded="true" signature="3778:4007" placeholder="{...}" />
-                <marker date="1429018179000" expanded="true" signature="4040:4059" placeholder="{...}" />
-                <marker date="1429018179000" expanded="true" signature="4092:4187" placeholder="{...}" />
-                <marker date="1429018179000" expanded="true" signature="4250:4728" placeholder="{...}" />
-                <marker date="1429018179000" expanded="true" signature="4762:4797" placeholder="{...}" />
-                <marker date="1429018179000" expanded="true" signature="4824:4859" placeholder="{...}" />
-                <marker date="1429018179000" expanded="true" signature="4896:4940" placeholder="{...}" />
-                <marker date="1429018179000" expanded="true" signature="4989:5215" placeholder="{...}" />
-                <marker date="1429018179000" expanded="true" signature="5302:6272" placeholder="{...}" />
-                <marker date="1429018179000" expanded="true" signature="5494:5771" placeholder="^(UIImage *image){...}" />
-                <marker date="1429018179000" expanded="true" signature="6341:6815" placeholder="{...}" />
-                <marker date="1429018179000" expanded="true" signature="6878:7517" placeholder="{...}" />
-                <marker date="1429018179000" expanded="true" signature="7613:8083" placeholder="{...}" />
-                <marker date="1429018179000" expanded="true" signature="8160:8756" placeholder="{...}" />
-                <marker date="1429018179000" expanded="true" signature="9932:9933" placeholder="{...}" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -270,7 +400,7 @@
       <file leaf-file-name="DMMusicPlayManager.m" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DoubanMedia/Classes/Models/Managers/SongPlay/DMMusicPlayManager.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1924" max-vertical-offset="2262">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1924" max-vertical-offset="2756">
               <caret line="148" column="1" selection-start-line="148" selection-start-column="1" selection-end-line="148" selection-end-column="1" />
               <folding />
             </state>
@@ -322,9 +452,9 @@
         <option value="$PROJECT_DIR$/DoubanMedia/Classes/Models/Managers/SongPlay/DMMusicPlayManager.m" />
         <option value="$PROJECT_DIR$/DoubanMedia/Classes/Controllers/DMFM/DMMusicPlayerController.h" />
         <option value="$PROJECT_DIR$/DoubanMedia/Classes/Controllers/DMFM/DMMusicPlayerController.m" />
-        <option value="$PROJECT_DIR$/Podfile" />
         <option value="$PROJECT_DIR$/DoubanMedia/DoubanMedia.pch" />
         <option value="$PROJECT_DIR$/DoubanMedia/Classes/Vendors/MagicalRecord/Categories/NSManagedObject/NSManagedObject+MagicalRecord.m" />
+        <option value="$PROJECT_DIR$/Podfile" />
       </list>
     </option>
   </component>
@@ -332,9 +462,9 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="133" />
+    <option name="x" value="-3" />
     <option name="y" value="23" />
-    <option name="width" value="1005" />
+    <option name="width" value="1280" />
     <option name="height" value="729" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -389,20 +519,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Products" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DoubanMedia" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Frameworks" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -611,7 +727,35 @@
       </EXTENSION>
       <method />
     </configuration>
-    <list size="15">
+    <configuration default="false" name="Pods-MJExtension" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="Pods-MJExtension" CONFIG_NAME="Debug" SCHEME_NAME="Pods-MJExtension" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <configuration default="false" name="Pods-NHBalancedFlowLayout" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="Pods-NHBalancedFlowLayout" CONFIG_NAME="Debug" SCHEME_NAME="Pods-NHBalancedFlowLayout" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <configuration default="false" name="Pods-NYTPhotoViewer" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="Pods-NYTPhotoViewer" CONFIG_NAME="Debug" SCHEME_NAME="Pods-NYTPhotoViewer" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <configuration default="false" name="Pods-UIActivityIndicator-for-SDWebImage" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="Pods-UIActivityIndicator-for-SDWebImage" CONFIG_NAME="Debug" SCHEME_NAME="Pods-UIActivityIndicator-for-SDWebImage" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <list size="19">
       <item index="0" class="java.lang.String" itemvalue="Application.DoubanMedia" />
       <item index="1" class="java.lang.String" itemvalue="Application.Pods-MJRefresh" />
       <item index="2" class="java.lang.String" itemvalue="Application.Pods-SDWebImage" />
@@ -627,6 +771,10 @@
       <item index="12" class="java.lang.String" itemvalue="Application.Pods-TMCache" />
       <item index="13" class="java.lang.String" itemvalue="Application.Pods-MBProgressHUD" />
       <item index="14" class="java.lang.String" itemvalue="Application.Pods-MagicalRecord" />
+      <item index="15" class="java.lang.String" itemvalue="Application.Pods-MJExtension" />
+      <item index="16" class="java.lang.String" itemvalue="Application.Pods-NHBalancedFlowLayout" />
+      <item index="17" class="java.lang.String" itemvalue="Application.Pods-NYTPhotoViewer" />
+      <item index="18" class="java.lang.String" itemvalue="Application.Pods-UIActivityIndicator-for-SDWebImage" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -663,29 +811,29 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="133" y="23" width="1005" height="729" extended-state="0" />
+    <frame x="-3" y="23" width="1280" height="729" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3865415" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32707354" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32707354" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32810047" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286385" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24898374" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38414633" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38363782" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16797489" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1027,8 +1175,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DoubanMedia/Classes/Common/DMGlobal.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="169" max-vertical-offset="325">
-          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="182" max-vertical-offset="559">
+          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -1097,41 +1245,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="3380" max-vertical-offset="4134">
           <caret line="260" column="5" selection-start-line="260" selection-start-column="5" selection-end-line="260" selection-end-column="5" />
-          <folding>
-            <marker date="1429018179000" expanded="false" signature="155:445" placeholder="..." />
-            <marker date="1429018179000" expanded="true" signature="523:797" placeholder="..." />
-            <marker date="1429018179000" expanded="true" signature="524:748" placeholder="{...}" />
-            <marker date="1429018179000" expanded="true" signature="842:9934" placeholder="..." />
-            <marker date="1429018179000" expanded="true" signature="864:1016" placeholder="{...}" />
-            <marker date="1429018179000" expanded="true" signature="1054:1093" placeholder="{...}" />
-            <marker date="1429018179000" expanded="true" signature="1658:2061" placeholder="{...}" />
-            <marker date="1429018179000" expanded="true" signature="2085:3193" placeholder="{...}" />
-            <marker date="1429018179000" expanded="true" signature="3212:3389" placeholder="{...}" />
-            <marker date="1429018179000" expanded="true" signature="3423:3562" placeholder="{...}" />
-            <marker date="1429018179000" expanded="true" signature="3606:3744" placeholder="{...}" />
-            <marker date="1429018179000" expanded="true" signature="3778:4007" placeholder="{...}" />
-            <marker date="1429018179000" expanded="true" signature="4040:4059" placeholder="{...}" />
-            <marker date="1429018179000" expanded="true" signature="4092:4187" placeholder="{...}" />
-            <marker date="1429018179000" expanded="true" signature="4250:4728" placeholder="{...}" />
-            <marker date="1429018179000" expanded="true" signature="4762:4797" placeholder="{...}" />
-            <marker date="1429018179000" expanded="true" signature="4824:4859" placeholder="{...}" />
-            <marker date="1429018179000" expanded="true" signature="4896:4940" placeholder="{...}" />
-            <marker date="1429018179000" expanded="true" signature="4989:5215" placeholder="{...}" />
-            <marker date="1429018179000" expanded="true" signature="5302:6272" placeholder="{...}" />
-            <marker date="1429018179000" expanded="true" signature="5494:5771" placeholder="^(UIImage *image){...}" />
-            <marker date="1429018179000" expanded="true" signature="6341:6815" placeholder="{...}" />
-            <marker date="1429018179000" expanded="true" signature="6878:7517" placeholder="{...}" />
-            <marker date="1429018179000" expanded="true" signature="7613:8083" placeholder="{...}" />
-            <marker date="1429018179000" expanded="true" signature="8160:8756" placeholder="{...}" />
-            <marker date="1429018179000" expanded="true" signature="9932:9933" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Podfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="182" max-vertical-offset="273">
-          <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
           <folding />
         </state>
       </provider>
@@ -1148,6 +1261,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="273" max-vertical-offset="4290">
           <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Podfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6175" vertical-offset="0" max-vertical-offset="400">
+          <caret line="19" column="9" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
