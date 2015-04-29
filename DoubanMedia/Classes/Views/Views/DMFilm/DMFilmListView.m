@@ -13,9 +13,9 @@
 #import "DMFilmListManager.h"
 #define CellSpacingWidth
 @interface DMFilmListView()<UICollectionViewDataSource,
-                            UICollectionViewDelegate,
-						UICollectionViewDelegateFlowLayout,filmManagerDelegate,
-						NSFetchedResultsControllerDelegate>
+UICollectionViewDelegate,
+UICollectionViewDelegateFlowLayout,filmManagerDelegate,
+NSFetchedResultsControllerDelegate>
 {
     NSFetchedResultsController *fetchedController;
     BOOL isComing;//是否正在上映
@@ -27,7 +27,7 @@
 @implementation DMFilmListView
 -(instancetype)initWithFrame:(CGRect)frame
 {
-     self =[super initWithFrame:frame];
+    self =[super initWithFrame:frame];
     if (self)
     {
         [self setUpView];
@@ -98,9 +98,10 @@
     return [[[fetchedController sections] objectAtIndex:section] numberOfObjects];
 }
 -(DMFilmCell*)collectionView:(UICollectionView *)collectionView
-              							  cellForItemAtIndexPath:(NSIndexPath *)indexPath
+      cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    DMFilmCell *cell = [ collectionView dequeueReusableCellWithReuseIdentifier:@"filmCell" forIndexPath:indexPath];
+    DMFilmCell *cell = [ collectionView dequeueReusableCellWithReuseIdentifier:@"filmCell"
+                                                                  forIndexPath:indexPath];
     FilmInfo *filmInfo = [fetchedController objectAtIndexPath:indexPath];
     NSString * filmImageStr;
     switch ([DMDeviceManager getCurrentDeviceType])
@@ -118,15 +119,21 @@
     {
         thePubdate = filmInfo.filmPubdate;
     }
-    [cell setContentWithFilmInfo:[NSURL URLWithString:filmImageStr] filmName:filmInfo.filmTitle score:score willOnView:thePubdate];
+    [cell setContentWithFilmInfo:[NSURL URLWithString:filmImageStr]
+                        filmName:filmInfo.filmTitle
+                           score:score
+                      willOnView:thePubdate];
     return cell;
 
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
- FilmInfo *filmInfo = [fetchedController objectAtIndexPath:indexPath];
-    [self.delegate filmListView:self didSelectedfilmId:filmInfo.filmId];
+    DMFilmCell *theCell =(DMFilmCell*)[collectionView cellForItemAtIndexPath:indexPath];
+    FilmInfo *filmInfo = [fetchedController objectAtIndexPath:indexPath];
+    [self.delegate filmListView:self didSelectedfilmId:filmInfo.filmId
+                 withFilmPoster:theCell.filmImageView.image
+                      filmTitle:theCell.filmName.text];
 }
 
 #pragma mark ---- filmListManagerDelegate
@@ -138,11 +145,10 @@
         isOnShow = YES;
     }
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"isNowShow=%@",
-                              				[NSNumber numberWithBool:isOnShow]];
+                              [NSNumber numberWithBool:isOnShow]];
     fetchedController = [FilmInfo MR_fetchAllGroupedBy:nil withPredicate:predicate
                                               sortedBy:nil ascending:YES];
-
-   [self.filmCollectionView reloadData];
+    [self.filmCollectionView reloadData];
     [self.filmHud hide:YES afterDelay:0.2f];
 }
 

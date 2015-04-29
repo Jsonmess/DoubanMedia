@@ -82,14 +82,21 @@
             break;
     }
 }
+
 #pragma mark ---filmListDelegate
 -(void)filmListView:(DMFilmListView *)listView didSelectedfilmId:(NSString *)filmId
+     												withFilmPoster:(UIImage *)image
+          												filmTitle:(NSString *)filmName
 {
     //这里直接接入浏览器
     [theManager getTheFilmInfoWithFilmId:filmId];
     NSString *urlStr = [NSString stringWithFormat:@"%@/subject/%@/mobile",DoubanFilmBaseUrl,filmId];
     NSURL *url = [NSURL URLWithString:urlStr];
-    JSWebViewController *filmDetailController = [[JSWebViewController alloc] initWithRequset:[NSURLRequest requestWithURL:url]];
+    JSWebViewController *filmDetailController = [[JSWebViewController alloc]
+                                                 initWithRequset:[NSURLRequest requestWithURL:url]];
+    filmDetailController.shareEntity.urlString = urlStr;
+    filmDetailController.shareEntity.shareImageData = UIImageJPEGRepresentation(image, 1.0f);
+    filmDetailController.shareEntity.theTitle =[NSString stringWithFormat:@"推荐这部《%@》",filmName];
     [self presentViewController:filmDetailController animated:YES completion:nil];
 }
 @end

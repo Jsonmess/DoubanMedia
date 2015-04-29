@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "DMShareEntity.h"
 @interface JSWebViewController : UIViewController
-
+@property(nonatomic) DMShareEntity *shareEntity;//用于电影分享
 -(instancetype)initWithRequset:(NSURLRequest *)request;
 @end

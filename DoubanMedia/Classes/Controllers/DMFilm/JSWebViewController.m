@@ -9,7 +9,7 @@
 #import "JSWebViewController.h"
 #import "DMLoginManager.h"
 #import "MBProgressHUD+DMProgressHUD.h"
-#import "DMShareEntity.h"
+#import "ShareActionTool.h"
 @interface JSWebViewController ()<UIWebViewDelegate,DMLoginManagerDelegate,UIScrollViewDelegate>
 {
     UIWebView *theWebView;
@@ -26,8 +26,6 @@
     UIButton *pbackBtn;//后退
     UIButton *pforwardBtn;//前进
     int _lastPosition;//辅助判断滚动方向
-    DMShareEntity *ShareEntity;//用于分享
-
 }
 @end
 
@@ -54,6 +52,8 @@
 {
     loginManager = [[DMLoginManager alloc] init];
     [loginManager setLoginDelegate:self];
+    _shareEntity = [[DMShareEntity alloc] init];
+
 }
 -(void)viewWillAppear:(BOOL)animated
 {
@@ -151,7 +151,8 @@
 //分享
 -(void)share
 {
-	NSLog(@"点此分享");
+    ShareActionTool *shareTool = [[ShareActionTool alloc] initWithSuperNavigationController:nil];
+    [shareTool shareToThirdActionWithSuperView:self.view shareEntity:self.shareEntity];
 }
 //后退
 -(void)goBackThePage
@@ -210,7 +211,6 @@
 -(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request
 	navigationType:(UIWebViewNavigationType)navigationType
 {
-
         //1.如果是用户登录界面准备弹出
         if ([request.URL.absoluteString isEqualToString:DoubanWebLogin]&&isShouldRefresh)
         {

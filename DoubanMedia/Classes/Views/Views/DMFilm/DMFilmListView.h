@@ -10,7 +10,10 @@
 #import "MBProgressHUD+DMProgressHUD.h"
 @class  DMFilmListView;
 @protocol DMFilmListViewDelegate <NSObject>
--(void)filmListView:(DMFilmListView*)listView didSelectedfilmId:(NSString *)filmId;
+-(void)filmListView:(DMFilmListView*)listView
+  didSelectedfilmId:(NSString *)filmId
+     withFilmPoster:(UIImage *)image
+          filmTitle:(NSString*)filmName;
 @end
 @interface DMFilmListView : UIView
 
