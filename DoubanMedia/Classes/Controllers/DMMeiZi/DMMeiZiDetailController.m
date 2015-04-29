@@ -10,6 +10,7 @@
 #import "DMMeiZiConstant.h"
 #import "DMMeiZiManager.h"
 #import "DMMeiZi.h"
+#import "TabViewManager.h"
 #import "DMMeiZiDetailCell.h"
 
 @interface DMMeiZiDetailController() < NYTPhotosViewControllerDelegate,DMMeiZiManagerDelegate,
@@ -28,6 +29,8 @@
 {
     [super viewWillAppear:animated];
 	[self setupHeaderAndFooter];
+    //隐藏tabBar
+    [[TabViewManager sharedTabViewManager].getTabView setHidden:YES];
 }
 -(void)viewDidLoad
 {
@@ -62,8 +65,7 @@
     layout.minimumInteritemSpacing = 1.0;
     layout.sectionInset = UIEdgeInsetsZero;
     layout.sectionInset = UIEdgeInsetsMake(5.0f, 0, 5.0f, 0);
-    CGRect theFrame = (CGRect){{0,0},{self.view.bounds.size.width,self.view.bounds.size.height - kTabbarHeight}};
-    self.collectionView = [[UICollectionView alloc] initWithFrame:theFrame collectionViewLayout:layout];
+    self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
     [self.collectionView setBackgroundColor:DMColor(230,230,238,1.0f)];
     [self.collectionView setDelegate:self];
     [self.collectionView setDataSource:self];
@@ -81,8 +83,7 @@
                                             refreshingAction:@selector(loadMoreMeizi)];
     self.collectionView.footer.automaticallyRefresh = NO;
     self.collectionView.footer.hidden = YES;
-//    self.collectionView.header.textColor = [UIColor blackColor];
-//    self.collectionView.footer.textColor = [UIColor blackColor];
+
     [self.collectionView.header beginRefreshing];
 }
 
@@ -229,6 +230,7 @@
 
 -(void)backToList
 {
+    [[TabViewManager sharedTabViewManager].getTabView setHidden:NO];
     [self.navigationController popViewControllerAnimated:YES];
 }
 @end

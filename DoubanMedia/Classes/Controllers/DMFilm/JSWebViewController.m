@@ -247,7 +247,9 @@
         //提示手动登录
         isShouldRefresh = NO;
         [MBProgressHUD showTextOnlyIndicatorWithView:self.view Text:@"登录失败，请您手动登录"
-                                                      Font:DMFont(13.0f)   Margin:10.0f
+                                                      Font:DMFont(13.0f)
+                                         	     Margin:10.0f
+       											  offsetY:0
                                                   showTime:1.2f];
         [theWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:DoubanWebLogin]]];
     }

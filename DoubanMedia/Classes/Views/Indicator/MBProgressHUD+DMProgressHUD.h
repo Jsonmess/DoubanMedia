@@ -14,6 +14,7 @@
                                 Text:(NSString *)text
                                 Font:(UIFont*)font
                               Margin:(CGFloat)margin
+    						offsetY:(CGFloat)offsetY
                             showTime:(CGFloat)timeLength;
 //text 提示
 +(MBProgressHUD *)createProgressOnlyWithView:(UIView *)view

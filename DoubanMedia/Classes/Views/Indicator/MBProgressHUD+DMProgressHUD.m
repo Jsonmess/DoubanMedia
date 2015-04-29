@@ -14,6 +14,7 @@
                                        Text:(NSString *)text
                                         Font:(UIFont*)font
                                      Margin:(CGFloat)margin
+                             		offsetY:(CGFloat)offsetY
                                    showTime:(CGFloat)timeLength
 {
 	MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view
@@ -22,6 +23,7 @@
     hud.labelText = text;
     hud.labelFont = font;
     hud.margin = margin;
+    hud.yOffset = offsetY;
     hud.removeFromSuperViewOnHide = YES;
     hud.color = DMColor(200, 200, 200, 0.9f);
     [hud hide:YES afterDelay:timeLength];
