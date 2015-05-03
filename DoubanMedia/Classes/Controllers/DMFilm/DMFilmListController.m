@@ -15,6 +15,7 @@
 {
 	DMFilmListView *filmListView;
     DMFilmListManager *theManager;
+    MBProgressHUD *hud;
 }
 @property (nonatomic) UISegmentedControl *segemtControl;
 @end
@@ -33,10 +34,12 @@
 -(void)getFilmInfoListWithType:(kFilmViewType)type
 {
     //开始loading提示
- MBProgressHUD *hud = [MBProgressHUD showTextAndProgressViewIndicatorWithView:self.view Text:@"电影信息加载中..." Font:DMBoldFont(14.0f) Margin:10.0f];
+    [hud removeFromSuperview];
+ 	hud= [MBProgressHUD showTextAndProgressViewIndicatorWithView:self.view Text:@"电影信息加载中..." Font:DMBoldFont(14.0f) Margin:10.0f];
     [filmListView setFilmHud:hud];
     [theManager getFilmList:type];
 }
+
 -(void)setUpView
 {
     // 设置导航栏

@@ -17,7 +17,6 @@ typedef NS_ENUM(NSInteger, kFilmViewType)
 @protocol filmManagerDelegate <NSObject>
 
 -(void)reloadFilmDataWithfilmType:(kFilmViewType)type;
-
 @end
 
 @interface DMFilmListManager : NSObject

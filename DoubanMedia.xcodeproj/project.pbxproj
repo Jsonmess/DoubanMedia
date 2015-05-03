@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1B95DDCBFA3C0E32FBAA006C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 91578B2819DE2AD8A3EE13F1 /* libPods.a */; };
+		2913A4B01AF64592006A6B5F /* DMSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2913A4AF1AF64592006A6B5F /* DMSettingController.m */; };
 		29141D6C1AC703E100FDDC85 /* home_mm@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 29141D6B1AC703E100FDDC85 /* home_mm@2x.png */; };
 		29141D6E1AC7070200FDDC85 /* home_fm@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 29141D6D1AC7070200FDDC85 /* home_fm@2x.png */; };
 		29141D7B1AC7ABB100FDDC85 /* DMChannelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 29141D7A1AC7ABB100FDDC85 /* DMChannelManager.m */; };
@@ -170,6 +171,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2913A4AE1AF64592006A6B5F /* DMSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMSettingController.h; sourceTree = "<group>"; };
+		2913A4AF1AF64592006A6B5F /* DMSettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMSettingController.m; sourceTree = "<group>"; };
 		29141D6B1AC703E100FDDC85 /* home_mm@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_mm@2x.png"; sourceTree = "<group>"; };
 		29141D6D1AC7070200FDDC85 /* home_fm@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_fm@2x.png"; sourceTree = "<group>"; };
 		29141D791AC7ABB100FDDC85 /* DMChannelManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMChannelManager.h; sourceTree = "<group>"; };
@@ -423,6 +426,8 @@
 		2913A4AD1AF63B2C006A6B5F /* DMSetting */ = {
 			isa = PBXGroup;
 			children = (
+				2913A4AE1AF64592006A6B5F /* DMSettingController.h */,
+				2913A4AF1AF64592006A6B5F /* DMSettingController.m */,
 			);
 			path = DMSetting;
 			sourceTree = "<group>";
@@ -1439,6 +1444,7 @@
 				295DF5121ADD35640096935A /* MBProgressHUD+DMProgressHUD.m in Sources */,
 				299F2E431AF06D3D001606AE /* NYTPhotosOverlayView.m in Sources */,
 				29A1491D1ADF797000CAAAAF /* DMFilmListView.m in Sources */,
+				2913A4B01AF64592006A6B5F /* DMSettingController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
