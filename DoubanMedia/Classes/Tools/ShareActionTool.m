@@ -240,27 +240,42 @@
             switch (type) {
                 case kThumbnailTypeJPEG:
                 case kThumbnailTypeJPG:
-                    imageData = UIImageJPEGRepresentation(image, 0.55f);
+                    imageData = UIImageJPEGRepresentation(image, 0.45f);
                     break;
                 case kThumbnailTypePNG:
 
                      imageData = UIImagePNGRepresentation(image);
-                //无法压缩，防止死循环
-                    if (imageData.length == length) {
-                        break;
-                    }
-                    length = imageData.length;
                     break;
                 default:
                     break;
             }
-   
+            //无法压缩，防止死循环
+            if (imageData.length == length)
+            {
+              image = [self scaleToSize:image size:CGSizeMake(image.size.width*0.5f, image.size.height*0.5f)];
+                imageData = UIImageJPEGRepresentation(image, 1.0f);
+               // break;
+            }
+        length = imageData.length;
         } while ([imageData length] > 32 * 1024);
     
         
     }
 
     return imageData;
+}
+-(UIImage *)scaleToSize:(UIImage *)image size:(CGSize)size
+{
+    //创建一个bitmap的context
+    //并把他设置成当前的context
+    UIGraphicsBeginImageContext(size);
+    //绘制图片的大小
+    [image drawInRect:CGRectMake(0, 0, size.width, size.height)];
+    //从当前context中创建一个改变大小后的图片
+    UIImage *endImage=UIGraphicsGetImageFromCurrentImageContext();
+
+    UIGraphicsEndImageContext();
+    return endImage;
 }
 
 -(void)alertViewFowShareWithNoRoad:(NSString*)message AppUrl:(NSString *)url
