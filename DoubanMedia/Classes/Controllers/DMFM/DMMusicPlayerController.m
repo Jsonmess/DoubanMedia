@@ -88,6 +88,8 @@
     musicPlayer = [DMMusicPlayManager sharedMusicPlayManager];
     [musicPlayer setDelegate:self];
     isRedNow = YES;
+    //添加远程控制消息通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(remoteControlWithNotification:) name:@"remoteControl" object:nil];
 }
 //获取当前频道的音乐列表
 -(void)getSongList
@@ -221,6 +223,13 @@
         case DOUAudioStreamerPlaying:
             //播放错误
             statusString = @"开始播放";
+			//更新远程播放进度
+            if (remoteInfoDic != nil)
+            {
+			   [remoteInfoDic setObject:[NSNumber numberWithDouble:[currentPlaySong.length floatValue]]
+                         forKey:MPMediaItemPropertyPlaybackDuration];
+				[[MPNowPlayingInfoCenter defaultCenter] setNowPlayingInfo:remoteInfoDic];
+            }
             break;
         default:
             break;
@@ -233,7 +242,7 @@
     //    NSLog(@"当前歌曲时间：%f-----%f",currentTime,len);
     int currentTimeMinutes = (unsigned)currentTime/60;
     int currentTimeSeconds = (unsigned)currentTime%60;
-    NSString * currentTimeString;
+    NSString * currentTimeString = @"0:00";
     if (currentTimeSeconds < 10) {
         currentTimeString = [NSMutableString stringWithFormat:@"%d:0%d",currentTimeMinutes,currentTimeSeconds];
     }
@@ -261,25 +270,27 @@
     totalTime = totalTimeString;
 }
 #pragma mark---远程控制
-- (void)remoteControlReceivedWithEvent:(UIEvent *)event
-{
-    if (event.type == UIEventTypeRemoteControl) {
-        switch (event.subtype) {
-            case UIEventSubtypeRemoteControlPause:
 
-                [musicPlayer actionPlayPause:NO];
-                [_mplayView.albumView pause];
-                break;
-            case UIEventSubtypeRemoteControlPlay:
-                [musicPlayer actionPlayPause:YES];
-                [_mplayView.albumView play];
-                break;
-            case UIEventSubtypeRemoteControlNextTrack:
-                [self actionWithType:@"s"];
-                break;
-            default:
-                break;
-        }
+-(void)remoteControlWithNotification:(NSNotification *)notification
+{
+    NSString * playControlPr = notification.userInfo[@"playStatus"];
+    if ([playControlPr isEqualToString:@"pause"])
+    {
+        [musicPlayer actionPlayPause:NO];
+        [_mplayView.albumView pause];
+    }
+    else if ([playControlPr isEqualToString:@"play"])
+    {
+        [musicPlayer actionPlayPause:YES];
+        [_mplayView.albumView play];
+    }
+    else if ([playControlPr isEqualToString:@"next"])
+    {
+        [self actionWithType:@"s"];
+    }
+    else if ([playControlPr isEqualToString:@"previous"])
+    {
+        [self actionWithType:@"s"];
     }
 }
 //锁屏数据
@@ -301,6 +312,7 @@
         }
         [dict setObject:[NSNumber numberWithDouble:[currentPlaySong.length floatValue]]
                  forKey:MPMediaItemPropertyPlaybackDuration];
+        remoteInfoDic = dict;
         [[MPNowPlayingInfoCenter defaultCenter] setNowPlayingInfo:dict];
     }
     

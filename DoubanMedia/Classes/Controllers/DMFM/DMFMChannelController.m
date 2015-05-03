@@ -234,6 +234,7 @@ static NSString *reuseCell = @"FMChannelCell";
     [musicPlayer setPlayChannelTitle:channel.channelName];
     [musicPlayer setPlayChannelId:channel.channelID];
     playController = musicPlayer;
+    appDelegate.musicPlayerController = musicPlayer;
     [self.navigationController pushViewController:musicPlayer animated:YES];
     //设置当前播放频道为选中状态
     [tableView deselectRowAtIndexPath:indexPath animated:NO];

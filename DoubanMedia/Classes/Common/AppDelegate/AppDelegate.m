@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "FMChannel.h"
 #import <AVFoundation/AVFoundation.h>
+
 @interface AppDelegate ()
 {
 
@@ -38,6 +39,7 @@
     }
     //注册远程控制
     [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
+    //AudioSessionInitialize(NULL, NULL, interruptionListenner, (__bridge void*)self);
 }
 //初始化频道分类
 -(void)initTheChannels
@@ -83,7 +85,11 @@
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
 
-- (void)applicationWillEnterForeground:(UIApplication *)application {
+- (void)applicationWillEnterForeground:(UIApplication *)application
+{
+//    //后台播放
+//     AVAudioSession *session = [AVAudioSession sharedInstance];
+//     [session setActive:YES error:nil];
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
 }
 
@@ -95,10 +101,63 @@
 {
     //注销远程控制
     [[UIApplication sharedApplication]endReceivingRemoteControlEvents];
+    //移除远程通知
+    if(_musicPlayerController != nil)
+    {
+   	 [[NSNotificationCenter defaultCenter] removeObserver:_musicPlayerController];
+    }
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     // Saves changes in the application's managed object context before the application terminates.
     [self saveContext];
 }
+//远程控制
+- (void)remoteControlReceivedWithEvent:(UIEvent *)event
+{
+    NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+    NSMutableDictionary *playDic = [NSMutableDictionary dictionary];
+    if (event.type == UIEventTypeRemoteControl) {
+        switch (event.subtype) {
+            case UIEventSubtypeRemoteControlPause:
+               [playDic setValue:@"pause" forKey:@"playStatus"];
+
+                break;
+            case UIEventSubtypeRemoteControlPlay:
+		[playDic setValue:@"play" forKey:@"playStatus"];
+                break;
+            case UIEventSubtypeRemoteControlNextTrack:
+		[playDic setValue:@"next" forKey:@"playStatus"];
+                break;
+            case UIEventSubtypeRemoteControlPreviousTrack:
+                [playDic setValue:@"previous" forKey:@"playStatus"];
+                break;
+            default:
+                break;
+        }
+    }
+       [center postNotificationName:@"remoteControl" object:nil userInfo:playDic];
+}
+////播放被中断处理
+//void interruptionListenner(void* inClientData, UInt32 inInterruptionState)
+//{
+//    AppDelegate* bgDelegate = (__bridge AppDelegate*)inClientData;
+//     NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+//     NSMutableDictionary *playDic = [NSMutableDictionary dictionary];
+//    if (bgDelegate)
+//    {
+//        NSLog(@"interruptionListenner %u", (unsigned int)inInterruptionState);
+//        if (kAudioSessionBeginInterruption == inInterruptionState)
+//        {
+//			[playDic setValue:@"pause" forKey:@"playStatus"];
+//        }
+//        else
+//        {
+//            NSLog(@"Begin end interruption");
+//			[playDic setValue:@"play" forKey:@"playStatus"];
+//            NSLog(@"End end interruption");
+//        }
+//    [center postNotificationName:@"remoteControl" object:nil userInfo:playDic];
+//    }
+//}
 
 #pragma mark - Core Data stack
 

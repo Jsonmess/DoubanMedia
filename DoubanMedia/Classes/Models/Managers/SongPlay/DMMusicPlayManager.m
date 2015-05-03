@@ -90,7 +90,7 @@
 
     if([UIApplication sharedApplication].applicationState== UIApplicationStateBackground) {
 
-        NSLog(@"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx后台播放");
+        NSLog(@"xxxx后台播放");
 
         [streamer play];
 
@@ -110,7 +110,7 @@
     
     else {
         
-        NSLog(@"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx前台播放");
+        NSLog(@"xxx前台播放");
         
         [streamer play];
         
