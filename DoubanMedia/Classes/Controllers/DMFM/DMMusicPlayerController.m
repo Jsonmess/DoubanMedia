@@ -221,6 +221,13 @@
         case DOUAudioStreamerPlaying:
             //播放错误
             statusString = @"开始播放";
+			//更新远程播放进度
+            if (remoteInfoDic != nil)
+            {
+			   [remoteInfoDic setObject:[NSNumber numberWithDouble:[currentPlaySong.length floatValue]]
+                         forKey:MPMediaItemPropertyPlaybackDuration];
+				[[MPNowPlayingInfoCenter defaultCenter] setNowPlayingInfo:remoteInfoDic];
+            }
             break;
         default:
             break;
@@ -233,7 +240,7 @@
     //    NSLog(@"当前歌曲时间：%f-----%f",currentTime,len);
     int currentTimeMinutes = (unsigned)currentTime/60;
     int currentTimeSeconds = (unsigned)currentTime%60;
-    NSString * currentTimeString;
+    NSString * currentTimeString = @"0:00";
     if (currentTimeSeconds < 10) {
         currentTimeString = [NSMutableString stringWithFormat:@"%d:0%d",currentTimeMinutes,currentTimeSeconds];
     }
@@ -301,6 +308,7 @@
         }
         [dict setObject:[NSNumber numberWithDouble:[currentPlaySong.length floatValue]]
                  forKey:MPMediaItemPropertyPlaybackDuration];
+        remoteInfoDic = dict;
         [[MPNowPlayingInfoCenter defaultCenter] setNowPlayingInfo:dict];
     }
     

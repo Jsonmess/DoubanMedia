@@ -8,6 +8,7 @@
 
 #import "DMSettingController.h"
 #import "BaseTableView.h"
+#import "BaseTableViewCell.h"
 @interface DMSettingController ()<UITableViewDelegate,UITableViewDataSource>
 {
     BaseTableView *baseTableView;
@@ -19,14 +20,21 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self setUpView];
     // Do any additional setup after loading the view.
 }
 
 -(void)setUpView
 {
     [self setTitle:@"应用设置"];
-    baseTableView = [[BaseTableView alloc]initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
+    CGFloat btSpacing = 10.0f;
+    CGFloat btWidth = self.view.bounds.size.width -btSpacing*2;
+    baseTableView = [[BaseTableView alloc]initWithFrame:CGRectMake(btSpacing, 0, btWidth,
+                                                                   self.view.bounds.size.height-kTabbarHeight)
+                                                  style:UITableViewStyleGrouped];
     [self.view addSubview:baseTableView];
+    [self.view setBackgroundColor:baseTableView.backgroundColor];
+    [baseTableView setContentInset:UIEdgeInsetsMake(20.0f, 0, 0, 0)];
     [baseTableView setDelegate:self];
     [baseTableView setDataSource:self];
 
@@ -37,21 +45,43 @@
 #pragma mark -- tableViewDelegate
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 3;
+    return 4;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 4;
+    return 10;
 }
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+-(BaseTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *reUseStr = @"settingCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reUseStr];
+    BaseTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reUseStr];
     if (cell == nil)
     {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reUseStr];
+        cell = [[BaseTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reUseStr];
     }
     return cell;
+}
+-(UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 30)];
+    [label setText:@"设置"];
+    return label;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 30.0f;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    //设置底部视图
+    if (section == 3)
+    {
+         return 10.f;
+    }
+    else
+        return 30.0f;
+
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

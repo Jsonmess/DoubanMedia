@@ -56,8 +56,6 @@
      DMSettingController *doubanSettingController = [[DMSettingController alloc]init];
     Com_navigationController *navSettingController = [[Com_navigationController alloc]
                                                    initWithRootViewController:doubanSettingController];
-
-    [doubanSettingController.view setBackgroundColor:[UIColor yellowColor]];
     [subViewControllers addObject:navSettingController];
 }
 //添加视图和Tabbar
