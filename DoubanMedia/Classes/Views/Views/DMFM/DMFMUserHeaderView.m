@@ -30,7 +30,7 @@
 {
     [self setUserInteractionEnabled:NO];
     userIcon = [[UIImageView alloc] initWithFrame:CGRectZero];
-    [userIcon setImage:[UIImage imageNamed:@"user_normal.jpg"]];
+    [userIcon setImage:[UIImage imageNamed:@"user_normal"]];
     userName = [[UILabel alloc] initWithFrame:CGRectZero];
     [userName setText:@"用户"];
     [userName setTextAlignment:NSTextAlignmentLeft];

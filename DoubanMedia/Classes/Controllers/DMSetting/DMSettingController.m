@@ -9,6 +9,8 @@
 #import "DMSettingController.h"
 #import "BaseTableView.h"
 #import "BaseTableViewCell.h"
+#import "DMUserInfoCell.h"
+#import "DMDeviceManager.h"
 @interface DMSettingController ()<UITableViewDelegate,UITableViewDataSource>
 {
     BaseTableView *baseTableView;
@@ -34,7 +36,7 @@
                                                   style:UITableViewStyleGrouped];
     [self.view addSubview:baseTableView];
     [self.view setBackgroundColor:baseTableView.backgroundColor];
-    [baseTableView setContentInset:UIEdgeInsetsMake(20.0f, 0, 0, 0)];
+    [baseTableView setContentInset:UIEdgeInsetsMake(5.0f, 0, 0, 0)];
     [baseTableView setDelegate:self];
     [baseTableView setDataSource:self];
 
@@ -49,27 +51,69 @@
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    if (section == 0)
+    {
+        return 1;
+    }
+    else
     return 10;
 }
--(BaseTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *reUseStr = @"settingCell";
-    BaseTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reUseStr];
-    if (cell == nil)
+    UITableViewCell *cell;
+    if (indexPath.section == 0)
     {
-        cell = [[BaseTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reUseStr];
+        cell = [[DMUserInfoCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+        
+    }else
+    {
+        static NSString *reUseStr = @"settingCell";
+        cell = [tableView dequeueReusableCellWithIdentifier:reUseStr];
+        if (cell == nil)
+        {
+            cell = [[BaseTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reUseStr];
+        }
     }
     return cell;
 }
 -(UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 30)];
-    [label setText:@"设置"];
     return label;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    CGFloat theHeight = 0.0f;
+	if([DMDeviceManager getCurrentDeviceType] == kiPad)
+    {
+        if (indexPath.section == 0)
+        {
+            theHeight = 290.0f;
+        }
+        else
+            theHeight = 80.0f;
+    }
+    else
+    {
+        if (indexPath.section == 0)
+        {
+            theHeight = 180.0f;
+        }
+        else
+            theHeight = 60.0f;
+
+    }
+    return theHeight;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
+    if (section == 0)
+    {
+        return 0.1f;
+    }
+    else
     return 30.0f;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
@@ -80,7 +124,7 @@
          return 10.f;
     }
     else
-        return 30.0f;
+        return 20.0f;
 
 }
 - (void)didReceiveMemoryWarning {
