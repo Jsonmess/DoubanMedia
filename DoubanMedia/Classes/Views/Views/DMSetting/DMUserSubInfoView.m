@@ -11,6 +11,7 @@
 {
     UIImageView *infoImageView;//用户详情标识
     UILabel *infoText;//详情
+    UIView *contenView;//容器
 }
 @end
 @implementation DMUserSubInfoView
@@ -27,23 +28,30 @@
 
 -(void)setUpView
 {
+    contenView = [[UIView alloc] init];
     infoImageView = [[UIImageView alloc] initWithFrame:CGRectZero];
     [infoImageView setImage:[UIImage imageNamed:@"error"]];
     [infoImageView setContentMode:UIViewContentModeScaleAspectFill];
     [infoImageView autoSetDimension:ALDimensionHeight toSize:32.0f];
 	[infoImageView autoSetDimension:ALDimensionWidth toSize:32.0f];
-    [self addSubview:infoImageView];
+    [contenView addSubview:infoImageView];
+    [self addSubview:contenView];
     //详情
     infoText = [[UILabel alloc] initWithFrame:CGRectZero];
     [infoText setText:@"0"];
     [infoText setTextAlignment:NSTextAlignmentCenter];
-    [self addSubview:infoText];
+    [contenView addSubview:infoText];
     //contains
+    [contenView autoSetDimension:ALDimensionWidth toSize:55.0f];
+    [contenView autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:self];
+    [contenView autoPinEdge:ALEdgeBottom toEdge:ALEdgeBottom ofView:self];
+    [contenView autoAlignAxisToSuperviewAxis:ALAxisVertical];
+
     [infoImageView autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
-	[infoImageView autoAlignAxisToSuperviewAxis:ALAxisVertical];
-    [infoText autoPinEdge:ALEdgeLeading toEdge:ALEdgeTrailing ofView:infoImageView withOffset:8.0f];
-    [infoText autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:self withOffset:2.0f];
-    [infoText autoPinEdge:ALEdgeBottom toEdge:ALEdgeBottom ofView:self withOffset:2.0f];
+    [infoImageView autoPinEdge:ALEdgeLeading toEdge:ALEdgeLeading ofView:contenView];
+    [infoText autoPinEdge:ALEdgeLeading toEdge:ALEdgeTrailing ofView:infoImageView withOffset:5.0f];
+    [infoText autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:contenView withOffset:2.0f];
+    [infoText autoPinEdge:ALEdgeBottom toEdge:ALEdgeBottom ofView:contenView withOffset:2.0f];
 
 }
 
