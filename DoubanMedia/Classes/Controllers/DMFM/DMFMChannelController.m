@@ -253,7 +253,7 @@ static NSString *reuseCell = @"FMChannelCell";
     //设置head 数据
     NSString *title = appDelegate.channels[section][@"section"];
     BOOL isNeedGetInterface = NO;//header用户交互
-		UIImage *imagefile = [UIImage imageNamed:@"user_normal.jpg"];
+		UIImage *imagefile = [UIImage imageNamed:@"user_normal"];
     if (userInfo.count > 0 && section == 0)
     {
         title = [userInfo valueForKey:@"userName"];

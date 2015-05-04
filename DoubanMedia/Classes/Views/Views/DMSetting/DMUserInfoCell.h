@@ -10,4 +10,8 @@
 
 @interface DMUserInfoCell : BaseTableViewCell
 
+#pragma mark --actions
+//设置内容
+-(void)setUserContents;
+
 @end
