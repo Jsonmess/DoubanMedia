@@ -20,6 +20,8 @@
     BaseTableView *baseTableView;
     DMLoginManager *loginManager;
     DMUserInfoCell *userCell;//单独的用户Cell
+    NSArray *sources;//资源
+    NSArray *headSources;//分组标题
 }
 @end
 
@@ -35,6 +37,10 @@
         userCell = [[DMUserInfoCell alloc] initWithStyle:UITableViewCellStyleDefault
                                                          reuseIdentifier:nil];
                 [userCell setDelegate:self];
+
+        sources = @[@[@"二维码扫描",@"生成二维码"],@[@"只在Wifi下联网",@"同步本地歌曲",@"离线管理"],
+                    @[@"清除FM缓存",@"清除图片缓存"],@[@"意见反馈",@"关于作者"]];
+        headSources = @[@"工具",@"基本设置",@"数据清理",@"更多"];
     }
     return self;
 }
@@ -60,6 +66,7 @@
     [self.view addSubview:baseTableView];
     [self.view setBackgroundColor:baseTableView.backgroundColor];
     [baseTableView setContentInset:UIEdgeInsetsMake(5.0f, 0, 0, 0)];
+    [baseTableView setShowsVerticalScrollIndicator:NO];
     [baseTableView setDelegate:self];
     [baseTableView setDataSource:self];
     //添加监听--用于FM模块登录账户的通知
@@ -89,7 +96,10 @@
         return 1;
     }
     else
-    return 10;
+    {
+        NSArray *array = sources[section-1];
+   		 return array.count;
+    }
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -104,6 +114,7 @@
         if (cell == nil)
         {
             cell = [[BaseTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reUseStr];
+            [cell.textLabel setText:sources[indexPath.section-1][indexPath.row]];
         }
     }
     return cell;
@@ -111,6 +122,12 @@
 -(UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 30)];
+    if (section > 0)
+    {
+        [label setText:headSources[section-1]];
+    }
+    [label setFont:DMFont(12.0f)];
+    [label setTextColor:DMColor(120, 122, 122, 1.0f)];
     return label;
 }
 

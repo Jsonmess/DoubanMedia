@@ -60,6 +60,12 @@
     [super viewWillAppear:animated];
     isShouldRefresh = YES;
 }
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    //清理缓存
+    [[NSURLCache sharedURLCache] removeAllCachedResponses];
+}
 /**
  *  初始化视图
  
