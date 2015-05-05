@@ -16,7 +16,7 @@
 
 @interface AlbumRoundView : UIView
 
-@property (assign, nonatomic) id<AlbumRoundViewDelegate> delegate;
+@property (weak, nonatomic) id<AlbumRoundViewDelegate> delegate;
 
 //专辑图片
 @property (strong, nonatomic) UIImage *roundImage;

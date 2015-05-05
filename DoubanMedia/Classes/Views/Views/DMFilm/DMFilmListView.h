@@ -18,6 +18,6 @@
 @interface DMFilmListView : UIView
 
 @property (nonatomic) MBProgressHUD *filmHud;//指示器
-@property (nonatomic) id<DMFilmListViewDelegate>delegate;
+@property (nonatomic,weak) id<DMFilmListViewDelegate>delegate;
 
 @end

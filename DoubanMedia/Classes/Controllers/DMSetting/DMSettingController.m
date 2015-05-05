@@ -11,21 +11,44 @@
 #import "BaseTableViewCell.h"
 #import "DMUserInfoCell.h"
 #import "DMDeviceManager.h"
-@interface DMSettingController ()<UITableViewDelegate,UITableViewDataSource>
+#import "DMLoginManager.h"
+#import "MBProgressHUD+DMProgressHUD.h"
+#import "DMLoginViewController.h"
+@interface DMSettingController ()<UITableViewDelegate,UITableViewDataSource,
+						DMUserInfoCellDelegate,UIActionSheetDelegate,DMLoginManagerDelegate>
 {
     BaseTableView *baseTableView;
+    DMLoginManager *loginManager;
+    DMUserInfoCell *userCell;//单独的用户Cell
 }
 @end
 
 @implementation DMSettingController
 
+-(instancetype)init
+{
+    self = [super init];
+    if (self)
+    {
+        loginManager = [[DMLoginManager alloc] init];
+        loginManager.loginDelegate = self;
+        userCell = [[DMUserInfoCell alloc] initWithStyle:UITableViewCellStyleDefault
+                                                         reuseIdentifier:nil];
+                [userCell setDelegate:self];
+    }
+    return self;
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     [self setUpView];
     // Do any additional setup after loading the view.
 }
-
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    shouldHiddenStatusBar(NO);
+}
 -(void)setUpView
 {
     [self setTitle:@"应用设置"];
@@ -39,10 +62,20 @@
     [baseTableView setContentInset:UIEdgeInsetsMake(5.0f, 0, 0, 0)];
     [baseTableView setDelegate:self];
     [baseTableView setDataSource:self];
+    //添加监听--用于FM模块登录账户的通知
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(loginSuccess:)
+                                                 name:@"LoginSucess"
+                                               object:nil];
 
 }
 
+#pragma mark --actions
 
+-(void)loginSuccess:(NSNotification *)notification
+{
+    [userCell checkLoginInfo];
+}
 
 #pragma mark -- tableViewDelegate
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -63,8 +96,7 @@
     UITableViewCell *cell;
     if (indexPath.section == 0)
     {
-        cell = [[DMUserInfoCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
-        
+        cell = userCell;
     }else
     {
         static NSString *reUseStr = @"settingCell";
@@ -126,6 +158,60 @@
     else
         return 20.0f;
 
+}
+
+#pragma mark ----UserInfoCellDelegate
+//登录状态
+-(void)setRegisterStatus:(BOOL)isLogin
+{
+    if (!isLogin)
+    {
+		//直接跳转到登录
+        DMLoginViewController *controller = [[DMLoginViewController alloc] init];
+        [self  presentViewController:controller animated:YES completion:nil];
+    }
+    else
+    {
+        //提示是否注销
+        UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"您确定要注销么？\n注销会清除您的离线歌曲等信息。"
+                                                           delegate:self
+                                                  cancelButtonTitle:@"取消"
+                                             destructiveButtonTitle:@"注销登录"
+                                                  otherButtonTitles: nil];
+        [sheet showInView:self.view];
+    }
+}
+
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 0)
+    {
+        //开始注销
+        [loginManager logout];
+    }
+}
+
+-(void)logoutState:(kLogoutState)state
+{
+    NSString *text = @" ";
+    switch (state)
+    {
+        case eLogoutFaild:
+		text = @"注销失败，请重试";
+            break;
+        case eLogoutSuccess:
+            text = @"您已注销";
+            //更新显示状态
+            break;
+        default:
+            break;
+    }
+
+	[MBProgressHUD showTextOnlyIndicatorWithView:self.view Text:text Font:DMFont(13.0f)
+                                          Margin:12.0f
+                                         offsetY:self.view.bounds.size.height*0.06f
+                                        showTime:1.5f];
+    [userCell checkLoginInfo];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

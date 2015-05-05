@@ -73,7 +73,6 @@
 
         if ([(NSNumber *)[tempLoginInfoDictionary valueForKey:@"r"] intValue] == 0)
         {
-            [self.loginDelegate loginState:kLoginSuccess];
             //保存用户数据到数据库
             [self saveUserInfoToDataBase:tempLoginInfoDictionary];
             //用于自动登录Web页面---待改进
@@ -82,7 +81,7 @@
                                        @"password":password
                                        };
             [[NSUserDefaults standardUserDefaults] setObject:theUserInfo forKey:@"userInformation"];
-
+			 [self.loginDelegate loginState:kLoginSuccess];
         }
         else{
 			//登录失败
@@ -139,9 +138,9 @@
                   success:^(AFHTTPRequestOperation *operation,id responseObject)
         {
        			 NSLog(@"成功注销 ");
-            [self.loginDelegate logoutState:eLogoutSuccess];
             [userInfo MR_deleteEntity];
             [userInfo.managedObjectContext MR_saveToPersistentStoreAndWait];
+            [self.loginDelegate logoutState:eLogoutSuccess];
 
     } failure:^(AFHTTPRequestOperation *operation, NSError *error)
      {

@@ -20,7 +20,7 @@ typedef NS_ENUM(NSInteger, kFilmViewType)
 @end
 
 @interface DMFilmListManager : NSObject
-@property (nonatomic) id<filmManagerDelegate>delegate;
+@property (nonatomic,weak) id<filmManagerDelegate>delegate;
 //获取电影列表
 -(void)getFilmList:(kFilmViewType)type;
 

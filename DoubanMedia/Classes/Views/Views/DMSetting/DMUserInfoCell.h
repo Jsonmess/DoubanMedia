@@ -8,10 +8,18 @@
 
 #import "BaseTableViewCell.h"
 
+@protocol DMUserInfoCellDelegate <NSObject>
+
+//登录状态
+-(void)setRegisterStatus:(BOOL)isLogin;
+
+@end
+
 @interface DMUserInfoCell : BaseTableViewCell
 
+@property(nonatomic,weak) id<DMUserInfoCellDelegate>delegate;
 #pragma mark --actions
 //设置内容
--(void)setUserContents;
+-(void)checkLoginInfo;
 
 @end
