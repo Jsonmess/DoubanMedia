@@ -113,10 +113,9 @@
         cell = [tableView dequeueReusableCellWithIdentifier:reUseStr];
         if (cell == nil)
         {
-            [cell.textLabel setText:@""];
             cell = [[BaseTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reUseStr];
-            [cell.textLabel setText:sources[indexPath.section-1][indexPath.row]];
         }
+        [cell.textLabel setText:sources[indexPath.section-1][indexPath.row]];
     }
     return cell;
 }
@@ -142,7 +141,7 @@
             theHeight = 290.0f;
         }
         else
-            theHeight = 80.0f;
+            theHeight = 70.0f;
     }
     else
     {
@@ -151,7 +150,7 @@
             theHeight = 180.0f;
         }
         else
-            theHeight = 60.0f;
+            theHeight = 50.0f;
 
     }
     return theHeight;

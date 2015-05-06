@@ -50,15 +50,12 @@
                                                                      withOnePageCellNumber:4];
 
             //兼容ipad
-            if (view.bounds.size.width >760)
+            if (view.bounds.size.width > 760)
             {
                 [self.mShareActionSheet setNumberOfShareActionOneScreen:4];
             }
-            //根据需求（iPhone6 5个 之前设备 4个）
-            else if (view.bounds.size.width>320 )
-            {
-                [self.mShareActionSheet setNumberOfShareActionOneScreen:5];
-            }else
+            //iPhone6 5个 之前设备 4个
+			else
             {
                 [self.mShareActionSheet setNumberOfShareActionOneScreen:4];
             }
