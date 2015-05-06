@@ -87,7 +87,7 @@
 #pragma mark -- tableViewDelegate
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 4;
+    return 5;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -113,6 +113,7 @@
         cell = [tableView dequeueReusableCellWithIdentifier:reUseStr];
         if (cell == nil)
         {
+            [cell.textLabel setText:@""];
             cell = [[BaseTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reUseStr];
             [cell.textLabel setText:sources[indexPath.section-1][indexPath.row]];
         }
