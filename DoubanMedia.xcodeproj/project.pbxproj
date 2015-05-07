@@ -111,6 +111,7 @@
 		299F2E481AF06D3D001606AE /* NYTScalingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 299F2E341AF06D3D001606AE /* NYTScalingImageView.m */; };
 		299F2E4A1AF0D835001606AE /* douban_meizhi_share.png in Resources */ = {isa = PBXBuildFile; fileRef = 299F2E491AF0D835001606AE /* douban_meizhi_share.png */; };
 		29A1491D1ADF797000CAAAAF /* DMFilmListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A1491C1ADF797000CAAAAF /* DMFilmListView.m */; };
+		29A2B1851AFA27C200CF79AE /* DMSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A2B1841AFA27C200CF79AE /* DMSettingCell.m */; };
 		29A35B081AC6624900C2C2ED /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A35B071AC6624900C2C2ED /* BaseTableViewCell.m */; };
 		29A35B0B1AC6879200C2C2ED /* UIImage+DMResizeImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A35B0A1AC6879200C2C2ED /* UIImage+DMResizeImage.m */; };
 		29A35B0E1AC68DEF00C2C2ED /* BaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A35B0D1AC68DEF00C2C2ED /* BaseTableView.m */; };
@@ -335,6 +336,8 @@
 		299F2E491AF0D835001606AE /* douban_meizhi_share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = douban_meizhi_share.png; sourceTree = "<group>"; };
 		29A1491B1ADF797000CAAAAF /* DMFilmListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMFilmListView.h; sourceTree = "<group>"; };
 		29A1491C1ADF797000CAAAAF /* DMFilmListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMFilmListView.m; sourceTree = "<group>"; };
+		29A2B1831AFA27C200CF79AE /* DMSettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMSettingCell.h; sourceTree = "<group>"; };
+		29A2B1841AFA27C200CF79AE /* DMSettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMSettingCell.m; sourceTree = "<group>"; };
 		29A35B061AC6624900C2C2ED /* BaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
 		29A35B071AC6624900C2C2ED /* BaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCell.m; sourceTree = "<group>"; };
 		29A35B091AC6879200C2C2ED /* UIImage+DMResizeImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+DMResizeImage.h"; sourceTree = "<group>"; };
@@ -445,6 +448,8 @@
 				2913A4B31AF66084006A6B5F /* DMUserInfoCell.m */,
 				2913A4BA1AF7823F006A6B5F /* DMUserSubInfoView.h */,
 				2913A4BB1AF7823F006A6B5F /* DMUserSubInfoView.m */,
+				29A2B1831AFA27C200CF79AE /* DMSettingCell.h */,
+				29A2B1841AFA27C200CF79AE /* DMSettingCell.m */,
 			);
 			path = DMSetting;
 			sourceTree = "<group>";
@@ -1406,6 +1411,7 @@
 				29851C5B1ADFE333004BC01A /* DMFilmCell.m in Sources */,
 				29C1B2171AE7C12D008E8F6E /* JSWebViewController.m in Sources */,
 				299F2DAB1AEF42DF001606AE /* DMMeiZiController.m in Sources */,
+				29A2B1851AFA27C200CF79AE /* DMSettingCell.m in Sources */,
 				297FFD181AD2173700A6D3EE /* TabViewManager.m in Sources */,
 				299F2E461AF06D3D001606AE /* NYTPhotoTransitionController.m in Sources */,
 				2978D1971AC035D4005CB2F3 /* Com_navigationController.m in Sources */,
@@ -1591,7 +1597,7 @@
 					"$(PROJECT_DIR)/DoubanMedia/Classes/Assets/SDKs/WeiChat",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a874dd33-ab96-4bb6-b6a0-713eac969559";
+				PROVISIONING_PROFILE = "0eec9bb8-fc23-4cfe-9e88-19578e7e5d72";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1617,7 +1623,7 @@
 					"$(PROJECT_DIR)/DoubanMedia/Classes/Assets/SDKs/WeiChat",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a874dd33-ab96-4bb6-b6a0-713eac969559";
+				PROVISIONING_PROFILE = "0eec9bb8-fc23-4cfe-9e88-19578e7e5d72";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

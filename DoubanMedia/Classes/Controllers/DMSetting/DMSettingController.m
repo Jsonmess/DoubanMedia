@@ -14,6 +14,7 @@
 #import "DMLoginManager.h"
 #import "MBProgressHUD+DMProgressHUD.h"
 #import "DMLoginViewController.h"
+#import "DMSettingCell.h"
 @interface DMSettingController ()<UITableViewDelegate,UITableViewDataSource,
 						DMUserInfoCellDelegate,UIActionSheetDelegate,DMLoginManagerDelegate>
 {
@@ -104,18 +105,40 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell;
+    //设置基本内容
+    BOOL showSwitch = false;
+    BOOL showArrow = YES;
+    NSString *subTitle = @"";
+
     if (indexPath.section == 0)
     {
         cell = userCell;
     }else
     {
         static NSString *reUseStr = @"settingCell";
-        cell = [tableView dequeueReusableCellWithIdentifier:reUseStr];
-        if (cell == nil)
+        DMSettingCell *settingCell;
+        settingCell = (DMSettingCell *)[tableView dequeueReusableCellWithIdentifier:reUseStr];
+        if (settingCell == nil)
         {
-            cell = [[BaseTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reUseStr];
+            settingCell = [[DMSettingCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reUseStr];
         }
-        [cell.textLabel setText:sources[indexPath.section-1][indexPath.row]];
+		//这里就没必要重新去创建字典，定义每一行 内容显示属性
+        if (indexPath.section == 2 && indexPath.row == 0)
+        {
+            showSwitch = YES;
+            showArrow = NO;
+        }
+        if (indexPath.section == 3)
+        {
+            showSwitch = NO;
+            showArrow = NO;
+            subTitle = @"20m";
+        }
+        [settingCell setContentsWithTitle:sources[indexPath.section-1][indexPath.row]
+                                                                      subTitle:subTitle
+                                                                      isShouldShowSwitch:showSwitch
+                                                                      haveArrows:showArrow];
+        cell = settingCell;
     }
     return cell;
 }
@@ -124,7 +147,7 @@
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 30)];
     if (section > 0)
     {
-        [label setText:headSources[section-1]];
+        [label setText: [NSString stringWithFormat:@"      %@", headSources[section-1]]];
     }
     [label setFont:DMFont(12.0f)];
     [label setTextColor:DMColor(120, 122, 122, 1.0f)];
@@ -174,6 +197,14 @@
     }
     else
         return 20.0f;
+
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
 }
 
