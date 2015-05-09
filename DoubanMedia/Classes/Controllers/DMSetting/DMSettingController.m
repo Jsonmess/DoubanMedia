@@ -15,6 +15,8 @@
 #import "MBProgressHUD+DMProgressHUD.h"
 #import "DMLoginViewController.h"
 #import "DMSettingCell.h"
+#import "DMZBarReaderController.h"
+#import "DMCreateQRCodeController.h"
 @interface DMSettingController ()<UITableViewDelegate,UITableViewDataSource,
 						DMUserInfoCellDelegate,UIActionSheetDelegate,DMLoginManagerDelegate>
 {
@@ -202,8 +204,23 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if (indexPath.section == 1)
+    {
+        switch (indexPath.row)
+        {
+            case 0:
+               //扫描二维码
+                [self gotoScanQRCode];
+                break;
+               case 1:
+                //生成二维码
+                [self createQRCode];
+                break;
+            default:
+                break;
+        }
+    }
 
-    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
 }
@@ -261,19 +278,33 @@
                                         showTime:1.5f];
     [userCell checkLoginInfo];
 }
+
+#pragma mark ---- actions for sub fuction
+//扫一扫
+-(void)gotoScanQRCode
+{
+    //添加提示器---用于等待
+    MBProgressHUD *hud = [MBProgressHUD createProgressOnlyWithView:self.view ShouldRemoveOnHide:YES];
+    [hud showAnimated:YES whileExecutingBlock:^{
+         DMZBarReaderController *zbarController = [[DMZBarReaderController alloc] init];
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            [self.navigationController pushViewController:zbarController animated:YES];
+        });
+    } completionBlock:^{
+        [hud setHidden:YES];
+    }];
+}
+//生成二维码
+-(void)createQRCode
+{
+    DMCreateQRCodeController *controller = [[DMCreateQRCodeController alloc] init];
+    [self.navigationController pushViewController:controller animated:YES];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

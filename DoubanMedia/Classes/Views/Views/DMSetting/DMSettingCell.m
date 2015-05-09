@@ -43,6 +43,7 @@
     subTitleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
     [subTitleLabel setTextAlignment:NSTextAlignmentRight];
     [subTitleLabel setFont:subFont];
+    [subTitleLabel setTextColor:DMColor(130, 132, 132, 1.0f)];
     theSwitch = [[UISwitch alloc] initWithFrame:CGRectZero];
     [theSwitch setOn:NO];
     //默认隐藏

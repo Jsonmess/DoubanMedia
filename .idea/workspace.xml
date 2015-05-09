@@ -2,96 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2bb2a61-7e59-426b-aa34-7d54bf3010c4" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/README" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/README.windows" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/include/zbar.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/iphone/ZBarCVImage.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/iphone/ZBarCVImage.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/iphone/ZBarCameraSimulator.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/iphone/ZBarCaptureReader.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/iphone/ZBarHelpController.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/iphone/ZBarImage.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/iphone/ZBarImageScanner.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/iphone/ZBarReaderController.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/iphone/ZBarReaderView.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/iphone/ZBarReaderViewController.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/iphone/ZBarReaderViewImpl_Capture.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/iphone/ZBarReaderViewImpl_Simulator.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/iphone/ZBarSymbol.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/iphone/debug.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/iphone/include/ZBarSDK/ZBarCameraSimulator.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/iphone/include/ZBarSDK/ZBarCaptureReader.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/iphone/include/ZBarSDK/ZBarHelpController.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/iphone/include/ZBarSDK/ZBarImage.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/iphone/include/ZBarSDK/ZBarImageScanner.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/iphone/include/ZBarSDK/ZBarReaderController.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/iphone/include/ZBarSDK/ZBarReaderView.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/iphone/include/ZBarSDK/ZBarReaderViewController.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/iphone/include/ZBarSDK/ZBarSDK.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/iphone/include/ZBarSDK/ZBarSymbol.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/iphone/include/config.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/iphone/include/prefix.pch" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/iphone/res/zbar-back.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/iphone/res/zbar-help.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/iphone/res/zbar-helpicons.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/iphone/res/zbar-samples.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/zbar/config.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/zbar/debug.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/zbar/decoder.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/zbar/decoder.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/zbar/decoder/code128.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/zbar/decoder/code128.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/zbar/decoder/code39.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/zbar/decoder/code39.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/zbar/decoder/code93.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/zbar/decoder/code93.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/zbar/decoder/databar.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/zbar/decoder/databar.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/zbar/decoder/ean.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/zbar/decoder/ean.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/zbar/decoder/i25.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/zbar/decoder/i25.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/zbar/decoder/pdf417.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/zbar/decoder/pdf417_hash.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/zbar/decoder/qr_finder.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/zbar/decoder/qr_finder.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/zbar/error.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/zbar/error.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/zbar/event.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/zbar/image.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/zbar/image.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/zbar/img_scanner.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/zbar/img_scanner.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/zbar/mutex.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/zbar/processor.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/zbar/processor/posix.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/zbar/qrcode.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/zbar/qrcode/bch15_5.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/zbar/qrcode/bch15_5.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/zbar/qrcode/binarize.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/zbar/qrcode/binarize.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/zbar/qrcode/isaac.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/zbar/qrcode/isaac.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/zbar/qrcode/qrdec.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/zbar/qrcode/qrdec.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/zbar/qrcode/qrdectxt.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/zbar/qrcode/rs.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/zbar/qrcode/rs.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/zbar/qrcode/util.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/zbar/qrcode/util.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/zbar/refcnt.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/zbar/refcnt.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/zbar/scanner.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/zbar/svg.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/zbar/symbol.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/zbar/symbol.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/zbar/thread.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/zbar/timer.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/zbar/video.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/zbar/window.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/zbar/window/win.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/ZBarSDK/zbar/window/x.h" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Resource/images/Setting/scan@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Resource/images/Setting/scan_animation@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Controllers/DMSetting/DMCreateQRCodeController.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Controllers/DMSetting/DMCreateQRCodeController.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/DMZBarReader/DMZBarReaderController.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Assets/DMZBarReader/DMZBarReaderController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Views/Views/DMSetting/DMSettingCell.m" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Views/Views/DMSetting/DMSettingCell.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DoubanMedia/Classes/Controllers/DMSetting/DMSettingController.m" afterPath="$PROJECT_DIR$/DoubanMedia/Classes/Controllers/DMSetting/DMSettingController.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Manifest.lock" afterPath="$PROJECT_DIR$/Pods/Manifest.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Podfile.lock" afterPath="$PROJECT_DIR$/Podfile.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Podfile" afterPath="$PROJECT_DIR$/Podfile" />
@@ -110,12 +28,13 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-SVWebViewController/Pods-SVWebViewController-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-SVWebViewController/Pods-SVWebViewController-Private.xcconfig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-TMCache/Pods-TMCache-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-TMCache/Pods-TMCache-Private.xcconfig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-UIActivityIndicator-for-SDWebImage/Pods-UIActivityIndicator-for-SDWebImage-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-UIActivityIndicator-for-SDWebImage/Pods-UIActivityIndicator-for-SDWebImage-Private.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-ZBarSDK/Pods-ZBarSDK-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-ZBarSDK/Pods-ZBarSDK-Private.xcconfig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods/Pods-acknowledgements.markdown" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods/Pods-acknowledgements.markdown" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods/Pods-acknowledgements.plist" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods/Pods-acknowledgements.plist" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods/Pods-environment.h" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods/Pods-environment.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods/Pods-resources.sh" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods/Pods-resources.sh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods/Pods.debug.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods/Pods.debug.xcconfig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods/Pods.release.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods/Pods.release.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DoubanMedia.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/DoubanMedia.xcodeproj/project.pbxproj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/project.pbxproj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/jsonmess.xcuserdatad/xcschemes/xcschememanagement.plist" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/jsonmess.xcuserdatad/xcschemes/xcschememanagement.plist" />
     </list>
@@ -135,7 +54,7 @@
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_b1644c80fbc04405437fad41906cc2f68d198202" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_fc9b56e57c802e678786097c621b409bf70ec391" />
   <component name="FavoritesManager">
     <favorites_list name="DoubanMedia" />
   </component>
@@ -166,8 +85,8 @@
       <file leaf-file-name="Podfile" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Podfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.39285713" vertical-offset="0" max-vertical-offset="364">
-              <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.6902655" vertical-offset="0" max-vertical-offset="339">
+              <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -196,8 +115,8 @@
       <file leaf-file-name="DMMusicPlayerController.m" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DoubanMedia/Classes/Controllers/DMFM/DMMusicPlayerController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3380" max-vertical-offset="4082">
-              <caret line="260" column="5" selection-start-line="260" selection-start-column="5" selection-end-line="260" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="3536" max-vertical-offset="4238">
+              <caret line="272" column="0" selection-start-line="272" selection-start-column="0" selection-end-line="272" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -268,7 +187,8 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+    <option name="x" value="18" />
+    <option name="y" value="25" />
     <option name="width" value="1280" />
     <option name="height" value="729" />
   </component>
@@ -295,6 +215,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Cidr.FilesView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -387,7 +308,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Cidr.FilesView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -551,7 +471,14 @@
       </EXTENSION>
       <method />
     </configuration>
-    <list size="18">
+    <configuration default="false" name="Pods-libqrencode" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="Pods-libqrencode" CONFIG_NAME="Debug" SCHEME_NAME="Pods-libqrencode" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <list size="19">
       <item index="0" class="java.lang.String" itemvalue="Application.DoubanMedia" />
       <item index="1" class="java.lang.String" itemvalue="Application.Pods-MJRefresh" />
       <item index="2" class="java.lang.String" itemvalue="Application.Pods-SDWebImage" />
@@ -570,6 +497,7 @@
       <item index="15" class="java.lang.String" itemvalue="Application.Pods-NHBalancedFlowLayout" />
       <item index="16" class="java.lang.String" itemvalue="Application.Pods-UIActivityIndicator-for-SDWebImage" />
       <item index="17" class="java.lang.String" itemvalue="Application.Pods-ZBarSDK" />
+      <item index="18" class="java.lang.String" itemvalue="Application.Pods-libqrencode" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -606,10 +534,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="729" extended-state="0" />
-    <editor active="false" />
+    <frame x="18" y="25" width="1280" height="729" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3865415" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3865415" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32707354" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1038,8 +966,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DoubanMedia/Classes/Controllers/DMFM/DMMusicPlayerController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3380" max-vertical-offset="4134">
-          <caret line="260" column="5" selection-start-line="260" selection-start-column="5" selection-end-line="260" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="3536" max-vertical-offset="4238">
+          <caret line="272" column="0" selection-start-line="272" selection-start-column="0" selection-end-line="272" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1062,8 +990,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Podfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39285713" vertical-offset="0" max-vertical-offset="364">
-          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.6902655" vertical-offset="0" max-vertical-offset="339">
+          <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
           <folding />
         </state>
       </provider>
