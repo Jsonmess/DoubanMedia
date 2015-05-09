@@ -32,7 +32,7 @@
 @property (nonatomic) UILabel *playProgress;//播放进度
 @property (nonatomic) UILabel *songArtist;//显示歌手
 @property (nonatomic) UISlider *volumeSlider;//控制音量
-@property (nonatomic) id<DMPlayerViewDelegate> playDelegate;
+@property (nonatomic,weak) id<DMPlayerViewDelegate> playDelegate;
 -(void)setChannelName:(NSString *)channelName;
 -(void)setSongTitle:(NSString *)title;
 -(void)setAlbumImage:(UIImage *)image;

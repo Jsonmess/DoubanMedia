@@ -15,6 +15,7 @@
 		29141D6C1AC703E100FDDC85 /* home_mm@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 29141D6B1AC703E100FDDC85 /* home_mm@2x.png */; };
 		29141D6E1AC7070200FDDC85 /* home_fm@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 29141D6D1AC7070200FDDC85 /* home_fm@2x.png */; };
 		29141D7B1AC7ABB100FDDC85 /* DMChannelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 29141D7A1AC7ABB100FDDC85 /* DMChannelManager.m */; };
+		292772AD1AFB9D4800638A73 /* DMZBarReaderController.m in Sources */ = {isa = PBXBuildFile; fileRef = 292772AC1AFB9D4800638A73 /* DMZBarReaderController.m */; };
 		293C18A41AE2B0580033398A /* DMFilmListManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 293C18A31AE2B0580033398A /* DMFilmListManager.m */; };
 		293C18DA1AE358920033398A /* FilmInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 293C18D91AE358920033398A /* FilmInfo.m */; };
 		293C18E21AE3D1300033398A /* DMFilmInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 293C18E11AE3D1300033398A /* DMFilmInfoCell.m */; };
@@ -63,6 +64,8 @@
 		297FFD111AD1780A00A6D3EE /* DMPlayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 297FFD101AD1780A00A6D3EE /* DMPlayManager.m */; };
 		297FFD181AD2173700A6D3EE /* TabViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 297FFD171AD2173700A6D3EE /* TabViewManager.m */; };
 		29851C5B1ADFE333004BC01A /* DMFilmCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 29851C5A1ADFE333004BC01A /* DMFilmCell.m */; };
+		298860721AFDE0E20092B491 /* scan_animation@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 298860701AFDE0E20092B491 /* scan_animation@2x.png */; };
+		298860731AFDE0E20092B491 /* scan@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 298860711AFDE0E20092B491 /* scan@2x.png */; };
 		2999D9791ABB134400F43C54 /* RootTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2999D9781ABB134400F43C54 /* RootTabView.m */; };
 		299F2D931AEF42AB001606AE /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 299F2D8D1AEF42AB001606AE /* TencentOpenAPI.framework */; };
 		299F2D941AEF42AB001606AE /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 299F2D8E1AEF42AB001606AE /* TencentOpenApi_IOS_Bundle.bundle */; };
@@ -111,6 +114,7 @@
 		299F2E481AF06D3D001606AE /* NYTScalingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 299F2E341AF06D3D001606AE /* NYTScalingImageView.m */; };
 		299F2E4A1AF0D835001606AE /* douban_meizhi_share.png in Resources */ = {isa = PBXBuildFile; fileRef = 299F2E491AF0D835001606AE /* douban_meizhi_share.png */; };
 		29A1491D1ADF797000CAAAAF /* DMFilmListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A1491C1ADF797000CAAAAF /* DMFilmListView.m */; };
+		29A2B1851AFA27C200CF79AE /* DMSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A2B1841AFA27C200CF79AE /* DMSettingCell.m */; };
 		29A35B081AC6624900C2C2ED /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A35B071AC6624900C2C2ED /* BaseTableViewCell.m */; };
 		29A35B0B1AC6879200C2C2ED /* UIImage+DMResizeImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A35B0A1AC6879200C2C2ED /* UIImage+DMResizeImage.m */; };
 		29A35B0E1AC68DEF00C2C2ED /* BaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A35B0D1AC68DEF00C2C2ED /* BaseTableView.m */; };
@@ -119,6 +123,8 @@
 		29A35B171AC6D5D700C2C2ED /* DMFMUserHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A35B161AC6D5D700C2C2ED /* DMFMUserHeaderView.m */; };
 		29A6FB5A1AD95F720076C393 /* UIImage+loadRemoteImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A6FB591AD95F720076C393 /* UIImage+loadRemoteImage.m */; };
 		29A6FB5C1AD9760F0076C393 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29A6FB5B1AD9760F0076C393 /* MediaPlayer.framework */; };
+		29ADAF031AFE51BB00E6AB3A /* DMCreateQRCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29ADAF021AFE51BB00E6AB3A /* DMCreateQRCodeController.m */; };
+		29ADAF081AFE656100E6AB3A /* QRCodeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 29ADAF071AFE656100E6AB3A /* QRCodeGenerator.m */; };
 		29B4D1081ABEBCA300899F29 /* TabItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B4D1071ABEBCA300899F29 /* TabItem.m */; };
 		29B4D1521ABEBE7200899F29 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 29B4D10C1ABEBE7200899F29 /* Default-568h@2x.png */; };
 		29B4D1531ABEBE7200899F29 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 29B4D10D1ABEBE7200899F29 /* Default.png */; };
@@ -184,6 +190,8 @@
 		29141D6D1AC7070200FDDC85 /* home_fm@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_fm@2x.png"; sourceTree = "<group>"; };
 		29141D791AC7ABB100FDDC85 /* DMChannelManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMChannelManager.h; sourceTree = "<group>"; };
 		29141D7A1AC7ABB100FDDC85 /* DMChannelManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMChannelManager.m; sourceTree = "<group>"; };
+		292772AB1AFB9D4800638A73 /* DMZBarReaderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMZBarReaderController.h; sourceTree = "<group>"; };
+		292772AC1AFB9D4800638A73 /* DMZBarReaderController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMZBarReaderController.m; sourceTree = "<group>"; };
 		293C18A21AE2B0580033398A /* DMFilmListManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMFilmListManager.h; sourceTree = "<group>"; };
 		293C18A31AE2B0580033398A /* DMFilmListManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMFilmListManager.m; sourceTree = "<group>"; };
 		293C18D81AE358920033398A /* FilmInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilmInfo.h; sourceTree = "<group>"; };
@@ -256,6 +264,8 @@
 		297FFD171AD2173700A6D3EE /* TabViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabViewManager.m; sourceTree = "<group>"; };
 		29851C591ADFE333004BC01A /* DMFilmCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMFilmCell.h; sourceTree = "<group>"; };
 		29851C5A1ADFE333004BC01A /* DMFilmCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMFilmCell.m; sourceTree = "<group>"; };
+		298860701AFDE0E20092B491 /* scan_animation@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scan_animation@2x.png"; sourceTree = "<group>"; };
+		298860711AFDE0E20092B491 /* scan@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scan@2x.png"; sourceTree = "<group>"; };
 		2999D9771ABB134400F43C54 /* RootTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTabView.h; sourceTree = "<group>"; };
 		2999D9781ABB134400F43C54 /* RootTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTabView.m; sourceTree = "<group>"; };
 		299F2D8D1AEF42AB001606AE /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
@@ -335,6 +345,8 @@
 		299F2E491AF0D835001606AE /* douban_meizhi_share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = douban_meizhi_share.png; sourceTree = "<group>"; };
 		29A1491B1ADF797000CAAAAF /* DMFilmListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMFilmListView.h; sourceTree = "<group>"; };
 		29A1491C1ADF797000CAAAAF /* DMFilmListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMFilmListView.m; sourceTree = "<group>"; };
+		29A2B1831AFA27C200CF79AE /* DMSettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMSettingCell.h; sourceTree = "<group>"; };
+		29A2B1841AFA27C200CF79AE /* DMSettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMSettingCell.m; sourceTree = "<group>"; };
 		29A35B061AC6624900C2C2ED /* BaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
 		29A35B071AC6624900C2C2ED /* BaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCell.m; sourceTree = "<group>"; };
 		29A35B091AC6879200C2C2ED /* UIImage+DMResizeImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+DMResizeImage.h"; sourceTree = "<group>"; };
@@ -349,6 +361,10 @@
 		29A6FB581AD95F720076C393 /* UIImage+loadRemoteImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+loadRemoteImage.h"; sourceTree = "<group>"; };
 		29A6FB591AD95F720076C393 /* UIImage+loadRemoteImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+loadRemoteImage.m"; sourceTree = "<group>"; };
 		29A6FB5B1AD9760F0076C393 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		29ADAF011AFE51BB00E6AB3A /* DMCreateQRCodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMCreateQRCodeController.h; sourceTree = "<group>"; };
+		29ADAF021AFE51BB00E6AB3A /* DMCreateQRCodeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMCreateQRCodeController.m; sourceTree = "<group>"; };
+		29ADAF061AFE656100E6AB3A /* QRCodeGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeGenerator.h; sourceTree = "<group>"; };
+		29ADAF071AFE656100E6AB3A /* QRCodeGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeGenerator.m; sourceTree = "<group>"; };
 		29B4D1061ABEBCA300899F29 /* TabItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabItem.h; sourceTree = "<group>"; };
 		29B4D1071ABEBCA300899F29 /* TabItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabItem.m; sourceTree = "<group>"; };
 		29B4D10C1ABEBE7200899F29 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -434,6 +450,8 @@
 			children = (
 				2913A4AE1AF64592006A6B5F /* DMSettingController.h */,
 				2913A4AF1AF64592006A6B5F /* DMSettingController.m */,
+				29ADAF011AFE51BB00E6AB3A /* DMCreateQRCodeController.h */,
+				29ADAF021AFE51BB00E6AB3A /* DMCreateQRCodeController.m */,
 			);
 			path = DMSetting;
 			sourceTree = "<group>";
@@ -445,6 +463,8 @@
 				2913A4B31AF66084006A6B5F /* DMUserInfoCell.m */,
 				2913A4BA1AF7823F006A6B5F /* DMUserSubInfoView.h */,
 				2913A4BB1AF7823F006A6B5F /* DMUserSubInfoView.m */,
+				29A2B1831AFA27C200CF79AE /* DMSettingCell.h */,
+				29A2B1841AFA27C200CF79AE /* DMSettingCell.m */,
 			);
 			path = DMSetting;
 			sourceTree = "<group>";
@@ -456,6 +476,24 @@
 				29141D7A1AC7ABB100FDDC85 /* DMChannelManager.m */,
 			);
 			path = ChannelList;
+			sourceTree = "<group>";
+		};
+		292772AA1AFB9D3F00638A73 /* DMZBarReader */ = {
+			isa = PBXGroup;
+			children = (
+				29ADAF061AFE656100E6AB3A /* QRCodeGenerator.h */,
+				29ADAF071AFE656100E6AB3A /* QRCodeGenerator.m */,
+				292772AB1AFB9D4800638A73 /* DMZBarReaderController.h */,
+				292772AC1AFB9D4800638A73 /* DMZBarReaderController.m */,
+			);
+			path = DMZBarReader;
+			sourceTree = "<group>";
+		};
+		292772AE1AFB9DB100638A73 /* DMSetting */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DMSetting;
 			sourceTree = "<group>";
 		};
 		293C18A11AE2B0350033398A /* FilmList */ = {
@@ -501,6 +539,7 @@
 		2940BAF11AB87F3C00D1069A /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				292772AA1AFB9D3F00638A73 /* DMZBarReader */,
 				299F2E161AF06D3D001606AE /* NYTPhotoViewer */,
 				299F2D8B1AEF42AB001606AE /* SDKs */,
 				29BD5F291AE2205000AB3E23 /* JSStarRating */,
@@ -637,6 +676,7 @@
 		296F47151AC188E800231873 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				292772AE1AFB9DB100638A73 /* DMSetting */,
 				299F2E081AEF6D50001606AE /* DMMeiZi */,
 				293C18A11AE2B0350033398A /* FilmList */,
 				293D45331AD41FE900BD2406 /* SystemVolume */,
@@ -1068,6 +1108,8 @@
 		29B4D1411ABEBE7200899F29 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				298860701AFDE0E20092B491 /* scan_animation@2x.png */,
+				298860711AFDE0E20092B491 /* scan@2x.png */,
 				29B4D1421ABEBE7200899F29 /* Author.jpg */,
 				29B4D1431ABEBE7200899F29 /* Back_Setting.png */,
 				29B4D1441ABEBE7200899F29 /* Settingforward_pressed@2x.png */,
@@ -1286,6 +1328,7 @@
 				299F2E391AF06D3D001606AE /* NYTPhotoViewerCloseButtonX.png in Resources */,
 				2913A4BE1AF7A0CC006A6B5F /* user_normal.png in Resources */,
 				299F2D941AEF42AB001606AE /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
+				298860721AFDE0E20092B491 /* scan_animation@2x.png in Resources */,
 				297FFCF01AD03CF700A6D3EE /* cell_bg@2x.png in Resources */,
 				296F47131AC187B500231873 /* splash_screen_logo.png in Resources */,
 				29141D6E1AC7070200FDDC85 /* home_fm@2x.png in Resources */,
@@ -1317,6 +1360,7 @@
 				297FFCF51AD03CF700A6D3EE /* ic_player_ban.png in Resources */,
 				8A544CE265375C9223304D52 /* Podfile in Resources */,
 				297FFCFF1AD03CF700A6D3EE /* ic_player_next_highlight.png in Resources */,
+				298860731AFDE0E20092B491 /* scan@2x.png in Resources */,
 				299F2E3D1AF06D3D001606AE /* NYTPhotoViewerCloseButtonXLandscape@2x.png in Resources */,
 				29B4D17D1ABEBE7200899F29 /* original_top.png in Resources */,
 				299F2E051AEF6139001606AE /* RefreshBtn@2x.png in Resources */,
@@ -1406,6 +1450,7 @@
 				29851C5B1ADFE333004BC01A /* DMFilmCell.m in Sources */,
 				29C1B2171AE7C12D008E8F6E /* JSWebViewController.m in Sources */,
 				299F2DAB1AEF42DF001606AE /* DMMeiZiController.m in Sources */,
+				29A2B1851AFA27C200CF79AE /* DMSettingCell.m in Sources */,
 				297FFD181AD2173700A6D3EE /* TabViewManager.m in Sources */,
 				299F2E461AF06D3D001606AE /* NYTPhotoTransitionController.m in Sources */,
 				2978D1971AC035D4005CB2F3 /* Com_navigationController.m in Sources */,
@@ -1413,6 +1458,7 @@
 				297FFD111AD1780A00A6D3EE /* DMPlayManager.m in Sources */,
 				299F2E0B1AEF6D74001606AE /* DMMeiZiManager.m in Sources */,
 				29692FC81AD55D8A00641CDF /* DMMusicPlayManager.m in Sources */,
+				292772AD1AFB9D4800638A73 /* DMZBarReaderController.m in Sources */,
 				295DF5161ADD516B0096935A /* DMFilmListController.m in Sources */,
 				299F2DF01AEF5B16001606AE /* DMShareEntity.m in Sources */,
 				29B4D1081ABEBCA300899F29 /* TabItem.m in Sources */,
@@ -1423,6 +1469,7 @@
 				297AE74D1ACA4FA90037448C /* FMChannel.m in Sources */,
 				299F2E3F1AF06D3D001606AE /* NYTOperatingSystemCompatibilityUtility.m in Sources */,
 				299F2DCD1AEF430D001606AE /* DMMeiZiView.m in Sources */,
+				29ADAF031AFE51BB00E6AB3A /* DMCreateQRCodeController.m in Sources */,
 				29B4D1921ABF0D6C00899F29 /* RootViewController.m in Sources */,
 				29BE7A4B1AC1668700963F97 /* DMLoginViewController.m in Sources */,
 				299F2E151AEF7838001606AE /* DMMeiZiDetailCell.m in Sources */,
@@ -1453,6 +1500,7 @@
 				29A35B0B1AC6879200C2C2ED /* UIImage+DMResizeImage.m in Sources */,
 				293C18E21AE3D1300033398A /* DMFilmInfoCell.m in Sources */,
 				29A6FB5A1AD95F720076C393 /* UIImage+loadRemoteImage.m in Sources */,
+				29ADAF081AFE656100E6AB3A /* QRCodeGenerator.m in Sources */,
 				29FC25E51AC452870055A770 /* AccountInfo.m in Sources */,
 				2999D9791ABB134400F43C54 /* RootTabView.m in Sources */,
 				29692FC51AD54E4700641CDF /* DMSongInfo.m in Sources */,
@@ -1591,7 +1639,7 @@
 					"$(PROJECT_DIR)/DoubanMedia/Classes/Assets/SDKs/WeiChat",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0eec9bb8-fc23-4cfe-9e88-19578e7e5d72";
+				PROVISIONING_PROFILE = "a874dd33-ab96-4bb6-b6a0-713eac969559";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1617,7 +1665,7 @@
 					"$(PROJECT_DIR)/DoubanMedia/Classes/Assets/SDKs/WeiChat",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0eec9bb8-fc23-4cfe-9e88-19578e7e5d72";
+				PROVISIONING_PROFILE = "a874dd33-ab96-4bb6-b6a0-713eac969559";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

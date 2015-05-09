@@ -11,7 +11,7 @@
 -(void)shouldReloadData:(BOOL)isReadFromLocal;
 @end
 @interface DMChannelManager : NSObject
-@property (nonatomic) id<DMChannelDelegate>delegate;
+@property (nonatomic,weak) id<DMChannelDelegate>delegate;
 //获取频道列表数据
 -(void)getChannel:(NSUInteger)channelIndex withURLWithString:(NSString *)urlWithString;
 @end

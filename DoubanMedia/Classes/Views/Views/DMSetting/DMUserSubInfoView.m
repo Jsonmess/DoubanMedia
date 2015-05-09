@@ -40,6 +40,7 @@
     infoText = [[UILabel alloc] initWithFrame:CGRectZero];
     [infoText setText:@"0"];
     [infoText setTextAlignment:NSTextAlignmentCenter];
+    [infoText setTextColor: DMColor(130, 132, 132, 1.0f)];
     [contenView addSubview:infoText];
     //contains
     [contenView autoSetDimension:ALDimensionWidth toSize:55.0f];

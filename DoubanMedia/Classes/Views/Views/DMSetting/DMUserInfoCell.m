@@ -30,7 +30,7 @@
     if (self)
     {
         [self setUpView];
-        [self setUserContents];
+        [self checkLoginInfo];
     }
     return self;
 }
@@ -49,9 +49,10 @@
     [userIcon setContentMode:UIViewContentModeScaleAspectFill];
 	//用户名称
     userName = [[UILabel alloc] initWithFrame:CGRectZero];
-    [userName setText:@"用户未登录"];
+    [userName setText:@"点击登录"];
     [userName setTextAlignment:NSTextAlignmentCenter];
     [userName setFont:DMBoldFont(15.0f)];
+    [userName setTextColor: DMColor(130, 132, 132, 1.0f)];
     [self.contentView addSubview:userIcon];
     [self.contentView addSubview:userName];
 
@@ -86,14 +87,16 @@
     //用户详情
     NSArray * subInfoView = @[listenView,likeView,disLikeView];
     CGFloat spacingValue = ScreenBounds.size.width *1/6;
-    [subInfoView autoDistributeViewsAlongAxis:ALAxisHorizontal alignedTo:ALAttributeHorizontal withFixedSize:spacingValue insetSpacing:YES];
+    [subInfoView autoDistributeViewsAlongAxis:ALAxisHorizontal alignedTo:ALAttributeHorizontal
+                                withFixedSize:spacingValue insetSpacing:YES];
        [listenView autoPinEdge:ALEdgeBottom toEdge:ALEdgeBottom ofView:self.contentView withOffset:-5.0f];
 }
 #pragma mark --actions
 //设置内容
--(void)setUserContents
+-(void)checkLoginInfo
 {
-    NSManagedObjectContext *context = [NSManagedObjectContext MR_contextWithParent:[NSManagedObjectContext MR_defaultContext]];
+    NSManagedObjectContext *context = [NSManagedObjectContext MR_contextWithParent:[NSManagedObjectContext
+                                                                                    MR_defaultContext]];
     NSArray *users = [AccountInfo MR_findAllInContext:context];
     if (users.count > 0)
     {
@@ -102,21 +105,28 @@
         //设置
         NSString *userImageUrl = [NSString stringWithFormat:@"%@%@.jpg",
                                   UserAccountIconUrl,userInfo.userId];
-        [userIcon sd_setImageWithURL:[NSURL URLWithString:userImageUrl] placeholderImage:[UIImage imageNamed:@"user_normal"] options:SDWebImageLowPriority|SDWebImageRetryFailed];
+        [userIcon sd_setImageWithURL:[NSURL URLWithString:userImageUrl]
+                    placeholderImage:[UIImage imageNamed:@"user_normal"]
+                             options:SDWebImageLowPriority|SDWebImageRetryFailed];
         [userName setText:userInfo.name];
         [listenView.getInfoTextLabel setText:userInfo.played];
         [likeView.getInfoTextLabel setText:userInfo.liked];
         [disLikeView.getInfoTextLabel setText:userInfo.banned];
         [self setNeedsLayout];
     }
+    else
+    {
+        userIsLogin = NO;
+        [userIcon setImage:[UIImage imageNamed:@"user_normal"]];
+        [userName setText:@"点击登录"];
+        [listenView.getInfoTextLabel setText:@"0"];
+        [likeView.getInfoTextLabel setText:@"0"];
+        [disLikeView.getInfoTextLabel setText:@"0"];
+    }
 }
 //登录+注销
 -(void)loginInOrLoginOut
 {
-    if (!userIsLogin)
-    {
-		//提示登录
-
-    }
+    [self.delegate setRegisterStatus:userIsLogin];
 }
 @end

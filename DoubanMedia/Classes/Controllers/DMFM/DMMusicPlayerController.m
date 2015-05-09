@@ -226,8 +226,8 @@
 			//更新远程播放进度
             if (remoteInfoDic != nil)
             {
-			   [remoteInfoDic setObject:[NSNumber numberWithDouble:[currentPlaySong.length floatValue]]
-                         forKey:MPMediaItemPropertyPlaybackDuration];
+                NSNumber *number = [NSNumber numberWithDouble:musicPlayer.getCurrentAudioStreamer.currentTime];
+				[remoteInfoDic setObject:number forKey:MPNowPlayingInfoPropertyElapsedPlaybackTime];
 				[[MPNowPlayingInfoCenter defaultCenter] setNowPlayingInfo:remoteInfoDic];
             }
             break;
