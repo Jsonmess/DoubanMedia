@@ -13,6 +13,7 @@
 #import "ShareActionTool.h"
 #import "DMShareEntity.h"
 #import "TabViewManager.h"
+#import "PhotoTool.h"
 @interface DMCreateQRCodeController ()
 @property (nonatomic)  UITextField *theTextView;
 @property (nonatomic)  UIImageView *showQRCodeView;
@@ -123,12 +124,19 @@
 //保存到系统相册
 - (void)saveToAlbum:(id)sender
 {
-
+    [[PhotoTool SharePhotoTool]
+     SavePhotoToAlAssetsLibraryWithImageData:UIImageJPEGRepresentation(_showQRCodeView.image, 1.0f)];
 }
 //分享
 - (void)shareToOthers:(id)sender
 {
-    
+    DMShareEntity *entity = [[DMShareEntity alloc] init];
+    entity.theTitle = @"分享二维码";
+    entity.detailText = @"来自迷你豆瓣";
+    entity.thumbnailType = kThumbnailTypeJPG;
+    entity.shareImageData = UIImageJPEGRepresentation(_showQRCodeView.image, 1.0f);
+   ShareActionTool *shareTool = [[ShareActionTool alloc] initWithSuperNavigationController:nil];
+    [shareTool shareToThirdActionWithSuperView:self.view shareEntity:entity];
 }
 //生成二维码
 - (void)createQRCode:(id)sender
