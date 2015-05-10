@@ -1533,6 +1533,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/DoubanMedia/Classes/Assets/SDKs/WeiChat",
+					"$(PROJECT_DIR)/DoubanMedia/Classes/Assets/Umeng",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "a874dd33-ab96-4bb6-b6a0-713eac969559";
@@ -1559,6 +1560,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/DoubanMedia/Classes/Assets/SDKs/WeiChat",
+					"$(PROJECT_DIR)/DoubanMedia/Classes/Assets/Umeng",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "a874dd33-ab96-4bb6-b6a0-713eac969559";

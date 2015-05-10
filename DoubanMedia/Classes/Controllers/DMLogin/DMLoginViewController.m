@@ -170,8 +170,8 @@
     [self.registerBtn setTitleColor: [UIColor blackColor] forState:UIControlStateHighlighted];
     [self.registerBtn autoPinEdge:ALEdgeRight toEdge:ALEdgeRight ofView:self.view withOffset:-20.0f];
     [self.registerBtn autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.password withOffset:3.0f];
-
-    //验证码
+	[self.registerBtn setHidden:YES];
+	//验证码
     [self.authCode autoSetDimension:ALDimensionHeight toSize:30.0f];
     [self.authCode setPlaceholder:@"验证码"];
     [self.authCode setFont:DMFont(12.0f)];
