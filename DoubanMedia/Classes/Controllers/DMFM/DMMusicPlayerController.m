@@ -15,6 +15,9 @@
 #import "UIImage+loadRemoteImage.h"
 #import "DMLoginViewController.h"
 #import <MediaPlayer/MediaPlayer.h>
+#import "ShareActionTool.h"
+#import "DMShareEntity.h"
+#import "PhotoTool.h"
 @interface DMMusicPlayerController ()<DMPlayerViewDelegate,MusicPlayDelegate>
 {
     DMPlayManager *playMananger;
@@ -70,6 +73,14 @@
     [leftbtn setFrame:CGRectMake(0, 0, 32.0f, 32.0f)];
     UIBarButtonItem *backitem=[[UIBarButtonItem alloc]initWithCustomView:leftbtn];
     self.navigationItem.leftBarButtonItem=backitem;
+    //右边状态栏
+    UIButton *rightbtn=[UIButton buttonWithType:UIButtonTypeCustom];
+    [rightbtn setBackgroundImage:[UIImage imageNamed:@"top_menu_share.png"] forState:UIControlStateNormal];
+    [rightbtn setBackgroundImage:[UIImage imageNamed: @"top_menu_share.png"] forState:UIControlStateHighlighted];
+    [rightbtn addTarget:self action:@selector(shareToFriends) forControlEvents:UIControlEventTouchUpInside];
+    [rightbtn setFrame:CGRectMake(0, 0, 28.0f, 28.0f)];
+    UIBarButtonItem *shareitem=[[UIBarButtonItem alloc]initWithCustomView:rightbtn];
+    self.navigationItem.rightBarButtonItem=shareitem;
     [self.view setBackgroundColor:DMColor(242, 242, 242, 1.0f)];
     if (_mplayView == nil)
     {
@@ -104,7 +115,19 @@
     [[[TabViewManager sharedTabViewManager] getTabView] setHidden:NO];
 
 }
+//分享
+-(void)shareToFriends
+{
+    ShareActionTool *tool = [[ShareActionTool alloc] initWithSuperNavigationController:nil];
+    DMShareEntity *entity = [[DMShareEntity alloc] init];
+    PhotoTool *photoTool = [[PhotoTool alloc] init];
+    entity.shareImageData = UIImageJPEGRepresentation([photoTool captureCurrentScreen], 1.0f);
+    entity.theTitle = currentPlaySong.title;
+    entity.detailText = @"分享给大家这首歌";
+    entity.urlString = currentPlaySong.audioFileURL.absoluteString;
+    [tool shareToThirdActionWithSuperView:self.view shareEntity:entity];
 
+}
 - (void)changeVolume:(id)sender
 {
     CGFloat value = [[DMSysVolumeAjustManager sharedSysVolumeAjustManager]

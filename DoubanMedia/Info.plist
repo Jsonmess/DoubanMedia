@@ -24,7 +24,7 @@
 	<array>
 		<dict>
 			<key>CFBundleURLName</key>
-			<string>DoubanMedia</string>
+			<string>迷你豆瓣</string>
 		</dict>
 		<dict>
 			<key>CFBundleTypeRole</key>
@@ -73,6 +73,8 @@
 	<true/>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>CFBundleDisplayName</key>
+	<string>迷你豆瓣</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

@@ -47,7 +47,6 @@
      _channels = [NSMutableArray array];
     //初始化数据源Array----0
     NSArray *fmarray = @[@"用户未登录",@"推荐频道",@"上升最快兆赫",@"热门兆赫"];
-
 	//我的兆赫
     NSMutableArray *privateChannels = [NSMutableArray array];
     NSMutableDictionary *private = [NSMutableDictionary dictionary];
