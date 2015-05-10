@@ -18,6 +18,7 @@
 #import "DMZBarReaderController.h"
 #import "DMCreateQRCodeController.h"
 #import "JSAdviceController.h"
+#import "DMAboutMeController.h"
 @interface DMSettingController ()<UITableViewDelegate,UITableViewDataSource,
 						DMUserInfoCellDelegate,UIActionSheetDelegate,DMLoginManagerDelegate>
 {
@@ -212,10 +213,8 @@
             case 0:
                 [self gotoScanQRCode];
                 break;
-            case 1:
-                [self createQRCode];
-                break;
             default:
+                 [self createQRCode];
                 break;
         }
     }
@@ -227,6 +226,7 @@
                 [self goToAdvice];
                 break;
             default:
+                [self aboutMe];
                 break;
         }
     }
@@ -316,6 +316,12 @@
     JSAdviceController *advicedController = [[JSAdviceController alloc]
                                              initWithNibName:@"JSAdviceController" bundle:nil];
     [self.navigationController pushViewController:advicedController animated:YES];
+}
+//关于作者
+-(void)aboutMe
+{
+    DMAboutMeController *aboutController = [[DMAboutMeController alloc] init];
+    [self.navigationController pushViewController:aboutController animated:YES];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

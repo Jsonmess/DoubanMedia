@@ -128,6 +128,7 @@
 		29ADAF0B1AFEFF0800E6AB3A /* PhotoTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 29ADAF0A1AFEFF0800E6AB3A /* PhotoTool.m */; };
 		29ADAF0D1AFF0B3500E6AB3A /* JSAdviceController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29ADAF0C1AFF0B3500E6AB3A /* JSAdviceController.xib */; };
 		29ADAF101AFF0B4E00E6AB3A /* JSAdviceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29ADAF0F1AFF0B4E00E6AB3A /* JSAdviceController.m */; };
+		29ADAF131AFF40FD00E6AB3A /* DMAboutMeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29ADAF121AFF40FD00E6AB3A /* DMAboutMeController.m */; };
 		29B4D1081ABEBCA300899F29 /* TabItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B4D1071ABEBCA300899F29 /* TabItem.m */; };
 		29B4D1521ABEBE7200899F29 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 29B4D10C1ABEBE7200899F29 /* Default-568h@2x.png */; };
 		29B4D1531ABEBE7200899F29 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 29B4D10D1ABEBE7200899F29 /* Default.png */; };
@@ -153,9 +154,6 @@
 		29B4D18A1ABEBE7200899F29 /* TabBar_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 29B4D14B1ABEBE7200899F29 /* TabBar_bg@2x.png */; };
 		29B4D18B1ABEBE7200899F29 /* TabBarItem_Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 29B4D14C1ABEBE7200899F29 /* TabBarItem_Selected@2x.png */; };
 		29B4D18C1ABEBE7200899F29 /* AboutAuthor.txt in Resources */ = {isa = PBXBuildFile; fileRef = 29B4D14E1ABEBE7200899F29 /* AboutAuthor.txt */; };
-		29B4D18D1ABEBE7200899F29 /* channels.plist in Resources */ = {isa = PBXBuildFile; fileRef = 29B4D14F1ABEBE7200899F29 /* channels.plist */; };
-		29B4D18E1ABEBE7200899F29 /* Music_ranking.plist in Resources */ = {isa = PBXBuildFile; fileRef = 29B4D1501ABEBE7200899F29 /* Music_ranking.plist */; };
-		29B4D18F1ABEBE7200899F29 /* setlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 29B4D1511ABEBE7200899F29 /* setlist.plist */; };
 		29B4D1921ABF0D6C00899F29 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B4D1911ABF0D6C00899F29 /* RootViewController.m */; };
 		29BD5F2F1AE2205000AB3E23 /* ic_star_gray@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 29BD5F2A1AE2205000AB3E23 /* ic_star_gray@2x.png */; };
 		29BD5F301AE2205000AB3E23 /* ic_star_half@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 29BD5F2B1AE2205000AB3E23 /* ic_star_half@2x.png */; };
@@ -373,6 +371,8 @@
 		29ADAF0C1AFF0B3500E6AB3A /* JSAdviceController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSAdviceController.xib; sourceTree = "<group>"; };
 		29ADAF0E1AFF0B4E00E6AB3A /* JSAdviceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAdviceController.h; sourceTree = "<group>"; };
 		29ADAF0F1AFF0B4E00E6AB3A /* JSAdviceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAdviceController.m; sourceTree = "<group>"; };
+		29ADAF111AFF40FD00E6AB3A /* DMAboutMeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMAboutMeController.h; sourceTree = "<group>"; };
+		29ADAF121AFF40FD00E6AB3A /* DMAboutMeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMAboutMeController.m; sourceTree = "<group>"; };
 		29B4D1061ABEBCA300899F29 /* TabItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabItem.h; sourceTree = "<group>"; };
 		29B4D1071ABEBCA300899F29 /* TabItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabItem.m; sourceTree = "<group>"; };
 		29B4D10C1ABEBE7200899F29 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -399,9 +399,6 @@
 		29B4D14B1ABEBE7200899F29 /* TabBar_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TabBar_bg@2x.png"; sourceTree = "<group>"; };
 		29B4D14C1ABEBE7200899F29 /* TabBarItem_Selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TabBarItem_Selected@2x.png"; sourceTree = "<group>"; };
 		29B4D14E1ABEBE7200899F29 /* AboutAuthor.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AboutAuthor.txt; sourceTree = "<group>"; };
-		29B4D14F1ABEBE7200899F29 /* channels.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = channels.plist; sourceTree = "<group>"; };
-		29B4D1501ABEBE7200899F29 /* Music_ranking.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Music_ranking.plist; sourceTree = "<group>"; };
-		29B4D1511ABEBE7200899F29 /* setlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = setlist.plist; sourceTree = "<group>"; };
 		29B4D1901ABF0D6C00899F29 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		29B4D1911ABF0D6C00899F29 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		29BD5F2A1AE2205000AB3E23 /* ic_star_gray@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_star_gray@2x.png"; sourceTree = "<group>"; };
@@ -462,6 +459,8 @@
 				2913A4AF1AF64592006A6B5F /* DMSettingController.m */,
 				29ADAF011AFE51BB00E6AB3A /* DMCreateQRCodeController.h */,
 				29ADAF021AFE51BB00E6AB3A /* DMCreateQRCodeController.m */,
+				29ADAF111AFF40FD00E6AB3A /* DMAboutMeController.h */,
+				29ADAF121AFF40FD00E6AB3A /* DMAboutMeController.m */,
 			);
 			path = DMSetting;
 			sourceTree = "<group>";
@@ -1147,9 +1146,6 @@
 			isa = PBXGroup;
 			children = (
 				29B4D14E1ABEBE7200899F29 /* AboutAuthor.txt */,
-				29B4D14F1ABEBE7200899F29 /* channels.plist */,
-				29B4D1501ABEBE7200899F29 /* Music_ranking.plist */,
-				29B4D1511ABEBE7200899F29 /* setlist.plist */,
 			);
 			path = Plist;
 			sourceTree = "<group>";
@@ -1351,7 +1347,6 @@
 				29B4D17B1ABEBE7200899F29 /* musicincon.png in Resources */,
 				299F2E3E1AF06D3D001606AE /* NYTPhotoViewerCloseButtonXLandscape@3x.png in Resources */,
 				29B4D17A1ABEBE7200899F29 /* Dock_play.png in Resources */,
-				29B4D18F1ABEBE7200899F29 /* setlist.plist in Resources */,
 				29B4D1841ABEBE7200899F29 /* Settingforward_pressed@2x.png in Resources */,
 				29B4D1561ABEBE7200899F29 /* Icon@2x.png in Resources */,
 				29B4D1781ABEBE7200899F29 /* loading@2x.png in Resources */,
@@ -1401,8 +1396,6 @@
 				297FFD001AD03CF700A6D3EE /* Nav_play.png in Resources */,
 				29B4D1891ABEBE7200899F29 /* morePage_setting@2x.png in Resources */,
 				296F47141AC187B500231873 /* splash_screen_wave.png in Resources */,
-				29B4D18D1ABEBE7200899F29 /* channels.plist in Resources */,
-				29B4D18E1ABEBE7200899F29 /* Music_ranking.plist in Resources */,
 				29ADAF0D1AFF0B3500E6AB3A /* JSAdviceController.xib in Resources */,
 				29141D6C1AC703E100FDDC85 /* home_mm@2x.png in Resources */,
 				297FFD021AD03CF700A6D3EE /* play_sound@2x.png in Resources */,
@@ -1524,6 +1517,7 @@
 				29A35B121AC698F200C2C2ED /* DMFMTableViewCell.m in Sources */,
 				299F2E0F1AEF702B001606AE /* DMMeiZi.m in Sources */,
 				29756D8D1ACD9F940011A8E7 /* AlbumRoundView.m in Sources */,
+				29ADAF131AFF40FD00E6AB3A /* DMAboutMeController.m in Sources */,
 				299F2E411AF06D3D001606AE /* NYTPhotoDismissalInteractionController.m in Sources */,
 				295DF5121ADD35640096935A /* MBProgressHUD+DMProgressHUD.m in Sources */,
 				299F2E431AF06D3D001606AE /* NYTPhotosOverlayView.m in Sources */,
