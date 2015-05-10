@@ -34,6 +34,7 @@
     if (self)
     {
         [self commonInit];
+        [self setBackgroundColor:DMColor(230,230,238,1.0f)];
 
     }
     return self;

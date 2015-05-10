@@ -33,7 +33,7 @@
     titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
     [titleLabel setTextAlignment:NSTextAlignmentLeft];
     UIFont *font = DMFont(15.0f);
-    UIFont *subFont = DMFont(12.0f);
+    UIFont *subFont = DMFont(11.0f);
     if ([DMDeviceManager getCurrentDeviceType] == kiPad)
     {
         font = DMFont(18.0f);
@@ -85,7 +85,7 @@
 						ofView:theSwitch withOffset:-ScreenBounds.size.width *0.03f];
     [subTitleLabel autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:titleLabel withOffset:5.0f];
     [subTitleLabel autoPinEdge:ALEdgeBottom toEdge:ALEdgeBottom ofView:titleLabel];
-    [subTitleLabel autoSetDimension:ALDimensionWidth toSize:ScreenBounds.size.width *0.2f];
+    [subTitleLabel autoSetDimension:ALDimensionWidth toSize:ScreenBounds.size.width *0.3f];
 
 }
 

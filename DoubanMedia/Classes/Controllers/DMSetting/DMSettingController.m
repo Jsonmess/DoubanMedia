@@ -88,12 +88,11 @@
                                              selector:@selector(loginSuccess:)
                                                  name:@"LoginSucess"
                                                object:nil];
-    //初始化缓存数组
-    fileSizes = [NSMutableArray arrayWithObjects:@"",@"",@" ", nil];
 }
 //获取图片+音乐缓存大小
 -(void)getFileSize
 {
+    fileSizes = [NSMutableArray arrayWithObjects:@"",@"",@" ", nil];
     tmpPath = NSTemporaryDirectory();
     cachesPath = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)[0];
     DMFileTool *fileTool = [[DMFileTool alloc] init];

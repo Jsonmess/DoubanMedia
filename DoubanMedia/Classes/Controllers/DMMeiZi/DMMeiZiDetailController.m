@@ -33,6 +33,10 @@ UICollectionViewDelegate,UICollectionViewDataSource
     //隐藏tabBar
     [[TabViewManager sharedTabViewManager].getTabView setHidden:YES];
 }
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+}
 -(void)viewDidLoad
 {
     [super viewDidLoad];
