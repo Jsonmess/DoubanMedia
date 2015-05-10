@@ -18,14 +18,22 @@
 #import "DMZBarReaderController.h"
 #import "DMCreateQRCodeController.h"
 #import "JSAdviceController.h"
+#import "DMAboutMeController.h"
+#import "DMFileTool.h"
 @interface DMSettingController ()<UITableViewDelegate,UITableViewDataSource,
-						DMUserInfoCellDelegate,UIActionSheetDelegate,DMLoginManagerDelegate>
+                                DMUserInfoCellDelegate,UIActionSheetDelegate,
+                                    DMLoginManagerDelegate,UIAlertViewDelegate>
 {
     BaseTableView *baseTableView;
     DMLoginManager *loginManager;
     DMUserInfoCell *userCell;//单独的用户Cell
     NSArray *sources;//资源
     NSArray *headSources;//分组标题
+    NSMutableArray *fileSizes;//图片+播放缓存数组
+    NSInteger theIndex;//用于记录清理缓存标签
+    /**文件路径**/
+    NSString *tmpPath;
+    NSString *cachesPath;
 }
 @end
 
@@ -41,9 +49,9 @@
         userCell = [[DMUserInfoCell alloc] initWithStyle:UITableViewCellStyleDefault
                                                          reuseIdentifier:nil];
                 [userCell setDelegate:self];
-
-        sources = @[@[@"二维码扫描",@"生成二维码"],@[@"只在Wifi下联网",@"同步本地歌曲",@"离线管理"],
-                    @[@"清除FM缓存",@"清除图片缓存",@"恢复默认设置"],@[@"意见反馈",@"关于作者"]];
+        //@[@"只在Wifi下联网",@"同步本地歌曲",@"离线管理"]----该部分功能暂时不做
+        sources = @[@[@"二维码扫描",@"生成二维码"],@[@"清除FM缓存",@"清除图片缓存",@"恢复默认设置"],
+                        @[@"意见反馈",@"关于作者"]];
         headSources = @[@"工具",@"基本设置",@"数据清理",@"更多"];
     }
     return self;
@@ -52,12 +60,14 @@
 {
     [super viewDidLoad];
     [self setUpView];
+
     // Do any additional setup after loading the view.
 }
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     shouldHiddenStatusBar(NO);
+    [self getFileSize];
 }
 -(void)setUpView
 {
@@ -78,9 +88,35 @@
                                              selector:@selector(loginSuccess:)
                                                  name:@"LoginSucess"
                                                object:nil];
+}
+//获取图片+音乐缓存大小
+-(void)getFileSize
+{
+    fileSizes = [NSMutableArray arrayWithObjects:@"",@"",@" ", nil];
+    tmpPath = NSTemporaryDirectory();
+    cachesPath = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)[0];
+    DMFileTool *fileTool = [[DMFileTool alloc] init];
+    //tmp大小
+    [fileTool caculateFileSizeWithFilePath:tmpPath WithFileBlock:^(NSString *fileSize)
+    {
+        if (fileSize != nil)
+        {
+            NSString *tmpSize = [NSString stringWithFormat:@"%@缓存",fileSize];
+            [fileSizes replaceObjectAtIndex:0 withObject:tmpSize];
+        }
+    }];
+    //cache大小
+    [fileTool caculateFileSizeWithFilePath:cachesPath WithFileBlock:^(NSString *fileSize)
+     {
+         if (fileSize != nil)
+         {
+             NSString *cachesSize = [NSString stringWithFormat:@"%@缓存",fileSize];
+             [fileSizes replaceObjectAtIndex:1 withObject:cachesSize];
+         }
+         [baseTableView reloadData];
+     }];
 
 }
-
 #pragma mark --actions
 
 -(void)loginSuccess:(NSNotification *)notification
@@ -91,7 +127,7 @@
 #pragma mark -- tableViewDelegate
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 5;
+    return 4;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -125,17 +161,21 @@
         {
             settingCell = [[DMSettingCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reUseStr];
         }
-		//这里就没必要重新去创建字典，定义每一行 内容显示属性
-        if (indexPath.section == 2 && indexPath.row == 0)
-        {
-            showSwitch = YES;
-            showArrow = NO;
-        }
-        if (indexPath.section == 3)
+		//这里就没必要重新去创建字典，定义每一行 内容显示属性 ---这部分暂时不做
+//        if (indexPath.section == 2 && indexPath.row == 0)
+//        {
+//            showSwitch = YES;
+//            showArrow = NO;
+//        }
+        if (indexPath.section == 2)
         {
             showSwitch = NO;
             showArrow = NO;
-            subTitle = @"20m";
+            subTitle = fileSizes[indexPath.row];
+            if ([subTitle isEqualToString:@""])
+            {
+                subTitle = @"无缓存";
+            }
         }
         [settingCell setContentsWithTitle:sources[indexPath.section-1][indexPath.row]
                                                                       subTitle:subTitle
@@ -212,14 +252,12 @@
             case 0:
                 [self gotoScanQRCode];
                 break;
-            case 1:
-                [self createQRCode];
-                break;
             default:
+                 [self createQRCode];
                 break;
         }
     }
-    else if(indexPath.section == 4)
+    else if(indexPath.section == 3)
     {
         switch (indexPath.row)
         {
@@ -227,6 +265,22 @@
                 [self goToAdvice];
                 break;
             default:
+                [self aboutMe];
+                break;
+        }
+    }
+    else if (indexPath.section == 2)
+    {
+        switch (indexPath.row)
+        {
+            case 0:
+                [self cleanFMCache];
+                break;
+            case 1:
+                [self cleanImageCache];
+                break;
+            default:
+                [self resetAppSetting];
                 break;
         }
     }
@@ -310,6 +364,24 @@
     DMCreateQRCodeController *controller = [[DMCreateQRCodeController alloc] init];
     [self.navigationController pushViewController:controller animated:YES];
 }
+//清除FM缓存
+-(void)cleanFMCache
+{
+    theIndex = 0;
+    [self showAlertViewWithTile:@"确定要清理么" message:@"\n应用将会清理本地缓存的音乐数据"];
+}
+-(void)cleanImageCache
+{
+    theIndex = 1;
+    [self showAlertViewWithTile:@"确定要清理么" message:@"\n应用将会清理本地缓存的图片数据"];
+}
+//恢复设置
+-(void)resetAppSetting
+{
+    //暂时只做恢复加锁豆瓣妹纸
+    theIndex = 2;
+    [self showAlertViewWithTile:@"提示" message:@"应用将恢复初始设置"];
+}
 //意见反馈
 -(void)goToAdvice
 {
@@ -317,6 +389,72 @@
                                              initWithNibName:@"JSAdviceController" bundle:nil];
     [self.navigationController pushViewController:advicedController animated:YES];
 }
+//关于作者
+-(void)aboutMe
+{
+    DMAboutMeController *aboutController = [[DMAboutMeController alloc] init];
+    [self.navigationController pushViewController:aboutController animated:YES];
+}
+-(void)showAlertViewWithTile:(NSString *)title message:(NSString *)msg
+{
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:msg delegate:self
+                                              cancelButtonTitle:@"取消" otherButtonTitles:@"清理", nil];
+    [alert show];
+}
+
+//alertViewDelegate
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    DMFileTool *tool = [[DMFileTool alloc] init];
+    if (buttonIndex == 1)
+    {
+        __block MBProgressHUD *hud;
+        switch (theIndex)
+        {
+            case 0:
+            {
+                hud = [MBProgressHUD createProgressOnlyWithView:self.view ShouldRemoveOnHide:YES];
+                [tool deleteAllFilesWithPath:tmpPath cleanFinished:^{
+                    [hud hide:YES];
+                    //重新计算文件大小
+                    [self getFileSize];
+                    [MBProgressHUD showTextOnlyIndicatorWithView:self.view Text:@"FM缓存已清空" Font:DMFont(13.0f)
+                                                          Margin:12.0f
+                                                         offsetY:0
+                                                        showTime:1.0f];
+                }];
+                break;
+            }
+            case 1:
+
+            {
+                hud = [MBProgressHUD createProgressOnlyWithView:self.view ShouldRemoveOnHide:YES];
+                [tool deleteAllFilesWithPath:cachesPath cleanFinished:^{
+                    [hud hide:YES];
+                    //重新计算文件大小
+                    [self getFileSize];
+                    [MBProgressHUD showTextOnlyIndicatorWithView:self.view Text:@"图片缓存已清空" Font:DMFont(13.0f)
+                                                          Margin:12.0f
+                                                         offsetY:0
+                                                        showTime:1.0f];
+                }];
+            }
+                break;
+                
+            default:
+                NSLog(@"已恢复设置");
+                //暂时写死
+                [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"ZhaiNanUser"];
+                [MBProgressHUD showTextOnlyIndicatorWithView:self.view Text:@"已恢复设置" Font:DMFont(13.0f)
+                                                      Margin:12.0f
+                                                     offsetY:0
+                                                    showTime:1.f];
+                break;
+        }
+
+    }
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

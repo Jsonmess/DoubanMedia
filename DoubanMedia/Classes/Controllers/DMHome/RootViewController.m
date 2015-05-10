@@ -30,6 +30,7 @@
 
     [super viewDidLoad];
     subViewControllers = [NSMutableArray array];
+    [self.view setBackgroundColor:DMColor(230,230,238,1.0f)];
     [self setUpView];
     // Do any additional setup after loading the view, typically from a nib.
 }
