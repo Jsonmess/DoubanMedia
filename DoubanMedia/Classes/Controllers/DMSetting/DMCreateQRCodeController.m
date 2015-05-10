@@ -13,6 +13,8 @@
 #import "ShareActionTool.h"
 #import "DMShareEntity.h"
 #import "TabViewManager.h"
+#import "PhotoTool.h"
+#import "MBProgressHUD+DMProgressHUD.h"
 @interface DMCreateQRCodeController ()
 @property (nonatomic)  UITextField *theTextView;
 @property (nonatomic)  UIImageView *showQRCodeView;
@@ -123,20 +125,32 @@
 //保存到系统相册
 - (void)saveToAlbum:(id)sender
 {
-
+    [[PhotoTool SharePhotoTool]
+     SavePhotoToAlAssetsLibraryWithImageData:UIImageJPEGRepresentation(_showQRCodeView.image, 1.0f)];
 }
 //分享
 - (void)shareToOthers:(id)sender
 {
-    
+    DMShareEntity *entity = [[DMShareEntity alloc] init];
+    entity.theTitle = @"分享二维码";
+    entity.detailText = @"";
+    entity.thumbnailType = kThumbnailTypeJPG;
+    entity.urlString = @"doubanMedia";
+    entity.shareImageData = UIImageJPEGRepresentation(_showQRCodeView.image, 1.0f);
+   ShareActionTool *shareTool = [[ShareActionTool alloc] initWithSuperNavigationController:nil];
+    [shareTool shareToThirdActionWithSuperView:self.view shareEntity:entity];
 }
 //生成二维码
 - (void)createQRCode:(id)sender
 {
     NSString *contents = _theTextView.text;
-    if (contents == nil || [contents isEqualToString:@" "])
+    if (contents == nil || [contents isEqualToString:@" "]|| [contents isEqualToString:@""])
     {
         //提示内容不为空
+        [MBProgressHUD showTextOnlyIndicatorWithView:self.view Text:@"输入框内容不可为空"
+                                                Font:DMFont(15.0f) Margin:11.0f
+                                             offsetY:ScreenBounds.size.height*0.3f
+                                            showTime:1.0f];
         return;
     }
     //开始生成

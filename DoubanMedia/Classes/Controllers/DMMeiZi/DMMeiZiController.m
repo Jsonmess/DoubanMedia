@@ -10,7 +10,9 @@
 #import "DMMeiZiView.h"
 #import "DMMeiZiDetailController.h"
 @interface DMMeiZiController ()<DMMeiZiViewDelegate>
-
+{
+    DMMeiZiView *theView;
+}
 @end
 
 @implementation DMMeiZiController
@@ -18,13 +20,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setTitle:@"豆瓣妹纸"];
-    DMMeiZiView *theView = [[DMMeiZiView alloc] initWithFrame:self.view.bounds];
+    theView = [[DMMeiZiView alloc] initWithFrame:self.view.bounds];
     [theView setDelegate:self];
     self.view = theView;
 
     // Do any additional setup after loading the view.
 }
-
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [theView reloadLocalResource];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
