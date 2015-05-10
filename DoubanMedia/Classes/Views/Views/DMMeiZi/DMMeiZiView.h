@@ -11,9 +11,10 @@
 @protocol DMMeiZiViewDelegate <NSObject>
 
 -(void)meiZiView:(DMMeiZiView*)theView shouldLoadMeiZiClasses:(NSDictionary *)source;
-
 @end
 
 @interface DMMeiZiView : UIView
 @property(nonatomic) id<DMMeiZiViewDelegate>delegate;
+//加载资源
+-(void)reloadLocalResource;
 @end

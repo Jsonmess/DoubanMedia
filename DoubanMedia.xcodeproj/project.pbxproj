@@ -126,6 +126,8 @@
 		29ADAF031AFE51BB00E6AB3A /* DMCreateQRCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29ADAF021AFE51BB00E6AB3A /* DMCreateQRCodeController.m */; };
 		29ADAF081AFE656100E6AB3A /* QRCodeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 29ADAF071AFE656100E6AB3A /* QRCodeGenerator.m */; };
 		29ADAF0B1AFEFF0800E6AB3A /* PhotoTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 29ADAF0A1AFEFF0800E6AB3A /* PhotoTool.m */; };
+		29ADAF0D1AFF0B3500E6AB3A /* JSAdviceController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29ADAF0C1AFF0B3500E6AB3A /* JSAdviceController.xib */; };
+		29ADAF101AFF0B4E00E6AB3A /* JSAdviceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29ADAF0F1AFF0B4E00E6AB3A /* JSAdviceController.m */; };
 		29B4D1081ABEBCA300899F29 /* TabItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B4D1071ABEBCA300899F29 /* TabItem.m */; };
 		29B4D1521ABEBE7200899F29 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 29B4D10C1ABEBE7200899F29 /* Default-568h@2x.png */; };
 		29B4D1531ABEBE7200899F29 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 29B4D10D1ABEBE7200899F29 /* Default.png */; };
@@ -368,6 +370,9 @@
 		29ADAF071AFE656100E6AB3A /* QRCodeGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeGenerator.m; sourceTree = "<group>"; };
 		29ADAF091AFEFF0800E6AB3A /* PhotoTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoTool.h; sourceTree = "<group>"; };
 		29ADAF0A1AFEFF0800E6AB3A /* PhotoTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoTool.m; sourceTree = "<group>"; };
+		29ADAF0C1AFF0B3500E6AB3A /* JSAdviceController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSAdviceController.xib; sourceTree = "<group>"; };
+		29ADAF0E1AFF0B4E00E6AB3A /* JSAdviceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAdviceController.h; sourceTree = "<group>"; };
+		29ADAF0F1AFF0B4E00E6AB3A /* JSAdviceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAdviceController.m; sourceTree = "<group>"; };
 		29B4D1061ABEBCA300899F29 /* TabItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabItem.h; sourceTree = "<group>"; };
 		29B4D1071ABEBCA300899F29 /* TabItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabItem.m; sourceTree = "<group>"; };
 		29B4D10C1ABEBE7200899F29 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -451,6 +456,8 @@
 		2913A4AD1AF63B2C006A6B5F /* DMSetting */ = {
 			isa = PBXGroup;
 			children = (
+				29ADAF0E1AFF0B4E00E6AB3A /* JSAdviceController.h */,
+				29ADAF0F1AFF0B4E00E6AB3A /* JSAdviceController.m */,
 				2913A4AE1AF64592006A6B5F /* DMSettingController.h */,
 				2913A4AF1AF64592006A6B5F /* DMSettingController.m */,
 				29ADAF011AFE51BB00E6AB3A /* DMCreateQRCodeController.h */,
@@ -642,6 +649,7 @@
 		2940BB011AB87F3C00D1069A /* Xibs */ = {
 			isa = PBXGroup;
 			children = (
+				29ADAF0C1AFF0B3500E6AB3A /* JSAdviceController.xib */,
 				2940BB021AB87F3C00D1069A /* LaunchScreen.xib */,
 			);
 			path = Xibs;
@@ -1395,6 +1403,7 @@
 				296F47141AC187B500231873 /* splash_screen_wave.png in Resources */,
 				29B4D18D1ABEBE7200899F29 /* channels.plist in Resources */,
 				29B4D18E1ABEBE7200899F29 /* Music_ranking.plist in Resources */,
+				29ADAF0D1AFF0B3500E6AB3A /* JSAdviceController.xib in Resources */,
 				29141D6C1AC703E100FDDC85 /* home_mm@2x.png in Resources */,
 				297FFD021AD03CF700A6D3EE /* play_sound@2x.png in Resources */,
 				297FFD041AD03CF700A6D3EE /* refresh_pressed.png in Resources */,
@@ -1452,6 +1461,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29ADAF101AFF0B4E00E6AB3A /* JSAdviceController.m in Sources */,
 				29851C5B1ADFE333004BC01A /* DMFilmCell.m in Sources */,
 				29C1B2171AE7C12D008E8F6E /* JSWebViewController.m in Sources */,
 				299F2DAB1AEF42DF001606AE /* DMMeiZiController.m in Sources */,
@@ -1645,7 +1655,7 @@
 					"$(PROJECT_DIR)/DoubanMedia/Classes/Assets/SDKs/WeiChat",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0eec9bb8-fc23-4cfe-9e88-19578e7e5d72";
+				PROVISIONING_PROFILE = "a874dd33-ab96-4bb6-b6a0-713eac969559";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1671,7 +1681,7 @@
 					"$(PROJECT_DIR)/DoubanMedia/Classes/Assets/SDKs/WeiChat",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0eec9bb8-fc23-4cfe-9e88-19578e7e5d72";
+				PROVISIONING_PROFILE = "a874dd33-ab96-4bb6-b6a0-713eac969559";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

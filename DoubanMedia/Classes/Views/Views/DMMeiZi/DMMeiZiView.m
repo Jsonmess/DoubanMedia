@@ -26,7 +26,6 @@
     if (self)
     {
         [self setUpView];
-        [self reloadLocalResource];
     }
     return self;
 }
@@ -41,7 +40,7 @@
     BOOL isZhaiNan = [[NSUserDefaults standardUserDefaults] boolForKey:@"ZhaiNanUser"];
     if (isZhaiNan)
     {
-        [localMeiZiClasses addObject:@"宅男福利"];
+        [localMeiZiClasses addObject:@"解锁福利"];
 		[localMeiZiImages addObject:@"fuli.jpg"];
     }
     [_collectionView reloadData];

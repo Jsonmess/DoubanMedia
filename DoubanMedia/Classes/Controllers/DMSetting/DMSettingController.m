@@ -17,6 +17,7 @@
 #import "DMSettingCell.h"
 #import "DMZBarReaderController.h"
 #import "DMCreateQRCodeController.h"
+#import "JSAdviceController.h"
 @interface DMSettingController ()<UITableViewDelegate,UITableViewDataSource,
 						DMUserInfoCellDelegate,UIActionSheetDelegate,DMLoginManagerDelegate>
 {
@@ -209,12 +210,21 @@
         switch (indexPath.row)
         {
             case 0:
-               //扫描二维码
                 [self gotoScanQRCode];
                 break;
-               case 1:
-                //生成二维码
+            case 1:
                 [self createQRCode];
+                break;
+            default:
+                break;
+        }
+    }
+    else if(indexPath.section == 4)
+    {
+        switch (indexPath.row)
+        {
+            case 0:
+                [self goToAdvice];
                 break;
             default:
                 break;
@@ -300,7 +310,13 @@
     DMCreateQRCodeController *controller = [[DMCreateQRCodeController alloc] init];
     [self.navigationController pushViewController:controller animated:YES];
 }
-
+//意见反馈
+-(void)goToAdvice
+{
+    JSAdviceController *advicedController = [[JSAdviceController alloc]
+                                             initWithNibName:@"JSAdviceController" bundle:nil];
+    [self.navigationController pushViewController:advicedController animated:YES];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
