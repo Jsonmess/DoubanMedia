@@ -380,7 +380,7 @@
 {
     //暂时只做恢复加锁豆瓣妹纸
     theIndex = 2;
-    [self showAlertViewWithTile:@"提示" message:@"\n应用将恢复初始设置"];
+    [self showAlertViewWithTile:@"提示" message:@"应用将恢复初始设置"];
 }
 //意见反馈
 -(void)goToAdvice
