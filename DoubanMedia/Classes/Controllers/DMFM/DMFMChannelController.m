@@ -52,6 +52,13 @@ static NSString *reuseCell = @"FMChannelCell";
     //检查用户信息
     [self checkUserInfo];
     [super viewWillAppear:animated];
+    //统计
+    [MobClick beginLogPageView:@"豆瓣FM频道列表"];
+}
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [MobClick endLogPageView:@"豆瓣FM频道列表"];
 }
 -(void)commonInit
 {

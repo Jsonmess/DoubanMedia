@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "FMChannel.h"
 #import <AVFoundation/AVFoundation.h>
-
+#import "DMDeviceManager.h"
 @interface AppDelegate ()
 {
 
@@ -27,8 +27,24 @@
     [self initTheChannels];
     //后台播放
     [self playBackGround];
+    [self initUmeng];
     return YES;
 }
+//初始化友盟统计
+-(void)initUmeng
+{
+    NSString *umengKey = @"554f64fa67e58e3855003865";
+    if ([DMDeviceManager getCurrentDeviceType] == kiPad)
+    {
+        umengKey = @"554f654167e58e37110046c5";
+    }
+    [MobClick startWithAppkey:umengKey reportPolicy:SENDWIFIONLY channelId:@""];
+    //日志加密
+    [MobClick setEncryptEnabled:YES];
+    //后台
+    [MobClick setBackgroundTaskEnabled:YES];
+}
+
 -(void)playBackGround
 {
     AVAudioSession *session = [AVAudioSession sharedInstance];
@@ -47,7 +63,6 @@
      _channels = [NSMutableArray array];
     //初始化数据源Array----0
     NSArray *fmarray = @[@"用户未登录",@"推荐频道",@"上升最快兆赫",@"热门兆赫"];
-
 	//我的兆赫
     NSMutableArray *privateChannels = [NSMutableArray array];
     NSMutableDictionary *private = [NSMutableDictionary dictionary];

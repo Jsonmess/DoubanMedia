@@ -10,6 +10,10 @@
 
 @interface PhotoTool : NSObject
 +(PhotoTool *)SharePhotoTool;
+//保存照片
 -(void)SavePhotoToAlAssetsLibraryWithImageData:(NSData*)imagedata;
+//保存视频
 -(void)SaveRecordVideoToToAlAssetsLibraryWithOutPutURL:(NSURL*)url;
+//截屏
+- (UIImage *) captureCurrentScreen;
 @end

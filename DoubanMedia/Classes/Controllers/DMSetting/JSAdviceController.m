@@ -23,7 +23,16 @@
     [self SetUpView];
     // Do any additional setup after loading the view from its nib.
 }
-
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [MobClick beginLogPageView:@"意见反馈"];
+}
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [MobClick endLogPageView:@"意见反馈"];
+}
 -(void)SetUpView
 {
     self.title=@"用户吐槽";
@@ -73,9 +82,11 @@
     if ([self.userAddress.text isEqualToString:@"1024"] || [self.AdviceFiled.text isEqualToString:@"1024"])
     {
         [self unlock1024];
+        [MobClick event:@"id_event_unclock" label:@"福利解锁次数"];
         return;
     }
     [self sendMailInApp];
+    [MobClick event:@"id_event_feedback" label:@"反馈数目"];
 
 }
 //激活邮件功能

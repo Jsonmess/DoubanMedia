@@ -52,7 +52,8 @@
         //@[@"只在Wifi下联网",@"同步本地歌曲",@"离线管理"]----该部分功能暂时不做
         sources = @[@[@"二维码扫描",@"生成二维码"],@[@"清除FM缓存",@"清除图片缓存",@"恢复默认设置"],
                         @[@"意见反馈",@"关于作者"]];
-        headSources = @[@"工具",@"基本设置",@"数据清理",@"更多"];
+        //@"基本设置"--暂时不做
+        headSources = @[@"工具",@"数据清理",@"更多"];
     }
     return self;
 }
@@ -68,6 +69,12 @@
     [super viewWillAppear:animated];
     shouldHiddenStatusBar(NO);
     [self getFileSize];
+    [MobClick beginLogPageView:@"应用设置页面"];
+}
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [MobClick endLogPageView:@"应用设置页面"];
 }
 -(void)setUpView
 {
@@ -368,11 +375,13 @@
 -(void)cleanFMCache
 {
     theIndex = 0;
+    [MobClick event:@"id_event_cleanFM" label:@"清理FM缓存次数"];
     [self showAlertViewWithTile:@"确定要清理么" message:@"\n应用将会清理本地缓存的音乐数据"];
 }
 -(void)cleanImageCache
 {
     theIndex = 1;
+    [MobClick event:@"id_event_cleanImage" label:@"清理图片缓存次数"];
     [self showAlertViewWithTile:@"确定要清理么" message:@"\n应用将会清理本地缓存的图片数据"];
 }
 //恢复设置
@@ -381,6 +390,7 @@
     //暂时只做恢复加锁豆瓣妹纸
     theIndex = 2;
     [self showAlertViewWithTile:@"提示" message:@"应用将恢复初始设置"];
+    [MobClick event:@"id_event_reset" label:@"重置应用次数"];
 }
 //意见反馈
 -(void)goToAdvice

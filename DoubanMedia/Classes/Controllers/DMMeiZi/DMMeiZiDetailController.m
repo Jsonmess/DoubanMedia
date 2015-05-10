@@ -32,10 +32,16 @@ UICollectionViewDelegate,UICollectionViewDataSource
     [self setupHeaderAndFooter];
     //隐藏tabBar
     [[TabViewManager sharedTabViewManager].getTabView setHidden:YES];
+    [MobClick beginLogPageView:@"豆瓣妹纸详情页面"];
 }
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+}
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [MobClick endLogPageView:@"豆瓣妹纸详情页面"];
 }
 -(void)viewDidLoad
 {

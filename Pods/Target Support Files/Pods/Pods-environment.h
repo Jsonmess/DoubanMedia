@@ -90,12 +90,6 @@
 #define COCOAPODS_VERSION_MINOR_NHBalancedFlowLayout 2
 #define COCOAPODS_VERSION_PATCH_NHBalancedFlowLayout 0
 
-// NJKWebViewProgress
-#define COCOAPODS_POD_AVAILABLE_NJKWebViewProgress
-#define COCOAPODS_VERSION_MAJOR_NJKWebViewProgress 0
-#define COCOAPODS_VERSION_MINOR_NJKWebViewProgress 1
-#define COCOAPODS_VERSION_PATCH_NJKWebViewProgress 8
-
 // PureLayout
 #define COCOAPODS_POD_AVAILABLE_PureLayout
 #define COCOAPODS_VERSION_MAJOR_PureLayout 2
@@ -144,23 +138,17 @@
 #define COCOAPODS_VERSION_MINOR_SDWebImage_Core 7
 #define COCOAPODS_VERSION_PATCH_SDWebImage_Core 2
 
-// SVWebViewController
-#define COCOAPODS_POD_AVAILABLE_SVWebViewController
-#define COCOAPODS_VERSION_MAJOR_SVWebViewController 1
-#define COCOAPODS_VERSION_MINOR_SVWebViewController 0
-#define COCOAPODS_VERSION_PATCH_SVWebViewController 0
-
-// TMCache
-#define COCOAPODS_POD_AVAILABLE_TMCache
-#define COCOAPODS_VERSION_MAJOR_TMCache 1
-#define COCOAPODS_VERSION_MINOR_TMCache 2
-#define COCOAPODS_VERSION_PATCH_TMCache 4
-
 // UIActivityIndicator-for-SDWebImage
 #define COCOAPODS_POD_AVAILABLE_UIActivityIndicator_for_SDWebImage
 #define COCOAPODS_VERSION_MAJOR_UIActivityIndicator_for_SDWebImage 1
 #define COCOAPODS_VERSION_MINOR_UIActivityIndicator_for_SDWebImage 2
 #define COCOAPODS_VERSION_PATCH_UIActivityIndicator_for_SDWebImage 0
+
+// UMengAnalytics
+#define COCOAPODS_POD_AVAILABLE_UMengAnalytics
+#define COCOAPODS_VERSION_MAJOR_UMengAnalytics 3
+#define COCOAPODS_VERSION_MINOR_UMengAnalytics 4
+#define COCOAPODS_VERSION_PATCH_UMengAnalytics 6
 
 // ZBarSDK
 #define COCOAPODS_POD_AVAILABLE_ZBarSDK

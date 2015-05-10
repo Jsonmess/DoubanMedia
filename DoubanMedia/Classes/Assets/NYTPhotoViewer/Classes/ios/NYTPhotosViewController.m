@@ -115,7 +115,16 @@ static const UIEdgeInsets NYTPhotosViewControllerCloseButtinImageInsets = {3, 0,
         [self setOverlayViewHidden:NO animated:YES];
     }
 }
-
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [MobClick beginLogPageView:@"豆瓣妹纸大图浏览"];
+}
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [MobClick endLogPageView:@"豆瓣妹纸大图浏览"];
+}
 - (void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
     

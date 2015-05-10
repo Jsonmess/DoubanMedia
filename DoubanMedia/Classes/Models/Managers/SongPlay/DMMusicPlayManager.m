@@ -77,7 +77,7 @@
     //将音乐对象传出
     [self.delegate getCurrentPlaySong:songInfo];
 
-
+    [MobClick event:@"id_event_playnumber" label:@"音乐播放次数"];
     //应用前后台判断
     [self PlayMusic];
 

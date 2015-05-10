@@ -30,8 +30,13 @@
 {
     [super viewWillAppear:animated];
     [theView reloadLocalResource];
+    [MobClick beginLogPageView:@"豆瓣妹纸分类页面"];
 }
-
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [MobClick endLogPageView:@"豆瓣妹纸分类页面"];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

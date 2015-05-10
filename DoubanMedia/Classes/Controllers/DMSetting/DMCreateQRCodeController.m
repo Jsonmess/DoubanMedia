@@ -36,6 +36,12 @@
 {
     [super viewWillAppear:animated];
     [[[TabViewManager sharedTabViewManager] getTabView] setHidden:YES];
+    [MobClick beginLogPageView:@"生成二维码"];
+}
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [MobClick endLogPageView:@"生成二维码"];
 }
 -(void)setUpView
 {
@@ -156,6 +162,7 @@
     //开始生成
     _showQRCodeView.image = [QRCodeGenerator qrImageForString:contents
                                                     imageSize:_showQRCodeView.bounds.size.width];
+    [MobClick event:@"id_event_createqr" label:@"生成二维码数目"];
 }
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
