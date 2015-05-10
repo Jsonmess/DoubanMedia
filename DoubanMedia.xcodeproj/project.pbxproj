@@ -129,6 +129,7 @@
 		29ADAF0D1AFF0B3500E6AB3A /* JSAdviceController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29ADAF0C1AFF0B3500E6AB3A /* JSAdviceController.xib */; };
 		29ADAF101AFF0B4E00E6AB3A /* JSAdviceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29ADAF0F1AFF0B4E00E6AB3A /* JSAdviceController.m */; };
 		29ADAF131AFF40FD00E6AB3A /* DMAboutMeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29ADAF121AFF40FD00E6AB3A /* DMAboutMeController.m */; };
+		29ADAF161AFF511600E6AB3A /* DMFileTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 29ADAF151AFF511600E6AB3A /* DMFileTool.m */; };
 		29B4D1081ABEBCA300899F29 /* TabItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B4D1071ABEBCA300899F29 /* TabItem.m */; };
 		29B4D1521ABEBE7200899F29 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 29B4D10C1ABEBE7200899F29 /* Default-568h@2x.png */; };
 		29B4D1531ABEBE7200899F29 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 29B4D10D1ABEBE7200899F29 /* Default.png */; };
@@ -373,6 +374,8 @@
 		29ADAF0F1AFF0B4E00E6AB3A /* JSAdviceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAdviceController.m; sourceTree = "<group>"; };
 		29ADAF111AFF40FD00E6AB3A /* DMAboutMeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMAboutMeController.h; sourceTree = "<group>"; };
 		29ADAF121AFF40FD00E6AB3A /* DMAboutMeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMAboutMeController.m; sourceTree = "<group>"; };
+		29ADAF141AFF511600E6AB3A /* DMFileTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DMFileTool.h; path = DoubanMedia/Classes/Tools/DMFileTool.h; sourceTree = SOURCE_ROOT; };
+		29ADAF151AFF511600E6AB3A /* DMFileTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DMFileTool.m; path = DoubanMedia/Classes/Tools/DMFileTool.m; sourceTree = SOURCE_ROOT; };
 		29B4D1061ABEBCA300899F29 /* TabItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabItem.h; sourceTree = "<group>"; };
 		29B4D1071ABEBCA300899F29 /* TabItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabItem.m; sourceTree = "<group>"; };
 		29B4D10C1ABEBE7200899F29 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -498,13 +501,6 @@
 			path = DMZBarReader;
 			sourceTree = "<group>";
 		};
-		292772AE1AFB9DB100638A73 /* DMSetting */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DMSetting;
-			sourceTree = "<group>";
-		};
 		293C18A11AE2B0350033398A /* FilmList */ = {
 			isa = PBXGroup;
 			children = (
@@ -616,6 +612,8 @@
 		2940BAFD1AB87F3C00D1069A /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				29ADAF141AFF511600E6AB3A /* DMFileTool.h */,
+				29ADAF151AFF511600E6AB3A /* DMFileTool.m */,
 				29ADAF091AFEFF0800E6AB3A /* PhotoTool.h */,
 				29ADAF0A1AFEFF0800E6AB3A /* PhotoTool.m */,
 				299F2DF11AEF5B39001606AE /* ShareActionTool.h */,
@@ -688,7 +686,6 @@
 		296F47151AC188E800231873 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				292772AE1AFB9DB100638A73 /* DMSetting */,
 				299F2E081AEF6D50001606AE /* DMMeiZi */,
 				293C18A11AE2B0350033398A /* FilmList */,
 				293D45331AD41FE900BD2406 /* SystemVolume */,
@@ -1476,6 +1473,7 @@
 				299F2DF91AEF5B56001606AE /* PGActionSheetCell.m in Sources */,
 				29BD5F321AE2205000AB3E23 /* JSStarRating.m in Sources */,
 				297AE74D1ACA4FA90037448C /* FMChannel.m in Sources */,
+				29ADAF161AFF511600E6AB3A /* DMFileTool.m in Sources */,
 				299F2E3F1AF06D3D001606AE /* NYTOperatingSystemCompatibilityUtility.m in Sources */,
 				299F2DCD1AEF430D001606AE /* DMMeiZiView.m in Sources */,
 				29ADAF031AFE51BB00E6AB3A /* DMCreateQRCodeController.m in Sources */,
