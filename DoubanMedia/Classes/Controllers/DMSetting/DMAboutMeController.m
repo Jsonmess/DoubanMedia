@@ -26,7 +26,9 @@
 {
     [super viewWillAppear:animated];
     [[TabViewManager sharedTabViewManager].getTabView setHidden:YES];
+    [MobClick beginLogPageView:@"关于作者"];
 }
+
 -(void)setUpView
 {
     self.title=@"作者信息";
@@ -62,5 +64,6 @@
 {
     [super viewWillDisappear:animated];
     [[NSURLCache sharedURLCache] removeAllCachedResponses];
+     [MobClick endLogPageView:@"关于作者"];
 }
 @end

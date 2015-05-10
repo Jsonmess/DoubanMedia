@@ -23,7 +23,16 @@
     [self SetUpView];
     // Do any additional setup after loading the view from its nib.
 }
-
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [MobClick beginLogPageView:@"意见反馈"];
+}
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [MobClick endLogPageView:@"意见反馈"];
+}
 -(void)SetUpView
 {
     self.title=@"用户吐槽";

@@ -69,6 +69,12 @@
     [super viewWillAppear:animated];
     shouldHiddenStatusBar(NO);
     [self getFileSize];
+    [MobClick beginLogPageView:@"应用设置页面"];
+}
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [MobClick endLogPageView:@"应用设置页面"];
 }
 -(void)setUpView
 {

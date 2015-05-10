@@ -45,6 +45,7 @@
 {
     [super viewWillAppear:animated];
        shouldHiddenStatusBar(YES);
+    [MobClick beginLogPageView:@"用户登录页面"];
 }
 -(void)viewWillDisappear:(BOOL)animated
 {
@@ -52,6 +53,7 @@
     [_userName resignFirstResponder];
     [_password resignFirstResponder];
     [_authCode resignFirstResponder];
+    [MobClick endLogPageView:@"用户登录页面"];
 }
 -(void)commonInit
 {

@@ -51,6 +51,8 @@
                                                  name:@"AVSystemController_SystemVolumeDidChangeNotification"
                                                object:nil];
     [self becomeFirstResponder];
+    //统计
+    [MobClick beginLogPageView:@"豆瓣FM播放页面"];
 }
 -(void)viewDidDisappear:(BOOL)animated
 {
@@ -60,6 +62,7 @@
                                                    object:nil];
 
     [self resignFirstResponder];
+     [MobClick endLogPageView:@"豆瓣FM播放页面"];
 
 }//设置目录
 -(void)setUpView

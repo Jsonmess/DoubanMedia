@@ -59,12 +59,15 @@
 {
     [super viewWillAppear:animated];
     isShouldRefresh = YES;
+    [MobClick beginLogPageView:@"电影详情-豆瓣电影Html5页面"];
+
 }
 -(void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
     //清理缓存
     [[NSURLCache sharedURLCache] removeAllCachedResponses];
+    [MobClick endLogPageView:@"电影详情-豆瓣电影Html5页面"];
 }
 /**
  *  初始化视图

@@ -40,6 +40,12 @@
     [super viewWillAppear:animated];
     [scanView start];
     [self startAminimation];
+    [MobClick beginLogPageView:@"扫一扫二维码"];
+}
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [MobClick endLogPageView:@"扫一扫二维码"];
 }
 //设置视图
 -(void)setUpView

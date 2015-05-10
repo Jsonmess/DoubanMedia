@@ -26,7 +26,16 @@
     [self commonInit];
     [self setUpView];
 }
-
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [MobClick beginLogPageView:@"豆瓣电影列表页面"];
+}
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [MobClick endLogPageView:@"豆瓣电影列表页面"];
+}
 -(void)commonInit
 {
     theManager = [[DMFilmListManager alloc] init];

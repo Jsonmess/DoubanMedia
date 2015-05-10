@@ -36,6 +36,12 @@
 {
     [super viewWillAppear:animated];
     [[[TabViewManager sharedTabViewManager] getTabView] setHidden:YES];
+    [MobClick beginLogPageView:@"生成二维码"];
+}
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [MobClick endLogPageView:@"生成二维码"];
 }
 -(void)setUpView
 {
