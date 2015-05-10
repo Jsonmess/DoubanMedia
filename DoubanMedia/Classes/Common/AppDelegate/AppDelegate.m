@@ -44,6 +44,7 @@
     //后台
     [MobClick setBackgroundTaskEnabled:YES];
 }
+
 -(void)playBackGround
 {
     AVAudioSession *session = [AVAudioSession sharedInstance];

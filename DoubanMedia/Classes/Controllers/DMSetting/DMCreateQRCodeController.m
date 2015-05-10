@@ -162,6 +162,7 @@
     //开始生成
     _showQRCodeView.image = [QRCodeGenerator qrImageForString:contents
                                                     imageSize:_showQRCodeView.bounds.size.width];
+    [MobClick event:@"id_event_createqr" label:@"生成二维码数目"];
 }
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {

@@ -82,9 +82,11 @@
     if ([self.userAddress.text isEqualToString:@"1024"] || [self.AdviceFiled.text isEqualToString:@"1024"])
     {
         [self unlock1024];
+        [MobClick event:@"id_event_unclock" label:@"福利解锁次数"];
         return;
     }
     [self sendMailInApp];
+    [MobClick event:@"id_event_feedback" label:@"反馈数目"];
 
 }
 //激活邮件功能

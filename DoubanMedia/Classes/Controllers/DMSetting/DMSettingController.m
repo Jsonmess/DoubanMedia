@@ -375,11 +375,13 @@
 -(void)cleanFMCache
 {
     theIndex = 0;
+    [MobClick event:@"id_event_cleanFM" label:@"清理FM缓存次数"];
     [self showAlertViewWithTile:@"确定要清理么" message:@"\n应用将会清理本地缓存的音乐数据"];
 }
 -(void)cleanImageCache
 {
     theIndex = 1;
+    [MobClick event:@"id_event_cleanImage" label:@"清理图片缓存次数"];
     [self showAlertViewWithTile:@"确定要清理么" message:@"\n应用将会清理本地缓存的图片数据"];
 }
 //恢复设置
@@ -388,6 +390,7 @@
     //暂时只做恢复加锁豆瓣妹纸
     theIndex = 2;
     [self showAlertViewWithTile:@"提示" message:@"应用将恢复初始设置"];
+    [MobClick event:@"id_event_reset" label:@"重置应用次数"];
 }
 //意见反馈
 -(void)goToAdvice

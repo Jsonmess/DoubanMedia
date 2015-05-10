@@ -42,6 +42,7 @@
 //分享到第三方应用
 -(void)shareToThirdActionWithSuperView:(UIView *)view shareEntity:(DMShareEntity *)entity
 {
+    [MobClick event:@"id_event_share" label:@"分享次数"];
     _entity = entity;
 
         if (!self.mShareActionSheet)

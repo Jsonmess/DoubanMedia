@@ -201,6 +201,8 @@
 -(void)readerView:(ZBarReaderView *)readerView didReadSymbols:(ZBarSymbolSet *)symbols fromImage:(UIImage *)image
 {
     //播放个音效
+    //统计
+    [MobClick event:@"id_event_qrsan" label:@"扫描次数"];
     //处理结果--跳转到浏览器或者粘贴板---暂时不实现
     NSString *result;
     for (ZBarSymbol *symbol in symbols)
