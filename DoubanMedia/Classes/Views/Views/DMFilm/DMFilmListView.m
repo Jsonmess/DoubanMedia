@@ -11,6 +11,7 @@
 #import "DMDeviceManager.h"
 #import "FilmInfo.h"
 #import "DMFilmListManager.h"
+#import "GDTMobBannerView.h"
 #define CellSpacingWidth
 @interface DMFilmListView()<UICollectionViewDataSource,
 UICollectionViewDelegate,
@@ -19,6 +20,8 @@ NSFetchedResultsControllerDelegate>
 {
     NSFetchedResultsController *fetchedController;
     BOOL isComing;//是否正在上映
+    //广点通banner
+    GDTMobBannerView *bannerView;
 }
 
 @property (nonatomic) UICollectionView *filmCollectionView;
@@ -34,7 +37,13 @@ NSFetchedResultsControllerDelegate>
     }
     return self;
 }
-
+-(void)commonInit
+{
+    //初始化banner;
+    bannerView = [[GDTMobBannerView alloc] initWithFrame:CGRectZero
+                                                  appkey:@""
+                                             placementId:@""];
+}
 -(void)setUpView
 {
     [self setBackgroundColor:DMColor(250,250,248,1.0f)];
@@ -43,6 +52,8 @@ NSFetchedResultsControllerDelegate>
     {
         _advertiseView = [[UIView alloc] initWithFrame:CGRectZero];
         [_advertiseView setBackgroundColor:DMColor(244, 244, 244, 1.0f)];
+        [_advertiseView addSubview:bannerView];
+        [bannerView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
         [self addSubview:_advertiseView];
         [_advertiseView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(0, 0, 0, 0)
                                                  excludingEdge:ALEdgeBottom];
