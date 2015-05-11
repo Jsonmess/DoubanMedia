@@ -408,7 +408,7 @@
 -(void)showAlertViewWithTile:(NSString *)title message:(NSString *)msg
 {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:msg delegate:self
-                                              cancelButtonTitle:@"取消" otherButtonTitles:@"清理", nil];
+                                              cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
     [alert show];
 }
 

@@ -16,23 +16,26 @@
 @interface DMFilmListView()<UICollectionViewDataSource,
 UICollectionViewDelegate,
 UICollectionViewDelegateFlowLayout,filmManagerDelegate,
-NSFetchedResultsControllerDelegate>
+NSFetchedResultsControllerDelegate,GDTMobBannerViewDelegate>
 {
     NSFetchedResultsController *fetchedController;
     BOOL isComing;//是否正在上映
     //广点通banner
     GDTMobBannerView *bannerView;
+    id theController;
 }
 
 @property (nonatomic) UICollectionView *filmCollectionView;
 @property (nonatomic) UIView *advertiseView;//广告位--预留
 @end
 @implementation DMFilmListView
--(instancetype)initWithFrame:(CGRect)frame
+-(instancetype)initWithFrame:(CGRect)frame controller:(id)controller
 {
     self =[super initWithFrame:frame];
     if (self)
     {
+        theController = controller;
+        [self commonInit];
         [self setUpView];
     }
     return self;
@@ -40,9 +43,16 @@ NSFetchedResultsControllerDelegate>
 -(void)commonInit
 {
     //初始化banner;
-    bannerView = [[GDTMobBannerView alloc] initWithFrame:CGRectZero
-                                                  appkey:@""
-                                             placementId:@""];
+    bannerView = [[GDTMobBannerView alloc] initWithFrame:CGRectMake(10.f, 0, ScreenBounds.size.width-20.f, 50)
+                                                  appkey:@"1104570044"
+                                             placementId:@"5000506396086093"];
+    [bannerView setDelegate:self];
+    [bannerView setCurrentViewController:(UIViewController*)theController];
+    [bannerView setInterval:5.0f];
+    [bannerView setIsGpsOn:NO];
+    [bannerView setShowCloseBtn:NO];
+    [bannerView loadAdAndShow];
+
 }
 -(void)setUpView
 {
@@ -53,11 +63,10 @@ NSFetchedResultsControllerDelegate>
         _advertiseView = [[UIView alloc] initWithFrame:CGRectZero];
         [_advertiseView setBackgroundColor:DMColor(244, 244, 244, 1.0f)];
         [_advertiseView addSubview:bannerView];
-        [bannerView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
         [self addSubview:_advertiseView];
         [_advertiseView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(0, 0, 0, 0)
                                                  excludingEdge:ALEdgeBottom];
-        [_advertiseView autoSetDimension:ALDimensionHeight toSize:40.0f];
+        [_advertiseView autoSetDimension:ALDimensionHeight toSize:50.0f];
     }
     //
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
@@ -162,5 +171,19 @@ NSFetchedResultsControllerDelegate>
     [self.filmCollectionView reloadData];
     [self.filmHud hide:YES afterDelay:0.2f];
 }
-
+#pragma mark --- 广点通Delegate
+-(void)bannerViewDidReceived
+{
+    NSLog(@"广告接收成功");
+}
+-(void)bannerViewFailToReceived:(int)errCode
+{
+    NSLog(@"请求广告失败");
+}
+-(void)dealloc
+{
+    [bannerView setDelegate:self];
+    [bannerView setCurrentViewController:nil];
+    bannerView  = nil;
+}
 @end

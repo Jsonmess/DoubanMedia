@@ -72,7 +72,7 @@
         self.modalPresentationCapturesStatusBarAppearance = NO;
     }
 
-    filmListView = [[DMFilmListView alloc] initWithFrame:self.view.bounds];
+    filmListView = [[DMFilmListView alloc] initWithFrame:self.view.bounds controller:self];
     [filmListView setDelegate:self];
     [theManager setDelegate:(id)filmListView];
     self.view = filmListView;
