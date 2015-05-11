@@ -19,5 +19,6 @@
 
 @property (nonatomic) MBProgressHUD *filmHud;//指示器
 @property (nonatomic,weak) id<DMFilmListViewDelegate>delegate;
-
+//初始化
+-(instancetype)initWithFrame:(CGRect)frame controller:(id)controller;
 @end

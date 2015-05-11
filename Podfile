@@ -15,4 +15,3 @@ pod 'UIActivityIndicator-for-SDWebImage','~>1.2'
 pod 'NHBalancedFlowLayout' ,'~>0.2'
 pod 'libqrencode','~>3.4.2'
 pod 'UMengAnalytics','~>3.4.6'
-
