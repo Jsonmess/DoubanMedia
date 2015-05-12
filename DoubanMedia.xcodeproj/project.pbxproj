@@ -134,6 +134,8 @@
 		29B4D18B1ABEBE7200899F29 /* TabBarItem_Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 29B4D14C1ABEBE7200899F29 /* TabBarItem_Selected@2x.png */; };
 		29B4D18C1ABEBE7200899F29 /* AboutAuthor.txt in Resources */ = {isa = PBXBuildFile; fileRef = 29B4D14E1ABEBE7200899F29 /* AboutAuthor.txt */; };
 		29B4D1921ABF0D6C00899F29 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B4D1911ABF0D6C00899F29 /* RootViewController.m */; };
+		29BCD9691B022A8C00CBFD32 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29BCD9671B022A8C00CBFD32 /* Fabric.framework */; };
+		29BCD96A1B022A8C00CBFD32 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29BCD9681B022A8C00CBFD32 /* Crashlytics.framework */; };
 		29BD5F2F1AE2205000AB3E23 /* ic_star_gray@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 29BD5F2A1AE2205000AB3E23 /* ic_star_gray@2x.png */; };
 		29BD5F301AE2205000AB3E23 /* ic_star_half@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 29BD5F2B1AE2205000AB3E23 /* ic_star_half@2x.png */; };
 		29BD5F311AE2205000AB3E23 /* ic_star_red@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 29BD5F2C1AE2205000AB3E23 /* ic_star_red@2x.png */; };
@@ -367,6 +369,8 @@
 		29B4D14E1ABEBE7200899F29 /* AboutAuthor.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AboutAuthor.txt; sourceTree = "<group>"; };
 		29B4D1901ABF0D6C00899F29 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		29B4D1911ABF0D6C00899F29 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		29BCD9671B022A8C00CBFD32 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		29BCD9681B022A8C00CBFD32 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		29BD5F2A1AE2205000AB3E23 /* ic_star_gray@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_star_gray@2x.png"; sourceTree = "<group>"; };
 		29BD5F2B1AE2205000AB3E23 /* ic_star_half@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_star_half@2x.png"; sourceTree = "<group>"; };
 		29BD5F2C1AE2205000AB3E23 /* ic_star_red@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_star_red@2x.png"; sourceTree = "<group>"; };
@@ -414,11 +418,13 @@
 				299F2DE21AEF4474001606AE /* CoreTelephony.framework in Frameworks */,
 				299F2DE01AEF445F001606AE /* libsqlite3.dylib in Frameworks */,
 				29D6490C1B006B94000EE3E6 /* libGDTMobSDK_v3.3.a in Frameworks */,
+				29BCD96A1B022A8C00CBFD32 /* Crashlytics.framework in Frameworks */,
 				299F2DDE1AEF4456001606AE /* libiconv.dylib in Frameworks */,
 				299F2DDC1AEF4448001606AE /* libz.dylib in Frameworks */,
 				29A6FB5C1AD9760F0076C393 /* MediaPlayer.framework in Frameworks */,
 				299F2D931AEF42AB001606AE /* TencentOpenAPI.framework in Frameworks */,
 				299F2D951AEF42AB001606AE /* libWeChatSDK.a in Frameworks */,
+				29BCD9691B022A8C00CBFD32 /* Fabric.framework in Frameworks */,
 				1B95DDCBFA3C0E32FBAA006C /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1164,6 +1170,8 @@
 		67B9E8C8F08C500E4C0D83A0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				29BCD9671B022A8C00CBFD32 /* Fabric.framework */,
+				29BCD9681B022A8C00CBFD32 /* Crashlytics.framework */,
 				29D649171B006C86000EE3E6 /* QuartzCore.framework */,
 				29D649151B006C6C000EE3E6 /* SystemConfiguration.framework */,
 				29D649131B006C5A000EE3E6 /* CoreLocation.framework */,
@@ -1202,6 +1210,7 @@
 				297625411AB675DE00008804 /* Frameworks */,
 				297625421AB675DE00008804 /* Resources */,
 				51B2225D0BF5F3088E53D501 /* Copy Pods Resources */,
+				29BCD9661B022A6500CBFD32 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1344,6 +1353,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		29BCD9661B022A6500CBFD32 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 33ef5c416109bfc525d3a2738ce9f8ed8416f450 67357c59efc93ec0e86b59ec12d3db36cfec03e8273fdf03abb6fa9ed4f51ea2";
+		};
 		51B2225D0BF5F3088E53D501 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1563,9 +1585,11 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/DoubanMedia/Classes/Assets/SDKs/Tencent",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/DoubanMedia/DoubanMedia.pch";
@@ -1647,6 +1671,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/DoubanMedia/Classes/Assets/SDKs/Tencent",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/DoubanMedia/DoubanMedia.pch";

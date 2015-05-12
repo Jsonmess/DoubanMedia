@@ -10,6 +10,9 @@
 #import "FMChannel.h"
 #import <AVFoundation/AVFoundation.h>
 #import "DMDeviceManager.h"
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
+
 @interface AppDelegate ()
 {
 
@@ -28,7 +31,14 @@
     //后台播放
     [self playBackGround];
     [self initUmeng];
+    [self initCrashLytic];
     return YES;
+}
+//初始化crashLytics
+-(void)initCrashLytic
+{
+
+    [Fabric with:@[CrashlyticsKit]];
 }
 //初始化友盟统计
 -(void)initUmeng

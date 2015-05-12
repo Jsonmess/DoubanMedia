@@ -48,6 +48,7 @@
     //setContains
     [channelTitle autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self.contentView];
     [channelTitle autoPinEdge:ALEdgeLeft toEdge:ALEdgeLeft ofView:self.contentView withOffset:30.0f];
+    [channelTitle autoSetDimension:ALDimensionWidth toSize:ScreenBounds.size.width*0.5f];
     [mhz autoPinEdge:ALEdgeLeading toEdge:ALEdgeTrailing ofView:channelTitle withOffset:12.0f];
     [mhz autoAlignAxis:ALAxisHorizontal toSameAxisOfView:channelTitle withOffset:7.0f];
 
