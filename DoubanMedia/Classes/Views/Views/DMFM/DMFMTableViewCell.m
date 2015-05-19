@@ -47,8 +47,8 @@
     [self.contentView addSubview:currentPlay];
     //setContains
     [channelTitle autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self.contentView];
+    [channelTitle setTextAlignment:NSTextAlignmentLeft];
     [channelTitle autoPinEdge:ALEdgeLeft toEdge:ALEdgeLeft ofView:self.contentView withOffset:30.0f];
-    [channelTitle autoSetDimension:ALDimensionWidth toSize:ScreenBounds.size.width*0.5f];
     [mhz autoPinEdge:ALEdgeLeading toEdge:ALEdgeTrailing ofView:channelTitle withOffset:12.0f];
     [mhz autoAlignAxis:ALAxisHorizontal toSameAxisOfView:channelTitle withOffset:7.0f];
 
@@ -80,6 +80,15 @@
     }
     
     [self setNeedsLayout];
+}
+-(void)layoutSubviews
+{
+    [super layoutSubviews];
+    if (channelTitle.bounds.size.width > ScreenBounds.size.width*0.7f)
+    {
+        [channelTitle setBounds:CGRectMake(0, 0, ScreenBounds.size.width*0.7f, channelTitle.bounds.size.width)];
+    }
+
 }
 -(void)isNowPlayChannel:(BOOL)isPlay
 {

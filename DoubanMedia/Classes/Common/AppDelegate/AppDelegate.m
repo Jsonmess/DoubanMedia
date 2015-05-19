@@ -24,6 +24,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
+    [self initCrashLytic];
 	//初始化数据库
     [MagicalRecord setupCoreDataStackWithAutoMigratingSqliteStoreNamed:@"DoubanMedia.sqlite"];
     //频道分类
@@ -31,13 +32,12 @@
     //后台播放
     [self playBackGround];
     [self initUmeng];
-    [self initCrashLytic];
     return YES;
 }
 //初始化crashLytics
 -(void)initCrashLytic
 {
-
+    [Crashlytics startWithAPIKey:@"33ef5c416109bfc525d3a2738ce9f8ed8416f450"];
     [Fabric with:@[CrashlyticsKit]];
 }
 //初始化友盟统计
