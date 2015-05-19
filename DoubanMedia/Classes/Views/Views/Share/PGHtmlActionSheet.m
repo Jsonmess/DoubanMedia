@@ -319,7 +319,7 @@ UICollectionViewDelegateFlowLayout>
                      } completion:^(BOOL finished) {
                          [_shadeView setAlpha:0.0f];
                          [waekSelf setAlpha:0.0];
-                         
+                         [waekSelf setAlpha:0.0f];
                      }];
 }
 
