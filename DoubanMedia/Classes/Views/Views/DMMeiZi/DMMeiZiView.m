@@ -32,9 +32,9 @@
 
 -(void)reloadLocalResource
 {
-    NSArray *localClasses = @[@"所有妹纸",@"小清新",@"文艺",@"美腿",@"其他图片"];
+    NSArray *localClasses = @[@"所有妹纸",@"小清新",@"文艺",@"美腿"];
     NSArray *localImages = @[@"allgirl.jpg",@"freshness1.jpg",@"wenyi.jpg",@"changtui.jpg"
-                             ,@"others.jpg"];
+                             ];
     localMeiZiClasses = [NSMutableArray arrayWithArray:localClasses];
     localMeiZiImages = [NSMutableArray arrayWithArray:localImages];
     BOOL isZhaiNan = [[NSUserDefaults standardUserDefaults] boolForKey:@"ZhaiNanUser"];
@@ -44,8 +44,11 @@
         [localMeiZiImages addObject:@"meitun.jpg"];
         [localMeiZiClasses addObject:@"有沟(已解锁)"];
         [localMeiZiImages addObject:@"yougou.jpg"];
-        [localMeiZiClasses addObject:@"福利(已解锁)"];
+        [localMeiZiClasses addObject:@"黑丝袜(已解锁)"];
 		[localMeiZiImages addObject:@"fuli.jpg"];
+        [localMeiZiClasses addObject:@"性感(已解锁)"];
+        [localMeiZiImages addObject:@"others.jpg"];
+
     }
 
     [_collectionView reloadData];
@@ -139,16 +142,16 @@
                 theUrl = MEIZI_LEGS;
                 break;
             case 4:
-                theUrl = MEIZI_FUNNY;
-                break;
-            case 5:
                 theUrl = MEIZI_CALLIPYGE;
                 break;
-            case 6:
+            case 5:
                 theUrl = MEIZI_CLEAVAGE;
                 break;
-            case 7:
+            case 6:
                 theUrl = MEIZI_RATING;
+                break;
+            case 7:
+                theUrl = MEIZI_SEX;
                 break;
 
             default:

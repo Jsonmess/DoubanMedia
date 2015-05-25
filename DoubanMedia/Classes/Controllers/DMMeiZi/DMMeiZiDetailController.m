@@ -13,7 +13,7 @@
 #import "TabViewManager.h"
 #import "DMMeiZiDetailCell.h"
 #import "MBProgressHUD+DMProgressHUD.h"
-
+#import <time.h>
 @interface DMMeiZiDetailController() < NYTPhotosViewControllerDelegate,DMMeiZiManagerDelegate,
 UICollectionViewDelegate,UICollectionViewDataSource
 ,NHBalancedFlowLayoutDelegate>
@@ -150,9 +150,9 @@ UICollectionViewDelegate,UICollectionViewDataSource
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(NHBalancedFlowLayout *)collectionViewLayout preferredSizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    DMMeiZi *meizi = _meiziArray[indexPath.row];
-    CGSize size = CGSizeMake([meizi width].integerValue, [meizi height].integerValue);
-    return size;
+    //返回随机数，用于瀑布流
+    return [self getRandomSize];
+
 }
 
 - (DMMeiZiDetailCell *)collectionView:(UICollectionView *)collectionView
@@ -255,5 +255,14 @@ UICollectionViewDelegate,UICollectionViewDataSource
 {
     [[TabViewManager sharedTabViewManager].getTabView setHidden:NO];
     [self.navigationController popViewControllerAnimated:YES];
+}
+//随机大小--用于瀑布流的展示
+-(CGSize)getRandomSize
+{
+    srand((unsigned)time(NULL));
+    NSInteger number = rand()%30;
+    CGFloat width = ScreenBounds.size.width*0.5f*number/30+ScreenBounds.size.width*0.2f;
+    CGFloat height = width *4/3;
+    return CGSizeMake((int)width,(int)height);
 }
 @end

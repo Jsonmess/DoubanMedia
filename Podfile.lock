@@ -21,6 +21,7 @@ PODS:
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - DOUAudioStreamer (0.2.9)
+  - hpple (0.2.0)
   - libqrencode (3.4.2)
   - MagicalRecord (2.2):
     - MagicalRecord/Core (= 2.2)
@@ -49,6 +50,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking (~> 2.5.1)
   - DOUAudioStreamer (~> 0.2.9)
+  - hpple (~> 0.2.0)
   - libqrencode (~> 3.4.2)
   - MagicalRecord (= 2.2)
   - MBProgressHUD (~> 0.9.1)
@@ -66,6 +68,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AFNetworking: e1d86c2a96bb5d2e7408da36149806706ee122fe
   DOUAudioStreamer: b2144219092952cb1483839691d521aa7762146b
+  hpple: 3b765f96fc2cd56ad1a49aef6f7be5cb2aa64b57
   libqrencode: 43dc34b89af83ea4b07c409cd8e09c87aa3a1c9f
   MagicalRecord: f8a56bb87ab6552f20c4bb8681a1958a197ea3cd
   MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
@@ -80,4 +83,4 @@ SPEC CHECKSUMS:
   UMengAnalytics: 24c06f0ea07295d2f1c093f0fe12d196fd801ea4
   ZBarSDK: 4c1b5daeb7d6cc67dc9355e690af0230a661f6ec
 
-COCOAPODS: 0.37.0.beta.1
+COCOAPODS: 0.37.1
