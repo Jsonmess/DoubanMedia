@@ -9,16 +9,16 @@
 #ifndef DoubanMedia_DMMeiZiConstant_h
 #define DoubanMedia_DMMeiZiConstant_h
 
-static NSString * const BASE_URL         = @"http://www.dbmeizi.com";
-static NSString * const PIC_HOST         = @"http://23.92.26.220/";
-static NSString * const MEIZI_ALL        = @"/m/category_new/10";
-static NSString * const MEIZI_SEX        = @"/m/category_new/1";
-static NSString * const MEIZI_CLEAVAGE   = @"/m/category_new/2";
-static NSString * const MEIZI_LEGS       = @"/m/category_new/3";
-static NSString * const MEIZI_FRESH      = @"/m/category_new/11";
-static NSString * const MEIZI_LITERATURE = @"/m/category_new/12";
-static NSString * const MEIZI_CALLIPYGE  = @"/m/category_new/14";
-static NSString * const MEIZI_FUNNY      = @"/m/category_new/9";
-static NSString * const MEIZI_RATING     = @"/m/category_new/5";
+static NSString * const BASE_URL         = @"http://www.dbmeinv.com";
+static NSString * const PIC_HOST         = @"http://123.56.144.212/";
+static NSString * const MEIZI_ALL        = @"/dbgroup/show.htm";
+static NSString * const MEIZI_SEX        = @"/dbgroup/show.htm?cid=1";
+static NSString * const MEIZI_CLEAVAGE   = @"/dbgroup/show.htm?cid=2";//胸
+static NSString * const MEIZI_LEGS       = @"/dbgroup/show.htm?cid=3";
+static NSString * const MEIZI_FRESH      = @"/dbgroup/show.htm?cid=4";
+static NSString * const MEIZI_LITERATURE = @"/dbgroup/show.htm?cid=5";//文艺
+static NSString * const MEIZI_CALLIPYGE  = @"/dbgroup/show.htm?cid=6";//臀
+static NSString * const MEIZI_FUNNY      = @"/m/category_new/9";//其他
+static NSString * const MEIZI_RATING     = @"/m/category_new/5";//尺度
 
 #endif
