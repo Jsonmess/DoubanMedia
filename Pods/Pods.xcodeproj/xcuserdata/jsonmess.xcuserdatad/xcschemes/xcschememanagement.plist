@@ -19,11 +19,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-MJExtension.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-MJRefresh.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -87,82 +82,77 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2143856738529707C0A34536</key>
+		<key>1A1F88FF29EC5504CD8F1B81</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>397E6C6309E624EF20F3A981</key>
+		<key>239CEB07BB09877CC48E560F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5665F6D8588918E194F8961B</key>
+		<key>5A24A8F1B116868F3521E371</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8768349DABC88918B4E2AFD8</key>
+		<key>76E172EFCCE523690A4E1BB8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8D0A7CC04DE613A28B8BF981</key>
+		<key>8A14E4F2E7F543F47CF51CD1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8EACC30208FE1036C0C8E7FE</key>
+		<key>8E53316309244FF73880B9E2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A25372F1E74D1339AC224C32</key>
+		<key>9FF646F23C45A4D0F5D37CD2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A9030C53530996FDE75D2824</key>
+		<key>A43D87012AFC67B30583B89A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B49A8D5488B06FEEF34E5E78</key>
+		<key>A9F2B858A4766C865CED9C81</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DD95D87ACF7D43A81E32E438</key>
+		<key>AA669CD7AE34AFF8ED2DABD8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E8815021FB16ED1ADE0A978E</key>
+		<key>CC207C40AB7071B5F44936D6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>ED7996F7E0382B0E20900DD1</key>
+		<key>DA9DCB3CE4B5A7D26D79D2CA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F7D5E6640FE7C7DD3A08899A</key>
+		<key>E965A18480E90EC6D7E42EB9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FC3E519CE1159815E1C0E2A9</key>
+		<key>F66488F8CC9AC3AFF0E526DF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FDB02BF9944E791AAA14E515</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FEBCC4027DCA54421054E077</key>
+		<key>FCE2FB092C5B1EB548FCF4F5</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -27,7 +27,6 @@ PODS:
     - MagicalRecord/Core (= 2.2)
   - MagicalRecord/Core (2.2)
   - MBProgressHUD (0.9.1)
-  - MJExtension (1.0.1)
   - MJRefresh (1.4.6)
   - NHBalancedFlowLayout (0.2)
   - PureLayout (2.0.6)
@@ -54,7 +53,6 @@ DEPENDENCIES:
   - libqrencode (~> 3.4.2)
   - MagicalRecord (= 2.2)
   - MBProgressHUD (~> 0.9.1)
-  - MJExtension (~> 1.0.0)
   - MJRefresh (~> 1.3)
   - NHBalancedFlowLayout (~> 0.2)
   - PureLayout (~> 2.0.4)
@@ -72,7 +70,6 @@ SPEC CHECKSUMS:
   libqrencode: 43dc34b89af83ea4b07c409cd8e09c87aa3a1c9f
   MagicalRecord: f8a56bb87ab6552f20c4bb8681a1958a197ea3cd
   MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
-  MJExtension: ca94f428536eab70287dad5c931dbcdc096d7576
   MJRefresh: 2eaa3fd8f67fbb86497840fb0167446f7eb61dc7
   NHBalancedFlowLayout: fd253023c6754e605acdb180d50123e582cc62bb
   PureLayout: f25f0bb904d5ccfe6e31da3cb869185259f02e0d
