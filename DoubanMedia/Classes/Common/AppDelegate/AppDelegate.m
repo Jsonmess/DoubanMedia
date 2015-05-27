@@ -23,7 +23,6 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
     [self initCrashLytic];
 	//初始化数据库
     [MagicalRecord setupCoreDataStackWithAutoMigratingSqliteStoreNamed:@"DoubanMedia.sqlite"];
