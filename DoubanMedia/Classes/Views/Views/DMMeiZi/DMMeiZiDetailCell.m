@@ -23,6 +23,8 @@
 {
     _theImageView = [[UIImageView alloc] initWithFrame:CGRectZero];
     [self setBackgroundColor:DMColor(25, 25, 25, 1.0f)];
+    [_theImageView setContentMode:UIViewContentModeScaleAspectFill];
+    [_theImageView setClipsToBounds:YES];
     [self addSubview:_theImageView];
     [_theImageView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
     [self setNeedsLayout];

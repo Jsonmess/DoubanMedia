@@ -11,11 +11,6 @@
 
 @implementation DMMeiZi
 
-
-- (void)setPath:(NSString *)path {
-    _path = [PIC_HOST stringByAppendingString:path];
-}
-
 - (NSAttributedString *)attributedCaptionTitle {
     NSDictionary *attributes = @{NSFontAttributeName: [UIFont systemFontOfSize:13.0],
                                  NSForegroundColorAttributeName: [UIColor whiteColor]};

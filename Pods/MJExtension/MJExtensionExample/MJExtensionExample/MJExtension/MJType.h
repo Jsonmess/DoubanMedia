@@ -3,7 +3,7 @@
 //  MJExtension
 //
 //  Created by mj on 14-1-15.
-//  Copyright (c) 2014年 itcast. All rights reserved.
+//  Copyright (c) 2014年 小码哥. All rights reserved.
 //  包装一种类型
 
 #import <Foundation/Foundation.h>
@@ -16,6 +16,9 @@
 
 /** 是否为id类型 */
 @property (nonatomic, readonly, getter=isIdType) BOOL idType;
+
+/** 是否为基本数字类型：int、float等 */
+@property (nonatomic, readonly, getter=isNumberType) BOOL numberType;
 
 /** 对象类型（如果是基本数据类型，此值为nil） */
 @property (nonatomic, readonly) Class typeClass;

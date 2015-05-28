@@ -20,6 +20,6 @@ typedef NS_ENUM(NSInteger, kGetDataStatus)
 
 @interface DMMeiZiManager : NSObject
 @property(nonatomic) id<DMMeiZiManagerDelegate>delegate;
-- (void)getMeiziWithUrl:(NSString *)url page:(NSInteger)page
+- (void)getMeiziWithUrl:(NSString *)url page:(NSInteger)page 
              completion:(void (^)(NSArray *meiziArray, NSInteger nextPage))completion;
 @end

@@ -8,9 +8,9 @@
 
 #import "DMMeiZiManager.h"
 #import <AFNetworking/AFNetworking.h>
-#import <MJExtension/MJExtension.h>
 #import "DMMeiZiConstant.h"
 #import "DMMeiZi.h"
+#import <TFHpple.h>
 @interface DMMeiZiManager()
 {
     AFHTTPSessionManager *netManager;
@@ -23,33 +23,58 @@
 {
     if (self = [super init])
     {
-        netManager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:BASE_URL]];
-        netManager.requestSerializer.timeoutInterval = 20.0;
-        netManager.responseSerializer = [AFJSONResponseSerializer serializerWithReadingOptions:NSJSONReadingMutableContainers];
-        netManager.responseSerializer.acceptableContentTypes = [netManager.responseSerializer.acceptableContentTypes setByAddingObjectsFromSet:[NSSet setWithObject:@"text/html"]];
+        netManager = [[AFHTTPSessionManager alloc]init];
+                      netManager.requestSerializer.timeoutInterval = 20.0;
+        netManager.responseSerializer = [AFHTTPResponseSerializer serializer];
     }
     return self;
 }
 - (void)getMeiziWithUrl:(NSString *)url page:(NSInteger)page
              completion:(void (^)(NSArray *meiziArray, NSInteger nextPage))completion
 {
-    [netManager GET:url parameters:@{@"maxid": [@(page) stringValue]}
-            success:^(NSURLSessionDataTask *task, id responseJSON)
+    NSString *theUrl= [NSString stringWithFormat:@"%@%@&pager_offset=%@",BASE_URL,url,[@(page+1) stringValue]];
+    if ([self checkIsAllMeizi:url])
+    {
+        theUrl= [NSString stringWithFormat:@"%@%@?pager_offset=%@",BASE_URL,url,[@(page+1) stringValue]];
+    }
+    [netManager GET:theUrl parameters:nil
+            success:^(NSURLSessionDataTask *task, NSData *responseData)
      {
-        if (responseJSON && [responseJSON[@"data"] isEqualToString:@"ok"])
-        {
-            NSMutableArray *meiziArray = [NSMutableArray arrayWithArray:[DMMeiZi objectArrayWithKeyValuesArray:responseJSON[@"imgs"]]];
-            NSInteger nextPage = [((DMMeiZi *)[meiziArray lastObject]).id integerValue];
-            [meiziArray removeLastObject];
-            completion(meiziArray, nextPage);
-            [self.delegate getDataStatus:kGetDataStatusSuccess];
-        } else {
-            completion(nil, 0);
-            [self.delegate getDataStatus:kGetDataStatusFaild];
-        }
-    } failure:^(NSURLSessionDataTask *task, NSError *error)
+         TFHpple *htmlHpple = [TFHpple hppleWithHTMLData:responseData];
+         NSArray *trelements_contents = [htmlHpple searchWithXPathQuery:@"//img"];
+         if (trelements_contents.count <= 0)
+         {
+             [self.delegate getDataStatus:kGetDataStatusFaild];
+             completion(nil, 0);
+             return;
+         }
+         NSMutableArray *array = [NSMutableArray array];
+         for (TFHppleElement *element in trelements_contents)
+         {
+             DMMeiZi *meizi = [[DMMeiZi alloc] init];
+             meizi.title = element.attributes[@"title"];
+             meizi.path = element.attributes[@"src"];
+             [array addObject:meizi];
+         }
+         completion(array, page+1);
+         [self.delegate getDataStatus:kGetDataStatusSuccess];
+     } failure:^(NSURLSessionDataTask *task, NSError *error)
      {
-        completion(nil, 0); [self.delegate getDataStatus:kGetDataStatusError];
-    }];
+         NSLog(@"%@",error.localizedDescription);
+         completion(nil, 0);
+         [self.delegate getDataStatus:kGetDataStatusError];
+     }];
+}
+-(BOOL)checkIsAllMeizi:(NSString *)url
+{
+    NSRange range = [url rangeOfString:@"cid"];
+    if (range.length > 0)
+    {
+        return NO;
+    }
+    else
+    {
+        return YES;
+    }
 }
 @end

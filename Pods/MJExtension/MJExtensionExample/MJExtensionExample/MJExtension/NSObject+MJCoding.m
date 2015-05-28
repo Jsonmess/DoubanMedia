@@ -3,7 +3,7 @@
 //  MJExtension
 //
 //  Created by mj on 14-1-15.
-//  Copyright (c) 2014年 itcast. All rights reserved.
+//  Copyright (c) 2014年 小码哥. All rights reserved.
 //
 
 #import "NSObject+MJCoding.h"
@@ -14,12 +14,13 @@
 
 - (void)encode:(NSCoder *)encoder
 {
-    NSArray *ignoredCodingPropertyNames = nil;
-    if ([[self class] respondsToSelector:@selector(ignoredCodingPropertyNames)]) {
-        ignoredCodingPropertyNames = [[self class] ignoredCodingPropertyNames];
-    }
+    Class class = [self class];
     
-    [[self class] enumeratePropertiesWithBlock:^(MJProperty *property, BOOL *stop) {
+    NSArray *allowedCodingPropertyNames = [class totalAllowedCodingPropertyNames];
+    NSArray *ignoredCodingPropertyNames = [class totalIgnoredCodingPropertyNames];
+    
+    [class enumeratePropertiesWithBlock:^(MJProperty *property, BOOL *stop) {
+        if (allowedCodingPropertyNames.count && ![allowedCodingPropertyNames containsObject:property.name]) return;
         // 检测是否被忽略
         if ([ignoredCodingPropertyNames containsObject:property.name]) return;
         
@@ -31,12 +32,13 @@
 
 - (void)decode:(NSCoder *)decoder
 {
-    NSArray *ignoredCodingPropertyNames = nil;
-    if ([[self class] respondsToSelector:@selector(ignoredCodingPropertyNames)]) {
-        ignoredCodingPropertyNames = [[self class] ignoredCodingPropertyNames];
-    }
+    Class class = [self class];
     
-    [[self class] enumeratePropertiesWithBlock:^(MJProperty *property, BOOL *stop) {
+    NSArray *allowedCodingPropertyNames = [class totalAllowedCodingPropertyNames];
+    NSArray *ignoredCodingPropertyNames = [class totalIgnoredCodingPropertyNames];
+    
+    [class enumeratePropertiesWithBlock:^(MJProperty *property, BOOL *stop) {
+        if (allowedCodingPropertyNames.count && ![allowedCodingPropertyNames containsObject:property.name]) return;
         // 检测是否被忽略
         if ([ignoredCodingPropertyNames containsObject:property.name]) return;
         
