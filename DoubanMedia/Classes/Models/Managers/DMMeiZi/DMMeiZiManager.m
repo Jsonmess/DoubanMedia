@@ -32,9 +32,12 @@
 - (void)getMeiziWithUrl:(NSString *)url page:(NSInteger)page
              completion:(void (^)(NSArray *meiziArray, NSInteger nextPage))completion
 {
-
-    NSString *theUrl = [NSString stringWithFormat:@"%@%@&pager_offset=%@",BASE_URL,url,[@(page+1) stringValue]];
-        [netManager GET:theUrl parameters:nil
+    NSString *theUrl= [NSString stringWithFormat:@"%@%@&pager_offset=%@",BASE_URL,url,[@(page+1) stringValue]];
+    if ([self checkIsAllMeizi:url])
+    {
+        theUrl= [NSString stringWithFormat:@"%@%@?pager_offset=%@",BASE_URL,url,[@(page+1) stringValue]];
+    }
+    [netManager GET:theUrl parameters:nil
             success:^(NSURLSessionDataTask *task, NSData *responseData)
      {
          TFHpple *htmlHpple = [TFHpple hppleWithHTMLData:responseData];
@@ -42,7 +45,7 @@
          if (trelements_contents.count <= 0)
          {
              [self.delegate getDataStatus:kGetDataStatusFaild];
-               completion(nil, 0);
+             completion(nil, 0);
              return;
          }
          NSMutableArray *array = [NSMutableArray array];
@@ -53,14 +56,25 @@
              meizi.path = element.attributes[@"src"];
              [array addObject:meizi];
          }
-        completion(array, page+1);
+         completion(array, page+1);
          [self.delegate getDataStatus:kGetDataStatusSuccess];
-    } failure:^(NSURLSessionDataTask *task, NSError *error)
+     } failure:^(NSURLSessionDataTask *task, NSError *error)
      {
          NSLog(@"%@",error.localizedDescription);
-        completion(nil, 0);
+         completion(nil, 0);
          [self.delegate getDataStatus:kGetDataStatusError];
-    }];
+     }];
 }
-
+-(BOOL)checkIsAllMeizi:(NSString *)url
+{
+    NSRange range = [url rangeOfString:@"cid"];
+    if (range.length > 0)
+    {
+        return NO;
+    }
+    else
+    {
+        return YES;
+    }
+}
 @end
