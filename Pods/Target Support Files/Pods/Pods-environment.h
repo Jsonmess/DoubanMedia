@@ -64,13 +64,13 @@
 #define COCOAPODS_POD_AVAILABLE_MJExtension
 #define COCOAPODS_VERSION_MAJOR_MJExtension 2
 #define COCOAPODS_VERSION_MINOR_MJExtension 1
-#define COCOAPODS_VERSION_PATCH_MJExtension 0
+#define COCOAPODS_VERSION_PATCH_MJExtension 1
 
 // MJRefresh
 #define COCOAPODS_POD_AVAILABLE_MJRefresh
 #define COCOAPODS_VERSION_MAJOR_MJRefresh 1
 #define COCOAPODS_VERSION_MINOR_MJRefresh 4
-#define COCOAPODS_VERSION_PATCH_MJRefresh 6
+#define COCOAPODS_VERSION_PATCH_MJRefresh 7
 
 // MagicalRecord
 #define COCOAPODS_POD_AVAILABLE_MagicalRecord
@@ -143,12 +143,6 @@
 #define COCOAPODS_VERSION_MAJOR_UIActivityIndicator_for_SDWebImage 1
 #define COCOAPODS_VERSION_MINOR_UIActivityIndicator_for_SDWebImage 2
 #define COCOAPODS_VERSION_PATCH_UIActivityIndicator_for_SDWebImage 0
-
-// UMengAnalytics
-#define COCOAPODS_POD_AVAILABLE_UMengAnalytics
-#define COCOAPODS_VERSION_MAJOR_UMengAnalytics 3
-#define COCOAPODS_VERSION_MINOR_UMengAnalytics 4
-#define COCOAPODS_VERSION_PATCH_UMengAnalytics 6
 
 // ZBarSDK
 #define COCOAPODS_POD_AVAILABLE_ZBarSDK
