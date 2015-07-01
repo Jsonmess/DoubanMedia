@@ -21,5 +21,5 @@
 #define MR_SHORTHAND
 #import <CoreData+MagicalRecord.h>
 #import <ReactiveCocoa.h>
-#import <MobClick.h>
+#import "MobClick.h"
 #endif
