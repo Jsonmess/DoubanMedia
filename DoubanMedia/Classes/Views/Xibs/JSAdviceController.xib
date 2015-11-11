@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JSAdviceController">
@@ -19,6 +19,7 @@
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TER-M0-d4c">
                     <rect key="frame" x="222" y="338" width="143" height="30"/>
+                    <animations/>
                     <constraints>
                         <constraint firstAttribute="width" constant="143" id="XuC-H1-XZd"/>
                     </constraints>
@@ -32,6 +33,7 @@
                 </button>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" translatesAutoresizingMaskIntoConstraints="NO" id="ibe-NY-md1">
                     <rect key="frame" x="20" y="70" width="335" height="145"/>
+                    <animations/>
                     <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="0.27000000000000002" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="145" id="mcT-Op-Xk2"/>
@@ -42,6 +44,7 @@
                 </textView>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zhp-yK-3eK">
                     <rect key="frame" x="20" y="238" width="206" height="30"/>
+                    <animations/>
                     <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="206" id="8Ww-b1-4wr"/>
@@ -51,6 +54,7 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
             </subviews>
+            <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="ibe-NY-md1" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="MRJ-Jb-R9G"/>
@@ -66,9 +70,4 @@
             <point key="canvasLocation" x="182.5" y="324.5"/>
         </view>
     </objects>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
 </document>

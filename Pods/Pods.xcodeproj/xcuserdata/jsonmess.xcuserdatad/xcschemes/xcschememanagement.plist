@@ -4,77 +4,37 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-AFNetworking.xcscheme</key>
+		<key>AFNetworking.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-DOUAudioStreamer.xcscheme</key>
+		<key>DOUAudioStreamer.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-MBProgressHUD.xcscheme</key>
+		<key>MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-MJExtension.xcscheme</key>
+		<key>MJExtension.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-MJRefresh.xcscheme</key>
+		<key>MJRefresh.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-MagicalRecord.xcscheme</key>
+		<key>MagicalRecord.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-NHBalancedFlowLayout.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-PureLayout.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-Reachability.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-ReactiveCocoa.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-SDWebImage.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-UIActivityIndicator-for-SDWebImage.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-ZBarSDK.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-hpple.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-libqrencode.xcscheme</key>
+		<key>NHBalancedFlowLayout.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -84,85 +44,125 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>PureLayout.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Reachability.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ReactiveCocoa.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SDWebImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>UIActivityIndicator-for-SDWebImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ZBarSDK.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>hpple.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>libqrencode.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>036D64626211E2B666F7BADA</key>
+		<key>2602F3D0DAC534568B6AD7EEA0DD1959</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0C2D684BE0E633D196997422</key>
+		<key>2B3361A64DAB3892EDED325AF1E842BE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>18ED942700964B416BA77C88</key>
+		<key>3696AEC5C64CF927AE94AA15DE8B5223</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2EBDF13899033269A4849A6A</key>
+		<key>40690A8FA9E4B01CAE78CB008D1139D9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>34E27F429C987E453A851300</key>
+		<key>56832AE67C7E01F1D26AC4404462393D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3BCD11A907956D36DDD491A5</key>
+		<key>59B5154DEC6908AAF54B5F46275BEC56</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3F84B2857D2CF3721BA1E455</key>
+		<key>5A53149BF97C0581A5D12C344F8F42E6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3FCE71F4FBCF47DB93CD3205</key>
+		<key>75B187466AA9B130134359CD92AA2EAF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>43014F3D06992A086DB0FDDA</key>
+		<key>78248DBA53944001BA369DA079B71B48</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>63622CC794D48D699734AD56</key>
+		<key>7FE9D52AA6B65088854BF8E4B8ED0DF1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>861AC814EAC7E49DF515006D</key>
+		<key>849799B68B0D1D031F0152F88A05EB6D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C7D0830CAE82700B545CB2BF</key>
+		<key>9F550DB779916748DAF35369AA638142</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D2BB9F8BA2C28D3374721891</key>
+		<key>BA250BDE05647A8E5AE0B5FB0421E3CC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E785240F19EA508E7B5FC14D</key>
+		<key>D26A6D000EA63A2C3BBCF016605D3D4E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EA5623E75ABF96F004A53F80</key>
+		<key>FD4DA5B7F954E53CDD518FFF4419A0C1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F08286DB5D94C2EF93FD81D1</key>
+		<key>FE2F1D7B9D9FCEA148517E4657B243F4</key>
 		<dict>
 			<key>primary</key>
 			<true/>

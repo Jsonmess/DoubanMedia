@@ -93,7 +93,6 @@ typedef NS_ENUM(uint64_t, event_type) {
     pthread_mutex_init(&_mutex, NULL);
 
 #if TARGET_OS_IPHONE
-    // Audio session should be setup before `AudioComponentInstance` is initialized.
     [self _setupAudioSession];
 #endif /* TARGET_OS_IPHONE */
 
@@ -108,7 +107,6 @@ typedef NS_ENUM(uint64_t, event_type) {
     }
 
     _decoderBufferSize = [[self class] _decoderBufferSize];
-
     [self _setupFileProviderEventBlock];
     [self _enableEvents];
     [self _createThread];
@@ -294,8 +292,19 @@ static void audio_route_change_listener(void *inClientData,
         ([*streamer status] == DOUAudioStreamerPaused ||
          [*streamer status] == DOUAudioStreamerIdle ||
          [*streamer status] == DOUAudioStreamerFinished)) {
-      [*streamer setStatus:DOUAudioStreamerPlaying];
-      [_renderer setInterrupted:NO];
+      if ([_renderer isInterrupted]) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated"
+        const OSStatus status = AudioSessionSetActive(TRUE);
+#pragma clang diagnostic pop
+        if (status == noErr) {
+          [*streamer setStatus:DOUAudioStreamerPlaying];
+          [_renderer setInterrupted:NO];
+        }
+      }
+      else {
+        [*streamer setStatus:DOUAudioStreamerPlaying];
+      }
     }
   }
   else if (event == event_pause) {
@@ -371,13 +380,15 @@ static void audio_route_change_listener(void *inClientData,
       status = AudioSessionSetActive(TRUE);
       NSAssert(status == noErr, @"failed to activate audio session");
 #pragma clang diagnostic pop
-      [_renderer setInterrupted:NO];
+      if (status == noErr) {
+        [_renderer setInterrupted:NO];
 
-      if (*streamer != nil &&
-          [*streamer status] == DOUAudioStreamerPaused &&
-          [*streamer isPausedByInterruption]) {
-        [*streamer setPausedByInterruption:NO];
-        [self performSelector:@selector(play) onThread:[NSThread mainThread] withObject:nil waitUntilDone:NO];
+        if (*streamer != nil &&
+            [*streamer status] == DOUAudioStreamerPaused &&
+            [*streamer isPausedByInterruption]) {
+          [*streamer setPausedByInterruption:NO];
+          [self performSelector:@selector(play) onThread:[NSThread mainThread] withObject:nil waitUntilDone:NO];
+        }
       }
     }
   }
